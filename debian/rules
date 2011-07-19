@@ -14,4 +14,4 @@ GNOME_MODULE := gnome-online-accounts
 
 LDFLAGS += -Wl,-z,defs -Wl,-O1 -Wl,--as-needed
 
-DEB_CONFIGURE_EXTRA_FLAGS += 
+DEB_CONFIGURE_EXTRA_FLAGS += --enable-gtk-doc

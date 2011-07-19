@@ -1,3 +1,12 @@
+gnome-online-accounts (3.1.1-0ubuntu2) oneiric; urgency=low
+
+  * debian/rules:
+  * debian/control:
+    - Enable gtk-doc building
+    - Add libgoa-1.0-doc package
+
+ -- Rodrigo Moya <rodrigo.moya@canonical.com>  Tue, 19 Jul 2011 15:56:14 +0200
+
 gnome-online-accounts (3.1.1-0ubuntu1) oneiric; urgency=low
 
   * Initial release.
