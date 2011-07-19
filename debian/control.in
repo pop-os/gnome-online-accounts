@@ -43,8 +43,7 @@ Description: GNOME Online Accounts
  centralized place for managing online accounts (Google, etc) for the
  GNOME desktop.
  .
- This package contains the files needed to build applications that access
- the service.
+ This package contains the libraries used by GOA applications.
 
 Package: libgoa-1.0-dev
 Architecture: any
