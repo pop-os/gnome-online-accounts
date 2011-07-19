@@ -31,17 +31,19 @@ Package: gnome-online-accounts
 Architecture: any
 Section: gnome
 Depends: ${shlibs:Depends},
-         ${misc:Depends}
+         ${misc:Depends},
+         libgoa1.0-0 (= ${binary:Version})
 Recommends: gnome-control-center
 Description: GNOME Online Accounts
  This package contains the GNOME Online Accounts service, which provides a
  centralized place for managing online accounts (Google, etc) for the
  GNOME desktop.
 
-Package: gnome-online-accounts-dev
+Package: libgoa1.0-0
 Architecture: any
-Section: devel
-Depends: ${misc:Depends}
+Section: libs
+Depends: ${shlibs:Depends},
+         ${misc:Depends}
 Description: GNOME Online Accounts
  This package contains the GNOME Online Accounts service, which provides a
  centralized place for managing online accounts (Google, etc) for the
@@ -49,3 +51,29 @@ Description: GNOME Online Accounts
  .
  This package contains the files needed to build applications that access
  the service.
+
+Package: libgoa1.0-dev
+Architecture: any
+Section: libdevel
+Depends: ${misc:Depends},
+         libgoa1.0-0 (= ${binary:Version})
+Description: GNOME Online Accounts
+ This package contains the GNOME Online Accounts service, which provides a
+ centralized place for managing online accounts (Google, etc) for the
+ GNOME desktop.
+ .
+ This package contains the files needed to build applications that access
+ the service.
+
+Package: gir1.2-goa-1.0
+Architecture: any
+Depends: ${misc:Depends},
+         ${shlibs:Depends},
+         ${gir:Depends}
+Description: GNOME Online Accounts
+ This package contains the GNOME Online Accounts service, which provides a
+ centralized place for managing online accounts (Google, etc) for the
+ GNOME desktop.
+ .
+ This package can be used by other packages using the GIRepository format to
+ generate dynamic bindings.
