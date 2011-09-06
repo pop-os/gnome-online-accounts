@@ -1,8 +1,11 @@
-gnome-online-accounts (3.1.90-0ubuntu1) UNRELEASED; urgency=low
+gnome-online-accounts (3.1.90-0ubuntu1) oneiric; urgency=low
 
+  * Updated symbols list
+
+  [ Rodrigo Moya ]
   * New upstream release
 
- -- Rodrigo Moya <rodrigo.moya@canonical.com>  Tue, 06 Sep 2011 16:06:18 +0200
+ -- Sebastien Bacher <seb128@ubuntu.com>  Tue, 06 Sep 2011 16:32:04 +0200
 
 gnome-online-accounts (3.1.1-0ubuntu2) oneiric; urgency=low
 
