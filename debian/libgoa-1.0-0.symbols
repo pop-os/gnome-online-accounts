@@ -73,6 +73,17 @@ libgoa-1.0.so.0 libgoa-1.0-0 #MINVER#
  goa_contacts_proxy_new_sync@Base 3.1.1
  goa_contacts_skeleton_get_type@Base 3.1.1
  goa_contacts_skeleton_new@Base 3.1.1
+ goa_documents_get_type@Base 3.1.90
+ goa_documents_interface_info@Base 3.1.90
+ goa_documents_proxy_get_type@Base 3.1.90
+ goa_documents_proxy_new@Base 3.1.90
+ goa_documents_proxy_new_finish@Base 3.1.90
+ goa_documents_proxy_new_for_bus@Base 3.1.90
+ goa_documents_proxy_new_for_bus_finish@Base 3.1.90
+ goa_documents_proxy_new_for_bus_sync@Base 3.1.90
+ goa_documents_proxy_new_sync@Base 3.1.90
+ goa_documents_skeleton_get_type@Base 3.1.90
+ goa_documents_skeleton_new@Base 3.1.90
  goa_error_get_type@Base 3.1.1
  goa_error_quark@Base 3.1.1
  goa_mail_get_email_address@Base 3.1.1
@@ -159,6 +170,7 @@ libgoa-1.0.so.0 libgoa-1.0-0 #MINVER#
  goa_object_get_calendar@Base 3.1.1
  goa_object_get_chat@Base 3.1.1
  goa_object_get_contacts@Base 3.1.1
+ goa_object_get_documents@Base 3.1.90
  goa_object_get_mail@Base 3.1.1
  goa_object_get_manager@Base 3.1.1
  goa_object_get_oauth2_based@Base 3.1.1
@@ -177,6 +189,7 @@ libgoa-1.0.so.0 libgoa-1.0-0 #MINVER#
  goa_object_peek_calendar@Base 3.1.1
  goa_object_peek_chat@Base 3.1.1
  goa_object_peek_contacts@Base 3.1.1
+ goa_object_peek_documents@Base 3.1.90
  goa_object_peek_mail@Base 3.1.1
  goa_object_peek_manager@Base 3.1.1
  goa_object_peek_oauth2_based@Base 3.1.1
@@ -190,6 +203,7 @@ libgoa-1.0.so.0 libgoa-1.0-0 #MINVER#
  goa_object_skeleton_set_calendar@Base 3.1.1
  goa_object_skeleton_set_chat@Base 3.1.1
  goa_object_skeleton_set_contacts@Base 3.1.1
+ goa_object_skeleton_set_documents@Base 3.1.90
  goa_object_skeleton_set_mail@Base 3.1.1
  goa_object_skeleton_set_manager@Base 3.1.1
  goa_object_skeleton_set_oauth2_based@Base 3.1.1
