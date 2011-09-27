@@ -7,7 +7,7 @@ Source: gnome-online-accounts
 Section: gnome
 Priority: optional
 Maintainer: Ubuntu Desktop Team <ubuntu-desktop@lists.ubuntu.com>
-Uploaders: Debian GNOME Maintainers <pkg-gnome-maintainers@lists.alioth.debian.org>, Frederic Peters <fpeters@debian.org>, Josselin Mouette <joss@debian.org>
+Uploaders: Debian GNOME Maintainers <pkg-gnome-maintainers@lists.alioth.debian.org>
 Standards-Version: 3.9.2
 Build-Depends: cdbs (>= 0.4.41),
                dh-autoreconf,
@@ -21,6 +21,7 @@ Build-Depends: cdbs (>= 0.4.41),
                libjson-glib-dev,
                libgnome-keyring-dev,
                libnotify-dev (>= 0.7),
+               libsoup-gnome2.4-dev (>= 2.26),
                librest-dev,
                gobject-introspection (>= 0.9.12-4~),
                libgirepository1.0-dev (>= 0.9.3),
