@@ -1,4 +1,4 @@
-gnome-online-accounts (3.2.0-0ubuntu1) UNRELEASED; urgency=low
+gnome-online-accounts (3.2.0-0ubuntu1) oneiric; urgency=low
 
   * New upstream release.
     - Let authentication webkit window inherit from GNOME proxy settings
@@ -9,7 +9,7 @@ gnome-online-accounts (3.2.0-0ubuntu1) UNRELEASED; urgency=low
     we are building with the final gdbus-codegen.
   * debian/libgoa-1.0-0.symbols: Add new symbols from this release.
 
- -- Martin Pitt <martin.pitt@ubuntu.com>  Tue, 27 Sep 2011 07:40:26 +0200
+ -- Martin Pitt <martin.pitt@ubuntu.com>  Tue, 27 Sep 2011 07:58:36 +0200
 
 gnome-online-accounts (3.1.91-0ubuntu1) oneiric; urgency=low
 
