@@ -57,7 +57,8 @@ Architecture: any
 Section: libdevel
 Depends: ${misc:Depends},
          libgoa-1.0-0 (= ${binary:Version}),
-         libglib2.0-dev
+         libglib2.0-dev,
+         gir1.2-goa-1.0
 Suggests: libgoa-1.0-doc
 Description: GNOME Online Accounts
  This package contains the GNOME Online Accounts service, which provides a
