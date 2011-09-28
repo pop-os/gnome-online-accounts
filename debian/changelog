@@ -1,8 +1,8 @@
-gnome-online-accounts (3.2.0.1-0ubuntu1) UNRELEASED; urgency=low
+gnome-online-accounts (3.2.0.1-0ubuntu1) oneiric; urgency=low
 
   * New upstream release:
 
- -- Didier Roche <didrocks@ubuntu.com>  Wed, 28 Sep 2011 08:36:21 +0200
+ -- Didier Roche <didrocks@ubuntu.com>  Wed, 28 Sep 2011 09:16:16 +0200
 
 gnome-online-accounts (3.2.0-0ubuntu1) oneiric; urgency=low
 
