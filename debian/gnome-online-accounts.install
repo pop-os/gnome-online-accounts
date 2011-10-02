@@ -1,0 +1,4 @@
+debian/tmp/usr/lib/gnome-online-accounts/goa-daemon
+debian/tmp/usr/share/dbus-1/services/org.gnome.OnlineAccounts.service
+debian/tmp/usr/share/icons
+debian/tmp/usr/share/man
