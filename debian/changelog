@@ -1,3 +1,10 @@
+gnome-online-accounts (3.2.1-0ubuntu1) UNRELEASED; urgency=low
+
+  * New upstream release:
+    - translations update (LP: #877204)
+
+ -- Didier Roche <didrocks@ubuntu.com>  Tue, 18 Oct 2011 10:09:06 +0200
+
 gnome-online-accounts (3.2.0.1-0ubuntu2) oneiric; urgency=low
 
   * debian/control:
