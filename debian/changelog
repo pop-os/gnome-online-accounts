@@ -1,4 +1,4 @@
-gnome-online-accounts (3.2.1-0ubuntu1) UNRELEASED; urgency=low
+gnome-online-accounts (3.2.1-0ubuntu1) oneiric-proposed; urgency=low
 
   * New upstream release:
     - translations update (LP: #877204)
