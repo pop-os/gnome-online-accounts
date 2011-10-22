@@ -7,7 +7,7 @@ Source: gnome-online-accounts
 Section: gnome
 Priority: optional
 Maintainer: Debian GNOME Maintainers <pkg-gnome-maintainers@lists.alioth.debian.org>
-Uploaders: 
+Uploaders: Michael Biebl <biebl@debian.org>
 Build-Depends: cdbs (>= 0.4.41),
                dh-autoreconf,
                hardening-wrapper,
@@ -73,8 +73,8 @@ Description: library for GNOME Online Accounts - development files
 Package: libgoa-1.0-doc
 Architecture: all
 Section: doc
-Depends: lynx | www-browser,
-         ${misc:Depends}
+Depends: ${misc:Depends}
+Suggests: devhelp
 Description: library for GNOME Online Accounts - documentation files
  This package contains the GNOME Online Accounts service, which provides a
  centralized place for managing online accounts (Google, etc) for the

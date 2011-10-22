@@ -1,7 +1,7 @@
 gnome-online-accounts (3.2.1-1) UNRELEASED; urgency=low
 
   [ Jeremy Bicha ]
-  * Initial release.
+  * Initial release. Closes: #646255
 
   [ Michael Biebl ]
   * Suggest devhelp instead of depending on lynx | www-browser.
