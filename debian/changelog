@@ -1,5 +1,9 @@
 gnome-online-accounts (3.2.1-1) UNRELEASED; urgency=low
 
+  [ Jeremy Bicha ]
   * Initial release.
 
- -- Jeremy Bicha <jbicha@ubuntu.com>  Sun, 02 Oct 2011 02:46:09 -0400
+  [ Michael Biebl ]
+  * Suggest devhelp instead of depending on lynx | www-browser.
+
+ -- Michael Biebl <biebl@debian.org>  Sat, 22 Oct 2011 17:37:59 +0200
