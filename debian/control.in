@@ -90,7 +90,7 @@ Description: library for GNOME Online Accounts - documentation files
 
 Package: gir1.2-goa-1.0
 Architecture: any
-Section: libs
+Section: introspection
 Depends: ${misc:Depends},
          ${shlibs:Depends},
          ${gir:Depends}
