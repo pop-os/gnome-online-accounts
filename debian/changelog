@@ -1,3 +1,11 @@
+gnome-online-accounts (3.3.0-0ubuntu1) UNRELEASED; urgency=low
+
+  * New upstream release
+  * debian/libgoa-1.0-0.symbols
+    - updated symbols
+
+ -- Ken VanDine <ken.vandine@canonical.com>  Mon, 19 Dec 2011 14:25:31 -0500
+
 gnome-online-accounts (3.2.1-0ubuntu1) oneiric-proposed; urgency=low
 
   * New upstream release:
