@@ -1,3 +1,9 @@
+gnome-online-accounts (3.2.1-4) UNRELEASED; urgency=low
+
+  * Update repository URL.
+
+ -- Josselin Mouette <joss@debian.org>  Sat, 31 Dec 2011 13:58:58 +0100
+
 gnome-online-accounts (3.2.1-3) unstable; urgency=low
 
   * Change section of gir1.2-goa-1.0 to introspection.
