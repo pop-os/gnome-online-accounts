@@ -7,7 +7,7 @@ Source: gnome-online-accounts
 Section: gnome
 Priority: optional
 Maintainer: Debian GNOME Maintainers <pkg-gnome-maintainers@lists.alioth.debian.org>
-Uploaders: Michael Biebl <biebl@debian.org>
+Uploaders: Laurent Bigonville <bigon@debian.org>, Michael Biebl <biebl@debian.org>
 Build-Depends: cdbs (>= 0.4.41),
                dh-autoreconf,
                gnome-pkg-tools (>= 0.10),
@@ -25,14 +25,13 @@ Build-Depends: cdbs (>= 0.4.41),
                libgirepository1.0-dev (>= 0.9.3),
                gtk-doc-tools,
                libglib2.0-doc
-Standards-Version: 3.9.2
+Standards-Version: 3.9.3
 Vcs-Svn: svn://anonscm.debian.org/svn/pkg-gnome/desktop/unstable/gnome-online-accounts
 Vcs-Browser: http://anonscm.debian.org/viewvc/pkg-gnome/desktop/unstable/gnome-online-accounts/
 Homepage: https://live.gnome.org/OnlineAccounts
 
 Package: gnome-online-accounts
 Architecture: any
-Section: gnome
 Depends: ${shlibs:Depends},
          ${misc:Depends},
          libgoa-1.0-0 (= ${binary:Version})
