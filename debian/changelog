@@ -3,8 +3,9 @@ gnome-online-accounts (3.4.1-1) UNRELEASED; urgency=low
   * New upstream release.
   * Update debian/copyright to the final copyright-format 1.0 spec.
   * debian/patches/01_git_fix_build.patch: Refreshed.
+  * debian/libgoa-1.0-0.symbols: Add new symbol.
 
- -- Michael Biebl <biebl@debian.org>  Wed, 18 Apr 2012 01:03:14 +0200
+ -- Michael Biebl <biebl@debian.org>  Wed, 18 Apr 2012 01:03:32 +0200
 
 gnome-online-accounts (3.3.0-1) experimental; urgency=low
 
