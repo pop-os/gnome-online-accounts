@@ -1,8 +1,9 @@
 gnome-online-accounts (3.4.1-1) UNRELEASED; urgency=low
 
   * New upstream release.
+  * Update debian/copyright to the final copyright-format 1.0 spec.
 
- -- Michael Biebl <biebl@debian.org>  Wed, 18 Apr 2012 00:53:47 +0200
+ -- Michael Biebl <biebl@debian.org>  Wed, 18 Apr 2012 00:58:31 +0200
 
 gnome-online-accounts (3.3.0-1) experimental; urgency=low
 
