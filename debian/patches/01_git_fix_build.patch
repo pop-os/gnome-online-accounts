@@ -1,3 +1,5 @@
+Description: Fix build failure with LDFLAGS="-Wl,-z,defs"
+Bug: https://bugzilla.gnome.org/show_bug.cgi?id=674292
 Index: gnome-online-accounts-3.4.1/src/goabackend/Makefile.am
 ===================================================================
 --- gnome-online-accounts-3.4.1.orig/src/goabackend/Makefile.am	2012-04-18 00:59:55.555429577 +0200
