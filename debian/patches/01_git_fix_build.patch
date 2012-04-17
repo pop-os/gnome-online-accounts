@@ -1,8 +1,8 @@
-diff --git a/src/goabackend/Makefile.am b/src/goabackend/Makefile.am
-index 231347c..99e0410 100644
---- a/src/goabackend/Makefile.am
-+++ b/src/goabackend/Makefile.am
-@@ -89,6 +89,7 @@ libgoa_backend_1_0_la_CFLAGS =					\
+Index: gnome-online-accounts-3.4.1/src/goabackend/Makefile.am
+===================================================================
+--- gnome-online-accounts-3.4.1.orig/src/goabackend/Makefile.am	2012-04-18 00:59:55.555429577 +0200
++++ gnome-online-accounts-3.4.1/src/goabackend/Makefile.am	2012-04-18 00:59:58.439429696 +0200
+@@ -92,6 +92,7 @@
  	$(NULL)
  
  libgoa_backend_1_0_la_LIBADD = 					\
