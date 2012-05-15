@@ -1,8 +1,8 @@
-gnome-online-accounts (3.4.2-1) UNRELEASED; urgency=low
+gnome-online-accounts (3.4.2-1) unstable; urgency=low
 
   * New upstream release.
 
- -- Michael Biebl <biebl@debian.org>  Tue, 15 May 2012 16:25:49 +0200
+ -- Michael Biebl <biebl@debian.org>  Tue, 15 May 2012 16:27:22 +0200
 
 gnome-online-accounts (3.4.1-1) unstable; urgency=low
 
