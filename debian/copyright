@@ -1,5 +1,5 @@
-Format-Specification: http://svn.debian.org/wsvn/dep/web/deps/dep5.mdwn?op=file&rev=135
-Source: http://ftp.gnome.org/pub/GNOME/sources/gnome-online-accounts/
+Format: http://www.debian.org/doc/packaging-manuals/copyright-format/1.0/
+Upstream-Source: http://ftp.gnome.org/pub/GNOME/sources/gnome-online-accounts/
 
 Files: *
 Copyright: 2011 Red Hat, Inc.
