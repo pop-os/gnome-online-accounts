@@ -1,4 +1,4 @@
-gnome-online-accounts (3.6.0-1) UNRELEASED; urgency=low
+gnome-online-accounts (3.6.0-1) experimental; urgency=low
 
   * New upstream release
   * Debian/rules: explicitly enable all providers
@@ -7,7 +7,7 @@ gnome-online-accounts (3.6.0-1) UNRELEASED; urgency=low
   * debian/patches/01_git_fix_build.patch:
     Removed, Fixed upstream
 
- -- Sjoerd Simons <sjoerd@debian.org>  Sun, 07 Oct 2012 09:00:14 +0200
+ -- Sjoerd Simons <sjoerd@debian.org>  Sun, 07 Oct 2012 09:24:51 +0200
 
 gnome-online-accounts (3.4.2-1) unstable; urgency=low
 
