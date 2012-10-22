@@ -1,3 +1,10 @@
+gnome-online-accounts (3.6.1-1) UNRELEASED; urgency=low
+
+  * Team upload
+  * New upstream release
+
+ -- Simon McVittie <smcv@debian.org>  Mon, 22 Oct 2012 21:12:05 +0100
+
 gnome-online-accounts (3.6.0-1) experimental; urgency=low
 
   * New upstream release
