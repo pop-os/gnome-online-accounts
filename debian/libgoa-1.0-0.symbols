@@ -424,6 +424,7 @@ libgoa-backend-1.0.so.0 libgoa-1.0-0 #MINVER#
  goa_oauth2_provider_get_use_external_browser@Base 3.1.1
  goa_oauth2_provider_get_use_mobile_browser@Base 3.5.2
  goa_oauth2_provider_is_deny_node@Base 3.5.4
+ goa_oauth2_provider_is_identity_node@Base 3.6.1
  goa_oauth_provider_add_account_key_values@Base 3.1.1
  goa_oauth_provider_build_authorization_uri@Base 3.1.1
  goa_oauth_provider_get_access_token_sync@Base 3.1.1
@@ -440,6 +441,7 @@ libgoa-backend-1.0.so.0 libgoa-1.0-0 #MINVER#
  goa_oauth_provider_get_use_external_browser@Base 3.1.1
  goa_oauth_provider_get_use_mobile_browser@Base 3.5.2
  goa_oauth_provider_is_deny_node@Base 3.5.4
+ goa_oauth_provider_is_identity_node@Base 3.6.1
  goa_oauth_provider_parse_request_token_error@Base 3.5.1
  goa_provider_add_account@Base 3.1.1
  goa_provider_build_object@Base 3.1.1
