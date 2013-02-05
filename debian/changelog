@@ -1,3 +1,9 @@
+gnome-online-accounts (3.4.2-3) UNRELEASED; urgency=low
+
+  * Tag CVE-2013-0240 patch as having been accepted upstream
+
+ -- Simon McVittie <smcv@debian.org>  Tue, 05 Feb 2013 17:39:25 +0000
+
 gnome-online-accounts (3.4.2-2) unstable; urgency=medium
 
   * Team upload.
