@@ -1,4 +1,4 @@
-gnome-online-accounts (3.7.90-1) UNRELEASED; urgency=low
+gnome-online-accounts (3.7.90-1) experimental; urgency=low
 
   * New upstream release
   * Update build dependencies according to configure.ac changes:
@@ -8,7 +8,7 @@ gnome-online-accounts (3.7.90-1) UNRELEASED; urgency=low
   * debian/rules: fix typo --enable-flicker configure flag (flickr)
   * debian/rules: add --enable-imap-smtp configure flag
 
- -- Andreas Henriksson <andreas@fatal.se>  Tue, 05 Mar 2013 21:47:43 +0100
+ -- Andreas Henriksson <andreas@fatal.se>  Wed, 06 Mar 2013 08:01:37 +0100
 
 gnome-online-accounts (3.6.2-1) experimental; urgency=low
 
