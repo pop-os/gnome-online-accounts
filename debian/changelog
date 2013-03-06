@@ -3,7 +3,6 @@ gnome-online-accounts (3.7.90-1) experimental; urgency=low
   * New upstream release
   * Update build dependencies according to configure.ac changes:
     - libglib2.0-dev bumped to (>= 2.35.0)
-    - libnotify-dev dropped
     - libsoup2.4-dev (>= 2.41) instead of libsoup-gnome2.4-dev (>= 2.26)
   * debian/rules: fix typo --enable-flicker configure flag (flickr)
   * debian/rules: add --enable-imap-smtp configure flag
