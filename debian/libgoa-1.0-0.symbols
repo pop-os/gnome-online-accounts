@@ -170,6 +170,7 @@ libgoa-1.0.so.0 libgoa-1.0-0 #MINVER#
  goa_mail_get_imap_accept_ssl_errors@Base 3.7.90
  goa_mail_get_imap_host@Base 3.1.1
  goa_mail_get_imap_supported@Base 3.1.1
+ goa_mail_get_smtp_use_auth@Base 3.7.91
  goa_mail_get_imap_use_ssl@Base 3.7.90
  goa_mail_get_imap_use_tls@Base 3.1.1
  goa_mail_get_imap_user_name@Base 3.1.1
@@ -177,6 +178,7 @@ libgoa-1.0.so.0 libgoa-1.0-0 #MINVER#
  goa_mail_get_smtp_accept_ssl_errors@Base 3.7.90
  goa_mail_get_smtp_host@Base 3.1.1
  goa_mail_get_smtp_supported@Base 3.1.1
+ goa_mail_get_smtp_use_auth@Base 3.7.91
  goa_mail_get_smtp_use_ssl@Base 3.7.90
  goa_mail_get_smtp_use_tls@Base 3.1.1
  goa_mail_get_smtp_user_name@Base 3.1.1
@@ -201,6 +203,7 @@ libgoa-1.0.so.0 libgoa-1.0-0 #MINVER#
  goa_mail_set_smtp_accept_ssl_errors@Base 3.7.90
  goa_mail_set_smtp_host@Base 3.1.1
  goa_mail_set_smtp_supported@Base 3.1.1
+ goa_mail_set_smtp_use_auth@Base 3.7.91
  goa_mail_set_smtp_use_ssl@Base 3.7.90
  goa_mail_set_smtp_use_tls@Base 3.1.1
  goa_mail_set_smtp_user_name@Base 3.1.1
@@ -462,6 +465,7 @@ libgoa-backend-1.0.so.0 libgoa-1.0-0 #MINVER#
  goa_log@Base 3.1.1
  goa_log_init@Base 3.7.90
  goa_mail_auth_get_type@Base 3.7.90
+ goa_mail_auth_is_needed@Base 3.7.91
  goa_mail_auth_run@Base 3.7.90
  goa_mail_auth_run_finish@Base 3.7.90
  goa_mail_auth_run_sync@Base 3.7.90
