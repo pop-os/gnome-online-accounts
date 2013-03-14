@@ -1,3 +1,9 @@
+gnome-online-accounts (3.7.91-2) UNRELEASED; urgency=low
+
+  * Install goawebview.css in libgoa-1.0-0 since it's used by libgoa-backend
+
+ -- Andreas Henriksson <andreas@fatal.se>  Thu, 14 Mar 2013 22:24:01 +0100
+
 gnome-online-accounts (3.7.91-1) experimental; urgency=low
 
   * New upstream release.
