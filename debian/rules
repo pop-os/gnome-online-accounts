@@ -17,11 +17,10 @@ LDFLAGS += -Wl,-z,defs -Wl,-O1 -Wl,--as-needed
 DEB_CONFIGURE_EXTRA_FLAGS += --enable-gtk-doc \
   --enable-kerberos \
   --enable-facebook \
-  --enable-twitter \
   --enable-flickr \
-  --enable-yahoo \
   --enable-windows-live \
   --enable-google \
+  --enable-owncloud \
   --enable-imap-smtp \
   --enable-exchange
 

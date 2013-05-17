@@ -1,6 +1,19 @@
 gnome-online-accounts (3.8.2-1) UNRELEASED; urgency=low
 
+  [ Thomas Bechtold ]
   * New upstream release.
+
+  [ Tim Lunn ]
+  * debian/rules:
+    - Explicitly enable owncloud
+    - Don't try to enable Twitter or Yahoo support as they are not currently
+      included
+  * debian/libgoa-1.0-common: install arch-independent css file here rather
+    than in libgoa-1.0-0
+
+  [ Jeremy Bicha ]
+  * debian/control.in: Add Breaks/Replaces for above change. This is only
+    needed for users of experimental though.
 
  -- Thomas Bechtold <thomasbechtold@jpberlin.de>  Tue, 14 May 2013 14:48:34 +0200
 
