@@ -1,4 +1,4 @@
-gnome-online-accounts (3.8.2-1) UNRELEASED; urgency=low
+gnome-online-accounts (3.8.2-1) unstable; urgency=low
 
   [ Thomas Bechtold ]
   * New upstream release.
@@ -18,7 +18,7 @@ gnome-online-accounts (3.8.2-1) UNRELEASED; urgency=low
   [ Michael Biebl ]
   * Upload to unstable.
 
- -- Thomas Bechtold <thomasbechtold@jpberlin.de>  Tue, 14 May 2013 14:48:34 +0200
+ -- Michael Biebl <biebl@debian.org>  Fri, 24 May 2013 17:59:18 +0200
 
 gnome-online-accounts (3.8.1-1) experimental; urgency=low
 
