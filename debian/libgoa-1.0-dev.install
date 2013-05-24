@@ -2,3 +2,4 @@ usr/include/*
 usr/lib/*/pkgconfig/*
 usr/lib/*/*.so
 usr/share/gir-1.0/*.gir
+usr/lib/*/goa-1.0/include/goaconfig.h

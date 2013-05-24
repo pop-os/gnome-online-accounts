@@ -1,8 +1,87 @@
-gnome-online-accounts (3.4.2-3) UNRELEASED; urgency=low
+gnome-online-accounts (3.8.2-1) UNRELEASED; urgency=low
 
-  * Tag CVE-2013-0240 patch as having been accepted upstream
+  [ Thomas Bechtold ]
+  * New upstream release.
 
- -- Simon McVittie <smcv@debian.org>  Tue, 05 Feb 2013 17:39:25 +0000
+  [ Tim Lunn ]
+  * debian/rules:
+    - Explicitly enable owncloud
+    - Don't try to enable Twitter or Yahoo support as they are not currently
+      included
+  * debian/libgoa-1.0-common: install arch-independent css file here rather
+    than in libgoa-1.0-0
+
+  [ Jeremy Bicha ]
+  * debian/control.in: Add Breaks/Replaces for above change. This is only
+    needed for users of experimental though.
+
+ -- Thomas Bechtold <thomasbechtold@jpberlin.de>  Tue, 14 May 2013 14:48:34 +0200
+
+gnome-online-accounts (3.8.1-1) experimental; urgency=low
+
+  * New upstream release.
+
+ -- Thomas Bechtold <thomasbechtold@jpberlin.de>  Thu, 25 Apr 2013 16:58:36 +0200
+
+gnome-online-accounts (3.8.0-1) experimental; urgency=low
+
+  [ Andreas Henriksson ]
+  * Install goawebview.css in libgoa-1.0-0 since it's used by libgoa-backend
+
+  [ Thomas Bechtold ]
+  * New upstream release.
+  * Updated symbols file.
+
+ -- Andreas Henriksson <andreas@fatal.se>  Wed, 27 Mar 2013 20:42:10 +0100
+
+gnome-online-accounts (3.7.91-1) experimental; urgency=low
+
+  * New upstream release.
+  * Added 'goaconfig.h' to -dev package.
+  * Updated symbols file.
+  * Updated Standard-Version to 3.9.4 (no further changes).
+
+ -- Jean Schurger <jean@schurger.org>  Mon, 11 Mar 2013 15:14:03 -0400
+
+gnome-online-accounts (3.7.90-1) experimental; urgency=low
+
+  * New upstream release
+  * Update build dependencies according to configure.ac changes:
+    - libglib2.0-dev bumped to (>= 2.35.0)
+    - libsoup2.4-dev (>= 2.41) instead of libsoup-gnome2.4-dev (>= 2.26)
+  * debian/rules: fix typo --enable-flicker configure flag (flickr)
+  * debian/rules: add --enable-imap-smtp configure flag
+
+ -- Andreas Henriksson <andreas@fatal.se>  Wed, 06 Mar 2013 08:01:37 +0100
+
+gnome-online-accounts (3.6.2-1) experimental; urgency=low
+
+  * New upstream release
+    - Adjust .symbols file: some symbols have been dropped, but were not part
+      of the public API 
+
+ -- Laurent Bigonville <bigon@debian.org>  Sat, 09 Feb 2013 23:23:42 +0100
+
+gnome-online-accounts (3.6.1-1) experimental; urgency=low
+
+  * Team upload
+  * New upstream release
+    - update symbols file
+    - recommend the experimental gnome-control-center: the GOA panel doesn't
+      seem to work correctly any more with the one from 3.4
+
+ -- Simon McVittie <smcv@debian.org>  Mon, 22 Oct 2012 21:56:13 +0100
+
+gnome-online-accounts (3.6.0-1) experimental; urgency=low
+
+  * New upstream release
+  * Debian/rules: explicitly enable all providers
+  * Sync with Ubuntu:
+    * debian/control.in: Update depends
+  * debian/patches/01_git_fix_build.patch:
+    Removed, Fixed upstream
+
+ -- Sjoerd Simons <sjoerd@debian.org>  Sun, 07 Oct 2012 09:24:51 +0200
 
 gnome-online-accounts (3.4.2-2) unstable; urgency=medium
 
