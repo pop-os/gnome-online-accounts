@@ -83,6 +83,13 @@ gnome-online-accounts (3.6.0-1) experimental; urgency=low
 
  -- Sjoerd Simons <sjoerd@debian.org>  Sun, 07 Oct 2012 09:24:51 +0200
 
+gnome-online-accounts (3.4.2-2) unstable; urgency=medium
+
+  * Team upload.
+  * CVE-2013-0240: check TLS certificates for web services (Closes: #699825)
+
+ -- Simon McVittie <smcv@debian.org>  Tue, 05 Feb 2013 15:51:24 +0000
+
 gnome-online-accounts (3.4.2-1) unstable; urgency=low
 
   * New upstream release.
