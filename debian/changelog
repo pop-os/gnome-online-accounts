@@ -15,6 +15,9 @@ gnome-online-accounts (3.8.2-1) UNRELEASED; urgency=low
   * debian/control.in: Add Breaks/Replaces for above change. This is only
     needed for users of experimental though.
 
+  [ Michael Biebl ]
+  * Upload to unstable.
+
  -- Thomas Bechtold <thomasbechtold@jpberlin.de>  Tue, 14 May 2013 14:48:34 +0200
 
 gnome-online-accounts (3.8.1-1) experimental; urgency=low
