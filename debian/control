@@ -30,7 +30,7 @@ Build-Depends: cdbs (>= 0.4.93~),
 Standards-Version: 3.9.4
 Vcs-Svn: svn://anonscm.debian.org/svn/pkg-gnome/desktop/unstable/gnome-online-accounts
 Vcs-Browser: http://anonscm.debian.org/viewvc/pkg-gnome/desktop/unstable/gnome-online-accounts/
-Homepage: https://live.gnome.org/OnlineAccounts
+Homepage: https://wiki.gnome.org/GnomeOnlineAccounts
 
 Package: gnome-online-accounts
 Architecture: any

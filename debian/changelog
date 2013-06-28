@@ -1,3 +1,9 @@
+gnome-online-accounts (3.8.2-2) UNRELEASED; urgency=low
+
+  * Update homepage
+
+ -- Jeremy Bicha <jbicha@ubuntu.com>  Fri, 28 Jun 2013 18:32:04 -0400
+
 gnome-online-accounts (3.8.2-1) unstable; urgency=low
 
   [ Thomas Bechtold ]
