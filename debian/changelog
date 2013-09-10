@@ -5,6 +5,8 @@ gnome-online-accounts (3.8.3-1) UNRELEASED; urgency=low
 
   [ Michael Biebl ]
   * New upstream release.
+  * Move typelib files to /usr/lib/girepository-1.0/. Upstream now uses
+    $libdir and g-i isn't multi-arch aware yet.
 
  -- Jeremy Bicha <jbicha@ubuntu.com>  Fri, 28 Jun 2013 18:32:04 -0400
 
