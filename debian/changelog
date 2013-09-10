@@ -1,4 +1,4 @@
-gnome-online-accounts (3.8.3-1) UNRELEASED; urgency=low
+gnome-online-accounts (3.8.3-1) unstable; urgency=low
 
   [ Jeremy Bicha ]
   * Update homepage
@@ -8,7 +8,7 @@ gnome-online-accounts (3.8.3-1) UNRELEASED; urgency=low
   * Move typelib files to /usr/lib/girepository-1.0/. Upstream now uses
     $libdir and g-i isn't multi-arch aware yet.
 
- -- Jeremy Bicha <jbicha@ubuntu.com>  Fri, 28 Jun 2013 18:32:04 -0400
+ -- Michael Biebl <biebl@debian.org>  Tue, 10 Sep 2013 19:48:09 +0200
 
 gnome-online-accounts (3.8.2-1) unstable; urgency=low
 
