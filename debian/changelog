@@ -1,5 +1,6 @@
-gnome-online-accounts (3.8.3-2) UNRELEASED; urgency=low
+gnome-online-accounts (3.8.3-2) unstable; urgency=low
 
+  [ Jeremy Bicha ]
   * debian/patches/drop-google-password-interface*.patch:
     - Now that Google CalDav supports OAuth v2 for CalDav and
       evolution-data-server has been updated for it, drop the
@@ -8,7 +9,7 @@ gnome-online-accounts (3.8.3-2) UNRELEASED; urgency=low
   * debian/patches/revert-deadlock-fix.patch:
     - Backport revert of 3.8.3 commit that could cause 100% cpu use
 
- -- Jeremy Bicha <jbicha@ubuntu.com>  Thu, 19 Sep 2013 12:11:59 -0400
+ -- Michael Biebl <biebl@debian.org>  Thu, 19 Sep 2013 18:58:06 +0200
 
 gnome-online-accounts (3.8.3-1) unstable; urgency=low
 
