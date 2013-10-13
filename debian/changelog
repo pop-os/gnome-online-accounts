@@ -1,4 +1,29 @@
-gnome-online-accounts (3.8.2-1) UNRELEASED; urgency=low
+gnome-online-accounts (3.8.3-2) unstable; urgency=low
+
+  [ Jeremy Bicha ]
+  * debian/patches/drop-google-password-interface*.patch:
+    - Now that Google CalDav supports OAuth v2 for CalDav and
+      evolution-data-server has been updated for it, drop the
+      password-based UI that didn't work with Google Two-Factor
+      Authentication anyway (patches backported from git)
+  * debian/patches/revert-deadlock-fix.patch:
+    - Backport revert of 3.8.3 commit that could cause 100% cpu use
+
+ -- Michael Biebl <biebl@debian.org>  Thu, 19 Sep 2013 18:58:06 +0200
+
+gnome-online-accounts (3.8.3-1) unstable; urgency=low
+
+  [ Jeremy Bicha ]
+  * Update homepage
+
+  [ Michael Biebl ]
+  * New upstream release.
+  * Move typelib files to /usr/lib/girepository-1.0/. Upstream now uses
+    $libdir and g-i isn't multi-arch aware yet.
+
+ -- Michael Biebl <biebl@debian.org>  Tue, 10 Sep 2013 19:48:09 +0200
+
+gnome-online-accounts (3.8.2-1) unstable; urgency=low
 
   [ Thomas Bechtold ]
   * New upstream release.
@@ -15,7 +40,10 @@ gnome-online-accounts (3.8.2-1) UNRELEASED; urgency=low
   * debian/control.in: Add Breaks/Replaces for above change. This is only
     needed for users of experimental though.
 
- -- Thomas Bechtold <thomasbechtold@jpberlin.de>  Tue, 14 May 2013 14:48:34 +0200
+  [ Michael Biebl ]
+  * Upload to unstable.
+
+ -- Michael Biebl <biebl@debian.org>  Fri, 24 May 2013 17:59:18 +0200
 
 gnome-online-accounts (3.8.1-1) experimental; urgency=low
 
