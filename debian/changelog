@@ -1,3 +1,25 @@
+gnome-online-accounts (3.10.0-1) UNRELEASED; urgency=low
+
+  * Sync changes from Ubuntu Gnome3 Staging PPA (3.10.0-0ubuntu1~saucy1)
+    - undocumented change included: fix Vcs-Svn url.
+
+  [ Rico Tzschichholz ]
+  * New upstream release
+
+  [ Tim Lunn ]
+  * New upstream release
+  * debian/control.in: Bump b-d on webkitgtk 2.1.90
+  * debian/control.in: Add b-d on libdbus-glib-1-dev and libtelepathy-glib-dev
+  * debian/gir1.2-goa-1.0.install: install typelib into correct location.
+  * debian/patches: drop
+
+  [ Andreas Henriksson ]
+  * Bump glib build-dependency to >= 2.38 (uses G_ADD_PRIVATE)
+  * Update debian/libgoa-1.0-0.symbols
+    - libgoa-backend-1.0 bumped SONAME (0->1)
+
+ -- Andreas Henriksson <andreas@fatal.se>  Sun, 13 Oct 2013 23:54:14 +0200
+
 gnome-online-accounts (3.8.3-2) unstable; urgency=low
 
   [ Jeremy Bicha ]
