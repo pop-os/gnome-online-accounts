@@ -38,19 +38,21 @@ Package: gnome-online-accounts
 Architecture: any
 Depends: ${shlibs:Depends},
          ${misc:Depends},
-         libgoa-1.0-0 (= ${binary:Version})
+         libgoa-1.0-0b (= ${binary:Version})
 Recommends: gnome-control-center (>= 3.6.1)
 Description: GNOME Online Accounts
  This package contains the GNOME Online Accounts service, which provides a
  centralized place for managing online accounts (Google, etc) for the
  GNOME desktop.
 
-Package: libgoa-1.0-0
+Package: libgoa-1.0-0b
 Architecture: any
 Section: libs
 Depends: ${shlibs:Depends},
          ${misc:Depends},
          libgoa-1.0-common (= ${source:Version})
+Breaks: libgoa-1.0-0 (<< 3.10.0-1)
+Replaces: libgoa-1.0-0 (<< 3.10.0-1)
 Pre-Depends: ${misc:Pre-Depends}
 Multi-Arch: same
 Description: library for GNOME Online Accounts
@@ -64,13 +66,49 @@ Package: libgoa-1.0-dev
 Architecture: any
 Section: libdevel
 Depends: ${misc:Depends},
-         libgoa-1.0-0 (= ${binary:Version}),
+         libgoa-1.0-0b (= ${binary:Version}),
+         libgoa-backend-1.0-dev,
          libglib2.0-dev,
          libgtk-3-dev,
          librest-dev,
          gir1.2-goa-1.0 (= ${binary:Version})
 Suggests: libgoa-1.0-doc
 Description: library for GNOME Online Accounts - development files
+ This package contains the GNOME Online Accounts service, which provides a
+ centralized place for managing online accounts (Google, etc) for the
+ GNOME desktop.
+ .
+ This package contains the files needed to build applications that access
+ the service.
+
+Package: libgoa-backend-1.0-1
+Architecture: any
+Section: libs
+Depends: ${shlibs:Depends},
+         ${misc:Depends},
+         libgoa-1.0-common (= ${source:Version})
+Pre-Depends: ${misc:Pre-Depends}
+Multi-Arch: same
+Description: backend library for GNOME Online Accounts
+ This package contains the GNOME Online Accounts service, which provides a
+ centralized place for managing online accounts (Google, etc) for the
+ GNOME desktop.
+ .
+ This package contains the backend libraries used by GOA applications.
+
+Package: libgoa-backend-1.0-dev
+Architecture: any
+Section: libdevel
+Depends: ${misc:Depends},
+         libgoa-backend-1.0-1 (= ${binary:Version}),
+         libglib2.0-dev,
+         libgtk-3-dev,
+         librest-dev,
+         gir1.2-goa-1.0 (= ${binary:Version})
+Conflicts: libgoa-1.0-dev (<< 3.10.0-1)
+Replaces: libgoa-1.0-dev (<< 3.10.0-1)
+Suggests: libgoa-1.0-doc
+Description: backend library for GNOME Online Accounts - development files
  This package contains the GNOME Online Accounts service, which provides a
  centralized place for managing online accounts (Google, etc) for the
  GNOME desktop.
