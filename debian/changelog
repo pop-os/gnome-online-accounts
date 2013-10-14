@@ -15,8 +15,13 @@ gnome-online-accounts (3.10.0-1) UNRELEASED; urgency=low
 
   [ Andreas Henriksson ]
   * Bump glib build-dependency to >= 2.38 (uses G_ADD_PRIVATE)
-  * Update debian/libgoa-1.0-0.symbols
-    - libgoa-backend-1.0 bumped SONAME (0->1)
+  * Split goa-backend into separate packages.
+  * Make libgoa-1.0-dev depend on libgoa-backend-1.0-dev
+    - simply to avoid causing build failures for existing packages
+  * Make libgoa-backend-1.0-dev c/replace older versions of libgoa-1.0-dev
+  * Rename libgoa-1.0-0 to libgoa-1.0-0b to avoid upgrade issues
+    - libgoa-1.0-0b breaks/replaces libgoa-1.0-0
+  * Install irc-networks.xml in libgoa-1.0-common
 
  -- Andreas Henriksson <andreas@fatal.se>  Sun, 13 Oct 2013 23:54:14 +0200
 
