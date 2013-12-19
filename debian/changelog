@@ -1,3 +1,27 @@
+gnome-online-accounts (3.10.2-1) UNRELEASED; urgency=medium
+
+  * Sync from Ubuntu: Use Conflicts/Replaces for libgoa-1.0-0; we want to make
+    sure this package is really gone.
+  * New upstream bugfix release:
+    - telepathy: Choose better icons
+    - Adapt to changes in the redirect URI used by Facebook
+    - live: Does not update MailEnabled
+    - kerberos: don't crash if keyring credentials disappear
+    - kerberos: Leaking timerfds when we fall back to polling the ccache
+    - Support kernel keyring based Kerberos accounts
+    - Support Windows Live mail
+    - Adding Google or Facebook accounts adds a second Jabber account
+    - oauth2: Propagate the error if the dialog is dismissed during refresh
+    - kerberos: still consuming 100% CPU
+    - identity: don't queue two temporary accounts for one identity
+    - oauth2: Don't parse the DOM to detect access_denied
+    - goaalarm: add locks when setting up timers
+    - kerberos: correctly show sign in errors when mistyping password
+  * debian/libgoa-backend-1.0-1.symbols:
+    - Updated
+
+ -- Iain Lane <laney@debian.org>  Thu, 19 Dec 2013 11:12:11 +0000
+
 gnome-online-accounts (3.10.0-2) experimental; urgency=low
 
   * Drop debian version from breaks
