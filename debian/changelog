@@ -1,3 +1,17 @@
+gnome-online-accounts (3.11.90-1) experimental; urgency=medium
+
+  * New upstream release.
+  * Bump gtk+ build-dependency to 3.11.1 according to configure.ac
+  * Update debian/libgoa-backend-1.0-1.symbols:
+    - multiple symbols missing, but codesearch.debian.net didn't
+      find any users outside of goa so hope we're all ok.
+    - a few new symbols added.
+  * Update debian/libgoa-1.0-0b.symbols with new symbols.
+  * debian/rules: make dh_makeshlibs fail the build when we have
+    symbols mismatch (by adding -c4).
+
+ -- Andreas Henriksson <andreas@fatal.se>  Tue, 18 Feb 2014 21:42:07 +0100
+
 gnome-online-accounts (3.10.2-1) experimental; urgency=medium
 
   * Sync from Ubuntu: Use Conflicts/Replaces for libgoa-1.0-0; we want to make

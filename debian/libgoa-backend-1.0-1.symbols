@@ -1,14 +1,14 @@
 libgoa-backend-1.0.so.1 libgoa-backend-1.0-1 #MINVER#
- goa_editable_label_get_editable@Base 3.10.0
- goa_editable_label_get_scale@Base 3.10.0
- goa_editable_label_get_text@Base 3.10.0
- goa_editable_label_get_type@Base 3.10.0
- goa_editable_label_get_weight@Base 3.10.0
- goa_editable_label_new@Base 3.10.0
- goa_editable_label_set_editable@Base 3.10.0
- goa_editable_label_set_scale@Base 3.10.0
- goa_editable_label_set_text@Base 3.10.0
- goa_editable_label_set_weight@Base 3.10.0
+#MISSING: 3.11.90# goa_editable_label_get_editable@Base 3.10.0
+#MISSING: 3.11.90# goa_editable_label_get_scale@Base 3.10.0
+#MISSING: 3.11.90# goa_editable_label_get_text@Base 3.10.0
+#MISSING: 3.11.90# goa_editable_label_get_type@Base 3.10.0
+#MISSING: 3.11.90# goa_editable_label_get_weight@Base 3.10.0
+#MISSING: 3.11.90# goa_editable_label_new@Base 3.10.0
+#MISSING: 3.11.90# goa_editable_label_set_editable@Base 3.10.0
+#MISSING: 3.11.90# goa_editable_label_set_scale@Base 3.10.0
+#MISSING: 3.11.90# goa_editable_label_set_text@Base 3.10.0
+#MISSING: 3.11.90# goa_editable_label_set_weight@Base 3.10.0
  goa_ews_client_autodiscover@Base 3.10.0
  goa_ews_client_autodiscover_finish@Base 3.10.0
  goa_ews_client_autodiscover_sync@Base 3.10.0
@@ -89,8 +89,8 @@ libgoa-backend-1.0.so.1 libgoa-backend-1.0-1 #MINVER#
  goa_imap_auth_login_new@Base 3.10.0
  goa_imap_smtp_provider_get_type@Base 3.10.0
  goa_kerberos_provider_get_type@Base 3.10.0
- goa_log@Base 3.10.0
- goa_log_init@Base 3.10.0
+#MISSING: 3.11.90# goa_log@Base 3.10.0
+#MISSING: 3.11.90# goa_log_init@Base 3.10.0
  goa_mail_auth_get_input@Base 3.10.0
  goa_mail_auth_get_output@Base 3.10.0
  goa_mail_auth_get_type@Base 3.10.0
@@ -125,6 +125,7 @@ libgoa-backend-1.0.so.1 libgoa-backend-1.0-1 #MINVER#
  goa_oauth2_provider_is_deny_node@Base 3.10.0
  goa_oauth2_provider_is_identity_node@Base 3.10.0
  goa_oauth2_provider_is_password_node@Base 3.10.0
+ goa_oauth2_provider_process_redirect_url@Base 3.11.90
  goa_oauth_provider_add_account_key_values@Base 3.10.0
  goa_oauth_provider_build_authorization_uri@Base 3.10.0
  goa_oauth_provider_get_access_token_sync@Base 3.10.0
@@ -145,6 +146,7 @@ libgoa-backend-1.0.so.1 libgoa-backend-1.0-1 #MINVER#
  goa_oauth_provider_is_password_node@Base 3.10.0
  goa_oauth_provider_parse_request_token_error@Base 3.10.0
  goa_owncloud_provider_get_type@Base 3.10.0
+ goa_pocket_provider_get_type@Base 3.11.90
  goa_provider_add_account@Base 3.10.0
  goa_provider_build_object@Base 3.10.0
  goa_provider_ensure_credentials@Base 3.10.0
@@ -337,13 +339,17 @@ libgoa-backend-1.0.so.1 libgoa-backend-1.0-1 #MINVER#
  goa_realm_service_proxy_new_sync@Base 3.10.0
  goa_realm_service_skeleton_get_type@Base 3.10.0
  goa_realm_service_skeleton_new@Base 3.10.0
- goa_smtp_auth_plain_get_type@Base 3.10.0
- goa_smtp_auth_plain_new@Base 3.10.0
- goa_spinner_button_get_type@Base 3.10.0
- goa_spinner_button_new_from_stock@Base 3.10.0
- goa_spinner_button_set_label@Base 3.10.0
- goa_spinner_button_start@Base 3.10.0
- goa_spinner_button_stop@Base 3.10.0
+ goa_smtp_auth_get_type@Base 3.11.90
+ goa_smtp_auth_is_login@Base 3.11.90
+ goa_smtp_auth_is_plain@Base 3.11.90
+ goa_smtp_auth_new@Base 3.11.90
+#MISSING: 3.11.90# goa_smtp_auth_plain_get_type@Base 3.10.0
+#MISSING: 3.11.90# goa_smtp_auth_plain_new@Base 3.10.0
+#MISSING: 3.11.90# goa_spinner_button_get_type@Base 3.10.0
+#MISSING: 3.11.90# goa_spinner_button_new_from_stock@Base 3.10.0
+#MISSING: 3.11.90# goa_spinner_button_set_label@Base 3.10.0
+#MISSING: 3.11.90# goa_spinner_button_start@Base 3.10.0
+#MISSING: 3.11.90# goa_spinner_button_stop@Base 3.10.0
  goa_telepathy_factory_get_type@Base 3.10.0
  goa_telepathy_provider_get_type@Base 3.10.0
  goa_telepathy_provider_new_from_protocol@Base 3.10.0

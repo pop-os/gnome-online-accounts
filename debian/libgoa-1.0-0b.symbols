@@ -25,9 +25,11 @@ libgoa-1.0.so.0 libgoa-1.0-0b #MINVER#
  goa_account_get_mail_disabled@Base 3.5.1
  goa_account_get_photos_disabled@Base 3.7.90
  goa_account_get_presentation_identity@Base 3.1.1
+ goa_account_get_printers_disabled@Base 3.11.90
  goa_account_get_provider_icon@Base 3.1.1
  goa_account_get_provider_name@Base 3.1.1
  goa_account_get_provider_type@Base 3.1.1
+ goa_account_get_read_later_disabled@Base 3.11.90
  goa_account_get_ticketing_disabled@Base 3.5.90
  goa_account_get_type@Base 3.1.1
  goa_account_interface_info@Base 3.1.1
@@ -51,9 +53,11 @@ libgoa-1.0.so.0 libgoa-1.0-0b #MINVER#
  goa_account_set_mail_disabled@Base 3.5.1
  goa_account_set_photos_disabled@Base 3.7.90
  goa_account_set_presentation_identity@Base 3.1.1
+ goa_account_set_printers_disabled@Base 3.11.90
  goa_account_set_provider_icon@Base 3.1.1
  goa_account_set_provider_name@Base 3.1.1
  goa_account_set_provider_type@Base 3.1.1
+ goa_account_set_read_later_disabled@Base 3.11.90
  goa_account_set_ticketing_disabled@Base 3.5.90
  goa_account_skeleton_get_type@Base 3.1.1
  goa_account_skeleton_new@Base 3.1.1
@@ -175,6 +179,9 @@ libgoa-1.0.so.0 libgoa-1.0-0b #MINVER#
  goa_mail_get_imap_user_name@Base 3.1.1
  goa_mail_get_name@Base 3.7.90
  goa_mail_get_smtp_accept_ssl_errors@Base 3.7.90
+ goa_mail_get_smtp_auth_login@Base 3.11.90
+ goa_mail_get_smtp_auth_plain@Base 3.11.90
+ goa_mail_get_smtp_auth_xoauth2@Base 3.11.90
  goa_mail_get_smtp_host@Base 3.1.1
  goa_mail_get_smtp_supported@Base 3.1.1
  goa_mail_get_smtp_use_auth@Base 3.7.91
@@ -200,6 +207,9 @@ libgoa-1.0.so.0 libgoa-1.0-0b #MINVER#
  goa_mail_set_imap_user_name@Base 3.1.1
  goa_mail_set_name@Base 3.7.90
  goa_mail_set_smtp_accept_ssl_errors@Base 3.7.90
+ goa_mail_set_smtp_auth_login@Base 3.11.90
+ goa_mail_set_smtp_auth_plain@Base 3.11.90
+ goa_mail_set_smtp_auth_xoauth2@Base 3.11.90
  goa_mail_set_smtp_host@Base 3.1.1
  goa_mail_set_smtp_supported@Base 3.1.1
  goa_mail_set_smtp_use_auth@Base 3.7.91
@@ -284,6 +294,8 @@ libgoa-1.0.so.0 libgoa-1.0-0b #MINVER#
  goa_object_get_oauth_based@Base 3.1.1
  goa_object_get_password_based@Base 3.5.1
  goa_object_get_photos@Base 3.7.90
+ goa_object_get_printers@Base 3.11.90
+ goa_object_get_read_later@Base 3.11.90
  goa_object_get_ticketing@Base 3.5.90
  goa_object_get_type@Base 3.1.1
  goa_object_manager_client_get_proxy_type@Base 3.1.1
@@ -307,6 +319,8 @@ libgoa-1.0.so.0 libgoa-1.0-0b #MINVER#
  goa_object_peek_oauth_based@Base 3.1.1
  goa_object_peek_password_based@Base 3.5.1
  goa_object_peek_photos@Base 3.7.90
+ goa_object_peek_printers@Base 3.11.90
+ goa_object_peek_read_later@Base 3.11.90
  goa_object_peek_ticketing@Base 3.5.90
  goa_object_proxy_get_type@Base 3.1.1
  goa_object_proxy_new@Base 3.1.1
@@ -325,6 +339,8 @@ libgoa-1.0.so.0 libgoa-1.0-0b #MINVER#
  goa_object_skeleton_set_oauth_based@Base 3.1.1
  goa_object_skeleton_set_password_based@Base 3.5.1
  goa_object_skeleton_set_photos@Base 3.7.90
+ goa_object_skeleton_set_printers@Base 3.11.90
+ goa_object_skeleton_set_read_later@Base 3.11.90
  goa_object_skeleton_set_ticketing@Base 3.5.90
  goa_password_based_call_get_password@Base 3.5.1
  goa_password_based_call_get_password_finish@Base 3.5.1
@@ -354,6 +370,30 @@ libgoa-1.0.so.0 libgoa-1.0-0b #MINVER#
  goa_photos_proxy_new_sync@Base 3.7.90
  goa_photos_skeleton_get_type@Base 3.7.90
  goa_photos_skeleton_new@Base 3.7.90
+ goa_printers_get_type@Base 3.11.90
+ goa_printers_interface_info@Base 3.11.90
+ goa_printers_override_properties@Base 3.11.90
+ goa_printers_proxy_get_type@Base 3.11.90
+ goa_printers_proxy_new@Base 3.11.90
+ goa_printers_proxy_new_finish@Base 3.11.90
+ goa_printers_proxy_new_for_bus@Base 3.11.90
+ goa_printers_proxy_new_for_bus_finish@Base 3.11.90
+ goa_printers_proxy_new_for_bus_sync@Base 3.11.90
+ goa_printers_proxy_new_sync@Base 3.11.90
+ goa_printers_skeleton_get_type@Base 3.11.90
+ goa_printers_skeleton_new@Base 3.11.90
+ goa_read_later_get_type@Base 3.11.90
+ goa_read_later_interface_info@Base 3.11.90
+ goa_read_later_override_properties@Base 3.11.90
+ goa_read_later_proxy_get_type@Base 3.11.90
+ goa_read_later_proxy_new@Base 3.11.90
+ goa_read_later_proxy_new_finish@Base 3.11.90
+ goa_read_later_proxy_new_for_bus@Base 3.11.90
+ goa_read_later_proxy_new_for_bus_finish@Base 3.11.90
+ goa_read_later_proxy_new_for_bus_sync@Base 3.11.90
+ goa_read_later_proxy_new_sync@Base 3.11.90
+ goa_read_later_skeleton_get_type@Base 3.11.90
+ goa_read_later_skeleton_new@Base 3.11.90
  goa_ticketing_call_get_ticket@Base 3.5.90
  goa_ticketing_call_get_ticket_finish@Base 3.5.90
  goa_ticketing_call_get_ticket_sync@Base 3.5.90
