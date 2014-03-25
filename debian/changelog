@@ -1,3 +1,12 @@
+gnome-online-accounts (3.12.0-1) experimental; urgency=medium
+
+  * New upstream release.
+  * Update debian/libgoa-backend-1.0-1.symbols for twitter backend removal.
+    - twitter backend removed upstream. Symbol was only ever in a
+      development release in debian experimental. No known users anywhere.
+
+ -- Andreas Henriksson <andreas@fatal.se>  Tue, 25 Mar 2014 21:38:44 +0100
+
 gnome-online-accounts (3.11.90-1) experimental; urgency=medium
 
   * New upstream release.

@@ -1,14 +1,4 @@
 libgoa-backend-1.0.so.1 libgoa-backend-1.0-1 #MINVER#
-#MISSING: 3.11.90# goa_editable_label_get_editable@Base 3.10.0
-#MISSING: 3.11.90# goa_editable_label_get_scale@Base 3.10.0
-#MISSING: 3.11.90# goa_editable_label_get_text@Base 3.10.0
-#MISSING: 3.11.90# goa_editable_label_get_type@Base 3.10.0
-#MISSING: 3.11.90# goa_editable_label_get_weight@Base 3.10.0
-#MISSING: 3.11.90# goa_editable_label_new@Base 3.10.0
-#MISSING: 3.11.90# goa_editable_label_set_editable@Base 3.10.0
-#MISSING: 3.11.90# goa_editable_label_set_scale@Base 3.10.0
-#MISSING: 3.11.90# goa_editable_label_set_text@Base 3.10.0
-#MISSING: 3.11.90# goa_editable_label_set_weight@Base 3.10.0
  goa_ews_client_autodiscover@Base 3.10.0
  goa_ews_client_autodiscover_finish@Base 3.10.0
  goa_ews_client_autodiscover_sync@Base 3.10.0
@@ -89,8 +79,6 @@ libgoa-backend-1.0.so.1 libgoa-backend-1.0-1 #MINVER#
  goa_imap_auth_login_new@Base 3.10.0
  goa_imap_smtp_provider_get_type@Base 3.10.0
  goa_kerberos_provider_get_type@Base 3.10.0
-#MISSING: 3.11.90# goa_log@Base 3.10.0
-#MISSING: 3.11.90# goa_log_init@Base 3.10.0
  goa_mail_auth_get_input@Base 3.10.0
  goa_mail_auth_get_output@Base 3.10.0
  goa_mail_auth_get_type@Base 3.10.0
@@ -343,18 +331,10 @@ libgoa-backend-1.0.so.1 libgoa-backend-1.0-1 #MINVER#
  goa_smtp_auth_is_login@Base 3.11.90
  goa_smtp_auth_is_plain@Base 3.11.90
  goa_smtp_auth_new@Base 3.11.90
-#MISSING: 3.11.90# goa_smtp_auth_plain_get_type@Base 3.10.0
-#MISSING: 3.11.90# goa_smtp_auth_plain_new@Base 3.10.0
-#MISSING: 3.11.90# goa_spinner_button_get_type@Base 3.10.0
-#MISSING: 3.11.90# goa_spinner_button_new_from_stock@Base 3.10.0
-#MISSING: 3.11.90# goa_spinner_button_set_label@Base 3.10.0
-#MISSING: 3.11.90# goa_spinner_button_start@Base 3.10.0
-#MISSING: 3.11.90# goa_spinner_button_stop@Base 3.10.0
  goa_telepathy_factory_get_type@Base 3.10.0
  goa_telepathy_provider_get_type@Base 3.10.0
  goa_telepathy_provider_new_from_protocol@Base 3.10.0
  goa_telepathy_provider_new_from_protocol_name@Base 3.10.0
- goa_twitter_provider_get_type@Base 3.10.0
  goa_util_account_notify_property_cb@Base 3.10.0
  goa_util_add_account_info@Base 3.10.0
  goa_util_add_row_switch_from_keyfile_with_blurb@Base 3.10.0
