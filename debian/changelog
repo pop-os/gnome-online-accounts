@@ -1,3 +1,9 @@
+gnome-online-accounts (3.12.1-1) UNRELEASED; urgency=medium
+
+  * New upstream release.
+
+ -- Emilio Pozuelo Monfort <pochu@debian.org>  Sat, 26 Apr 2014 11:28:56 +0200
+
 gnome-online-accounts (3.12.0-1) experimental; urgency=medium
 
   * New upstream release.
