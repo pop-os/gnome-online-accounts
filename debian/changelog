@@ -1,3 +1,83 @@
+gnome-online-accounts (3.12.0-1) experimental; urgency=medium
+
+  * New upstream release.
+  * Update debian/libgoa-backend-1.0-1.symbols for twitter backend removal.
+    - twitter backend removed upstream. Symbol was only ever in a
+      development release in debian experimental. No known users anywhere.
+
+ -- Andreas Henriksson <andreas@fatal.se>  Tue, 25 Mar 2014 21:38:44 +0100
+
+gnome-online-accounts (3.11.90-1) experimental; urgency=medium
+
+  * New upstream release.
+  * Bump gtk+ build-dependency to 3.11.1 according to configure.ac
+  * Update debian/libgoa-backend-1.0-1.symbols:
+    - multiple symbols missing, but codesearch.debian.net didn't
+      find any users outside of goa so hope we're all ok.
+    - a few new symbols added.
+  * Update debian/libgoa-1.0-0b.symbols with new symbols.
+  * debian/rules: make dh_makeshlibs fail the build when we have
+    symbols mismatch (by adding -c4).
+
+ -- Andreas Henriksson <andreas@fatal.se>  Tue, 18 Feb 2014 21:42:07 +0100
+
+gnome-online-accounts (3.10.2-1) experimental; urgency=medium
+
+  * Sync from Ubuntu: Use Conflicts/Replaces for libgoa-1.0-0; we want to make
+    sure this package is really gone.
+  * New upstream bugfix release:
+    - telepathy: Choose better icons
+    - Adapt to changes in the redirect URI used by Facebook
+    - live: Does not update MailEnabled
+    - kerberos: don't crash if keyring credentials disappear
+    - kerberos: Leaking timerfds when we fall back to polling the ccache
+    - Support kernel keyring based Kerberos accounts
+    - Support Windows Live mail
+    - Adding Google or Facebook accounts adds a second Jabber account
+    - oauth2: Propagate the error if the dialog is dismissed during refresh
+    - kerberos: still consuming 100% CPU
+    - identity: don't queue two temporary accounts for one identity
+    - oauth2: Don't parse the DOM to detect access_denied
+    - goaalarm: add locks when setting up timers
+    - kerberos: correctly show sign in errors when mistyping password
+  * debian/libgoa-backend-1.0-1.symbols:
+    - Updated
+
+ -- Iain Lane <laney@debian.org>  Mon, 06 Jan 2014 11:39:44 +0000
+
+gnome-online-accounts (3.10.0-2) experimental; urgency=low
+
+  * Drop debian version from breaks
+
+ -- Sjoerd Simons <sjoerd@debian.org>  Sat, 02 Nov 2013 22:07:53 +0100
+
+gnome-online-accounts (3.10.0-1) experimental; urgency=low
+
+  * Sync changes from Ubuntu Gnome3 Staging PPA (3.10.0-0ubuntu1~saucy1)
+    - undocumented change included: fix Vcs-Svn url.
+
+  [ Rico Tzschichholz ]
+  * New upstream release
+
+  [ Tim Lunn ]
+  * New upstream release
+  * debian/control.in: Bump b-d on webkitgtk 2.1.90
+  * debian/control.in: Add b-d on libdbus-glib-1-dev and libtelepathy-glib-dev
+  * debian/gir1.2-goa-1.0.install: install typelib into correct location.
+  * debian/patches: drop
+
+  [ Andreas Henriksson ]
+  * Bump glib build-dependency to >= 2.38 (uses G_ADD_PRIVATE)
+  * Split goa-backend into separate packages.
+  * Make libgoa-1.0-dev depend on libgoa-backend-1.0-dev
+    - simply to avoid causing build failures for existing packages
+  * Make libgoa-backend-1.0-dev c/replace older versions of libgoa-1.0-dev
+  * Rename libgoa-1.0-0 to libgoa-1.0-0b to avoid upgrade issues
+    - libgoa-1.0-0b breaks/replaces libgoa-1.0-0
+  * Install irc-networks.xml in libgoa-1.0-common
+
+ -- Sjoerd Simons <sjoerd@debian.org>  Fri, 01 Nov 2013 23:12:47 +0100
+
 gnome-online-accounts (3.8.3-2) unstable; urgency=low
 
   [ Jeremy Bicha ]
