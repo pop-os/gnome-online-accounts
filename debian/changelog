@@ -1,3 +1,9 @@
+gnome-online-accounts (3.12.1-2) UNRELEASED; urgency=medium
+
+  * debian/control.in: Recommends realmd package
+
+ -- Laurent Bigonville <bigon@debian.org>  Sun, 04 May 2014 16:39:55 +0200
+
 gnome-online-accounts (3.12.1-1) unstable; urgency=medium
 
   * New upstream release.

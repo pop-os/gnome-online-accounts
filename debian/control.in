@@ -34,7 +34,7 @@ Architecture: any
 Depends: ${shlibs:Depends},
          ${misc:Depends},
          libgoa-1.0-0b (= ${binary:Version})
-Recommends: gnome-control-center (>= 3.6.1)
+Recommends: gnome-control-center (>= 3.6.1), realmd
 Description: GNOME Online Accounts
  This package contains the GNOME Online Accounts service, which provides a
  centralized place for managing online accounts (Google, etc) for the
