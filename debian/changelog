@@ -1,3 +1,9 @@
+gnome-online-accounts (3.12.4-1) UNRELEASED; urgency=medium
+
+  * New upstream release
+
+ -- Jackson Doak <noskcaj@ubuntu.com>  Sun, 20 Jul 2014 06:43:50 +1000
+
 gnome-online-accounts (3.12.2-1) unstable; urgency=medium
 
   [ Laurent Bigonville ]
