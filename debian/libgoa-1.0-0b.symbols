@@ -23,6 +23,7 @@ libgoa-1.0.so.0 libgoa-1.0-0b #MINVER#
  goa_account_get_identity@Base 3.1.1
  goa_account_get_is_temporary@Base 3.5.90
  goa_account_get_mail_disabled@Base 3.5.1
+ goa_account_get_maps_disabled@Base 3.13.90
  goa_account_get_photos_disabled@Base 3.7.90
  goa_account_get_presentation_identity@Base 3.1.1
  goa_account_get_printers_disabled@Base 3.11.90
@@ -51,6 +52,7 @@ libgoa-1.0.so.0 libgoa-1.0-0b #MINVER#
  goa_account_set_identity@Base 3.1.1
  goa_account_set_is_temporary@Base 3.5.90
  goa_account_set_mail_disabled@Base 3.5.1
+ goa_account_set_maps_disabled@Base 3.13.90
  goa_account_set_photos_disabled@Base 3.7.90
  goa_account_set_presentation_identity@Base 3.1.1
  goa_account_set_printers_disabled@Base 3.11.90
@@ -235,6 +237,35 @@ libgoa-1.0.so.0 libgoa-1.0-0b #MINVER#
  goa_manager_proxy_new_sync@Base 3.1.1
  goa_manager_skeleton_get_type@Base 3.1.1
  goa_manager_skeleton_new@Base 3.1.1
+ goa_maps_get_type@Base 3.13.90
+ goa_maps_interface_info@Base 3.13.90
+ goa_maps_override_properties@Base 3.13.90
+ goa_maps_proxy_get_type@Base 3.13.90
+ goa_maps_proxy_new@Base 3.13.90
+ goa_maps_proxy_new_finish@Base 3.13.90
+ goa_maps_proxy_new_for_bus@Base 3.13.90
+ goa_maps_proxy_new_for_bus_finish@Base 3.13.90
+ goa_maps_proxy_new_for_bus_sync@Base 3.13.90
+ goa_maps_proxy_new_sync@Base 3.13.90
+ goa_maps_skeleton_get_type@Base 3.13.90
+ goa_maps_skeleton_new@Base 3.13.90
+ goa_media_server_dup_udn@Base 3.13.90
+ goa_media_server_get_dlna_supported@Base 3.13.90
+ goa_media_server_get_type@Base 3.13.90
+ goa_media_server_get_udn@Base 3.13.90
+ goa_media_server_interface_info@Base 3.13.90
+ goa_media_server_override_properties@Base 3.13.90
+ goa_media_server_proxy_get_type@Base 3.13.90
+ goa_media_server_proxy_new@Base 3.13.90
+ goa_media_server_proxy_new_finish@Base 3.13.90
+ goa_media_server_proxy_new_for_bus@Base 3.13.90
+ goa_media_server_proxy_new_for_bus_finish@Base 3.13.90
+ goa_media_server_proxy_new_for_bus_sync@Base 3.13.90
+ goa_media_server_proxy_new_sync@Base 3.13.90
+ goa_media_server_set_dlna_supported@Base 3.13.90
+ goa_media_server_set_udn@Base 3.13.90
+ goa_media_server_skeleton_get_type@Base 3.13.90
+ goa_media_server_skeleton_new@Base 3.13.90
  goa_micro_version@Base 3.7.90
  goa_minor_version@Base 3.7.90
  goa_oauth2_based_call_get_access_token@Base 3.1.1
@@ -290,6 +321,8 @@ libgoa-1.0.so.0 libgoa-1.0-0b #MINVER#
  goa_object_get_files@Base 3.7.90
  goa_object_get_mail@Base 3.1.1
  goa_object_get_manager@Base 3.1.1
+ goa_object_get_maps@Base 3.13.90
+ goa_object_get_media_server@Base 3.13.90
  goa_object_get_oauth2_based@Base 3.1.1
  goa_object_get_oauth_based@Base 3.1.1
  goa_object_get_password_based@Base 3.5.1
@@ -315,6 +348,8 @@ libgoa-1.0.so.0 libgoa-1.0-0b #MINVER#
  goa_object_peek_files@Base 3.7.90
  goa_object_peek_mail@Base 3.1.1
  goa_object_peek_manager@Base 3.1.1
+ goa_object_peek_maps@Base 3.13.90
+ goa_object_peek_media_server@Base 3.13.90
  goa_object_peek_oauth2_based@Base 3.1.1
  goa_object_peek_oauth_based@Base 3.1.1
  goa_object_peek_password_based@Base 3.5.1
@@ -335,6 +370,8 @@ libgoa-1.0.so.0 libgoa-1.0-0b #MINVER#
  goa_object_skeleton_set_files@Base 3.7.90
  goa_object_skeleton_set_mail@Base 3.1.1
  goa_object_skeleton_set_manager@Base 3.1.1
+ goa_object_skeleton_set_maps@Base 3.13.90
+ goa_object_skeleton_set_media_server@Base 3.13.90
  goa_object_skeleton_set_oauth2_based@Base 3.1.1
  goa_object_skeleton_set_oauth_based@Base 3.1.1
  goa_object_skeleton_set_password_based@Base 3.5.1
