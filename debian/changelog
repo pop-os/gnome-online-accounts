@@ -1,3 +1,31 @@
+gnome-online-accounts (3.12.4-1) unstable; urgency=medium
+
+  * Team upload.
+
+  [ Jackson Doak ]
+  * New upstream release
+
+ -- Andreas Henriksson <andreas@fatal.se>  Thu, 31 Jul 2014 20:54:38 +0200
+
+gnome-online-accounts (3.12.2-1) unstable; urgency=medium
+
+  [ Laurent Bigonville ]
+  * debian/control.in: Recommends realmd package (Closes: #725965)
+
+  [ Andreas Henriksson ]
+  * New upstream release.
+    - Removes chat support from Windows Live provider (XMPP gateway gone).
+  * Bump Standards-Version to 3.9.5
+
+ -- Andreas Henriksson <andreas@fatal.se>  Fri, 16 May 2014 11:42:52 +0200
+
+gnome-online-accounts (3.12.1-1) unstable; urgency=medium
+
+  * New upstream release.
+  * Upload to unstable.
+
+ -- Emilio Pozuelo Monfort <pochu@debian.org>  Sat, 26 Apr 2014 11:30:35 +0200
+
 gnome-online-accounts (3.12.0-1) experimental; urgency=medium
 
   * New upstream release.
