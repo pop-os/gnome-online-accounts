@@ -1,4 +1,4 @@
-gnome-online-accounts (3.13.91-1) UNRELEASED; urgency=medium
+gnome-online-accounts (3.13.91-1) experimental; urgency=medium
 
   * New upstream development release.
   * Add missing intltool build-dependency (probably pulled in indirectly)
@@ -13,7 +13,7 @@ gnome-online-accounts (3.13.91-1) UNRELEASED; urgency=medium
    * Install new gschema for whitelisting in -common
    * debian/rules: explicitly enable media-server, yahoo and pocket.
 
- -- Andreas Henriksson <andreas@fatal.se>  Fri, 05 Sep 2014 15:15:39 -0700
+ -- Andreas Henriksson <andreas@fatal.se>  Sat, 06 Sep 2014 04:12:57 -0700
 
 gnome-online-accounts (3.12.4-1) unstable; urgency=medium
 
