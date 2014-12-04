@@ -23,7 +23,6 @@ DEB_CONFIGURE_EXTRA_FLAGS += --enable-gtk-doc \
   --enable-flickr \
   --enable-windows-live \
   --enable-google \
-  --enable-yahoo \
   --enable-owncloud \
   --enable-pocket \
   --enable-imap-smtp \
