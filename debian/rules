@@ -26,7 +26,8 @@ DEB_CONFIGURE_EXTRA_FLAGS += --enable-gtk-doc \
   --enable-owncloud \
   --enable-pocket \
   --enable-imap-smtp \
-  --enable-exchange
+  --enable-exchange \
+  --enable-foursquare
 
 # List any files which are not installed
 common-binary-post-install-arch:: list-missing
