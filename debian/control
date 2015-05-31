@@ -73,6 +73,7 @@ Depends: ${misc:Depends},
          librest-dev,
          gir1.2-goa-1.0 (= ${binary:Version})
 Suggests: libgoa-1.0-doc
+Multi-Arch: same
 Description: library for GNOME Online Accounts - development files
  This package contains the GNOME Online Accounts service, which provides a
  centralized place for managing online accounts (Google, etc) for the
@@ -108,6 +109,7 @@ Depends: ${misc:Depends},
 Conflicts: libgoa-1.0-dev (<< 3.10.0)
 Replaces: libgoa-1.0-dev (<< 3.10.0)
 Suggests: libgoa-1.0-doc
+Multi-Arch: same
 Description: backend library for GNOME Online Accounts - development files
  This package contains the GNOME Online Accounts service, which provides a
  centralized place for managing online accounts (Google, etc) for the
@@ -149,6 +151,7 @@ Section: introspection
 Depends: ${misc:Depends},
          ${shlibs:Depends},
          ${gir:Depends}
+Multi-Arch: same
 Description: Introspection data for GNOME Online Accounts
  This package contains the GNOME Online Accounts service, which provides a
  centralized place for managing online accounts (Google, etc) for the
