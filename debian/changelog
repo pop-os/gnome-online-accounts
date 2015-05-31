@@ -6,6 +6,7 @@ gnome-online-accounts (3.16.2-1) UNRELEASED; urgency=medium
   * Install typelib files into multiarch paths.
   * Mark gir and dev packages as Multi-Arch: same.
   * Bump debhelper compatibility level to 9.
+  * Install new web-extension component.
 
  -- Michael Biebl <biebl@debian.org>  Mon, 01 Jun 2015 01:19:38 +0200
 
