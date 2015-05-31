@@ -3,6 +3,7 @@ gnome-online-accounts (3.16.2-1) UNRELEASED; urgency=medium
   * New upstream release.
   * Update Build-Depends, switch to Webkit2.
   * Enable Foursquare provider.
+  * Install typelib files into multiarch paths.
 
  -- Michael Biebl <biebl@debian.org>  Mon, 01 Jun 2015 01:19:38 +0200
 
