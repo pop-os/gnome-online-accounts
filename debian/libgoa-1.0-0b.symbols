@@ -21,6 +21,7 @@ libgoa-1.0.so.0 libgoa-1.0-0b #MINVER#
  goa_account_get_files_disabled@Base 3.7.90
  goa_account_get_id@Base 3.1.1
  goa_account_get_identity@Base 3.1.1
+ goa_account_get_is_locked@Base 3.16.2
  goa_account_get_is_temporary@Base 3.5.90
  goa_account_get_mail_disabled@Base 3.5.1
  goa_account_get_maps_disabled@Base 3.13.90
@@ -50,6 +51,7 @@ libgoa-1.0.so.0 libgoa-1.0-0b #MINVER#
  goa_account_set_files_disabled@Base 3.7.90
  goa_account_set_id@Base 3.1.1
  goa_account_set_identity@Base 3.1.1
+ goa_account_set_is_locked@Base 3.16.2
  goa_account_set_is_temporary@Base 3.5.90
  goa_account_set_mail_disabled@Base 3.5.1
  goa_account_set_maps_disabled@Base 3.13.90

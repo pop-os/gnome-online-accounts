@@ -7,6 +7,8 @@ gnome-online-accounts (3.16.2-1) UNRELEASED; urgency=medium
   * Mark gir and dev packages as Multi-Arch: same.
   * Bump debhelper compatibility level to 9.
   * Install new web-extension component.
+  * Update symbols files. Due to the removal of the Yahoo provider, the
+    goa_yahoo_provider_get_type symbol was dropped from libgoa-backend-1.0-1.
 
  -- Michael Biebl <biebl@debian.org>  Mon, 01 Jun 2015 01:19:38 +0200
 

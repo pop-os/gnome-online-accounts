@@ -46,6 +46,7 @@ libgoa-backend-1.0.so.1 libgoa-backend-1.0-1 #MINVER#
  goa_exchange_provider_get_type@Base 3.10.0
  goa_facebook_provider_get_type@Base 3.10.0
  goa_flickr_provider_get_type@Base 3.10.0
+ goa_foursquare_provider_get_type@Base 3.16.2
  goa_google_provider_get_type@Base 3.10.0
  goa_http_client_check@Base 3.10.0
  goa_http_client_check_finish@Base 3.10.0
@@ -399,7 +400,7 @@ libgoa-backend-1.0.so.1 libgoa-backend-1.0-1 #MINVER#
  goa_web_view_get_view@Base 3.10.0
  goa_web_view_new@Base 3.10.0
  goa_windows_live_provider_get_type@Base 3.10.0
- goa_yahoo_provider_get_type@Base 3.10.0
+#MISSING: 3.16.2-1# goa_yahoo_provider_get_type@Base 3.10.0
  nautilus_floating_bar_add_action@Base 3.10.0
  nautilus_floating_bar_cleanup_actions@Base 3.10.0
  nautilus_floating_bar_get_type@Base 3.10.0
