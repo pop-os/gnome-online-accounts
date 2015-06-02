@@ -1,4 +1,4 @@
-gnome-online-accounts (3.16.2-1) UNRELEASED; urgency=medium
+gnome-online-accounts (3.16.2-1) unstable; urgency=medium
 
   * New upstream release.
   * Update Build-Depends, switch to Webkit2.
@@ -10,7 +10,7 @@ gnome-online-accounts (3.16.2-1) UNRELEASED; urgency=medium
   * Update symbols files. Due to the removal of the Yahoo provider, the
     goa_yahoo_provider_get_type symbol was dropped from libgoa-backend-1.0-1.
 
- -- Michael Biebl <biebl@debian.org>  Mon, 01 Jun 2015 01:19:38 +0200
+ -- Michael Biebl <biebl@debian.org>  Tue, 02 Jun 2015 07:01:35 +0200
 
 gnome-online-accounts (3.14.2-1) unstable; urgency=medium
 
