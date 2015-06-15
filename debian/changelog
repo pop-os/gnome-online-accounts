@@ -1,6 +1,7 @@
 gnome-online-accounts (3.16.3-1) UNRELEASED; urgency=medium
 
   * New upstream release.
+  * Add Upstream-Name and Upstream-Contact to debian/copyright.
 
  -- Michael Biebl <biebl@debian.org>  Mon, 15 Jun 2015 20:30:45 +0200
 
