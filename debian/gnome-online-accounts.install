@@ -1,4 +1,5 @@
 usr/lib/gnome-online-accounts/goa-daemon
+/usr/lib/*/goa-1.0/web-extensions/libgoawebextension.so
 usr/share/dbus-1/services/org.gnome.OnlineAccounts.service
 usr/share/icons
 usr/share/man

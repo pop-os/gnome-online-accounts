@@ -1,3 +1,63 @@
+gnome-online-accounts (3.16.4-1) unstable; urgency=medium
+
+  * New upstream release.
+
+ -- Michael Biebl <biebl@debian.org>  Tue, 15 Sep 2015 23:21:16 +0200
+
+gnome-online-accounts (3.16.3-1) unstable; urgency=medium
+
+  * New upstream release.
+  * Add Upstream-Name and Upstream-Contact to debian/copyright.
+
+ -- Michael Biebl <biebl@debian.org>  Mon, 15 Jun 2015 20:31:35 +0200
+
+gnome-online-accounts (3.16.2-1) unstable; urgency=medium
+
+  * New upstream release.
+  * Update Build-Depends, switch to Webkit2.
+  * Enable Foursquare provider.
+  * Install typelib files into multiarch paths.
+  * Mark gir and dev packages as Multi-Arch: same.
+  * Bump debhelper compatibility level to 9.
+  * Install new web-extension component.
+  * Update symbols files. Due to the removal of the Yahoo provider, the
+    goa_yahoo_provider_get_type symbol was dropped from libgoa-backend-1.0-1.
+
+ -- Michael Biebl <biebl@debian.org>  Tue, 02 Jun 2015 07:01:35 +0200
+
+gnome-online-accounts (3.14.2-1) unstable; urgency=medium
+
+  * New upstream bugfix release
+  * debian/rules: Disable yahoo provider, it is experimental, broken and
+    nothing is using it anyway (Closes: #764816)
+  * debian/control.in: Use the canonical URL for the Vcs-Svn field
+
+ -- Laurent Bigonville <bigon@debian.org>  Thu, 04 Dec 2014 22:51:04 +0100
+
+gnome-online-accounts (3.14.1-1) unstable; urgency=medium
+
+  * New upstream release.
+  * debian/control.in:
+    - Bump Standards-Version to 3.9.6 (no further changes)
+    - Fix the short description to please lintian
+    - Update Homepage URL
+    - Recommends dleyna-server on linux architectures, it can be used to add
+      Media servers and mine their content
+
+ -- Laurent Bigonville <bigon@debian.org>  Mon, 20 Oct 2014 00:29:37 +0200
+
+gnome-online-accounts (3.14.0-1) unstable; urgency=medium
+
+  * New upstream release.
+
+ -- Andreas Henriksson <andreas@fatal.se>  Tue, 23 Sep 2014 18:37:03 +0200
+
+gnome-online-accounts (3.13.92-1) unstable; urgency=medium
+
+  * New upstream release
+
+ -- Sjoerd Simons <sjoerd@debian.org>  Sat, 20 Sep 2014 10:31:59 +0200
+
 gnome-online-accounts (3.13.91-1) experimental; urgency=medium
 
   * New upstream development release.
