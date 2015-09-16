@@ -119,6 +119,7 @@ libgoa-backend-1.0.so.1 libgoa-backend-1.0-1 #MINVER#
  goa_imap_auth_login_new@Base 3.10.0
  goa_imap_smtp_provider_get_type@Base 3.10.0
  goa_kerberos_provider_get_type@Base 3.10.0
+ goa_lastfm_provider_get_type@Base 3.17.92
  goa_mail_auth_get_input@Base 3.10.0
  goa_mail_auth_get_output@Base 3.10.0
  goa_mail_auth_get_type@Base 3.10.0
