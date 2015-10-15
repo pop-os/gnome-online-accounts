@@ -392,6 +392,7 @@ libgoa-backend-1.0.so.1 libgoa-backend-1.0-1 #MINVER#
  goa_utils_lookup_credentials_sync@Base 3.10.0
  goa_utils_parse_email_address@Base 3.10.0
  goa_utils_set_dialog_title@Base 3.10.0
+ goa_utils_set_error_soup@Base 3.18.1
  goa_utils_set_error_ssl@Base 3.10.0
  goa_utils_store_credentials_for_id_sync@Base 3.10.0
  goa_utils_store_credentials_for_object_sync@Base 3.10.0

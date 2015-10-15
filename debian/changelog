@@ -1,6 +1,7 @@
 gnome-online-accounts (3.18.1-1) UNRELEASED; urgency=medium
 
   * New upstream release.
+  * Update debian/libgoa-backend-1.0-1.symbols with one new addition.
 
  -- Michael Biebl <biebl@debian.org>  Thu, 15 Oct 2015 16:26:05 +0200
 
