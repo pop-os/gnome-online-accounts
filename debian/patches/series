@@ -1,5 +1,1 @@
-drop-google-password-interface-1.patch
-drop-google-password-interface-2.patch
-drop-google-password-interface-3.patch
-drop-google-password-interface-4.patch
-revert-deadlock-fix.patch
+Add-missing-service-file.patch
