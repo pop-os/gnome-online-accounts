@@ -1,3 +1,10 @@
+gnome-online-accounts (3.18.2.1-1) UNRELEASED; urgency=medium
+
+  * New upstream release which includes the fix for the missing
+    org.gnome.Identity.service.in file.
+
+ -- Michael Biebl <biebl@debian.org>  Thu, 12 Nov 2015 14:15:40 +0100
+
 gnome-online-accounts (3.18.2-1) unstable; urgency=medium
 
   * New upstream release.
