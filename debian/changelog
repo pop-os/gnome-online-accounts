@@ -1,10 +1,10 @@
-gnome-online-accounts (3.18.3-1) UNRELEASED; urgency=medium
+gnome-online-accounts (3.18.3-1) unstable; urgency=medium
 
   * New upstream release.
   * Update debian/libgoa-backend-1.0-1.symbols for the addition of
     goa_utils_data_input_stream_read_line.
 
- -- Michael Biebl <biebl@debian.org>  Sun, 20 Dec 2015 15:13:41 +0100
+ -- Michael Biebl <biebl@debian.org>  Sun, 20 Dec 2015 15:24:41 +0100
 
 gnome-online-accounts (3.18.2.1-1) unstable; urgency=medium
 
