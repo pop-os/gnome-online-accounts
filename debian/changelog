@@ -1,6 +1,8 @@
 gnome-online-accounts (3.18.3-1) UNRELEASED; urgency=medium
 
   * New upstream release.
+  * Update debian/libgoa-backend-1.0-1.symbols for the addition of
+    goa_utils_data_input_stream_read_line.
 
  -- Michael Biebl <biebl@debian.org>  Sun, 20 Dec 2015 15:13:41 +0100
 
