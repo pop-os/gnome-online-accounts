@@ -1,3 +1,9 @@
+gnome-online-accounts (3.18.4-1) UNRELEASED; urgency=medium
+
+  * New upstream release.
+
+ -- Michael Biebl <biebl@debian.org>  Wed, 24 Feb 2016 16:04:28 +0100
+
 gnome-online-accounts (3.18.3-1) unstable; urgency=medium
 
   * New upstream release.
