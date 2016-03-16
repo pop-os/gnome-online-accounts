@@ -384,6 +384,7 @@ libgoa-backend-1.0.so.1 libgoa-backend-1.0-1 #MINVER#
  goa_util_lookup_keyfile_boolean@Base 3.10.0
  goa_util_lookup_keyfile_string@Base 3.10.0
  goa_utils_check_duplicate@Base 3.10.0
+ goa_utils_data_input_stream_read_line@Base 3.18.3
  goa_utils_delete_credentials_sync@Base 3.10.0
  goa_utils_initialize_client_factory@Base 3.10.2
  goa_utils_keyfile_remove_key@Base 3.10.0
@@ -392,6 +393,7 @@ libgoa-backend-1.0.so.1 libgoa-backend-1.0-1 #MINVER#
  goa_utils_lookup_credentials_sync@Base 3.10.0
  goa_utils_parse_email_address@Base 3.10.0
  goa_utils_set_dialog_title@Base 3.10.0
+ goa_utils_set_error_soup@Base 3.18.1
  goa_utils_set_error_ssl@Base 3.10.0
  goa_utils_store_credentials_for_id_sync@Base 3.10.0
  goa_utils_store_credentials_for_object_sync@Base 3.10.0

@@ -1,3 +1,40 @@
+gnome-online-accounts (3.18.4-1) unstable; urgency=medium
+
+  * New upstream release.
+  * Bump Standards-Version to 3.9.7.
+
+ -- Michael Biebl <biebl@debian.org>  Wed, 24 Feb 2016 16:12:52 +0100
+
+gnome-online-accounts (3.18.3-1) unstable; urgency=medium
+
+  * New upstream release.
+  * Update debian/libgoa-backend-1.0-1.symbols for the addition of
+    goa_utils_data_input_stream_read_line.
+
+ -- Michael Biebl <biebl@debian.org>  Sun, 20 Dec 2015 15:24:41 +0100
+
+gnome-online-accounts (3.18.2.1-1) unstable; urgency=medium
+
+  * New upstream release which includes the fix for the missing
+    org.gnome.Identity.service.in file.
+
+ -- Michael Biebl <biebl@debian.org>  Thu, 12 Nov 2015 14:24:32 +0100
+
+gnome-online-accounts (3.18.2-1) unstable; urgency=medium
+
+  * New upstream release.
+  * Add data/org.gnome.Identity.service.in file which is missing from the dist
+    tarball.
+
+ -- Michael Biebl <biebl@debian.org>  Wed, 11 Nov 2015 16:11:47 +0100
+
+gnome-online-accounts (3.18.1-1) unstable; urgency=medium
+
+  * New upstream release.
+  * Update debian/libgoa-backend-1.0-1.symbols with one new addition.
+
+ -- Michael Biebl <biebl@debian.org>  Thu, 15 Oct 2015 16:33:51 +0200
+
 gnome-online-accounts (3.18.0-1) unstable; urgency=medium
 
   * New upstream release.
