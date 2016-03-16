@@ -175,6 +175,15 @@ libgoa-backend-1.0.so.1 libgoa-backend-1.0-1 #MINVER#
  goa_oauth_provider_is_identity_node@Base 3.10.0
  goa_oauth_provider_is_password_node@Base 3.10.0
  goa_oauth_provider_parse_request_token_error@Base 3.10.0
+ goa_object_skeleton_attach_calendar@Base 3.19.92.1
+ goa_object_skeleton_attach_chat@Base 3.19.92.1
+ goa_object_skeleton_attach_contacts@Base 3.19.92.1
+ goa_object_skeleton_attach_documents@Base 3.19.92.1
+ goa_object_skeleton_attach_files@Base 3.19.92.1
+ goa_object_skeleton_attach_maps@Base 3.19.92.1
+ goa_object_skeleton_attach_photos@Base 3.19.92.1
+ goa_object_skeleton_attach_printers@Base 3.19.92.1
+ goa_object_skeleton_attach_read_later@Base 3.19.92.1
  goa_owncloud_provider_get_type@Base 3.10.0
  goa_pocket_provider_get_type@Base 3.11.90
  goa_provider_add_account@Base 3.10.0
@@ -386,6 +395,7 @@ libgoa-backend-1.0.so.1 libgoa-backend-1.0-1 #MINVER#
  goa_utils_check_duplicate@Base 3.10.0
  goa_utils_data_input_stream_read_line@Base 3.18.3
  goa_utils_delete_credentials_sync@Base 3.10.0
+ goa_utils_get_credentials@Base 3.19.92.1
  goa_utils_initialize_client_factory@Base 3.10.2
  goa_utils_keyfile_remove_key@Base 3.10.0
  goa_utils_keyfile_set_boolean@Base 3.10.0

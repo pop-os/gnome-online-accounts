@@ -1,9 +1,10 @@
-gnome-online-accounts (3.19.92-1) UNRELEASED; urgency=medium
+gnome-online-accounts (3.19.92.1-1) experimental; urgency=medium
 
   * New upstream release.
   * Bump build-dependency on libgtk-3-dev to (>= 3.19.12)
+  * Update debian/libgoa-backend-1.0-1.symbols with several additions.
 
- -- Andreas Henriksson <andreas@fatal.se>  Wed, 16 Mar 2016 17:20:27 +0100
+ -- Andreas Henriksson <andreas@fatal.se>  Wed, 16 Mar 2016 19:29:36 +0100
 
 gnome-online-accounts (3.18.4-1) unstable; urgency=medium
 
