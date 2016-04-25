@@ -7,6 +7,7 @@ gnome-online-accounts (3.20.1-1) UNRELEASED; urgency=medium
   * Remove m4/glib-gettext.m4 via debian/clean. Otherwise autoreconf fails
     because the system-wide /usr/share/aclocal/glib-gettext.m4 was updated and
     is now out-of-sync with m4/glib-gettext.m4.
+  * Run wrap-and-sort -a.
 
  -- Michael Biebl <biebl@debian.org>  Mon, 25 Apr 2016 18:38:50 +0200
 
