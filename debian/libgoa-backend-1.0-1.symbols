@@ -150,7 +150,6 @@ libgoa-backend-1.0.so.1 libgoa-backend-1.0-1 #MINVER#
  goa_oauth2_provider_get_scope@Base 3.10.0
  goa_oauth2_provider_get_token_uri@Base 3.10.0
  goa_oauth2_provider_get_type@Base 3.10.0
-#MISSING: 3.13.90-1# goa_oauth2_provider_get_use_external_browser@Base 3.10.0
  goa_oauth2_provider_get_use_mobile_browser@Base 3.10.0
  goa_oauth2_provider_is_deny_node@Base 3.10.0
  goa_oauth2_provider_is_identity_node@Base 3.10.0
@@ -169,12 +168,20 @@ libgoa-backend-1.0.so.1 libgoa-backend-1.0-1 #MINVER#
  goa_oauth_provider_get_request_uri_params@Base 3.10.0
  goa_oauth_provider_get_token_uri@Base 3.10.0
  goa_oauth_provider_get_type@Base 3.10.0
-#MISSING: 3.13.90-1# goa_oauth_provider_get_use_external_browser@Base 3.10.0
  goa_oauth_provider_get_use_mobile_browser@Base 3.10.0
  goa_oauth_provider_is_deny_node@Base 3.10.0
  goa_oauth_provider_is_identity_node@Base 3.10.0
  goa_oauth_provider_is_password_node@Base 3.10.0
  goa_oauth_provider_parse_request_token_error@Base 3.10.0
+ goa_object_skeleton_attach_calendar@Base 3.20.1
+ goa_object_skeleton_attach_chat@Base 3.20.1
+ goa_object_skeleton_attach_contacts@Base 3.20.1
+ goa_object_skeleton_attach_documents@Base 3.20.1
+ goa_object_skeleton_attach_files@Base 3.20.1
+ goa_object_skeleton_attach_maps@Base 3.20.1
+ goa_object_skeleton_attach_photos@Base 3.20.1
+ goa_object_skeleton_attach_printers@Base 3.20.1
+ goa_object_skeleton_attach_read_later@Base 3.20.1
  goa_owncloud_provider_get_type@Base 3.10.0
  goa_pocket_provider_get_type@Base 3.11.90
  goa_provider_add_account@Base 3.10.0
@@ -386,6 +393,7 @@ libgoa-backend-1.0.so.1 libgoa-backend-1.0-1 #MINVER#
  goa_utils_check_duplicate@Base 3.10.0
  goa_utils_data_input_stream_read_line@Base 3.18.3
  goa_utils_delete_credentials_sync@Base 3.10.0
+ goa_utils_get_credentials@Base 3.20.1
  goa_utils_initialize_client_factory@Base 3.10.2
  goa_utils_keyfile_remove_key@Base 3.10.0
  goa_utils_keyfile_set_boolean@Base 3.10.0
@@ -403,7 +411,6 @@ libgoa-backend-1.0.so.1 libgoa-backend-1.0-1 #MINVER#
  goa_web_view_get_view@Base 3.10.0
  goa_web_view_new@Base 3.10.0
  goa_windows_live_provider_get_type@Base 3.10.0
-#MISSING: 3.16.2-1# goa_yahoo_provider_get_type@Base 3.10.0
  nautilus_floating_bar_add_action@Base 3.10.0
  nautilus_floating_bar_cleanup_actions@Base 3.10.0
  nautilus_floating_bar_get_type@Base 3.10.0
@@ -479,9 +486,7 @@ libgoa-backend-1.0.so.1 libgoa-backend-1.0-1 #MINVER#
  tpaw_avatar_chooser_get_type@Base 3.10.0
  tpaw_avatar_chooser_new@Base 3.10.0
  tpaw_builder_connect@Base 3.10.0
-#MISSING: 3.13.90-1# tpaw_builder_get_file@Base 3.10.0
  tpaw_builder_get_file_with_domain@Base 3.13.90
-#MISSING: 3.13.90-1# tpaw_builder_get_resource@Base 3.10.0
  tpaw_builder_get_resource_with_domain@Base 3.13.90
  tpaw_builder_unref_and_keep_widget@Base 3.10.0
  tpaw_calendar_button_get_date@Base 3.10.0
@@ -569,7 +574,6 @@ libgoa-backend-1.0.so.1 libgoa-backend-1.0-1 #MINVER#
  tpaw_live_search_strip_utf8_string@Base 3.10.0
  tpaw_make_absolute_url@Base 3.10.0
  tpaw_make_absolute_url_len@Base 3.10.0
-#MISSING: 3.13.90-1# tpaw_make_color_whiter@Base 3.10.0
  tpaw_pixbuf_from_data@Base 3.10.0
  tpaw_pixbuf_from_data_and_mime@Base 3.10.0
  tpaw_pixbuf_from_icon_name@Base 3.10.0
