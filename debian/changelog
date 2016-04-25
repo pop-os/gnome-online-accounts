@@ -1,6 +1,7 @@
 gnome-online-accounts (3.20.1-1) UNRELEASED; urgency=medium
 
   * New upstream release.
+  * Bump Build-Depends on libgtk-3-dev to (>= 3.19.12) as per configure.ac.
 
  -- Michael Biebl <biebl@debian.org>  Mon, 25 Apr 2016 18:38:50 +0200
 
