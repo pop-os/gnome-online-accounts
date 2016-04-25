@@ -4,6 +4,9 @@ gnome-online-accounts (3.20.1-1) UNRELEASED; urgency=medium
   * Bump Build-Depends on libgtk-3-dev to (>= 3.19.12) as per configure.ac.
   * Update debian/libgoa-backend-1.0-1.symbols, add new goa_object_skeleton_*
     symbols.
+  * Remove m4/glib-gettext.m4 via debian/clean. Otherwise autoreconf fails
+    because the system-wide /usr/share/aclocal/glib-gettext.m4 was updated and
+    is now out-of-sync with m4/glib-gettext.m4.
 
  -- Michael Biebl <biebl@debian.org>  Mon, 25 Apr 2016 18:38:50 +0200
 
