@@ -1,6 +1,7 @@
 gnome-online-accounts (3.20.2-1) UNRELEASED; urgency=medium
 
   * New upstream release.
+  * Convert from cdbs to dh.
 
  -- Michael Biebl <biebl@debian.org>  Fri, 08 Jul 2016 13:33:27 +0200
 
