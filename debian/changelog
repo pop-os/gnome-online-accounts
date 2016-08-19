@@ -1,10 +1,32 @@
-gnome-online-accounts (3.19.92.1-1) experimental; urgency=medium
+gnome-online-accounts (3.20.3-1) unstable; urgency=medium
 
   * New upstream release.
-  * Bump build-dependency on libgtk-3-dev to (>= 3.19.12)
-  * Update debian/libgoa-backend-1.0-1.symbols with several additions.
+  * Update symbols file for libgoa-backend-1.0-1.
 
- -- Andreas Henriksson <andreas@fatal.se>  Wed, 16 Mar 2016 19:29:36 +0100
+ -- Michael Biebl <biebl@debian.org>  Sun, 07 Aug 2016 18:37:33 +0200
+
+gnome-online-accounts (3.20.2-1) unstable; urgency=medium
+
+  * New upstream release.
+  * Convert from cdbs to dh.
+  * Pass --as-needed to dh_autoreconf to reduce runtime dependencies.
+
+ -- Michael Biebl <biebl@debian.org>  Fri, 08 Jul 2016 14:15:38 +0200
+
+gnome-online-accounts (3.20.1-1) unstable; urgency=medium
+
+  * New upstream release.
+  * Bump Build-Depends on libgtk-3-dev to (>= 3.19.12) as per configure.ac.
+  * Update debian/libgoa-backend-1.0-1.symbols, add new goa_object_skeleton_*
+    symbols.
+  * Remove m4/glib-gettext.m4 via debian/clean. Otherwise autoreconf fails
+    because the system-wide /usr/share/aclocal/glib-gettext.m4 was updated and
+    is now out-of-sync with m4/glib-gettext.m4.
+  * Run wrap-and-sort -a.
+  * Bump Standards-Versiont to 3.9.8.
+  * Install Vala bindings. Add Build-Depends on valac for that.
+
+ -- Michael Biebl <biebl@debian.org>  Mon, 25 Apr 2016 21:04:50 +0200
 
 gnome-online-accounts (3.18.4-1) unstable; urgency=medium
 
