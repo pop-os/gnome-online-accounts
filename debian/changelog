@@ -1,3 +1,13 @@
+gnome-online-accounts (3.21.90-1) experimental; urgency=medium
+
+  * New upstream beta release.
+  * Update debian/libgoa-backend-1.0-1.symbols
+    - several additions and two (unused) missing symbols:
+      goa_util_add_account_info@Base 3.10.0
+      goa_utils_delete_credentials_sync@Base 3.10.0
+
+ -- Andreas Henriksson <andreas@fatal.se>  Fri, 19 Aug 2016 15:59:48 +0200
+
 gnome-online-accounts (3.20.3-1) unstable; urgency=medium
 
   * New upstream release.
