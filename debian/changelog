@@ -1,3 +1,11 @@
+gnome-online-accounts (3.21.90-2) UNRELEASED; urgency=medium
+
+  * Update Build-Depends:
+    - Bump libglib2.0-dev to (>= 2.40).
+    - Drop libdbus-glib-1-dev and libnotify-dev.
+
+ -- Michael Biebl <biebl@debian.org>  Thu, 01 Sep 2016 02:40:51 +0200
+
 gnome-online-accounts (3.21.90-1) experimental; urgency=medium
 
   * New upstream beta release.
