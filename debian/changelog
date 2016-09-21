@@ -1,11 +1,11 @@
-gnome-online-accounts (3.22.0-1) UNRELEASED; urgency=medium
+gnome-online-accounts (3.22.0-1) unstable; urgency=medium
 
   * New upstream release.
   * Use non-multiarch path (/usr/lib/gnome-online-accounts) for libexecdir.
   * Update debian/libgoa-backend-1.0-1.symbols.
   * Bump debhelper compat level to 10.
 
- -- Michael Biebl <biebl@debian.org>  Wed, 21 Sep 2016 21:37:26 +0200
+ -- Michael Biebl <biebl@debian.org>  Wed, 21 Sep 2016 22:03:11 +0200
 
 gnome-online-accounts (3.21.91-1) unstable; urgency=medium
 
