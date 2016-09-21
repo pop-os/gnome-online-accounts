@@ -2,6 +2,7 @@ gnome-online-accounts (3.22.0-1) UNRELEASED; urgency=medium
 
   * New upstream release.
   * Use non-multiarch path (/usr/lib/gnome-online-accounts) for libexecdir.
+  * Update debian/libgoa-backend-1.0-1.symbols.
 
  -- Michael Biebl <biebl@debian.org>  Wed, 21 Sep 2016 21:37:26 +0200
 
