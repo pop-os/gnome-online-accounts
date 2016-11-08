@@ -1,6 +1,7 @@
 gnome-online-accounts (3.22.2-1) UNRELEASED; urgency=medium
 
   * New upstream release.
+  * Enable all hardening build flags.
 
  -- Michael Biebl <biebl@debian.org>  Tue, 08 Nov 2016 15:23:38 +0100
 
