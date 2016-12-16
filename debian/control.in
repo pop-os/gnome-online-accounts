@@ -30,6 +30,7 @@ Homepage: https://wiki.gnome.org/Projects/GnomeOnlineAccounts
 Package: gnome-online-accounts
 Architecture: any
 Depends: libgoa-1.0-0b (= ${binary:Version}),
+         libgoa-backend-1.0-1 (= ${binary:Version}),
          ${misc:Depends},
          ${shlibs:Depends}
 Recommends: dleyna-server [linux-any],
