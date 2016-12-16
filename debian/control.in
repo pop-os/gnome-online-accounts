@@ -35,6 +35,7 @@ Depends: libgoa-1.0-0b (= ${binary:Version}),
 Recommends: dleyna-server [linux-any],
             gnome-control-center (>= 3.6.1),
             realmd
+Breaks: evolution-data-server (<< 3.22.3)
 Description: service to manage online accounts for the GNOME desktop
  This package contains the GNOME Online Accounts service, which provides a
  centralized place for managing online accounts (Google, etc) for the
