@@ -1,4 +1,7 @@
-debian/tmp/usr/share/dbus-1/services/org.gnome.OnlineAccounts.service
-debian/tmp/usr/share/man/man8/goa-daemon.8
-debian/tmp/usr/share/icons/*
-debian/tmp/usr/lib/gnome-online-accounts/goa-daemon
+/usr/lib/*/goa-1.0/web-extensions/libgoawebextension.so
+usr/lib/gnome-online-accounts/goa-daemon
+usr/lib/gnome-online-accounts/goa-identity-service
+usr/share/dbus-1/services/org.gnome.Identity.service
+usr/share/dbus-1/services/org.gnome.OnlineAccounts.service
+usr/share/icons
+usr/share/man

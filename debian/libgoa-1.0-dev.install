@@ -1,4 +1,7 @@
-debian/tmp/usr/lib/pkgconfig/*
-debian/tmp/usr/share/gir-1.0/*.gir
-debian/tmp/usr/lib/*.so
-debian/tmp/usr/include/*
+usr/include/goa-1.0/goa/*
+usr/lib/*/*goa-1.0.so
+usr/lib/*/goa-1.0/include/goaconfig.h
+usr/lib/*/pkgconfig/goa-1.0.pc
+usr/share/gir-1.0/*.gir
+usr/share/vala/vapi/*.deps
+usr/share/vala/vapi/*.vapi
