@@ -1,7 +1,12 @@
 gnome-online-accounts (3.24.0-0ubuntu2) UNRELEASED; urgency=medium
 
-  * debian/control.in
-    - Dropped dleyna-server from a recommends to a suggests
+  [ Ken VanDine ]
+  * debian/control.in:
+    - Drop dleyna-server from a recommends to a suggests
+
+  [ Jeremy Bicha ]
+  * debian/control.in:
+    - Drop realmd from a recommends to a suggests
 
  -- Ken VanDine <ken.vandine@canonical.com>  Mon, 24 Apr 2017 10:24:11 -0400
 
