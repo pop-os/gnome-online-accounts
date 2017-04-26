@@ -1,4 +1,4 @@
-gnome-online-accounts (3.24.0-0ubuntu2) UNRELEASED; urgency=medium
+gnome-online-accounts (3.24.0-0ubuntu2) artful; urgency=medium
 
   [ Ken VanDine ]
   * debian/control.in:
@@ -8,7 +8,7 @@ gnome-online-accounts (3.24.0-0ubuntu2) UNRELEASED; urgency=medium
   * debian/control.in:
     - Drop realmd from a recommends to a suggests
 
- -- Ken VanDine <ken.vandine@canonical.com>  Mon, 24 Apr 2017 10:24:11 -0400
+ -- Jeremy Bicha <jbicha@ubuntu.com>  Tue, 25 Apr 2017 22:25:19 -0400
 
 gnome-online-accounts (3.24.0-0ubuntu1) zesty; urgency=medium
 
