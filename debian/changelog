@@ -1,3 +1,9 @@
+gnome-online-accounts (3.25.90-1) UNRELEASED; urgency=medium
+
+  * New upstream release
+
+ -- Jeremy Bicha <jbicha@ubuntu.com>  Tue, 29 Aug 2017 20:14:26 -0400
+
 gnome-online-accounts (3.22.5-1) unstable; urgency=medium
 
   * New upstream release.
