@@ -1,0 +1,1057 @@
+# gnome-online-accounts ja.po.
+# Copyright (C) 2011,2012 gnome-online-accounts's COPYRIGHT HOLDER
+# This file is distributed under the same license as the gnome-online-accounts package.
+# Takeshi AIHANA <takeshi.aihana@gmail.com>, 2011.
+# Hajime Taira <htaira@redhat.com>, 2012.
+# Shuuji Takahashi <shuuji3@gmail.com>, 2012.
+# Noriko Mizumoto <noriko@fedoraproject.org>, 2012.
+# Takayuki KUSANO <AE5T-KSN@asahi-net.or.jp>, 2012.
+# Jiro Matsuzawa <jmatsuzawa@gnome.org>, 2013, 2014, 2015.
+# Ikuya Awashiro <ikuya@fruitsbasket.info>, 2014.
+# Kento Tsuji <tuziemon@pclives.org>, 2014.
+# IWAI, Masaharu <iwaim.sub@gmail.com>, 2015.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: gnome-online-accounts master\n"
+"Report-Msgid-Bugs-To: http://bugzilla.gnome.org/enter_bug.cgi?product=gnome-"
+"online-accounts&keywords=I18N+L10N&component=general\n"
+"POT-Creation-Date: 2016-04-11 15:52+0000\n"
+"PO-Revision-Date: 2016-03-28 16:34+0900\n"
+"Last-Translator: Hajime Taira <htaira@redhat.com>\n"
+"Language-Team: Japanese <gnome-translation@gnome.gr.jp>\n"
+"Language: ja\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"X-Generator: Poedit 1.8.6\n"
+
+#. TODO: more specific
+#: ../src/daemon/goadaemon.c:842 ../src/daemon/goadaemon.c:1100
+#, c-format
+msgid "Failed to find a provider for: %s"
+msgstr "次のプロバイダーが見つかりません: %s"
+
+#: ../src/daemon/goadaemon.c:1028
+msgid "IsLocked property is set for account"
+msgstr "IsLocked プロパティーがアカウントに設定されています"
+
+#. TODO: more specific
+#: ../src/daemon/goadaemon.c:1088
+msgid "ProviderType property is not set for account"
+msgstr "ProviderType プロパティーがアカウントに設定されていません"
+
+#. TODO: more specific
+#: ../src/goabackend/goaewsclient.c:250
+#, c-format
+msgid "Failed to parse autodiscover response XML"
+msgstr "自動検出の応答 XML の解析に失敗しました"
+
+#. TODO: more specific
+#. Translators: the parameter is an XML element name.
+#: ../src/goabackend/goaewsclient.c:261 ../src/goabackend/goaewsclient.c:276
+#: ../src/goabackend/goaewsclient.c:291
+#, c-format
+msgid "Failed to find ‘%s’ element"
+msgstr "‘%s’エレメントの検出に失敗しました"
+
+#. TODO: more specific
+#: ../src/goabackend/goaewsclient.c:312
+#, c-format
+msgid "Failed to find ASUrl and OABUrl in autodiscover response"
+msgstr "自動検出の応答内での ASUrl と OABUrl の検出に失敗しました"
+
+#: ../src/goabackend/goaexchangeprovider.c:74
+msgid "Microsoft Exchange"
+msgstr "Microsoft Exchange"
+
+#. Translators: the first %s is the username
+#. * (eg., debarshi.ray@gmail.com or rishi), and the
+#. * (%s, %d) is the error domain and code.
+#.
+#: ../src/goabackend/goaexchangeprovider.c:283
+#: ../src/goabackend/goalastfmprovider.c:280
+#: ../src/goabackend/goaowncloudprovider.c:314
+#, c-format
+msgid "Invalid password with username ‘%s’ (%s, %d): "
+msgstr "ユーザー名‘%s’のパスワードが不正です (%s, %d):"
+
+#: ../src/goabackend/goaexchangeprovider.c:436
+#: ../src/goabackend/goaimapsmtpprovider.c:686
+msgid "_E-mail"
+msgstr "メール(_E)"
+
+#: ../src/goabackend/goaexchangeprovider.c:437
+#: ../src/goabackend/goaimapsmtpprovider.c:706
+#: ../src/goabackend/goaimapsmtpprovider.c:726
+#: ../src/goabackend/goalastfmprovider.c:420
+#: ../src/goabackend/goaowncloudprovider.c:560
+msgid "_Password"
+msgstr "パスワード(_P)"
+
+#: ../src/goabackend/goaexchangeprovider.c:440
+msgid "_Custom"
+msgstr "カスタム(_C)"
+
+#: ../src/goabackend/goaexchangeprovider.c:451
+#: ../src/goabackend/goaimapsmtpprovider.c:705
+#: ../src/goabackend/goaimapsmtpprovider.c:725
+#: ../src/goabackend/goakerberosprovider.c:734
+#: ../src/goabackend/goalastfmprovider.c:419
+#: ../src/goabackend/goaowncloudprovider.c:559
+msgid "User_name"
+msgstr "ユーザー名(_N)"
+
+#: ../src/goabackend/goaexchangeprovider.c:452
+#: ../src/goabackend/goaowncloudprovider.c:558
+msgid "_Server"
+msgstr "サーバー(_S)"
+
+#. --
+#: ../src/goabackend/goaexchangeprovider.c:462
+#: ../src/goabackend/goaimapsmtpprovider.c:738
+#: ../src/goabackend/goakerberosprovider.c:739
+#: ../src/goabackend/goalastfmprovider.c:428
+#: ../src/goabackend/goaowncloudprovider.c:569
+#: ../src/goabackend/goatelepathyprovider.c:650
+msgid "_Cancel"
+msgstr "キャンセル(_C)"
+
+#: ../src/goabackend/goaexchangeprovider.c:463
+#: ../src/goabackend/goakerberosprovider.c:740
+#: ../src/goabackend/goalastfmprovider.c:429
+#: ../src/goabackend/goaowncloudprovider.c:570
+msgid "C_onnect"
+msgstr "接続(_O)"
+
+#: ../src/goabackend/goaexchangeprovider.c:479
+#: ../src/goabackend/goaimapsmtpprovider.c:754
+#: ../src/goabackend/goakerberosprovider.c:756
+#: ../src/goabackend/goalastfmprovider.c:445
+#: ../src/goabackend/goaowncloudprovider.c:585
+msgid "Connecting…"
+msgstr "接続中…"
+
+#: ../src/goabackend/goaexchangeprovider.c:584
+#: ../src/goabackend/goaexchangeprovider.c:779
+#: ../src/goabackend/goaimapsmtpprovider.c:916
+#: ../src/goabackend/goaimapsmtpprovider.c:951
+#: ../src/goabackend/goaimapsmtpprovider.c:1039
+#: ../src/goabackend/goaimapsmtpprovider.c:1302
+#: ../src/goabackend/goaimapsmtpprovider.c:1375
+#: ../src/goabackend/goakerberosprovider.c:1155
+#: ../src/goabackend/goalastfmprovider.c:640
+#: ../src/goabackend/goalastfmprovider.c:806
+#: ../src/goabackend/goamediaserverprovider.c:459
+#: ../src/goabackend/goaoauth2provider.c:1033
+#: ../src/goabackend/goaoauthprovider.c:862
+#: ../src/goabackend/goaowncloudprovider.c:696
+#: ../src/goabackend/goaowncloudprovider.c:910
+#: ../src/goabackend/goatelepathyprovider.c:460
+#: ../src/goabackend/goatelepathyprovider.c:509
+#: ../src/goabackend/goatelepathyprovider.c:684
+#, c-format
+msgid "Dialog was dismissed"
+msgstr "ダイアログが閉じられました"
+
+#: ../src/goabackend/goaexchangeprovider.c:622
+#: ../src/goabackend/goaexchangeprovider.c:807
+#: ../src/goabackend/goaimapsmtpprovider.c:981
+#: ../src/goabackend/goaimapsmtpprovider.c:1074
+#: ../src/goabackend/goaimapsmtpprovider.c:1326
+#: ../src/goabackend/goaimapsmtpprovider.c:1400
+#: ../src/goabackend/goalastfmprovider.c:674
+#: ../src/goabackend/goalastfmprovider.c:825
+#: ../src/goabackend/goaowncloudprovider.c:738
+#: ../src/goabackend/goaowncloudprovider.c:931
+#, c-format
+msgid "Dialog was dismissed (%s, %d): "
+msgstr "ダイアログが閉じられました (%s, %d): "
+
+#: ../src/goabackend/goaexchangeprovider.c:635
+#: ../src/goabackend/goaimapsmtpprovider.c:994
+#: ../src/goabackend/goaimapsmtpprovider.c:1087
+#: ../src/goabackend/goaowncloudprovider.c:751
+msgid "_Ignore"
+msgstr "無視する(_I)"
+
+#: ../src/goabackend/goaexchangeprovider.c:640
+#: ../src/goabackend/goaexchangeprovider.c:826
+#: ../src/goabackend/goaimapsmtpprovider.c:999
+#: ../src/goabackend/goaimapsmtpprovider.c:1092
+#: ../src/goabackend/goaimapsmtpprovider.c:1345
+#: ../src/goabackend/goaimapsmtpprovider.c:1419
+#: ../src/goabackend/goakerberosprovider.c:1262
+#: ../src/goabackend/goalastfmprovider.c:686
+#: ../src/goabackend/goalastfmprovider.c:842
+#: ../src/goabackend/goaowncloudprovider.c:756
+#: ../src/goabackend/goaowncloudprovider.c:950
+msgid "_Try Again"
+msgstr "やり直す(_T)"
+
+#: ../src/goabackend/goaexchangeprovider.c:645
+#: ../src/goabackend/goaexchangeprovider.c:819
+msgid "Error connecting to Microsoft Exchange server"
+msgstr "Microsoft Exchange サーバーへの接続に失敗しました"
+
+#: ../src/goabackend/goafacebookprovider.c:77
+msgid "Facebook"
+msgstr "Facebook"
+
+#: ../src/goabackend/goafacebookprovider.c:216
+#: ../src/goabackend/goaflickrprovider.c:184
+#: ../src/goabackend/goafoursquareprovider.c:190
+#: ../src/goabackend/goagoogleprovider.c:226
+#: ../src/goabackend/goawindowsliveprovider.c:196
+#, c-format
+msgid ""
+"Expected status 200 when requesting your identity, instead got status %d (%s)"
+msgstr ""
+"識別子を要求した時に返されるステータスは 200 を期待していましたが、代わりに受"
+"け取ったステータスは %d (%s) でした"
+
+#. TODO: more specific
+#: ../src/goabackend/goafacebookprovider.c:235
+#: ../src/goabackend/goafacebookprovider.c:247
+#: ../src/goabackend/goafacebookprovider.c:260
+#: ../src/goabackend/goaflickrprovider.c:203
+#: ../src/goabackend/goaflickrprovider.c:215
+#: ../src/goabackend/goaflickrprovider.c:225
+#: ../src/goabackend/goaflickrprovider.c:235
+#: ../src/goabackend/goaflickrprovider.c:245
+#: ../src/goabackend/goafoursquareprovider.c:209
+#: ../src/goabackend/goafoursquareprovider.c:221
+#: ../src/goabackend/goafoursquareprovider.c:232
+#: ../src/goabackend/goafoursquareprovider.c:243
+#: ../src/goabackend/goafoursquareprovider.c:254
+#: ../src/goabackend/goafoursquareprovider.c:265
+#: ../src/goabackend/goagoogleprovider.c:245
+#: ../src/goabackend/goagoogleprovider.c:257
+#: ../src/goabackend/goalastfmprovider.c:211
+#: ../src/goabackend/goalastfmprovider.c:220
+#: ../src/goabackend/goalastfmprovider.c:230
+#: ../src/goabackend/goalastfmprovider.c:237
+#: ../src/goabackend/goalastfmprovider.c:503
+#: ../src/goabackend/goalastfmprovider.c:512
+#: ../src/goabackend/goalastfmprovider.c:527
+#: ../src/goabackend/goalastfmprovider.c:534
+#: ../src/goabackend/goaoauth2provider.c:699
+#: ../src/goabackend/goaoauth2provider.c:729
+#: ../src/goabackend/goaoauth2provider.c:741 ../src/goabackend/goautils.c:153
+#: ../src/goabackend/goawindowsliveprovider.c:215
+#: ../src/goabackend/goawindowsliveprovider.c:227
+#: ../src/goabackend/goawindowsliveprovider.c:239
+#, c-format
+msgid "Could not parse response"
+msgstr "応答を解析できませんでした"
+
+#: ../src/goabackend/goaflickrprovider.c:78
+msgid "Flickr"
+msgstr "Flickr"
+
+#: ../src/goabackend/goaflickrprovider.c:322
+msgid "Your system time is invalid. Check your date and time settings."
+msgstr ""
+"お使いのシステムの時刻が正しくありません。日付と時刻の設定を確認してくださ"
+"い。"
+
+#: ../src/goabackend/goafoursquareprovider.c:78
+msgid "Foursquare"
+msgstr "Foursquare"
+
+#: ../src/goabackend/goagoogleprovider.c:77
+msgid "Google"
+msgstr "Google"
+
+#. TODO: more specific
+#: ../src/goabackend/goaimapauthlogin.c:94 ../src/goabackend/goasmtpauth.c:160
+#, c-format
+msgid "Service not available"
+msgstr "サービスは利用できません"
+
+#. TODO: more specific
+#: ../src/goabackend/goaimapauthlogin.c:115
+#: ../src/goabackend/goalastfmprovider.c:520
+#: ../src/goabackend/goasmtpauth.c:113 ../src/goabackend/goautils.c:584
+#, c-format
+msgid "Authentication failed"
+msgstr "認証失敗"
+
+#: ../src/goabackend/goaimapauthlogin.c:140
+#, c-format
+msgid "Server does not support PLAIN"
+msgstr "サーバーが PLAIN をサポートしていません"
+
+#: ../src/goabackend/goaimapauthlogin.c:194 ../src/goabackend/goasmtpauth.c:818
+#, c-format
+msgid "Server does not support STARTTLS"
+msgstr "サーバーが STARTTLS をサポートしていません"
+
+#: ../src/goabackend/goaimapsmtpprovider.c:61
+msgid "IMAP and SMTP"
+msgstr "IMAP と SMTP"
+
+#. Translators: the first %s is a field name. The
+#. * second %s is the IMAP
+#. * username (eg., rishi), and the (%s, %d)
+#. * is the error domain and code.
+#.
+#. Translators: the first %s is a field name. The
+#. * second %s is the SMTP
+#. * username (eg., rishi), and the (%s, %d)
+#. * is the error domain and code.
+#.
+#: ../src/goabackend/goaimapsmtpprovider.c:364
+#: ../src/goabackend/goaimapsmtpprovider.c:415
+#, c-format
+msgid "Invalid %s with username ‘%s’ (%s, %d): "
+msgstr "ユーザー名‘%2$s’の %1$s が不正です (%3$s, %4$d): "
+
+#. Translators: the following four strings are used to show a
+#. * combo box similar to the one in the evolution module.
+#. * Encryption: None
+#. *             STARTTLS after connecting
+#. *             SSL on a dedicated port
+#.
+#: ../src/goabackend/goaimapsmtpprovider.c:603
+msgid "_Encryption"
+msgstr "暗号化(_E)"
+
+#: ../src/goabackend/goaimapsmtpprovider.c:606
+msgid "None"
+msgstr "なし"
+
+#: ../src/goabackend/goaimapsmtpprovider.c:609
+msgid "STARTTLS after connecting"
+msgstr "接続後に STARTTLS"
+
+#: ../src/goabackend/goaimapsmtpprovider.c:612
+msgid "SSL on a dedicated port"
+msgstr "専用のポートで SSL"
+
+#: ../src/goabackend/goaimapsmtpprovider.c:687
+msgid "_Name"
+msgstr "名前(_N)"
+
+#: ../src/goabackend/goaimapsmtpprovider.c:704
+msgid "IMAP _Server"
+msgstr "IMAP サーバー(_S)"
+
+#: ../src/goabackend/goaimapsmtpprovider.c:724
+msgid "SMTP _Server"
+msgstr "SMTP サーバー(_S)"
+
+#: ../src/goabackend/goaimapsmtpprovider.c:739
+#: ../src/goabackend/goaimapsmtpprovider.c:1020
+#: ../src/goabackend/goaimapsmtpprovider.c:1355
+msgid "_Forward"
+msgstr "次へ(_F)"
+
+#: ../src/goabackend/goaimapsmtpprovider.c:1004
+#: ../src/goabackend/goaimapsmtpprovider.c:1338
+msgid "Error connecting to IMAP server"
+msgstr "IMAP サーバーへの接続に失敗しました"
+
+#: ../src/goabackend/goaimapsmtpprovider.c:1097
+#: ../src/goabackend/goaimapsmtpprovider.c:1412
+msgid "Error connecting to SMTP server"
+msgstr "SMTP サーバーへの接続に失敗しました"
+
+#: ../src/goabackend/goaimapsmtpprovider.c:1510
+msgid "E-mail"
+msgstr "メール"
+
+#: ../src/goabackend/goaimapsmtpprovider.c:1514
+msgid "Name"
+msgstr "名前"
+
+#: ../src/goabackend/goaimapsmtpprovider.c:1524
+#: ../src/goabackend/goaimapsmtpprovider.c:1528
+msgid "IMAP"
+msgstr "IMAP"
+
+#: ../src/goabackend/goaimapsmtpprovider.c:1539
+#: ../src/goabackend/goaimapsmtpprovider.c:1543
+msgid "SMTP"
+msgstr "SMTP"
+
+#: ../src/goabackend/goakerberosprovider.c:99
+msgid "Enterprise Login (Kerberos)"
+msgstr "企業向けログイン (Kerberos)"
+
+#: ../src/goabackend/goakerberosprovider.c:293
+#, c-format
+msgid "Ticketing is disabled for account"
+msgstr "このアカウントのチケッティングは無効化されています"
+
+#: ../src/goabackend/goakerberosprovider.c:318
+#, c-format
+msgid "Could not find saved credentials for principal ‘%s’ in keyring"
+msgstr "キーリングにユーザー‘%s’用に保存した証明書が見つかりませんでした"
+
+#: ../src/goabackend/goakerberosprovider.c:331
+#, c-format
+msgid "Did not find password for principal ‘%s’ in credentials"
+msgstr "証明書の中にユーザー‘%s’のパスワードが見つかりませんでした"
+
+#: ../src/goabackend/goakerberosprovider.c:726
+msgid "_Domain"
+msgstr "ドメイン(_D)"
+
+#: ../src/goabackend/goakerberosprovider.c:727
+msgid "Enterprise domain or realm name"
+msgstr "企業ドメイン名またはレルム名"
+
+#: ../src/goabackend/goakerberosprovider.c:963
+#: ../src/goaidentity/goaidentityservice.c:1126
+msgid "Log In to Realm"
+msgstr "レルムへのログイン"
+
+#: ../src/goabackend/goakerberosprovider.c:964
+msgid "Please enter your password below."
+msgstr "以下にパスワードを入力してください。"
+
+#: ../src/goabackend/goakerberosprovider.c:965
+msgid "Remember this password"
+msgstr "このパスワードを記憶する"
+
+#: ../src/goabackend/goakerberosprovider.c:1107
+#, c-format
+msgid "The domain is not valid"
+msgstr "ドメインが正しくありません"
+
+#: ../src/goabackend/goakerberosprovider.c:1257
+msgid "Error connecting to enterprise identity server"
+msgstr "企業アイデンティティサーバーへの接続中にエラーが発生しました"
+
+#: ../src/goabackend/goakerberosprovider.c:1522
+#, c-format
+msgid "Identity service returned invalid key"
+msgstr "アイデンティティサーバーより無効なキーが返されました"
+
+#: ../src/goabackend/goalastfmprovider.c:64
+msgid "Last.fm"
+msgstr "Last.fm"
+
+#: ../src/goabackend/goalastfmprovider.c:688
+#: ../src/goabackend/goalastfmprovider.c:836
+msgid "Error connecting to Last.fm"
+msgstr "Last.fm への接続に失敗しました"
+
+#: ../src/goabackend/goamediaserverprovider.c:77
+msgid "Media Server"
+msgstr "メディアサーバー"
+
+#: ../src/goabackend/goamediaserverprovider.c:355
+msgid ""
+"Personal content can be added to your applications through a media server "
+"account."
+msgstr ""
+"メディアサーバーのアカウントを通じて個人のコンテンツをお使いのアプリケーショ"
+"ンに追加できます。"
+
+#: ../src/goabackend/goamediaserverprovider.c:369
+msgid "Available Media Servers"
+msgstr "利用できるメディアサーバー"
+
+#: ../src/goabackend/goamediaserverprovider.c:399
+msgid "No media servers found"
+msgstr "メディアサーバーが見つかりませんでした"
+
+#. Translators: the %d is a HTTP status code and the %s is a textual description of it
+#: ../src/goabackend/goaoauth2provider.c:675
+#: ../src/goabackend/goaoauthprovider.c:559
+#, c-format
+msgid ""
+"Expected status 200 when requesting access token, instead got status %d (%s)"
+msgstr ""
+"token を要求した時に返されるステータスは 200 を期待していましたが、代わりに受"
+"け取ったステータスは %d (%s) でした"
+
+#: ../src/goabackend/goaoauth2provider.c:841
+msgid "Authorization response: "
+msgstr "認証の応答:"
+
+#: ../src/goabackend/goaoauth2provider.c:911
+#, c-format
+msgid "Authorization response: %s"
+msgstr "認証の応答: %s"
+
+#: ../src/goabackend/goaoauth2provider.c:1059
+#: ../src/goabackend/goaoauthprovider.c:893
+msgid "Error getting an Access Token: "
+msgstr "アクセス用トークンの取得エラー: "
+
+#: ../src/goabackend/goaoauth2provider.c:1074
+#: ../src/goabackend/goaoauthprovider.c:906
+msgid "Error getting identity: "
+msgstr "識別情報の取得中にエラー発生: "
+
+#: ../src/goabackend/goaoauth2provider.c:1291
+#: ../src/goabackend/goaoauthprovider.c:1210
+#, c-format
+msgid "Was asked to log in as %s, but logged in as %s"
+msgstr "%s でログインしたものの最終的に %s でのログインになりました"
+
+#: ../src/goabackend/goaoauth2provider.c:1453
+#, c-format
+msgid "Credentials do not contain access_token"
+msgstr "証明書に access_token が含まれていません"
+
+#: ../src/goabackend/goaoauth2provider.c:1492
+#: ../src/goabackend/goaoauthprovider.c:1438
+#, c-format
+msgid "Failed to refresh access token (%s, %d): "
+msgstr "アクセス用トークン (%s, %d) の更新エラー: "
+
+#: ../src/goabackend/goaoauthprovider.c:582
+#, c-format
+msgid "Missing access_token or access_token_secret headers in response"
+msgstr ""
+"受信した応答の中に access_token または access_token_secret のヘッダーがありま"
+"せん"
+
+#: ../src/goabackend/goaoauthprovider.c:774
+msgid "Error getting a Request Token: "
+msgstr "リクエスト用トークンの取得エラー: "
+
+#. Translators: the %d is a HTTP status code and the %s is a textual description of it
+#: ../src/goabackend/goaoauthprovider.c:807
+#, c-format
+msgid ""
+"Expected status 200 for getting a Request Token, instead got status %d (%s)"
+msgstr ""
+"リクエスト用トークンの取得で 200 のステータスを期待していましたが、代わりに受"
+"け取ったのは %d (%s) でした"
+
+#: ../src/goabackend/goaoauthprovider.c:824
+#, c-format
+msgid "Missing request_token or request_token_secret headers in response"
+msgstr ""
+"受信した応答の中に request_token または request_token_secret のヘッダーがあり"
+"ません"
+
+#: ../src/goabackend/goaoauthprovider.c:1394
+#, c-format
+msgid "Credentials do not contain access_token or access_token_secret"
+msgstr "証明書に access_token や access_token_secret が含まれていません"
+
+#: ../src/goabackend/goaowncloudprovider.c:68
+msgid "ownCloud"
+msgstr "ownCloud"
+
+#: ../src/goabackend/goaowncloudprovider.c:761
+#: ../src/goabackend/goaowncloudprovider.c:943
+msgid "Error connecting to ownCloud server"
+msgstr "ownCloud サーバーへの接続に失敗しました"
+
+#: ../src/goabackend/goapocketprovider.c:70
+msgid "Pocket"
+msgstr "Pocket"
+
+#. TODO: more specific
+#: ../src/goabackend/goapocketprovider.c:219
+#, c-format
+msgid "No username or access_token"
+msgstr "ユーザー名かアクセストークンがありません(_T)"
+
+#: ../src/goabackend/goaprovider.c:479
+msgid "_Mail"
+msgstr "メール(_M)"
+
+#: ../src/goabackend/goaprovider.c:484
+msgid "Cale_ndar"
+msgstr "カレンダー(_N)"
+
+#: ../src/goabackend/goaprovider.c:489
+msgid "_Contacts"
+msgstr "連絡先(_C)"
+
+#: ../src/goabackend/goaprovider.c:494
+msgid "C_hat"
+msgstr "チャット(_H)"
+
+#: ../src/goabackend/goaprovider.c:499
+msgid "_Documents"
+msgstr "ドキュメント(_D)"
+
+#: ../src/goabackend/goaprovider.c:504
+msgid "M_usic"
+msgstr "音楽(_U)"
+
+#: ../src/goabackend/goaprovider.c:509
+msgid "_Photos"
+msgstr "写真(_P)"
+
+#: ../src/goabackend/goaprovider.c:514
+msgid "_Files"
+msgstr "ファイル(_F)"
+
+#: ../src/goabackend/goaprovider.c:519
+msgid "Network _Resources"
+msgstr "ネットワークリソース(_R)"
+
+#: ../src/goabackend/goaprovider.c:524
+msgid "_Read Later"
+msgstr "あとで読む(_R)"
+
+#: ../src/goabackend/goaprovider.c:529
+msgid "Prin_ters"
+msgstr "プリンター(_T)"
+
+#: ../src/goabackend/goaprovider.c:534
+msgid "_Maps"
+msgstr "地図(_M)"
+
+#. Translators: This is a label for a series of
+#. * options switches. For example: “Use for Mail”.
+#: ../src/goabackend/goaprovider.c:563
+msgid "Use for"
+msgstr "用途"
+
+#: ../src/goabackend/goaprovider.c:802
+#, c-format
+msgid "ensure_credentials_sync is not implemented on type %s"
+msgstr "%s では ensure_credentials_sync は未だ利用できません"
+
+#. TODO: more specific
+#: ../src/goabackend/goasmtpauth.c:175
+#, c-format
+msgid "TLS not available"
+msgstr "TLS が利用できません"
+
+#. TODO: more specific
+#: ../src/goabackend/goasmtpauth.c:242
+#, c-format
+msgid "org.gnome.OnlineAccounts.Mail is not available"
+msgstr "org.gnome.OnlineAccounts.Mail が利用できません"
+
+#. TODO: more specific
+#: ../src/goabackend/goasmtpauth.c:252
+#, c-format
+msgid "Failed to parse email address"
+msgstr "メールアドレスの解析に失敗しました"
+
+#. TODO: more specific
+#: ../src/goabackend/goasmtpauth.c:261
+#, c-format
+msgid "Cannot do SMTP authentication without a domain"
+msgstr "ドメインなしで SMTP 認証はできません"
+
+#. TODO: more specific
+#: ../src/goabackend/goasmtpauth.c:301
+#, c-format
+msgid "Did not find smtp-password in credentials"
+msgstr "資格情報に SMTP パスワードが見つかりませんでした"
+
+#. TODO: more specific
+#: ../src/goabackend/goasmtpauth.c:312
+#, c-format
+msgid "Cannot do SMTP authentication without a password"
+msgstr "パスワードなしで SMTP 認証はできません"
+
+#: ../src/goabackend/goasmtpauth.c:674
+#, c-format
+msgid "Unknown authentication mechanism"
+msgstr "不明な認証メカニズム"
+
+#: ../src/goabackend/goatelepathyprovider.c:181
+#, c-format
+msgid "Telepathy chat account not found"
+msgstr "Telepathy チャットアカウントが見つかりませんでした"
+
+#: ../src/goabackend/goatelepathyprovider.c:381
+#, c-format
+msgid "Failed to initialize a GOA client"
+msgstr "GOA クライアントの初期化に失敗しました"
+
+#: ../src/goabackend/goatelepathyprovider.c:421
+#, c-format
+msgid "Failed to create a user interface for %s"
+msgstr "%s のユーザーインターフェース作成に失敗しました"
+
+#: ../src/goabackend/goatelepathyprovider.c:536
+msgid "Connection Settings"
+msgstr "接続設定"
+
+#: ../src/goabackend/goatelepathyprovider.c:645
+msgid "Personal Details"
+msgstr "個人情報"
+
+#: ../src/goabackend/goatelepathyprovider.c:651
+msgid "_OK"
+msgstr "_OK"
+
+#: ../src/goabackend/goatelepathyprovider.c:839
+msgid "Cannot save the connection parameters"
+msgstr "接続パラメーターを保存できません"
+
+#: ../src/goabackend/goatelepathyprovider.c:852
+msgid "Cannot save your personal information on the server"
+msgstr "個人情報をサーバーに保存できません"
+
+#. Connection Settings button
+#: ../src/goabackend/goatelepathyprovider.c:878
+msgid "_Connection Settings"
+msgstr "接続設定(_C)"
+
+#. Edit Personal Information button
+#: ../src/goabackend/goatelepathyprovider.c:882
+msgid "_Personal Details"
+msgstr "個人情報(_P)"
+
+#: ../src/goabackend/goautils.c:120
+#, c-format
+msgid "A %s account already exists for %s"
+msgstr "%s アカウントは、すでに %s に使用されています。"
+
+#. Translators: the %s is the name of the provider. eg., Google.
+#: ../src/goabackend/goautils.c:170
+#, c-format
+msgid "%s account"
+msgstr "%s アカウント"
+
+#. TODO: more specific
+#: ../src/goabackend/goautils.c:214
+msgid "Failed to delete credentials from the keyring"
+msgstr "キーリングから証明書の削除に失敗しました"
+
+#. TODO: more specific
+#: ../src/goabackend/goautils.c:266
+msgid "Failed to retrieve credentials from the keyring"
+msgstr "キーリングから証明書の取得に失敗しました"
+
+#. TODO: more specific
+#: ../src/goabackend/goautils.c:276
+msgid "No credentials found in the keyring"
+msgstr "キーリングに証明書が見つかりませんでした"
+
+#: ../src/goabackend/goautils.c:289
+msgid "Error parsing result obtained from the keyring: "
+msgstr "キーリングから取得した結果の解析に失敗しました: "
+
+#. Translators: The %s is the type of the provider, e.g. 'google' or 'yahoo'
+#: ../src/goabackend/goautils.c:332
+#, c-format
+msgid "GOA %s credentials for identity %s"
+msgstr "GOA の %s は %s を正しく認識しました"
+
+#. TODO: more specific
+#: ../src/goabackend/goautils.c:349
+msgid "Failed to store credentials in the keyring"
+msgstr "キーリングへの証明書の保存に失敗しました"
+
+#: ../src/goabackend/goautils.c:571
+msgid "Cannot resolve hostname"
+msgstr "ホスト名を解決できませんでした"
+
+#: ../src/goabackend/goautils.c:575
+msgid "Cannot resolve proxy hostname"
+msgstr "プロキシのホスト名を解決できませんでした"
+
+#: ../src/goabackend/goautils.c:580
+msgid "Cannot find WebDAV endpoint"
+msgstr "WebDAV エンドポイントが見つかりませんでした"
+
+#: ../src/goabackend/goautils.c:589
+#, c-format
+msgid "Code: %u — Unexpected response from server"
+msgstr "コード: %u — サーバーからの予期しない応答"
+
+#: ../src/goabackend/goautils.c:605
+msgid "The signing certificate authority is not known."
+msgstr "署名している認証局が未知です。"
+
+#: ../src/goabackend/goautils.c:609
+msgid ""
+"The certificate does not match the expected identity of the site that it was "
+"retrieved from."
+msgstr "証明書が予期した取得サイトの識別情報と一致しません。"
+
+#: ../src/goabackend/goautils.c:614
+msgid "The certificate’s activation time is still in the future."
+msgstr "証明書の発効時刻が未来になっています。"
+
+#: ../src/goabackend/goautils.c:618
+msgid "The certificate has expired."
+msgstr "証明書の有効期限が切れています。"
+
+#: ../src/goabackend/goautils.c:622
+msgid "The certificate has been revoked."
+msgstr "証明書が失効しています。"
+
+#: ../src/goabackend/goautils.c:626
+msgid "The certificate’s algorithm is considered insecure."
+msgstr "証明書のアルゴリズムは安全ではないものと見なされています。"
+
+#: ../src/goabackend/goautils.c:630
+msgid "Invalid certificate."
+msgstr "不正な証明書です。"
+
+#. TODO: more specific
+#: ../src/goabackend/goautils.c:665
+#, c-format
+msgid "Did not find %s with identity ‘%s’ in credentials"
+msgstr "資格情報に識別子‘%2$s’の %1$s が見つかりませんでした。"
+
+#. translators: %s here is the address of the web page
+#: ../src/goabackend/goawebview.c:95
+#, c-format
+msgid "Loading “%s”…"
+msgstr "“%s”をロード中…"
+
+#: ../src/goabackend/goawindowsliveprovider.c:78
+msgid "Microsoft Account"
+msgstr "Microsoft アカウント"
+
+#: ../src/goaidentity/goaidentityservice.c:378
+msgid "initial secret passed before secret key exchange"
+msgstr ""
+"シークレットキーの交換が行われる前に初期設定のシークレットが渡されました"
+
+#: ../src/goaidentity/goaidentityservice.c:574
+msgid "Initial secret key is invalid"
+msgstr "初期設定のシークレットキーが無効です"
+
+#: ../src/goaidentity/goaidentityservice.c:1131
+#, c-format
+msgid "The network realm %s needs some information to sign you in."
+msgstr ""
+"ネットワークレルム %s にサインインを行うには、 何らかの情報を与える必要があり"
+"ます。"
+
+#: ../src/goaidentity/goakerberosidentity.c:276
+#: ../src/goaidentity/goakerberosidentity.c:285
+#: ../src/goaidentity/goakerberosidentity.c:713
+msgid "Could not find identity in credential cache: %k"
+msgstr "証明書キャッシュに識別情報が見つかりませんでした: %k"
+
+#: ../src/goaidentity/goakerberosidentity.c:727
+msgid "Could not find identity credentials in cache: %k"
+msgstr "キャッシュに識別情報の証明書が見つかりませんでした: %k"
+
+#: ../src/goaidentity/goakerberosidentity.c:779
+msgid "Could not sift through identity credentials in cache: %k"
+msgstr "キャッシュにある識別情報の証明書の選別ができませんでした: %k"
+
+#: ../src/goaidentity/goakerberosidentity.c:797
+msgid "Could not finish up sifting through identity credentials in cache: %k"
+msgstr "キャッシュにある識別情報の証明書の選別を終了できませんでした: %k"
+
+#: ../src/goaidentity/goakerberosidentity.c:1111
+#, c-format
+msgid "No associated identification found"
+msgstr "関連のある ID が見つかりませんでした"
+
+#: ../src/goaidentity/goakerberosidentity.c:1194
+msgid "Could not create credential cache: %k"
+msgstr "証明書キャッシュを作成できませんでした: %k"
+
+#: ../src/goaidentity/goakerberosidentity.c:1228
+msgid "Could not initialize credentials cache: %k"
+msgstr "証明書用キャッシュを初期化できませんでした: %k"
+
+#: ../src/goaidentity/goakerberosidentity.c:1245
+msgid "Could not store new credentials in credentials cache: %k"
+msgstr "証明書用キャッシュに新しい証明書を保存できませんでした: %k"
+
+#: ../src/goaidentity/goakerberosidentity.c:1540
+#, c-format
+msgid "Could not renew identity: Not signed in"
+msgstr "識別情報を更新できませんでした: サインインしていません"
+
+#: ../src/goaidentity/goakerberosidentity.c:1552
+msgid "Could not renew identity: %k"
+msgstr "識別情報を更新できませんでした: %k"
+
+#: ../src/goaidentity/goakerberosidentity.c:1569
+msgid "Could not get new credentials to renew identity %s: %k"
+msgstr "識別情報 %s の更新に必要な新しい証明書が取得できませんでした: %k"
+
+#: ../src/goaidentity/goakerberosidentity.c:1611
+msgid "Could not erase identity: %k"
+msgstr "識別情報の消去ができませんでした: %k"
+
+#: ../src/goaidentity/goakerberosidentitymanager.c:749
+msgid "Could not find identity"
+msgstr "識別情報が見つかりませんでした"
+
+#: ../src/goaidentity/goakerberosidentitymanager.c:840
+msgid "Could not create credential cache for identity"
+msgstr "識別情報用の証明書キャッシュを作成できませんでした"
+
+#~ msgid "Did not find password with identity ‘%s’ in credentials"
+#~ msgstr "資格情報に識別子‘%s’のパスワードが見つかりませんでした。"
+
+#~ msgid "Windows Live"
+#~ msgstr "Windows Live"
+
+#~ msgid "Yahoo"
+#~ msgstr "Yahoo"
+
+#~ msgid "Expected status 200 when requesting name, instead got status %d (%s)"
+#~ msgstr ""
+#~ "name を要求した時に返されるステータスは 200 を期待していましたが、代わりに"
+#~ "受け取ったステータスは %d (%s) でした"
+
+#~ msgid ""
+#~ "Paste authorization code obtained from the <a href=\"%s\">authorization "
+#~ "page</a>:"
+#~ msgstr ""
+#~ "<a href=\"%s\">認証のページ</a>で得られた認証コードを入力してください:"
+
+#~ msgid "Paste token obtained from the <a href=\"%s\">authorization page</a>:"
+#~ msgstr ""
+#~ "<a href=\"%s\">認証のページ</a>で得られたトークンを入力してください:"
+
+#~ msgid "Time"
+#~ msgstr "時間"
+
+#~ msgid "Time to fire"
+#~ msgstr "起動させる時間"
+
+#~ msgid "Twitter"
+#~ msgstr "Twitter"
+
+#~ msgid "Failed to find Autodiscover element"
+#~ msgstr "自動検出エレメントの検出に失敗しました"
+
+#~ msgid "Failed to find Account element"
+#~ msgstr "Account 要素が見つかりませんでした"
+
+#~ msgid "Expected status 200 when requesting guid, instead got status %d (%s)"
+#~ msgstr ""
+#~ "guid を要求した時に返されるステータスは 200 を期待していましたが、代わりに"
+#~ "受け取ったステータスは %d (%s) でした"
+
+#~ msgid "Did not find imap-password with identity `%s' in credentials"
+#~ msgstr "資格情報に識別子 '%s' の IMAP パスワードが見つかりませんでした。"
+
+#~ msgid "Invalid imap-password with username `%s' (%s, %d): "
+#~ msgstr "ユーザー名 '%s' の IMAP パスワードが不正です (%s, %d): "
+
+#~ msgid "Did not find smtp-password with identity `%s' in credentials"
+#~ msgstr "資格情報に識別子 '%s' の SMTP パスワードが見つかりませんでした。"
+
+#~ msgid "Invalid smtp-password with username `%s' (%s, %d): "
+#~ msgstr "ユーザー名 '%s' の SMTP パスワードが不正です (%s, %d): "
+
+#~ msgid "Online Accounts"
+#~ msgstr "オンラインアカウント"
+
+#~ msgid "An online account needs attention"
+#~ msgstr "オンラインアカウントの利用には注意が必要です"
+
+#~ msgid "Open Online Accounts..."
+#~ msgstr "オンラインアカウントを開く..."
+
+#~ msgid "Credentials not found in keyring (%s, %d): "
+#~ msgstr "キーリング (%s, %d) の中に証明書が見つかりませんでした: "
+
+#~ msgid "Error parsing response as JSON: "
+#~ msgstr "JSON からの応答の解析に失敗しました: "
+
+#~ msgid "Didn't find id member in JSON data"
+#~ msgstr "JSON データの中に id メンバーがありませんでした"
+
+#~ msgid "Didn't find email member in JSON data"
+#~ msgstr "JSON データの中に email メンバーがありませんでした"
+
+#~ msgid "Didn't find data member in JSON data"
+#~ msgstr "JSON データの中に data メンバーがありませんでした"
+
+#~ msgid "Didn't find access_token in non-JSON data"
+#~ msgstr "JSON 以外のデータの中に access_token がありませんでした"
+
+#~ msgid "Didn't find access_token in JSON data"
+#~ msgstr "JSON データの中に access_token がありませんでした"
+
+#~ msgid "Error storing credentials in keyring (%s, %d): "
+#~ msgstr "証明書をキーリングの (%s, %d) に保存できませんでした: "
+
+#~ msgid "Didn't find id_str member in JSON data"
+#~ msgstr "JSON データの中に id str メンバーがありませんでした"
+
+#~ msgid "Didn't find screen_name member in JSON data"
+#~ msgstr "JSON データの中に screen_name メンバーがありませんでした"
+
+#~ msgid "Didn't find account email member in JSON data"
+#~ msgstr "JSON データの中に email メンバーがありませんでした"
+
+#~ msgid "Didn't find guid member in JSON data"
+#~ msgstr "JSON データの中に guid メンバーがありませんでした"
+
+#~ msgid "Didn't find value member in JSON data"
+#~ msgstr "JSON データの中に value メンバーがありませんでした"
+
+#~ msgid "Error parsing usercard response as JSON: "
+#~ msgstr "JSON からの usercard 応答の解析に失敗しました: "
+
+#~ msgid "Didn't find profile member in JSON data"
+#~ msgstr "JSON データの中に profile メンバーがありませんでした"
+
+#~ msgid "Didn't find nickname member in JSON data"
+#~ msgstr "JSON データの中に nickname メンバーがありませんでした"
+
+#~ msgid "Domain Administrator Login"
+#~ msgstr "ドメイン管理者のログイン"
+
+#~ msgid ""
+#~ "In order to use this enterprise identity, the computer needs to be "
+#~ "enrolled in the domain. Please have your network administrator type their "
+#~ "domain password here."
+#~ msgstr ""
+#~ "この企業用の識別情報を使用する場合は、コンピューターをドメインに登録する必"
+#~ "要があります。ネットワーク管理者の方にドメイン用のパスワードを入力しても"
+#~ "らってください。"
+
+#~ msgid ""
+#~ "In order to use this enterprise identity, the computer needs to be "
+#~ "enrolled in the domain. Please have your network administrator type their "
+#~ "domain username here."
+#~ msgstr ""
+#~ "この企業用の識別情報を使用する場合は、コンピューターをドメインに登録する必"
+#~ "要があります。ネットワーク管理者の方にドメイン用のユーザー名を入力しても"
+#~ "らってください。"
+
+#~ msgid "No such domain or realm found"
+#~ msgstr "そのようなドメインやレルムは見つかりませんでした"
+
+#~ msgid "Cannot log in as %s at the %s domain"
+#~ msgstr "%s として %s ドメインにはログインできません"
+
+#~ msgid "Invalid password, please try again"
+#~ msgstr "無効なパスワードです、もう一度やり直してください"
+
+#~ msgid "Couldn't connect to the %s domain: %s"
+#~ msgstr "%s ドメインに接続できませんでした: %s"
+
+#~ msgid "New Microsoft Exchange Account"
+#~ msgstr "Microsoft Exchange の新しいアカウント"
+
+#~ msgid "New Enterprise Login (Kerberos)"
+#~ msgstr "新しい企業向けログイン (Kerberos)"
+
+#~ msgid "Add %s"
+#~ msgstr "%s を追加する"
+
+#~ msgid "Refresh %s"
+#~ msgstr "%s を更新する"
+
+#~ msgid "Email _Address"
+#~ msgstr "メールアドレス(_A)"
+
+#~ msgid "Didn't find username member in JSON data"
+#~ msgstr "JSON データの中に username メンバーが見つかりませんでした"
+
+#~ msgid "Didn't find name member in JSON data"
+#~ msgstr "JSON データの中に name メンバーが見つかりませんでした"
+
+#~ msgid "There is already an account for the identity %s"
+#~ msgstr "次の身元情報のアカウントは既に存在しています: %s"
+
+#~ msgid "Expected 200 for getting a Request Token, got %d (%s)"
+#~ msgstr ""
+#~ "リクエスト用のトークンの取得で返されるステータスは 200 を期待していました"
+#~ "が、受け取ったステータスは %d (%s) でした"
