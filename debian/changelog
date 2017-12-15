@@ -10,6 +10,7 @@ gnome-online-accounts (3.26.2-1) UNRELEASED; urgency=medium
   * Build-Depend on autoconf-archive
   * debian/libgoa-backend-1.0-1.symbols:
     Drop realmd symbols. The backend library is a "private" API
+  * Don't recommend realmd: libkrb is used directly instead now.
 
  -- Jeremy Bicha <jbicha@debian.org>  Fri, 15 Dec 2017 10:41:11 -0500
 
