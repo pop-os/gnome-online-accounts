@@ -135,6 +135,7 @@ Description: library for GNOME Online Accounts - common files
 
 Package: libgoa-1.0-doc
 Architecture: all
+Multi-Arch: foreign
 Section: doc
 Depends: ${misc:Depends}
 Recommends: libglib2.0-doc
