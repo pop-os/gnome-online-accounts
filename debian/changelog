@@ -1,4 +1,4 @@
-gnome-online-accounts (3.26.2-1) UNRELEASED; urgency=medium
+gnome-online-accounts (3.26.2-1) unstable; urgency=medium
 
   * New upstream release
   * Update Vcs fields for conversion to git
@@ -12,7 +12,7 @@ gnome-online-accounts (3.26.2-1) UNRELEASED; urgency=medium
   * Don't recommend realmd: libkrb is used directly instead now.
   * Don't recommend dleyna-server on Ubuntu since it's in universe.
 
- -- Jeremy Bicha <jbicha@debian.org>  Fri, 15 Dec 2017 10:41:11 -0500
+ -- Jeremy Bicha <jbicha@debian.org>  Fri, 15 Dec 2017 11:54:46 -0500
 
 gnome-online-accounts (3.26.1-1) unstable; urgency=medium
 
