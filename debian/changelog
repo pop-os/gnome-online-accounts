@@ -6,6 +6,7 @@ gnome-online-accounts (3.26.1-2) UNRELEASED; urgency=medium
   * Mark libgoa-1.0-doc as Multi-Arch: foreign
   * Add all of m4/ (except ax_config_dir.m4) to Files-Excluded so that
     we use the system versions instead
+  * Build-Depend on autoconf-archive
 
  -- Jeremy Bicha <jbicha@debian.org>  Fri, 15 Dec 2017 10:41:11 -0500
 
