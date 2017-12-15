@@ -37,7 +37,7 @@ Depends: libgoa-1.0-0b (= ${binary:Version}),
          libgoa-backend-1.0-1 (= ${binary:Version}),
          ${misc:Depends},
          ${shlibs:Depends}
-Recommends: dleyna-server [linux-any],
+Recommends: ${media-server:Depends},
             gnome-control-center (>= 3.6.1)
 Breaks: evolution-data-server (<< 3.22.3)
 Description: service to manage online accounts for the GNOME desktop
