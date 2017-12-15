@@ -7,7 +7,6 @@ gnome-online-accounts (3.26.2-1) UNRELEASED; urgency=medium
   * Mark libgoa-1.0-doc as Multi-Arch: foreign
   * Add all of m4/ (except ax_config_dir.m4) to Files-Excluded so that
     we use the system versions instead
-  * Build-Depend on autoconf-archive
   * debian/libgoa-backend-1.0-1.symbols:
     Drop realmd symbols. The backend library is a "private" API
   * Don't recommend realmd: libkrb is used directly instead now.
