@@ -23,8 +23,8 @@ Build-Depends: debhelper (>= 10),
                libwebkit2gtk-4.0-dev (>= 2.7.2),
                valac
 Standards-Version: 4.1.2
-Vcs-Git: https://anonscm.debian.org/git/pkg-gnome/gnome-online-accounts.git
-Vcs-Browser: https://anonscm.debian.org/git/pkg-gnome/gnome-online-accounts.git
+Vcs-Browser: https://salsa.debian.org/gnome-team/gnome-online-accounts
+Vcs-Git: https://salsa.debian.org/gnome-team/gnome-online-accounts.git
 Homepage: https://wiki.gnome.org/Projects/GnomeOnlineAccounts
 
 Package: gnome-online-accounts
