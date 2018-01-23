@@ -1,4 +1,5 @@
 libgoa-1.0.so.0 libgoa-1.0-0b #MINVER#
+* Build-Depends-Package: libgoa-1.0-dev
  goa_account_call_ensure_credentials@Base 3.1.1
  goa_account_call_ensure_credentials_finish@Base 3.1.1
  goa_account_call_ensure_credentials_sync@Base 3.1.1

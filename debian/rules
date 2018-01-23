@@ -29,7 +29,12 @@ override_dh_auto_configure:
 		--enable-foursquare
 
 override_dh_install:
-	dh_install --list-missing
+	find debian/tmp -name '*.a' -print -delete
+	find debian/tmp -name '*.la' -print -delete
+	dh_install
+
+override_dh_missing:
+	dh_missing --fail-missing
 
 override_dh_makeshlibs:
 	dh_makeshlibs -- -c4

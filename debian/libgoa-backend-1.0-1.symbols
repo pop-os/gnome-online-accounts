@@ -1,4 +1,5 @@
 libgoa-backend-1.0.so.1 libgoa-backend-1.0-1 #MINVER#
+* Build-Depends-Package: libgoa-backend-1.0-dev
  dleyna_server_manager_call_get_servers@Base 3.13.90
  dleyna_server_manager_call_get_servers_finish@Base 3.13.90
  dleyna_server_manager_call_get_servers_sync@Base 3.13.90

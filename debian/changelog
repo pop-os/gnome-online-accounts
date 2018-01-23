@@ -1,6 +1,7 @@
 gnome-online-accounts (3.26.2-2) UNRELEASED; urgency=medium
 
   * Update Vcs fields for migration to https://salsa.debian.org/
+  * Use dh_missing --fail-missing
 
  -- Jeremy Bicha <jbicha@debian.org>  Fri, 19 Jan 2018 20:37:01 -0500
 
