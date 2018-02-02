@@ -1,6 +1,7 @@
 gnome-online-accounts (3.26.2-2) UNRELEASED; urgency=medium
 
   * Update Vcs fields for migration to https://salsa.debian.org/
+  * Bump debhelper compat to 11
   * Use dh_missing --fail-missing
   * Don't enable Media Server option and drop dleyna-server recommends.
     It is an experimental untested feature that was only used in GNOME
