@@ -18,7 +18,6 @@ override_dh_auto_configure:
 		--disable-media-server \
 		--enable-facebook \
 		--enable-flickr \
-		--enable-telepathy \
 		--enable-todoist \
 		--enable-windows-live \
 		--enable-google \
