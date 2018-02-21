@@ -2,6 +2,7 @@ gnome-online-accounts (3.27.3-1) UNRELEASED; urgency=medium
 
   * New upstream development release
   * Drop obsolete Build-Depends on gnome-common & intltool (Closes: #829843)
+  * Bump minimum libwebkit2gtk4.0-dev to 2.12.0
 
  -- Jeremy Bicha <jbicha@debian.org>  Tue, 20 Feb 2018 19:26:56 -0500
 
