@@ -4,11 +4,9 @@ Priority: optional
 Maintainer: Debian GNOME Maintainers <pkg-gnome-maintainers@lists.alioth.debian.org>
 Uploaders: @GNOME_TEAM@
 Build-Depends: debhelper (>= 10.3),
-               gnome-common,
                gnome-pkg-tools (>= 0.10),
                gobject-introspection (>= 0.9.12-4~),
                gtk-doc-tools,
-               intltool (>= 0.50.1),
                libgcr-3-dev,
                libgirepository1.0-dev (>= 0.9.3),
                libglib2.0-dev (>= 2.52),
