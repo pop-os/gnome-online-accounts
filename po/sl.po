@@ -9,8 +9,8 @@ msgstr ""
 "Project-Id-Version: gnome-online-accounts master\n"
 "Report-Msgid-Bugs-To: https://bugzilla.gnome.org/enter_bug.cgi?product=gnome-"
 "online-accounts&keywords=I18N+L10N&component=general\n"
-"POT-Creation-Date: 2017-11-01 15:41+0000\n"
-"PO-Revision-Date: 2017-11-02 19:47+0100\n"
+"POT-Creation-Date: 2017-12-31 10:37+0000\n"
+"PO-Revision-Date: 2017-12-31 12:37+0100\n"
 "Last-Translator: Matej Urbančič <mateju@svn.gnome.org>\n"
 "Language-Team: Slovenian GNOME Translation Team <gnome-si@googlegroups.com>\n"
 "Language: sl\n"
@@ -78,21 +78,21 @@ msgstr "Microsoft Exchange"
 #.
 #: src/goabackend/goaexchangeprovider.c:248
 #: src/goabackend/goalastfmprovider.c:287
-#: src/goabackend/goaowncloudprovider.c:299
+#: src/goabackend/goaowncloudprovider.c:291
 #, c-format
 msgid "Invalid password with username “%s” (%s, %d): "
 msgstr "Neveljavno geslo za uporabniško ime »%s« (%s, %d): "
 
 #: src/goabackend/goaexchangeprovider.c:396
-#: src/goabackend/goaimapsmtpprovider.c:686
+#: src/goabackend/goaimapsmtpprovider.c:647
 msgid "_E-mail"
 msgstr "_Elektronski naslov"
 
 #: src/goabackend/goaexchangeprovider.c:397
-#: src/goabackend/goaimapsmtpprovider.c:706
-#: src/goabackend/goaimapsmtpprovider.c:726
+#: src/goabackend/goaimapsmtpprovider.c:667
+#: src/goabackend/goaimapsmtpprovider.c:687
 #: src/goabackend/goalastfmprovider.c:429
-#: src/goabackend/goaowncloudprovider.c:538
+#: src/goabackend/goaowncloudprovider.c:530
 msgid "_Password"
 msgstr "_Geslo"
 
@@ -101,58 +101,57 @@ msgid "_Custom"
 msgstr "_Po meri"
 
 #: src/goabackend/goaexchangeprovider.c:411
-#: src/goabackend/goaimapsmtpprovider.c:705
-#: src/goabackend/goaimapsmtpprovider.c:725
-#: src/goabackend/goakerberosprovider.c:739
+#: src/goabackend/goaimapsmtpprovider.c:666
+#: src/goabackend/goaimapsmtpprovider.c:686
 #: src/goabackend/goalastfmprovider.c:428
-#: src/goabackend/goaowncloudprovider.c:537
+#: src/goabackend/goaowncloudprovider.c:529
 msgid "User_name"
 msgstr "_Uporabniško ime"
 
 #: src/goabackend/goaexchangeprovider.c:412
-#: src/goabackend/goaowncloudprovider.c:536
+#: src/goabackend/goaowncloudprovider.c:528
 msgid "_Server"
 msgstr "_Strežnik"
 
 #. --
 #: src/goabackend/goaexchangeprovider.c:422
-#: src/goabackend/goaimapsmtpprovider.c:738
-#: src/goabackend/goakerberosprovider.c:744
+#: src/goabackend/goaimapsmtpprovider.c:699
+#: src/goabackend/goakerberosprovider.c:563
 #: src/goabackend/goalastfmprovider.c:437
-#: src/goabackend/goaowncloudprovider.c:552
+#: src/goabackend/goaowncloudprovider.c:544
 #: src/goabackend/goatelepathyprovider.c:651
 msgid "_Cancel"
 msgstr "_Prekliči"
 
 #: src/goabackend/goaexchangeprovider.c:423
-#: src/goabackend/goakerberosprovider.c:745
+#: src/goabackend/goakerberosprovider.c:564
 #: src/goabackend/goalastfmprovider.c:438
-#: src/goabackend/goaowncloudprovider.c:553
+#: src/goabackend/goaowncloudprovider.c:545
 msgid "C_onnect"
 msgstr "_Poveži"
 
 #: src/goabackend/goaexchangeprovider.c:439
-#: src/goabackend/goaimapsmtpprovider.c:754
-#: src/goabackend/goakerberosprovider.c:761
+#: src/goabackend/goaimapsmtpprovider.c:715
+#: src/goabackend/goakerberosprovider.c:579
 #: src/goabackend/goalastfmprovider.c:454
-#: src/goabackend/goaowncloudprovider.c:568
+#: src/goabackend/goaowncloudprovider.c:560
 msgid "Connecting…"
 msgstr "Vzpostavljanje povezave ..."
 
 #: src/goabackend/goaexchangeprovider.c:539
 #: src/goabackend/goaexchangeprovider.c:733
-#: src/goabackend/goaimapsmtpprovider.c:916
-#: src/goabackend/goaimapsmtpprovider.c:951
-#: src/goabackend/goaimapsmtpprovider.c:1043
-#: src/goabackend/goaimapsmtpprovider.c:1312
-#: src/goabackend/goaimapsmtpprovider.c:1388
-#: src/goabackend/goakerberosprovider.c:1155
+#: src/goabackend/goaimapsmtpprovider.c:865
+#: src/goabackend/goaimapsmtpprovider.c:900
+#: src/goabackend/goaimapsmtpprovider.c:992
+#: src/goabackend/goaimapsmtpprovider.c:1249
+#: src/goabackend/goaimapsmtpprovider.c:1325
+#: src/goabackend/goakerberosprovider.c:896
 #: src/goabackend/goalastfmprovider.c:652
 #: src/goabackend/goalastfmprovider.c:820
 #: src/goabackend/goamediaserverprovider.c:420
 #: src/goabackend/goaoauth2provider.c:995 src/goabackend/goaoauthprovider.c:859
-#: src/goabackend/goaowncloudprovider.c:671
-#: src/goabackend/goaowncloudprovider.c:888
+#: src/goabackend/goaowncloudprovider.c:663
+#: src/goabackend/goaowncloudprovider.c:883
 #: src/goabackend/goatelepathyprovider.c:475
 #: src/goabackend/goatelepathyprovider.c:514
 #: src/goabackend/goatelepathyprovider.c:682
@@ -161,36 +160,36 @@ msgstr "Pogovorno okno je bilo opuščeno"
 
 #: src/goabackend/goaexchangeprovider.c:577
 #: src/goabackend/goaexchangeprovider.c:761
-#: src/goabackend/goaimapsmtpprovider.c:984
-#: src/goabackend/goaimapsmtpprovider.c:1081
-#: src/goabackend/goaimapsmtpprovider.c:1339
-#: src/goabackend/goaimapsmtpprovider.c:1416
+#: src/goabackend/goaimapsmtpprovider.c:933
+#: src/goabackend/goaimapsmtpprovider.c:1030
+#: src/goabackend/goaimapsmtpprovider.c:1276
+#: src/goabackend/goaimapsmtpprovider.c:1353
 #: src/goabackend/goalastfmprovider.c:686
 #: src/goabackend/goalastfmprovider.c:839
-#: src/goabackend/goaowncloudprovider.c:713
-#: src/goabackend/goaowncloudprovider.c:912
+#: src/goabackend/goaowncloudprovider.c:708
+#: src/goabackend/goaowncloudprovider.c:910
 #, c-format
 msgid "Dialog was dismissed (%s, %d): "
 msgstr "Pogovorno okno je bilo opuščeno (%s, %d): "
 
 #: src/goabackend/goaexchangeprovider.c:590
-#: src/goabackend/goaimapsmtpprovider.c:997
-#: src/goabackend/goaimapsmtpprovider.c:1094
-#: src/goabackend/goaowncloudprovider.c:726
+#: src/goabackend/goaimapsmtpprovider.c:946
+#: src/goabackend/goaimapsmtpprovider.c:1043
+#: src/goabackend/goaowncloudprovider.c:721
 msgid "_Ignore"
 msgstr "_Prezri"
 
 #: src/goabackend/goaexchangeprovider.c:595
 #: src/goabackend/goaexchangeprovider.c:780
-#: src/goabackend/goaimapsmtpprovider.c:1002
-#: src/goabackend/goaimapsmtpprovider.c:1099
-#: src/goabackend/goaimapsmtpprovider.c:1358
-#: src/goabackend/goaimapsmtpprovider.c:1435
-#: src/goabackend/goakerberosprovider.c:1262
+#: src/goabackend/goaimapsmtpprovider.c:951
+#: src/goabackend/goaimapsmtpprovider.c:1048
+#: src/goabackend/goaimapsmtpprovider.c:1295
+#: src/goabackend/goaimapsmtpprovider.c:1372
+#: src/goabackend/goakerberosprovider.c:981
 #: src/goabackend/goalastfmprovider.c:698
 #: src/goabackend/goalastfmprovider.c:856
-#: src/goabackend/goaowncloudprovider.c:731
-#: src/goabackend/goaowncloudprovider.c:931
+#: src/goabackend/goaowncloudprovider.c:726
+#: src/goabackend/goaowncloudprovider.c:929
 msgid "_Try Again"
 msgstr "_Poskusi znova"
 
@@ -259,7 +258,7 @@ msgstr "Odgovora ni mogoče razčleniti"
 msgid "Flickr"
 msgstr "Flickr"
 
-#: src/goabackend/goaflickrprovider.c:293
+#: src/goabackend/goaflickrprovider.c:271
 msgid "Your system time is invalid. Check your date and time settings."
 msgstr "Sistemski čas ni veljaven. Preverite nastavitve časa in datuma."
 
@@ -272,25 +271,25 @@ msgid "Google"
 msgstr "Google"
 
 #. TODO: more specific
-#: src/goabackend/goaimapauthlogin.c:89 src/goabackend/goasmtpauth.c:155
+#: src/goabackend/goaimapauthlogin.c:84 src/goabackend/goasmtpauth.c:155
 msgid "Service not available"
 msgstr "Storitev ni na vojo"
 
 #. TODO: more specific
-#: src/goabackend/goaimapauthlogin.c:109 src/goabackend/goalastfmprovider.c:529
-#: src/goabackend/goasmtpauth.c:108 src/goabackend/goautils.c:883
+#: src/goabackend/goaimapauthlogin.c:104 src/goabackend/goalastfmprovider.c:529
+#: src/goabackend/goasmtpauth.c:108 src/goabackend/goautils.c:878
 msgid "Authentication failed"
 msgstr "Overitev je spodletela"
 
-#: src/goabackend/goaimapauthlogin.c:134
+#: src/goabackend/goaimapauthlogin.c:129
 msgid "Server does not support PLAIN"
 msgstr "Strežnik ne podpira protokola PLAIN"
 
-#: src/goabackend/goaimapauthlogin.c:186 src/goabackend/goasmtpauth.c:606
+#: src/goabackend/goaimapauthlogin.c:181 src/goabackend/goasmtpauth.c:606
 msgid "Server does not support STARTTLS"
 msgstr "Strežnik ne podpira protokola STARTTLS"
 
-#: src/goabackend/goaimapsmtpprovider.c:61
+#: src/goabackend/goaimapsmtpprovider.c:53
 msgid "IMAP and SMTP"
 msgstr "IMAP in SMTP"
 
@@ -304,8 +303,8 @@ msgstr "IMAP in SMTP"
 #. * username (eg., rishi), and the (%s, %d)
 #. * is the error domain and code.
 #.
-#: src/goabackend/goaimapsmtpprovider.c:364
-#: src/goabackend/goaimapsmtpprovider.c:415
+#: src/goabackend/goaimapsmtpprovider.c:327
+#: src/goabackend/goaimapsmtpprovider.c:378
 #, c-format
 msgid "Invalid %s with username “%s” (%s, %d): "
 msgstr "Neveljavno %s za uporabniško ime »%s« (%s, %d): "
@@ -316,116 +315,112 @@ msgstr "Neveljavno %s za uporabniško ime »%s« (%s, %d): "
 #. *             STARTTLS after connecting
 #. *             SSL on a dedicated port
 #.
-#: src/goabackend/goaimapsmtpprovider.c:603
+#: src/goabackend/goaimapsmtpprovider.c:564
 msgid "_Encryption"
 msgstr "_Šifriranje"
 
-#: src/goabackend/goaimapsmtpprovider.c:606
+#: src/goabackend/goaimapsmtpprovider.c:567
 msgid "None"
 msgstr "Brez"
 
-#: src/goabackend/goaimapsmtpprovider.c:609
+#: src/goabackend/goaimapsmtpprovider.c:570
 msgid "STARTTLS after connecting"
 msgstr "Po povezavi začni STARTTLS"
 
-#: src/goabackend/goaimapsmtpprovider.c:612
+#: src/goabackend/goaimapsmtpprovider.c:573
 msgid "SSL on a dedicated port"
 msgstr "Protokol SSL na določenih vratih"
 
-#: src/goabackend/goaimapsmtpprovider.c:687
+#: src/goabackend/goaimapsmtpprovider.c:648
 msgid "_Name"
 msgstr "_Ime"
 
-#: src/goabackend/goaimapsmtpprovider.c:704
+#: src/goabackend/goaimapsmtpprovider.c:665
 msgid "IMAP _Server"
 msgstr "_Strežnik IMAP"
 
-#: src/goabackend/goaimapsmtpprovider.c:724
+#: src/goabackend/goaimapsmtpprovider.c:685
 msgid "SMTP _Server"
 msgstr "_Strežnik SMTP"
 
-#: src/goabackend/goaimapsmtpprovider.c:739
-#: src/goabackend/goaimapsmtpprovider.c:1023
-#: src/goabackend/goaimapsmtpprovider.c:1368
+#: src/goabackend/goaimapsmtpprovider.c:700
+#: src/goabackend/goaimapsmtpprovider.c:972
+#: src/goabackend/goaimapsmtpprovider.c:1305
 msgid "_Forward"
 msgstr "_Posreduj"
 
-#: src/goabackend/goaimapsmtpprovider.c:1007
-#: src/goabackend/goaimapsmtpprovider.c:1351
+#: src/goabackend/goaimapsmtpprovider.c:956
+#: src/goabackend/goaimapsmtpprovider.c:1288
 msgid "Error connecting to IMAP server"
 msgstr "Napaka med povezovanjem s strežnikom IMAP"
 
-#: src/goabackend/goaimapsmtpprovider.c:1104
-#: src/goabackend/goaimapsmtpprovider.c:1428
+#: src/goabackend/goaimapsmtpprovider.c:1053
+#: src/goabackend/goaimapsmtpprovider.c:1365
 msgid "Error connecting to SMTP server"
 msgstr "Napaka med povezovanjem s strežnikom SMTP"
 
-#: src/goabackend/goaimapsmtpprovider.c:1541
+#: src/goabackend/goaimapsmtpprovider.c:1476
 msgid "E-mail"
 msgstr "Elektronski naslov"
 
-#: src/goabackend/goaimapsmtpprovider.c:1545
+#: src/goabackend/goaimapsmtpprovider.c:1480
 msgid "Name"
 msgstr "Ime"
 
-#: src/goabackend/goaimapsmtpprovider.c:1555
-#: src/goabackend/goaimapsmtpprovider.c:1559
+#: src/goabackend/goaimapsmtpprovider.c:1490
+#: src/goabackend/goaimapsmtpprovider.c:1494
 msgid "IMAP"
 msgstr "IMAP"
 
-#: src/goabackend/goaimapsmtpprovider.c:1570
-#: src/goabackend/goaimapsmtpprovider.c:1574
+#: src/goabackend/goaimapsmtpprovider.c:1505
+#: src/goabackend/goaimapsmtpprovider.c:1509
 msgid "SMTP"
 msgstr "SMTP"
 
-#: src/goabackend/goakerberosprovider.c:102
+#: src/goabackend/goakerberosprovider.c:100
 msgid "Enterprise Login (Kerberos)"
 msgstr "Prijava v poslovno domeno (Kerberos)"
 
-#: src/goabackend/goakerberosprovider.c:300
+#: src/goabackend/goakerberosprovider.c:220
 msgid "Ticketing is disabled for account"
 msgstr "Za ta račun je ustvarjanje kartic onemogočeno"
 
-#: src/goabackend/goakerberosprovider.c:325
+#: src/goabackend/goakerberosprovider.c:245
 #, c-format
 msgid "Could not find saved credentials for principal “%s” in keyring"
 msgstr "Shranjenih poveril za »%s« v zbirki ključev ni mogoče najti"
 
-#: src/goabackend/goakerberosprovider.c:338
+#: src/goabackend/goakerberosprovider.c:258
 #, c-format
 msgid "Did not find password for principal “%s” in credentials"
 msgstr "Gesla za »%s« med poverili ni mogoče najti"
 
-#: src/goabackend/goakerberosprovider.c:731
-msgid "_Domain"
-msgstr "_Domena"
+#: src/goabackend/goakerberosprovider.c:558
+msgid "_Principal"
+msgstr "_Poverila"
 
-#: src/goabackend/goakerberosprovider.c:732
-msgid "Enterprise domain or realm name"
-msgstr "Poslovna domena ali ime območja"
+#: src/goabackend/goakerberosprovider.c:744
+msgid "Operation was cancelled"
+msgstr "Opravilo je preklicano"
 
-#: src/goabackend/goakerberosprovider.c:974
+#: src/goabackend/goakerberosprovider.c:794
 #: src/goaidentity/goaidentityservice.c:1072
 msgid "Log In to Realm"
 msgstr "Prijava v področje"
 
-#: src/goabackend/goakerberosprovider.c:975
+#: src/goabackend/goakerberosprovider.c:795
 msgid "Please enter your password below."
 msgstr "Spodaj vnesite geslo."
 
-#: src/goabackend/goakerberosprovider.c:976
+#: src/goabackend/goakerberosprovider.c:796
 msgid "Remember this password"
 msgstr "Zapomni si geslo"
 
-#: src/goabackend/goakerberosprovider.c:1110
-msgid "The domain is not valid"
-msgstr "Domena ni veljavna"
-
-#: src/goabackend/goakerberosprovider.c:1257
+#: src/goabackend/goakerberosprovider.c:976
 msgid "Error connecting to enterprise identity server"
 msgstr "Prišlo je do napake med povezovanjem s strežnikom Microsoft Exchange"
 
-#: src/goabackend/goakerberosprovider.c:1604
+#: src/goabackend/goakerberosprovider.c:1315
 msgid "Identity service returned invalid key"
 msgstr "Storitev istovetnosti je vrnila neveljaven ključ"
 
@@ -527,12 +522,12 @@ msgstr "Manjka glava žetona zahteve oziroma skritega žetona zahteve v odzivu"
 msgid "Credentials do not contain access_token or access_token_secret"
 msgstr "Poverila ne vsebujejo žetona dostopa oziroma skritega žetona dostopa"
 
-#: src/goabackend/goaowncloudprovider.c:68
+#: src/goabackend/goaowncloudprovider.c:60
 msgid "Nextcloud"
 msgstr "Nextcloud"
 
-#: src/goabackend/goaowncloudprovider.c:736
-#: src/goabackend/goaowncloudprovider.c:924
+#: src/goabackend/goaowncloudprovider.c:731
+#: src/goabackend/goaowncloudprovider.c:922
 msgid "Error connecting to ownCloud server"
 msgstr "Napaka povezave s strežnikom ownCloud..."
 
@@ -728,28 +723,28 @@ msgstr "Poverila GOA %s za %s"
 msgid "Failed to store credentials in the keyring"
 msgstr "Shranjevanje poveril v zbirko ključev je spodletelo"
 
-#: src/goabackend/goautils.c:870
+#: src/goabackend/goautils.c:865
 msgid "Cannot resolve hostname"
 msgstr "Ni mogoče razrešiti imena gostitelja"
 
-#: src/goabackend/goautils.c:874
+#: src/goabackend/goautils.c:869
 msgid "Cannot resolve proxy hostname"
 msgstr "Ni mogoče razrešiti posredniškega strežnika gostitelja"
 
-#: src/goabackend/goautils.c:879
+#: src/goabackend/goautils.c:874
 msgid "Cannot find WebDAV endpoint"
 msgstr "Ni mogoče najti končne točke WebDAV"
 
-#: src/goabackend/goautils.c:888
+#: src/goabackend/goautils.c:883
 #, c-format
 msgid "Code: %u — Unexpected response from server"
 msgstr "Koda: %u — Nepričakovan odziv strežnika"
 
-#: src/goabackend/goautils.c:904
+#: src/goabackend/goautils.c:899
 msgid "The signing certificate authority is not known."
 msgstr "Podpisnik potrdil ni znan."
 
-#: src/goabackend/goautils.c:908
+#: src/goabackend/goautils.c:903
 msgid ""
 "The certificate does not match the expected identity of the site that it was "
 "retrieved from."
@@ -757,28 +752,28 @@ msgstr ""
 "Potrdilo ni skladno s pričakovano istovetnostjo strani, s katere je "
 "pridobljen."
 
-#: src/goabackend/goautils.c:913
+#: src/goabackend/goautils.c:908
 msgid "The certificate’s activation time is still in the future."
 msgstr "Čas omogočenosti potrdila je v prihodnosti."
 
-#: src/goabackend/goautils.c:917
+#: src/goabackend/goautils.c:912
 msgid "The certificate has expired."
 msgstr "Potrdilo je poteklo."
 
-#: src/goabackend/goautils.c:921
+#: src/goabackend/goautils.c:916
 msgid "The certificate has been revoked."
 msgstr "Potrdilo je bilo preklicano."
 
-#: src/goabackend/goautils.c:925
+#: src/goabackend/goautils.c:920
 msgid "The certificate’s algorithm is considered insecure."
 msgstr "Algoritem potrdila ni dovolj varen."
 
-#: src/goabackend/goautils.c:929
+#: src/goabackend/goautils.c:926
 msgid "Invalid certificate."
 msgstr "Neveljavno potrdilo."
 
 #. TODO: more specific
-#: src/goabackend/goautils.c:964
+#: src/goabackend/goautils.c:961
 #, c-format
 msgid "Did not find %s with identity “%s” in credentials"
 msgstr "V poverilih %s za istovetnost »%s« ni mogoče najti gesla"
@@ -802,62 +797,63 @@ msgstr "Začetni skivni ključ ni veljaven!"
 msgid "The network realm %s needs some information to sign you in."
 msgstr "Omrežno področje %s zahteva dodatne podatke za prijavo."
 
-#: src/goaidentity/goakerberosidentity.c:276
-#: src/goaidentity/goakerberosidentity.c:285
-#: src/goaidentity/goakerberosidentity.c:713
-msgid "Could not find identity in credential cache: %k"
-msgstr "Ni mogoče najti istovetnosti v predpomnilniku poveril: %k"
+#: src/goaidentity/goakerberosidentity.c:275
+#: src/goaidentity/goakerberosidentity.c:283
+#: src/goaidentity/goakerberosidentity.c:707
+msgid "Could not find identity in credential cache: "
+msgstr "Ni mogoče najti istovetnosti v predpomnilniku poveril: "
 
-#: src/goaidentity/goakerberosidentity.c:727
-msgid "Could not find identity credentials in cache: %k"
-msgstr "Ni mogoče najti poveril istovetnosti v predpomnilniku: %k"
+#: src/goaidentity/goakerberosidentity.c:720
+msgid "Could not find identity credentials in cache: "
+msgstr "Ni mogoče najti poveril istovetnosti v predpomnilniku: "
 
-#: src/goaidentity/goakerberosidentity.c:779
-msgid "Could not sift through identity credentials in cache: %k"
-msgstr "Ni se mogoče premikati med poverili istovetnosti v predpomnilniku: %k"
+#: src/goaidentity/goakerberosidentity.c:771
+msgid "Could not sift through identity credentials in cache: "
+msgstr "Ni se mogoče premikati med poverili istovetnosti v predpomnilniku: "
 
-#: src/goaidentity/goakerberosidentity.c:797
-msgid "Could not finish up sifting through identity credentials in cache: %k"
+#: src/goaidentity/goakerberosidentity.c:788
+msgid "Could not finish up sifting through identity credentials in cache: "
 msgstr ""
-"Ni mogoče prekiniti premikanja med poverili istovetnosti v predpomnilniku: %k"
+"Ni mogoče prekiniti premikanja med poverili istovetnosti v predpomnilniku: "
 
-#: src/goaidentity/goakerberosidentity.c:1111
+#: src/goaidentity/goakerberosidentity.c:1103
 msgid "No associated identification found"
 msgstr "Ni najdene povezane istovetnosti"
 
-#: src/goaidentity/goakerberosidentity.c:1194
-msgid "Could not create credential cache: %k"
-msgstr "Ni mogoče ustvariti predpomnilnika poverila: %k"
+#: src/goaidentity/goakerberosidentity.c:1186
+msgid "Could not create credential cache: "
+msgstr "Ni mogoče ustvariti predpomnilnika poverila: "
 
-#: src/goaidentity/goakerberosidentity.c:1228
-msgid "Could not initialize credentials cache: %k"
-msgstr "Ni mogoče začeti predpomnilnika poverila: %k"
+#: src/goaidentity/goakerberosidentity.c:1220
+msgid "Could not initialize credentials cache: "
+msgstr "Ni mogoče začeti predpomnilnika poverila: "
 
-#: src/goaidentity/goakerberosidentity.c:1245
-msgid "Could not store new credentials in credentials cache: %k"
-msgstr "Ni mogoče shraniti novih poveril v predpomnilnik: %k"
+#: src/goaidentity/goakerberosidentity.c:1236
+msgid "Could not store new credentials in credentials cache: "
+msgstr "Ni mogoče shraniti novih poveril v predpomnilnik: "
 
-#: src/goaidentity/goakerberosidentity.c:1540
+#: src/goaidentity/goakerberosidentity.c:1534
 msgid "Could not renew identity: Not signed in"
 msgstr "Istovetnosti ni mogoče obnoviti: prijava ni uspela"
 
-#: src/goaidentity/goakerberosidentity.c:1552
-msgid "Could not renew identity: %k"
-msgstr "Ni mogoče obnoviti istovetnosti: %k"
+#: src/goaidentity/goakerberosidentity.c:1546
+msgid "Could not renew identity: "
+msgstr "Ni mogoče obnoviti istovetnosti: "
 
-#: src/goaidentity/goakerberosidentity.c:1569
-msgid "Could not get new credentials to renew identity %s: %k"
-msgstr "Ni mogoče pridobiti poveril za obnovitev istovetnosti %s: %k"
+#: src/goaidentity/goakerberosidentity.c:1562
+#, c-format
+msgid "Could not get new credentials to renew identity %s: "
+msgstr "Ni mogoče pridobiti poveril za obnovitev istovetnosti %s: "
 
-#: src/goaidentity/goakerberosidentity.c:1611
-msgid "Could not erase identity: %k"
-msgstr "Istovetnosti ni mogoče izbrisati: %k"
+#: src/goaidentity/goakerberosidentity.c:1604
+msgid "Could not erase identity: "
+msgstr "Istovetnosti ni mogoče izbrisati: "
 
-#: src/goaidentity/goakerberosidentitymanager.c:750
+#: src/goaidentity/goakerberosidentitymanager.c:749
 msgid "Could not find identity"
 msgstr "Ni mogoče najti izbrane istovetnosti"
 
-#: src/goaidentity/goakerberosidentitymanager.c:842
+#: src/goaidentity/goakerberosidentitymanager.c:845
 msgid "Could not create credential cache for identity"
 msgstr "Ni mogoče ustvariti predpomnilnika poverila za izbrano istovetnost"
 
@@ -878,6 +874,15 @@ msgstr "Ni mogoče ustvariti predpomnilnika poverila za izbrano istovetnost"
 
 #~ msgid "initial secret passed before secret key exchange"
 #~ msgstr "paket poslan pred izmenjavo skrivnega ključa"
+
+#~ msgid "_Domain"
+#~ msgstr "_Domena"
+
+#~ msgid "Enterprise domain or realm name"
+#~ msgstr "Poslovna domena ali ime območja"
+
+#~ msgid "The domain is not valid"
+#~ msgstr "Domena ni veljavna"
 
 #~ msgid "ownCloud"
 #~ msgstr "ownCloud"
