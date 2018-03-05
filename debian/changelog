@@ -1,8 +1,9 @@
-gnome-online-accounts (3.27.92-1) UNRELEASED; urgency=medium
+gnome-online-accounts (3.27.92-1) unstable; urgency=medium
 
   * New upstream release candidate
+  * Release to unstable
 
- -- Jeremy Bicha <jbicha@debian.org>  Mon, 05 Mar 2018 14:16:19 -0500
+ -- Jeremy Bicha <jbicha@debian.org>  Mon, 05 Mar 2018 14:24:07 -0500
 
 gnome-online-accounts (3.27.3-1) experimental; urgency=medium
 
@@ -505,7 +506,7 @@ gnome-online-accounts (3.6.2-1) experimental; urgency=low
 
   * New upstream release
     - Adjust .symbols file: some symbols have been dropped, but were not part
-      of the public API 
+      of the public API
 
  -- Laurent Bigonville <bigon@debian.org>  Sat, 09 Feb 2013 23:23:42 +0100
 

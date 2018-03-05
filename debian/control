@@ -45,7 +45,7 @@ Description: service to manage online accounts for the GNOME desktop
 Package: libgoa-1.0-0b
 Architecture: any
 Section: libs
-Depends: libgoa-1.0-common (= ${source:Version}),
+Depends: libgoa-1.0-common (>= ${source:Version}),
          ${misc:Depends},
          ${shlibs:Depends}
 Conflicts: libgoa-1.0-0
@@ -82,7 +82,7 @@ Description: library for GNOME Online Accounts - development files
 Package: libgoa-backend-1.0-1
 Architecture: any
 Section: libs
-Depends: libgoa-1.0-common (= ${source:Version}),
+Depends: libgoa-1.0-common (>= ${source:Version}),
          ${misc:Depends},
          ${shlibs:Depends}
 Pre-Depends: ${misc:Pre-Depends}
