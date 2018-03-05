@@ -1,3 +1,9 @@
+gnome-online-accounts (3.27.92-1) UNRELEASED; urgency=medium
+
+  * New upstream release candidate
+
+ -- Jeremy Bicha <jbicha@debian.org>  Mon, 05 Mar 2018 14:16:19 -0500
+
 gnome-online-accounts (3.27.3-1) experimental; urgency=medium
 
   * New upstream development release
