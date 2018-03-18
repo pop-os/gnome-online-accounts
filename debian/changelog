@@ -1,3 +1,9 @@
+gnome-online-accounts (3.28.0-1) UNRELEASED; urgency=medium
+
+  * New upstream release
+
+ -- Tim Lunn <tim@feathertop.org>  Sun, 18 Mar 2018 18:41:25 +1100
+
 gnome-online-accounts (3.27.92-1) unstable; urgency=medium
 
   * New upstream release candidate
