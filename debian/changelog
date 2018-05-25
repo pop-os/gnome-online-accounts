@@ -1,39 +1,144 @@
-gnome-online-accounts (3.24.0-0ubuntu2) artful; urgency=medium
+gnome-online-accounts (3.28.0-0ubuntu3) cosmic; urgency=medium
 
-  [ Ken VanDine ]
+  * debian/patches/0001-ubuntu-sso-provider.patch: Add a link to the
+    link to the privacy policy in U1 login dialog (LP: #1773213).
+  * debian/patches/0002-livepatch-auth: Refresh patch.
+
+ -- Andrea Azzarone <andrea.azzarone@canonical.com>  Fri, 25 May 2018 09:04:11 -0500
+
+gnome-online-accounts (3.28.0-0ubuntu2) bionic; urgency=medium
+
+  * debian/patches/0002-livepatch-auth: Don't show an error message if the
+    polkit authentication dialog is dimissed by the user (LP: #1764989).
+
+ -- Andrea Azzarone <andrea.azzarone@canonical.com>  Wed, 18 Apr 2018 16:52:39 +0200
+
+gnome-online-accounts (3.28.0-0ubuntu1) bionic; urgency=medium
+
+  * New upstream release
+
+ -- Jeremy Bicha <jbicha@ubuntu.com>  Fri, 13 Apr 2018 14:33:07 -0400
+
+gnome-online-accounts (3.27.92-1ubuntu3) bionic; urgency=medium
+
+  * debian/rules:
+    Make sure that gnome-online-accounts.pot is refreshed so the
+    strings from 0001-ubuntu-sso-provider.patch are included
+    (LP: #1759251).
+
+ -- Gunnar Hjalmarsson <gunnarhj@ubuntu.com>  Tue, 27 Mar 2018 23:17:00 +0200
+
+gnome-online-accounts (3.27.92-1ubuntu2) bionic; urgency=medium
+
+  * debian/patches/0002-livepatch-auth:
+    clear the otp text entry when a second otp is required (LP: #1757444) 
+
+ -- Andrea Azzarone <andrea.azzarone@canonical.com>  Wed, 21 Mar 2018 15:19:11 +0100
+
+gnome-online-accounts (3.27.92-1ubuntu1) bionic; urgency=medium
+
   * debian/control.in:
-    - Drop dleyna-server from a recommends to a suggests
+    - Add b-d on libsnapd-glib-dev
+    - depends on python3-macaroonbakery for the ubuntu sso provide
+  * debian/gnome-online-accounts.install:
+    install usr/share/goa-1.0/scripts/lpa_helper.py
+  * debian/libgoa-backend-1.0-1.symbols:
+    Add goa_ubuntu_sso_provider_get_type
+  * debian/patches/0001-ubuntu-sso-provider.patch:
+    Add an Ubuntu Single Sing-On provider (lp: #1752472)
+  * debian/patches/0002-livepatch-auth:
+    Get the Canonical Livepatch authentication token.
+  * debian/rules:
+    Build with --enable-ubuntu-sso
+  * debian/source/include-binaries:
+    Add debian/patches/0001-ubuntu-sso-provider.patch to properly deal with
+    new binary images.
 
-  [ Jeremy Bicha ]
-  * debian/control.in:
-    - Drop realmd from a recommends to a suggests
+ -- Andrea Azzarone <andrea.azzarone@canonical.com>  Tue, 06 Mar 2018 08:46:07 +0100
 
- -- Jeremy Bicha <jbicha@ubuntu.com>  Tue, 25 Apr 2017 22:25:19 -0400
+gnome-online-accounts (3.27.92-1) unstable; urgency=medium
 
-gnome-online-accounts (3.24.0-0ubuntu1) zesty; urgency=medium
+  * New upstream release candidate
+  * Release to unstable
+
+ -- Jeremy Bicha <jbicha@debian.org>  Mon, 05 Mar 2018 14:24:07 -0500
+
+gnome-online-accounts (3.27.3-1) experimental; urgency=medium
+
+  * New upstream development release
+  * Drop obsolete Build-Depends on gnome-common & intltool (Closes: #829843)
+  * Bump minimum libwebkit2gtk4.0-dev to 2.12.0
+  * Build-Depend on autoconf-archive
+  * Drop telepathy support. It will be completely removed in 3.29 anyway.
+  * Update symbols for removed "private" backend symbols
+
+ -- Jeremy Bicha <jbicha@debian.org>  Tue, 20 Feb 2018 19:52:24 -0500
+
+gnome-online-accounts (3.26.2-2) unstable; urgency=medium
+
+  * Update Vcs fields for migration to https://salsa.debian.org/
+  * Use dh_missing --fail-missing
+  * Don't enable Media Server option and drop dleyna-server recommends.
+    It is an experimental untested feature that was only used in GNOME
+    Photos and the GNOME Photos maintainer recommended we disable it.
+    (LP: #1738448)
+
+ -- Jeremy Bicha <jbicha@debian.org>  Thu, 01 Feb 2018 20:29:48 -0500
+
+gnome-online-accounts (3.26.2-1) unstable; urgency=medium
+
+  * New upstream release
+  * Update Vcs fields for conversion to git
+  * Add debian/gbp.conf
+  * Bump Standards-Version to 4.1.2
+  * Mark libgoa-1.0-doc as Multi-Arch: foreign
+  * Add all of m4/ (except ax_config_dir.m4) to Files-Excluded so that
+    we use the system versions instead
+  * debian/libgoa-backend-1.0-1.symbols:
+    Drop realmd symbols. The backend library is a "private" API
+  * Don't recommend realmd: libkrb is used directly instead now.
+  * Don't recommend dleyna-server on Ubuntu since it's in universe.
+
+ -- Jeremy Bicha <jbicha@debian.org>  Fri, 15 Dec 2017 11:54:46 -0500
+
+gnome-online-accounts (3.26.1-1) unstable; urgency=medium
+
+  * New upstream release
+  * Bump Standards-Version to 4.1.1
+
+ -- Jeremy Bicha <jbicha@debian.org>  Tue, 03 Oct 2017 12:53:25 -0400
+
+gnome-online-accounts (3.26.0-1) unstable; urgency=medium
 
   * New upstream translations release
 
- -- Jeremy Bicha <jbicha@ubuntu.com>  Tue, 21 Mar 2017 14:46:24 -0400
+ -- Jeremy Bicha <jbicha@debian.org>  Wed, 13 Sep 2017 06:34:22 -0400
 
-gnome-online-accounts (3.23.92-0ubuntu1) zesty; urgency=medium
+gnome-online-accounts (3.25.92-1) unstable; urgency=medium
 
-  * New upstream release
+  * New upstream translations release
 
- -- Jeremy Bicha <jbicha@ubuntu.com>  Thu, 16 Mar 2017 20:36:05 -0400
+ -- Jeremy Bicha <jbicha@debian.org>  Tue, 05 Sep 2017 13:43:42 -0400
 
-gnome-online-accounts (3.23.91-0ubuntu1) zesty; urgency=medium
-
-  * New upstream release
-
- -- Jeremy Bicha <jbicha@ubuntu.com>  Wed, 01 Mar 2017 14:30:09 -0500
-
-gnome-online-accounts (3.23.4-0ubuntu1) zesty; urgency=medium
+gnome-online-accounts (3.25.90-1) unstable; urgency=medium
 
   * New upstream release
-    - This renames the ownCloud provider to Nextcloud
+  * debian/control.in:
+    - Bump minimum libglib2.0-dev to 2.52
+  * debian/rules: Explicitly enable Todoist and Telepathy
+  * Add new symbols and drop 2 apparently unused symbols
+    that are part of the "private" API
+    - goa_oauth2_provider_get_authentication_cookie
+    - goa_oauth_provider_get_authentication_cookie
+  * Bump Standards-Version to 4.1.0
 
- -- Jeremy Bicha <jbicha@ubuntu.com>  Wed, 15 Feb 2017 11:35:45 -0500
+ -- Jeremy Bicha <jbicha@ubuntu.com>  Tue, 29 Aug 2017 20:14:26 -0400
+
+gnome-online-accounts (3.22.5-1) unstable; urgency=medium
+
+  * New upstream release.
+
+ -- Michael Biebl <biebl@debian.org>  Sat, 11 Mar 2017 07:08:52 +0100
 
 gnome-online-accounts (3.22.4-1) unstable; urgency=medium
 
@@ -459,7 +564,7 @@ gnome-online-accounts (3.6.2-1) experimental; urgency=low
 
   * New upstream release
     - Adjust .symbols file: some symbols have been dropped, but were not part
-      of the public API 
+      of the public API
 
  -- Laurent Bigonville <bigon@debian.org>  Sat, 09 Feb 2013 23:23:42 +0100
 
