@@ -95,13 +95,11 @@ am__aclocal_m4_deps = $(top_srcdir)/m4/ax_append_compile_flags.m4 \
 	$(top_srcdir)/m4/ax_append_flag.m4 \
 	$(top_srcdir)/m4/ax_append_link_flags.m4 \
 	$(top_srcdir)/m4/ax_check_compile_flag.m4 \
-	$(top_srcdir)/m4/ax_check_enable_debug.m4 \
 	$(top_srcdir)/m4/ax_check_link_flag.m4 \
 	$(top_srcdir)/m4/ax_compiler_flags.m4 \
 	$(top_srcdir)/m4/ax_compiler_flags_cflags.m4 \
 	$(top_srcdir)/m4/ax_compiler_flags_gir.m4 \
 	$(top_srcdir)/m4/ax_compiler_flags_ldflags.m4 \
-	$(top_srcdir)/m4/ax_config_dir.m4 \
 	$(top_srcdir)/m4/ax_is_release.m4 \
 	$(top_srcdir)/m4/ax_require_defined.m4 \
 	$(top_srcdir)/m4/gettext.m4 $(top_srcdir)/m4/gsettings.m4 \
@@ -354,10 +352,6 @@ SED = @SED@
 SET_MAKE = @SET_MAKE@
 SHELL = @SHELL@
 STRIP = @STRIP@
-TPAW_CFLAGS = @TPAW_CFLAGS@
-TPAW_LIBS = @TPAW_LIBS@
-TP_CFLAGS = @TP_CFLAGS@
-TP_LIBS = @TP_LIBS@
 USE_NLS = @USE_NLS@
 VAPIGEN = @VAPIGEN@
 VAPIGEN_MAKEFILE = @VAPIGEN_MAKEFILE@
@@ -427,14 +421,15 @@ top_builddir = @top_builddir@
 top_srcdir = @top_srcdir@
 NULL = 
 SUBDIRS = icons
-gsettings_SCHEMAS = org.gnome.online-accounts.gschema.xml
+gsettings_schema_files = org.gnome.online-accounts.gschema.xml
+@BUILD_BACKEND_TRUE@gsettings_SCHEMAS = $(gsettings_schema_files)
 @BUILD_BACKEND_TRUE@servicedir = $(datadir)/dbus-1/services
 @BUILD_BACKEND_TRUE@service_in_files =  \
 @BUILD_BACKEND_TRUE@	org.gnome.OnlineAccounts.service.in \
 @BUILD_BACKEND_TRUE@	$(am__append_1)
 @BUILD_BACKEND_TRUE@service_DATA = $(service_in_files:.service.in=.service)
 EXTRA_DIST = \
-	$(gsettings_SCHEMAS)				\
+	$(gsettings_schema_files)			\
 	dbus-interfaces.xml				\
 	org.gnome.Identity.service.in			\
 	org.gnome.OnlineAccounts.service.in		\
@@ -781,7 +776,6 @@ uninstall-am: uninstall-serviceDATA
 	tags tags-am uninstall uninstall-am uninstall-serviceDATA
 
 .PRECIOUS: Makefile
-
 
 @BUILD_BACKEND_TRUE@@GSETTINGS_RULES@
 @BUILD_BACKEND_TRUE@%.service: %.service.in Makefile

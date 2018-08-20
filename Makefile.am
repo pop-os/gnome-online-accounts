@@ -1,15 +1,7 @@
 
 NULL =
 
-SUBDIRS = data
-
-if BUILD_BACKEND
-if BUILD_TELEPATHY
-SUBDIRS += telepathy-account-widgets
-endif
-endif
-
-SUBDIRS += src
+SUBDIRS = data src
 
 if BUILD_BACKEND
 SUBDIRS += doc
@@ -19,7 +11,11 @@ SUBDIRS += po
 
 ACLOCAL_AMFLAGS = -I m4 ${ACLOCAL_FLAGS}
 
-DISTCHECK_CONFIGURE_FLAGS=--enable-introspection --enable-gtk-doc --enable-telepathy
+DISTCHECK_CONFIGURE_FLAGS = \
+	--enable-documentation \
+	--enable-gtk-doc \
+	--enable-introspection \
+	$(NULL)
 
 MAINTAINERCLEANFILES = \
 	$(GITIGNORE_MAINTAINERCLEANFILES_TOPLEVEL) \

@@ -91,52 +91,6 @@ static void goa_daemon_reload_configuration (GoaDaemon *self);
 
 G_DEFINE_TYPE (GoaDaemon, goa_daemon, G_TYPE_OBJECT);
 
-/* ---------------------------------------------------------------------------------------------------- */
-
-typedef struct
-{
-  GError **error;
-  GList **out_providers;
-  GMainLoop *loop;
-  gboolean op_res;
-} GetAllSyncData;
-
-static void
-get_all_providers_sync_cb (GObject       *source_object,
-                           GAsyncResult  *res,
-                           gpointer       user_data)
-{
-  GetAllSyncData *data = (GetAllSyncData *) user_data;
-
-  data->op_res = goa_provider_get_all_finish (data->out_providers, res, data->error);
-  g_main_loop_quit (data->loop);
-}
-
-static gboolean
-get_all_providers_sync (GCancellable  *cancellable,
-                        GList        **out_providers,
-                        GError       **error)
-{
-  GetAllSyncData data;
-
-  data.error = error;
-  data.out_providers = out_providers;
-
-  /* HACK: Since telepathy-glib doesn't use the thread-default
-   * GMainContext for invoking the asynchronous callbacks, we can't
-   * push a new GMainContext here.
-   */
-  data.loop = g_main_loop_new (NULL, FALSE);
-
-  goa_provider_get_all (get_all_providers_sync_cb, &data);
-  g_main_loop_run (data.loop);
-  g_main_loop_unref (data.loop);
-
-  return data.op_res;
-}
-
-/* ---------------------------------------------------------------------------------------------------- */
-
 static void
 goa_daemon_constructed (GObject *object)
 {
@@ -291,9 +245,6 @@ static void
 goa_daemon_init (GoaDaemon *self)
 {
   static volatile GQuark goa_error_domain = 0;
-  GError *error;
-  GList *l;
-  GList *providers = NULL;
   GoaObjectSkeleton *object;
   gchar *path;
 
@@ -303,21 +254,7 @@ goa_daemon_init (GoaDaemon *self)
   goa_error_domain = GOA_ERROR;
   goa_error_domain; /* shut up -Wunused-but-set-variable */
 
-  error = NULL;
-  if (!get_all_providers_sync (NULL, &providers, &error))
-    {
-      g_warning ("Unable to get the list of providers: %s (%s, %d)",
-                 error->message,
-                 g_quark_to_string (error->domain),
-                 error->code);
-      g_error_free (error);
-    }
-
-  for (l = providers; l != NULL; l = l->next)
-    {
-      GoaProvider *provider = GOA_PROVIDER (l->data);
-      goa_provider_initialize (provider);
-    }
+  goa_provider_ensure_builtins_loaded ();
 
   /* Create object manager */
   self->object_manager = g_dbus_object_manager_server_new ("/org/gnome/OnlineAccounts");
@@ -364,8 +301,6 @@ goa_daemon_init (GoaDaemon *self)
 
   self->ensure_credentials_queue = g_queue_new ();
   queue_check_credentials (self);
-
-  g_list_free_full (providers, g_object_unref);
 }
 
 static void
@@ -1297,7 +1232,7 @@ get_all_providers_cb (GObject      *source,
   g_free (key_file_data);
   g_free (group);
   g_free (id);
-  g_clear_pointer (&key_file, (GDestroyNotify) g_key_file_unref);
+  g_clear_pointer (&key_file, g_key_file_unref);
   g_object_unref (data->daemon);
   g_object_unref (data->manager);
   g_object_unref (data->invocation);
@@ -1501,7 +1436,7 @@ on_account_handle_remove (GoaAccount            *account,
  out:
   g_clear_object (&provider);
   g_clear_object (&task);
-  g_clear_pointer (&key_file, (GDestroyNotify) g_key_file_unref);
+  g_clear_pointer (&key_file, g_key_file_unref);
   g_free (group);
   return TRUE; /* invocation was handled */
 }

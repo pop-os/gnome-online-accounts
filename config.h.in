@@ -118,12 +118,6 @@
 /* ProviderType and extension point name */
 #undef GOA_POCKET_NAME
 
-/* Enable Telepathy data provider */
-#undef GOA_TELEPATHY_ENABLED
-
-/* ProviderType and extension point name */
-#undef GOA_TELEPATHY_NAME
-
 /* Path to the template file */
 #undef GOA_TEMPLATE_FILE
 
@@ -201,9 +195,6 @@
 
 /* Define to the sub-directory where libtool stores uninstalled libraries. */
 #undef LT_OBJDIR
-
-/* Define if debugging is disabled */
-#undef NDEBUG
 
 /* Name of package */
 #undef PACKAGE

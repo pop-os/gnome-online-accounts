@@ -52,7 +52,6 @@ G_BEGIN_DECLS
  * @ensure_credentials_sync: Virtual function for goa_provider_ensure_credentials_sync().
  * @show_account: Virtual function for goa_provider_show_account().
  * @get_credentials_generation: Virtual function for goa_provider_get_credentials_generation().
- * @initialize: Virtual function for goa_provider_initialize().
  *
  * Class structure for #GoaProvider.
  */
@@ -93,7 +92,6 @@ struct _GoaProviderClass
   guint                   (*get_credentials_generation)   (GoaProvider            *self);
   GIcon                  *(*get_provider_icon)            (GoaProvider            *self,
                                                            GoaObject              *object);
-  void                    (*initialize)                   (GoaProvider            *self);
   void                    (*remove_account)               (GoaProvider            *self,
                                                            GoaObject              *object,
                                                            GCancellable           *cancellable,
@@ -116,13 +114,6 @@ struct _GoaProviderClass
  * Extension point for #GoaProvider implementations.
  */
 #define GOA_PROVIDER_EXTENSION_POINT_NAME "goa-backend-provider"
-
-/**
- * GOA_PROVIDER_FACTORY_EXTENSION_POINT_NAME:
- *
- * Extension point for #GoaProviderFactory implementations.
- */
-#define GOA_PROVIDER_FACTORY_EXTENSION_POINT_NAME "goa-backend-provider-factory"
 
 void        goa_provider_ensure_builtins_loaded                (void);
 
@@ -152,8 +143,6 @@ gboolean    goa_provider_ensure_credentials_sync               (GoaProvider     
                                                                 gint                    *out_expires_in,
                                                                 GCancellable            *cancellable,
                                                                 GError                 **error);
-
-void        goa_provider_initialize                            (GoaProvider             *self);
 
 void        goa_provider_remove_account                        (GoaProvider             *self,
                                                                 GoaObject               *object,
