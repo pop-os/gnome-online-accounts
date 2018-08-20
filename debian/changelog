@@ -7,6 +7,7 @@ gnome-online-accounts (3.29.91-1) UNRELEASED; urgency=medium
   * d/libgoa-backend-1.0-1.symbols: Ignore removal of private symbols
     (not referenced by any other Debian package)
   * Set Rules-Requires-Root to no
+  * Bump Standards-Version to 4.2.0
 
  -- Simon McVittie <smcv@debian.org>  Mon, 20 Aug 2018 15:26:06 +0100
 
