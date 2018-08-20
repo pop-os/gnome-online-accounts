@@ -951,7 +951,6 @@
     <keyword type="member" name="GoaProviderClass.ensure-credentials-sync" link="GoaProvider.html#GoaProviderClass.ensure-credentials-sync"/>
     <keyword type="member" name="GoaProviderClass.get-credentials-generation" link="GoaProvider.html#GoaProviderClass.get-credentials-generation"/>
     <keyword type="member" name="GoaProviderClass.get-provider-icon" link="GoaProvider.html#GoaProviderClass.get-provider-icon"/>
-    <keyword type="member" name="GoaProviderClass.initialize" link="GoaProvider.html#GoaProviderClass.initialize"/>
     <keyword type="member" name="GoaProviderClass.remove-account" link="GoaProvider.html#GoaProviderClass.remove-account"/>
     <keyword type="member" name="GoaProviderClass.remove-account-finish" link="GoaProvider.html#GoaProviderClass.remove-account-finish"/>
     <keyword type="member" name="GoaProviderClass.show-account" link="GoaProvider.html#GoaProviderClass.show-account"/>

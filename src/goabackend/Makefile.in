@@ -93,25 +93,17 @@ host_triplet = @host@
 @BUILD_KERBEROS_TRUE@am__append_1 = \
 @BUILD_KERBEROS_TRUE@	goakerberosprovider.h		goakerberosprovider.c
 
-@BUILD_TELEPATHY_TRUE@am__append_2 = \
-@BUILD_TELEPATHY_TRUE@	goatelepathyfactory.h		goatelepathyfactory.c		\
-@BUILD_TELEPATHY_TRUE@	goatelepathyprovider.h		goatelepathyprovider.c		\
-@BUILD_TELEPATHY_TRUE@	goatpaccountlinker.h		goatpaccountlinker.c		\
-@BUILD_TELEPATHY_TRUE@	$(NULL)
-
 subdir = src/goabackend
 ACLOCAL_M4 = $(top_srcdir)/aclocal.m4
 am__aclocal_m4_deps = $(top_srcdir)/m4/ax_append_compile_flags.m4 \
 	$(top_srcdir)/m4/ax_append_flag.m4 \
 	$(top_srcdir)/m4/ax_append_link_flags.m4 \
 	$(top_srcdir)/m4/ax_check_compile_flag.m4 \
-	$(top_srcdir)/m4/ax_check_enable_debug.m4 \
 	$(top_srcdir)/m4/ax_check_link_flag.m4 \
 	$(top_srcdir)/m4/ax_compiler_flags.m4 \
 	$(top_srcdir)/m4/ax_compiler_flags_cflags.m4 \
 	$(top_srcdir)/m4/ax_compiler_flags_gir.m4 \
 	$(top_srcdir)/m4/ax_compiler_flags_ldflags.m4 \
-	$(top_srcdir)/m4/ax_config_dir.m4 \
 	$(top_srcdir)/m4/ax_is_release.m4 \
 	$(top_srcdir)/m4/ax_require_defined.m4 \
 	$(top_srcdir)/m4/gettext.m4 $(top_srcdir)/m4/gsettings.m4 \
@@ -171,15 +163,13 @@ libgoa_backend_1_0_la_DEPENDENCIES =  \
 	$(am__DEPENDENCIES_1) $(am__DEPENDENCIES_1) \
 	$(am__DEPENDENCIES_1) $(am__DEPENDENCIES_1) \
 	$(am__DEPENDENCIES_1) $(am__DEPENDENCIES_1) \
-	$(am__DEPENDENCIES_1) $(am__DEPENDENCIES_1) \
 	$(am__DEPENDENCIES_1)
 am__libgoa_backend_1_0_la_SOURCES_DIST = goabackend.h \
 	goabackendenums-priv.h goabackendenumtypes.h \
 	goabackendenumtypes.c gconstructor.h goabackendinit.c \
 	goadlnaservermanager.h goadlnaservermanager.c goaewsclient.h \
 	goaewsclient.c goahttpclient.h goahttpclient.c \
-	goaprovider-priv.h goaprovider.c goaproviderfactory.h \
-	goaproviderfactory.c goamailauth.h goamailauth.c \
+	goaprovider-priv.h goaprovider.c goamailauth.h goamailauth.c \
 	goaimapauthlogin.h goaimapauthlogin.c goarestproxy.h \
 	goarestproxy.c goasmtpauth.h goasmtpauth.c goasouplogger.h \
 	goasouplogger.c goamailclient.h goamailclient.c \
@@ -201,16 +191,9 @@ am__libgoa_backend_1_0_la_SOURCES_DIST = goabackend.h \
 	nautilus-floating-bar.c \
 	$(top_builddir)/src/goaidentity/org.gnome.Identity.c \
 	$(top_srcdir)/src/goaidentity/goaidentitymanagererror.c \
-	goakerberosprovider.h goakerberosprovider.c \
-	goatelepathyfactory.h goatelepathyfactory.c \
-	goatelepathyprovider.h goatelepathyprovider.c \
-	goatpaccountlinker.h goatpaccountlinker.c
+	goakerberosprovider.h goakerberosprovider.c
 am__objects_1 =
 @BUILD_KERBEROS_TRUE@am__objects_2 = libgoa_backend_1_0_la-goakerberosprovider.lo
-@BUILD_TELEPATHY_TRUE@am__objects_3 = libgoa_backend_1_0_la-goatelepathyfactory.lo \
-@BUILD_TELEPATHY_TRUE@	libgoa_backend_1_0_la-goatelepathyprovider.lo \
-@BUILD_TELEPATHY_TRUE@	libgoa_backend_1_0_la-goatpaccountlinker.lo \
-@BUILD_TELEPATHY_TRUE@	$(am__objects_1)
 am_libgoa_backend_1_0_la_OBJECTS =  \
 	libgoa_backend_1_0_la-goabackendenumtypes.lo \
 	libgoa_backend_1_0_la-goabackendinit.lo \
@@ -218,7 +201,6 @@ am_libgoa_backend_1_0_la_OBJECTS =  \
 	libgoa_backend_1_0_la-goaewsclient.lo \
 	libgoa_backend_1_0_la-goahttpclient.lo \
 	libgoa_backend_1_0_la-goaprovider.lo \
-	libgoa_backend_1_0_la-goaproviderfactory.lo \
 	libgoa_backend_1_0_la-goamailauth.lo \
 	libgoa_backend_1_0_la-goaimapauthlogin.lo \
 	libgoa_backend_1_0_la-goarestproxy.lo \
@@ -245,11 +227,11 @@ am_libgoa_backend_1_0_la_OBJECTS =  \
 	libgoa_backend_1_0_la-nautilus-floating-bar.lo \
 	libgoa_backend_1_0_la-org.gnome.Identity.lo \
 	libgoa_backend_1_0_la-goaidentitymanagererror.lo \
-	$(am__objects_1) $(am__objects_2) $(am__objects_3)
-am__objects_4 = libgoa_backend_1_0_la-goadleynaservermanager.lo \
+	$(am__objects_1) $(am__objects_2)
+am__objects_3 = libgoa_backend_1_0_la-goadleynaservermanager.lo \
 	libgoa_backend_1_0_la-goadleynaservermediadevice.lo \
 	$(am__objects_1)
-nodist_libgoa_backend_1_0_la_OBJECTS = $(am__objects_4) \
+nodist_libgoa_backend_1_0_la_OBJECTS = $(am__objects_3) \
 	$(am__objects_1)
 libgoa_backend_1_0_la_OBJECTS = $(am_libgoa_backend_1_0_la_OBJECTS) \
 	$(nodist_libgoa_backend_1_0_la_OBJECTS)
@@ -461,10 +443,6 @@ SED = @SED@
 SET_MAKE = @SET_MAKE@
 SHELL = @SHELL@
 STRIP = @STRIP@
-TPAW_CFLAGS = @TPAW_CFLAGS@
-TPAW_LIBS = @TPAW_LIBS@
-TP_CFLAGS = @TP_CFLAGS@
-TP_LIBS = @TP_LIBS@
 USE_NLS = @USE_NLS@
 VAPIGEN = @VAPIGEN@
 VAPIGEN_MAKEFILE = @VAPIGEN_MAKEFILE@
@@ -588,8 +566,7 @@ libgoa_backend_1_0_la_SOURCES = goabackend.h goabackendenums-priv.h \
 	goabackendenumtypes.h goabackendenumtypes.c gconstructor.h \
 	goabackendinit.c goadlnaservermanager.h goadlnaservermanager.c \
 	goaewsclient.h goaewsclient.c goahttpclient.h goahttpclient.c \
-	goaprovider-priv.h goaprovider.c goaproviderfactory.h \
-	goaproviderfactory.c goamailauth.h goamailauth.c \
+	goaprovider-priv.h goaprovider.c goamailauth.h goamailauth.c \
 	goaimapauthlogin.h goaimapauthlogin.c goarestproxy.h \
 	goarestproxy.c goasmtpauth.h goasmtpauth.c goasouplogger.h \
 	goasouplogger.c goamailclient.h goamailclient.c \
@@ -611,7 +588,7 @@ libgoa_backend_1_0_la_SOURCES = goabackend.h goabackendenums-priv.h \
 	nautilus-floating-bar.c \
 	$(top_builddir)/src/goaidentity/org.gnome.Identity.c \
 	$(top_srcdir)/src/goaidentity/goaidentitymanagererror.c \
-	$(NULL) $(am__append_1) $(am__append_2)
+	$(NULL) $(am__append_1)
 libgoa_backend_1_0_la_CFLAGS = \
 	$(WEBKIT_GTK_CFLAGS)					\
 	$(JSON_GLIB_CFLAGS)					\
@@ -832,14 +809,10 @@ distclean-compile:
 @AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/libgoa_backend_1_0_la-goaowncloudprovider.Plo@am__quote@
 @AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/libgoa_backend_1_0_la-goapocketprovider.Plo@am__quote@
 @AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/libgoa_backend_1_0_la-goaprovider.Plo@am__quote@
-@AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/libgoa_backend_1_0_la-goaproviderfactory.Plo@am__quote@
 @AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/libgoa_backend_1_0_la-goarestproxy.Plo@am__quote@
 @AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/libgoa_backend_1_0_la-goasmtpauth.Plo@am__quote@
 @AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/libgoa_backend_1_0_la-goasouplogger.Plo@am__quote@
-@AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/libgoa_backend_1_0_la-goatelepathyfactory.Plo@am__quote@
-@AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/libgoa_backend_1_0_la-goatelepathyprovider.Plo@am__quote@
 @AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/libgoa_backend_1_0_la-goatodoistprovider.Plo@am__quote@
-@AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/libgoa_backend_1_0_la-goatpaccountlinker.Plo@am__quote@
 @AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/libgoa_backend_1_0_la-goautils.Plo@am__quote@
 @AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/libgoa_backend_1_0_la-goawebview.Plo@am__quote@
 @AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/libgoa_backend_1_0_la-goawindowsliveprovider.Plo@am__quote@
@@ -910,13 +883,6 @@ libgoa_backend_1_0_la-goaprovider.lo: goaprovider.c
 @AMDEP_TRUE@@am__fastdepCC_FALSE@	$(AM_V_CC)source='goaprovider.c' object='libgoa_backend_1_0_la-goaprovider.lo' libtool=yes @AMDEPBACKSLASH@
 @AMDEP_TRUE@@am__fastdepCC_FALSE@	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
 @am__fastdepCC_FALSE@	$(AM_V_CC@am__nodep@)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(libgoa_backend_1_0_la_CFLAGS) $(CFLAGS) -c -o libgoa_backend_1_0_la-goaprovider.lo `test -f 'goaprovider.c' || echo '$(srcdir)/'`goaprovider.c
-
-libgoa_backend_1_0_la-goaproviderfactory.lo: goaproviderfactory.c
-@am__fastdepCC_TRUE@	$(AM_V_CC)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(libgoa_backend_1_0_la_CFLAGS) $(CFLAGS) -MT libgoa_backend_1_0_la-goaproviderfactory.lo -MD -MP -MF $(DEPDIR)/libgoa_backend_1_0_la-goaproviderfactory.Tpo -c -o libgoa_backend_1_0_la-goaproviderfactory.lo `test -f 'goaproviderfactory.c' || echo '$(srcdir)/'`goaproviderfactory.c
-@am__fastdepCC_TRUE@	$(AM_V_at)$(am__mv) $(DEPDIR)/libgoa_backend_1_0_la-goaproviderfactory.Tpo $(DEPDIR)/libgoa_backend_1_0_la-goaproviderfactory.Plo
-@AMDEP_TRUE@@am__fastdepCC_FALSE@	$(AM_V_CC)source='goaproviderfactory.c' object='libgoa_backend_1_0_la-goaproviderfactory.lo' libtool=yes @AMDEPBACKSLASH@
-@AMDEP_TRUE@@am__fastdepCC_FALSE@	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
-@am__fastdepCC_FALSE@	$(AM_V_CC@am__nodep@)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(libgoa_backend_1_0_la_CFLAGS) $(CFLAGS) -c -o libgoa_backend_1_0_la-goaproviderfactory.lo `test -f 'goaproviderfactory.c' || echo '$(srcdir)/'`goaproviderfactory.c
 
 libgoa_backend_1_0_la-goamailauth.lo: goamailauth.c
 @am__fastdepCC_TRUE@	$(AM_V_CC)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(libgoa_backend_1_0_la_CFLAGS) $(CFLAGS) -MT libgoa_backend_1_0_la-goamailauth.lo -MD -MP -MF $(DEPDIR)/libgoa_backend_1_0_la-goamailauth.Tpo -c -o libgoa_backend_1_0_la-goamailauth.lo `test -f 'goamailauth.c' || echo '$(srcdir)/'`goamailauth.c
@@ -1106,27 +1072,6 @@ libgoa_backend_1_0_la-goakerberosprovider.lo: goakerberosprovider.c
 @AMDEP_TRUE@@am__fastdepCC_FALSE@	$(AM_V_CC)source='goakerberosprovider.c' object='libgoa_backend_1_0_la-goakerberosprovider.lo' libtool=yes @AMDEPBACKSLASH@
 @AMDEP_TRUE@@am__fastdepCC_FALSE@	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
 @am__fastdepCC_FALSE@	$(AM_V_CC@am__nodep@)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(libgoa_backend_1_0_la_CFLAGS) $(CFLAGS) -c -o libgoa_backend_1_0_la-goakerberosprovider.lo `test -f 'goakerberosprovider.c' || echo '$(srcdir)/'`goakerberosprovider.c
-
-libgoa_backend_1_0_la-goatelepathyfactory.lo: goatelepathyfactory.c
-@am__fastdepCC_TRUE@	$(AM_V_CC)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(libgoa_backend_1_0_la_CFLAGS) $(CFLAGS) -MT libgoa_backend_1_0_la-goatelepathyfactory.lo -MD -MP -MF $(DEPDIR)/libgoa_backend_1_0_la-goatelepathyfactory.Tpo -c -o libgoa_backend_1_0_la-goatelepathyfactory.lo `test -f 'goatelepathyfactory.c' || echo '$(srcdir)/'`goatelepathyfactory.c
-@am__fastdepCC_TRUE@	$(AM_V_at)$(am__mv) $(DEPDIR)/libgoa_backend_1_0_la-goatelepathyfactory.Tpo $(DEPDIR)/libgoa_backend_1_0_la-goatelepathyfactory.Plo
-@AMDEP_TRUE@@am__fastdepCC_FALSE@	$(AM_V_CC)source='goatelepathyfactory.c' object='libgoa_backend_1_0_la-goatelepathyfactory.lo' libtool=yes @AMDEPBACKSLASH@
-@AMDEP_TRUE@@am__fastdepCC_FALSE@	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
-@am__fastdepCC_FALSE@	$(AM_V_CC@am__nodep@)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(libgoa_backend_1_0_la_CFLAGS) $(CFLAGS) -c -o libgoa_backend_1_0_la-goatelepathyfactory.lo `test -f 'goatelepathyfactory.c' || echo '$(srcdir)/'`goatelepathyfactory.c
-
-libgoa_backend_1_0_la-goatelepathyprovider.lo: goatelepathyprovider.c
-@am__fastdepCC_TRUE@	$(AM_V_CC)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(libgoa_backend_1_0_la_CFLAGS) $(CFLAGS) -MT libgoa_backend_1_0_la-goatelepathyprovider.lo -MD -MP -MF $(DEPDIR)/libgoa_backend_1_0_la-goatelepathyprovider.Tpo -c -o libgoa_backend_1_0_la-goatelepathyprovider.lo `test -f 'goatelepathyprovider.c' || echo '$(srcdir)/'`goatelepathyprovider.c
-@am__fastdepCC_TRUE@	$(AM_V_at)$(am__mv) $(DEPDIR)/libgoa_backend_1_0_la-goatelepathyprovider.Tpo $(DEPDIR)/libgoa_backend_1_0_la-goatelepathyprovider.Plo
-@AMDEP_TRUE@@am__fastdepCC_FALSE@	$(AM_V_CC)source='goatelepathyprovider.c' object='libgoa_backend_1_0_la-goatelepathyprovider.lo' libtool=yes @AMDEPBACKSLASH@
-@AMDEP_TRUE@@am__fastdepCC_FALSE@	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
-@am__fastdepCC_FALSE@	$(AM_V_CC@am__nodep@)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(libgoa_backend_1_0_la_CFLAGS) $(CFLAGS) -c -o libgoa_backend_1_0_la-goatelepathyprovider.lo `test -f 'goatelepathyprovider.c' || echo '$(srcdir)/'`goatelepathyprovider.c
-
-libgoa_backend_1_0_la-goatpaccountlinker.lo: goatpaccountlinker.c
-@am__fastdepCC_TRUE@	$(AM_V_CC)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(libgoa_backend_1_0_la_CFLAGS) $(CFLAGS) -MT libgoa_backend_1_0_la-goatpaccountlinker.lo -MD -MP -MF $(DEPDIR)/libgoa_backend_1_0_la-goatpaccountlinker.Tpo -c -o libgoa_backend_1_0_la-goatpaccountlinker.lo `test -f 'goatpaccountlinker.c' || echo '$(srcdir)/'`goatpaccountlinker.c
-@am__fastdepCC_TRUE@	$(AM_V_at)$(am__mv) $(DEPDIR)/libgoa_backend_1_0_la-goatpaccountlinker.Tpo $(DEPDIR)/libgoa_backend_1_0_la-goatpaccountlinker.Plo
-@AMDEP_TRUE@@am__fastdepCC_FALSE@	$(AM_V_CC)source='goatpaccountlinker.c' object='libgoa_backend_1_0_la-goatpaccountlinker.lo' libtool=yes @AMDEPBACKSLASH@
-@AMDEP_TRUE@@am__fastdepCC_FALSE@	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
-@am__fastdepCC_FALSE@	$(AM_V_CC@am__nodep@)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(libgoa_backend_1_0_la_CFLAGS) $(CFLAGS) -c -o libgoa_backend_1_0_la-goatpaccountlinker.lo `test -f 'goatpaccountlinker.c' || echo '$(srcdir)/'`goatpaccountlinker.c
 
 libgoa_backend_1_0_la-goadleynaservermanager.lo: goadleynaservermanager.c
 @am__fastdepCC_TRUE@	$(AM_V_CC)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(libgoa_backend_1_0_la_CFLAGS) $(CFLAGS) -MT libgoa_backend_1_0_la-goadleynaservermanager.lo -MD -MP -MF $(DEPDIR)/libgoa_backend_1_0_la-goadleynaservermanager.Tpo -c -o libgoa_backend_1_0_la-goadleynaservermanager.lo `test -f 'goadleynaservermanager.c' || echo '$(srcdir)/'`goadleynaservermanager.c

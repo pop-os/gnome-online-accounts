@@ -22,7 +22,6 @@
 
 #include "goaprovider.h"
 #include "goaprovider-priv.h"
-#include "goaproviderfactory.h"
 #include "goaexchangeprovider.h"
 #include "goagoogleprovider.h"
 #include "goafacebookprovider.h"
@@ -31,7 +30,6 @@
 #include "goaflickrprovider.h"
 #include "goafoursquareprovider.h"
 #include "goawindowsliveprovider.h"
-#include "goatelepathyfactory.h"
 #include "goapocketprovider.h"
 #include "goamediaserverprovider.h"
 #include "goalastfmprovider.h"
@@ -77,8 +75,6 @@ static guint goa_provider_get_credentials_generation_real (GoaProvider *self);
 
 static GIcon *goa_provider_get_provider_icon_real (GoaProvider *self,
                                                    GoaObject   *object);
-
-static void goa_provider_initialize_real (GoaProvider *self);
 
 static void goa_provider_remove_account_real (GoaProvider          *self,
                                               GoaObject            *object,
@@ -228,7 +224,6 @@ goa_provider_class_init (GoaProviderClass *klass)
   klass->ensure_credentials_sync = goa_provider_ensure_credentials_sync_real;
   klass->get_credentials_generation = goa_provider_get_credentials_generation_real;
   klass->get_provider_icon = goa_provider_get_provider_icon_real;
-  klass->initialize = goa_provider_initialize_real;
   klass->remove_account = goa_provider_remove_account_real;
   klass->remove_account_finish = goa_provider_remove_account_finish_real;
   klass->show_account = goa_provider_show_account_real;
@@ -396,21 +391,6 @@ goa_provider_get_provider_features (GoaProvider *self)
   g_return_val_if_fail (GOA_IS_PROVIDER (self), GOA_PROVIDER_FEATURE_INVALID);
   g_return_val_if_fail (GOA_PROVIDER_GET_CLASS (self)->get_provider_features != NULL, GOA_PROVIDER_FEATURE_INVALID);
   return GOA_PROVIDER_GET_CLASS (self)->get_provider_features (self);
-}
-
-/* ---------------------------------------------------------------------------------------------------- */
-
-void
-goa_provider_initialize (GoaProvider *self)
-{
-  g_return_if_fail (GOA_IS_PROVIDER (self));
-
-  GOA_PROVIDER_GET_CLASS (self)->initialize (self);
-}
-
-static void
-goa_provider_initialize_real (GoaProvider *self)
-{
 }
 
 /* ---------------------------------------------------------------------------------------------------- */
@@ -938,9 +918,6 @@ goa_provider_ensure_extension_points_registered (void)
       extension_point = g_io_extension_point_register (GOA_PROVIDER_EXTENSION_POINT_NAME);
       g_io_extension_point_set_required_type (extension_point, GOA_TYPE_PROVIDER);
 
-      extension_point = g_io_extension_point_register (GOA_PROVIDER_FACTORY_EXTENSION_POINT_NAME);
-      g_io_extension_point_set_required_type (extension_point, GOA_TYPE_PROVIDER_FACTORY);
-
       g_once_init_leave (&once_init_value, 1);
     }
 }
@@ -994,9 +971,6 @@ static struct
 #endif
 #ifdef GOA_MEDIA_SERVER_ENABLED
   { GOA_MEDIA_SERVER_NAME, goa_media_server_provider_get_type },
-#endif
-#ifdef GOA_TELEPATHY_ENABLED
-  { GOA_TELEPATHY_NAME, goa_telepathy_factory_get_type },
 #endif
   { NULL, NULL }
 };
@@ -1067,16 +1041,9 @@ goa_provider_ensure_builtins_loaded (void)
  * goa_provider_get_for_provider_type:
  * @provider_type: A provider type.
  *
- * Returns a #GoaProvider for @provider_type (if available).
- *
- * If @provider_type doesn't contain any "/", a
- * %GOA_PROVIDER_EXTENSION_POINT_NAME extension for @provider_type is looked up
- * and the newly created #GoaProvider, if any, is returned.
- *
- * If @provider_type contains a "/", a
- * %GOA_PROVIDER_FACTORY_EXTENSION_POINT_NAME extension for the first part of
- * @provider_type is looked up. If found, the #GoaProviderFactory is used
- * to create a dynamic #GoaProvider matching the second part of @provider_type.
+ * Looks up the %GOA_PROVIDER_EXTENSION_POINT_NAME extension
+ * point and returns a newly created #GoaProvider for
+ * @provider_type, if any.
  *
  * Returns: (transfer full): A #GoaProvider (that must be freed
  * with g_object_unref()) or %NULL if not found.
@@ -1086,7 +1053,6 @@ goa_provider_get_for_provider_type (const gchar *provider_type)
 {
   GIOExtension *extension;
   GIOExtensionPoint *extension_point;
-  gchar **split_provider_type;
   GoaProvider *ret;
 
   g_return_val_if_fail (provider_type != NULL, NULL);
@@ -1095,125 +1061,19 @@ goa_provider_get_for_provider_type (const gchar *provider_type)
 
   ret = NULL;
 
-  split_provider_type = g_strsplit (provider_type, "/", 2);
-
-  if (g_strv_length (split_provider_type) == 1)
-    {
-      /* Normal provider */
-      extension_point = g_io_extension_point_lookup (GOA_PROVIDER_EXTENSION_POINT_NAME);
-      extension = g_io_extension_point_get_extension_by_name (extension_point, provider_type);
-      if (extension != NULL)
-        ret = GOA_PROVIDER (g_object_new (g_io_extension_get_type (extension), NULL));
-    }
-  else
-    {
-      /* Dynamic provider created through a factory */
-      extension_point = g_io_extension_point_lookup (GOA_PROVIDER_FACTORY_EXTENSION_POINT_NAME);
-      extension = g_io_extension_point_get_extension_by_name (extension_point, split_provider_type[0]);
-      if (extension != NULL)
-        {
-          GoaProviderFactory *factory = g_object_new (g_io_extension_get_type (extension), NULL);
-          ret = goa_provider_factory_get_provider (factory, split_provider_type[1]);
-          g_object_unref (factory);
-        }
-    }
-
-  g_strfreev (split_provider_type);
-
+  extension_point = g_io_extension_point_lookup (GOA_PROVIDER_EXTENSION_POINT_NAME);
+  extension = g_io_extension_point_get_extension_by_name (extension_point, provider_type);
+  if (extension != NULL)
+    ret = GOA_PROVIDER (g_object_new (g_io_extension_get_type (extension), NULL));
   return ret;
 }
 
 /* ---------------------------------------------------------------------------------------------------- */
 
-typedef struct
-{
-  GQueue ret;
-  gint pending_calls;
-  GTask *task;
-} GetAllData;
-
 static void
 free_list_and_unref (gpointer data)
 {
   g_list_free_full (data, g_object_unref);
-}
-
-static gint
-compare_providers (GoaProvider *a,
-                   GoaProvider *b)
-{
-  gboolean a_branded;
-  gboolean b_branded;
-
-  if (goa_provider_get_provider_features (a) & GOA_PROVIDER_FEATURE_BRANDED)
-    a_branded = TRUE;
-  else
-    a_branded = FALSE;
-
-  if (goa_provider_get_provider_features (b) & GOA_PROVIDER_FEATURE_BRANDED)
-    b_branded = TRUE;
-  else
-    b_branded = FALSE;
-
-  /* g_queue_sort() uses a stable sort, so, if we return 0, the order
-   * is not changed. */
-  if (a_branded == b_branded)
-    return 0;
-  else if (a_branded)
-    return -1;
-  else
-    return 1;
-}
-
-static void
-get_all_check_done (GetAllData *data)
-{
-  if (data->pending_calls > 0)
-    return;
-
-  /* Make sure that branded providers come first, but don't change the
-   * order otherwise. */
-  g_queue_sort (&data->ret, (GCompareDataFunc) compare_providers, NULL);
-
-  /* Steal the list out of the GQueue. */
-  g_task_return_pointer (data->task, data->ret.head, free_list_and_unref);
-
-  g_object_unref (data->task);
-  g_slice_free (GetAllData, data);
-}
-
-static void
-get_providers_cb (GObject      *source,
-                  GAsyncResult *res,
-                  gpointer      user_data)
-{
-  GoaProviderFactory *factory = GOA_PROVIDER_FACTORY (source);
-  GetAllData *data = user_data;
-  GList *providers = NULL;
-  GList *l;
-  GError *error = NULL;
-
-  if (!goa_provider_factory_get_providers_finish (factory, &providers, res, &error))
-    {
-      g_critical ("Error getting providers from a factory: %s (%s, %d)",
-          error->message,
-          g_quark_to_string (error->domain),
-          error->code);
-      g_clear_error (&error);
-      goto out;
-    }
-
-  for (l = providers; l != NULL; l = l->next)
-    {
-      /* Steal the value */
-      g_queue_push_tail (&data->ret, l->data);
-    }
-
-  g_list_free (providers);
-
-out:
-  data->pending_calls--;
-  get_all_check_done (data);
 }
 
 /**
@@ -1236,46 +1096,31 @@ goa_provider_get_all (GAsyncReadyCallback callback,
                       gpointer            user_data)
 {
   GList *extensions;
+  GList *providers = NULL;
   GList *l;
   GIOExtensionPoint *extension_point;
-  GetAllData *data;
-  gint i;
+  GTask *task = NULL;
 
   goa_provider_ensure_builtins_loaded ();
 
-  data = g_slice_new0 (GetAllData);
-  data->task = g_task_new (NULL, NULL, callback, user_data);
-  g_task_set_source_tag (data->task, goa_provider_get_all);
-  g_queue_init (&data->ret);
+  task = g_task_new (NULL, NULL, callback, user_data);
+  g_task_set_source_tag (task, goa_provider_get_all);
 
-  /* Load the normal providers. */
   extension_point = g_io_extension_point_lookup (GOA_PROVIDER_EXTENSION_POINT_NAME);
   extensions = g_io_extension_point_get_extensions (extension_point);
   /* TODO: what if there are two extensions with the same name? */
-  for (l = extensions, i = 0; l != NULL; l = l->next, i++)
+  for (l = extensions; l != NULL; l = l->next)
     {
       GIOExtension *extension = l->data;
       /* The extensions are loaded in the reverse order we used in
        * goa_provider_ensure_builtins_loaded, so we need to push
        * extension if front of the already loaded ones. */
-      g_queue_push_head (&data->ret, g_object_new (g_io_extension_get_type (extension), NULL));
+      providers = g_list_prepend (providers, g_object_new (g_io_extension_get_type (extension), NULL));
     }
 
-  /* Load the provider factories and get the dynamic providers out of them. */
-  extension_point = g_io_extension_point_lookup (GOA_PROVIDER_FACTORY_EXTENSION_POINT_NAME);
-  extensions = g_io_extension_point_get_extensions (extension_point);
-  for (l = extensions, i = 0; l != NULL; l = l->next, i++)
-    {
-      GIOExtension *extension = l->data;
-      GoaProviderFactory *factory;
+  g_task_return_pointer (task, g_steal_pointer (&providers), free_list_and_unref);
 
-      factory = GOA_PROVIDER_FACTORY (g_object_new (g_io_extension_get_type (extension), NULL));
-      goa_provider_factory_get_providers (factory, get_providers_cb, data);
-      g_object_unref (factory);
-      data->pending_calls++;
-    }
-
-  get_all_check_done (data);
+  g_list_free_full (providers, g_object_unref);
 }
 
 /**
