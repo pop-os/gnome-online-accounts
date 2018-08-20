@@ -1,5 +1,6 @@
-gnome-online-accounts (3.29.91-1) UNRELEASED; urgency=medium
+gnome-online-accounts (3.29.91-1) experimental; urgency=medium
 
+  * Team upload
   * d/watch: Watch for development versions
   * New upstream development release
     - Fixes buildability with GLib 2.57.x
@@ -9,7 +10,7 @@ gnome-online-accounts (3.29.91-1) UNRELEASED; urgency=medium
   * Set Rules-Requires-Root to no
   * Bump Standards-Version to 4.2.0
 
- -- Simon McVittie <smcv@debian.org>  Mon, 20 Aug 2018 15:26:06 +0100
+ -- Simon McVittie <smcv@debian.org>  Mon, 20 Aug 2018 16:56:41 +0100
 
 gnome-online-accounts (3.28.0-1) unstable; urgency=medium
 
