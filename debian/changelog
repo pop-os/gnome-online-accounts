@@ -3,6 +3,7 @@ gnome-online-accounts (3.29.91-1) UNRELEASED; urgency=medium
   * d/watch: Watch for development versions
   * New upstream development release
     - Fixes buildability with GLib 2.57.x
+  * Enable documentation so that the man page will be built
 
  -- Simon McVittie <smcv@debian.org>  Mon, 20 Aug 2018 15:26:06 +0100
 
