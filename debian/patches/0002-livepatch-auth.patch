@@ -1,10 +1,10 @@
 From: Andrea Azzarone <andrea.azzarone@canonical.com>
 Date: Wed, 28 Feb 2018 08:53:38 +0000
-Bug: https://bugzilla.gnome.org/show_bug.cgi?id=793755
-Bug-Ubuntu: https://bugs.launchpad.net/bugs/1752472
-Forwarded: not-needed
 Subject: Get livepatch authentication token.
 
+Forwarded: not-needed
+Bug: https://bugzilla.gnome.org/show_bug.cgi?id=793755
+Bug-Ubuntu: https://bugs.launchpad.net/bugs/1752472
 ---
  configure.ac                          |   1 +
  data/Makefile.am                      |   3 +-
@@ -17,10 +17,10 @@ Subject: Get livepatch authentication token.
  create mode 100644 data/scripts/lpa_helper.py
 
 diff --git a/configure.ac b/configure.ac
-index ab2ec82..c90dacd 100644
+index 87ea868..0efbf47 100644
 --- a/configure.ac
 +++ b/configure.ac
-@@ -581,6 +581,7 @@ data/icons/32x32/Makefile
+@@ -545,6 +545,7 @@ data/icons/32x32/Makefile
  data/icons/48x48/Makefile
  data/icons/96x96/Makefile
  data/icons/256x256/Makefile
@@ -29,7 +29,7 @@ index ab2ec82..c90dacd 100644
  src/goa/Makefile
  src/goa/goa-1.0.pc
 diff --git a/data/Makefile.am b/data/Makefile.am
-index 286dcd0..646613a 100644
+index e3608a1..87c89c5 100644
 --- a/data/Makefile.am
 +++ b/data/Makefile.am
 @@ -1,7 +1,7 @@
@@ -39,9 +39,9 @@ index 286dcd0..646613a 100644
 -SUBDIRS = icons
 +SUBDIRS = icons scripts
  
- gsettings_SCHEMAS = org.gnome.online-accounts.gschema.xml
+ gsettings_schema_files = org.gnome.online-accounts.gschema.xml
  
-@@ -36,3 +36,4 @@ clean-local :
+@@ -37,3 +37,4 @@ clean-local :
  	rm -f *~
  
  -include $(top_srcdir)/git.mk
@@ -213,7 +213,7 @@ index 0000000..3836e9e
 +        print(generic_error, e, file=sys.stderr)
 +        sys.exit(1)
 diff --git a/src/goabackend/Makefile.am b/src/goabackend/Makefile.am
-index 3db1ebf..2ed7eda 100644
+index 133458a..40a669f 100644
 --- a/src/goabackend/Makefile.am
 +++ b/src/goabackend/Makefile.am
 @@ -12,6 +12,7 @@ AM_CPPFLAGS = 							\

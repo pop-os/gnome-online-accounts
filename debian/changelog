@@ -1,3 +1,26 @@
+gnome-online-accounts (3.29.91-1ubuntu1) UNRELEASED; urgency=medium
+
+  * Merge from Debian experimental (LP: #1788130). Remaining changes:
+    + debian/rules:
+      - Make sure that gnome-online-accounts.pot is refreshed so the
+        strings from 0001-ubuntu-sso-provider.patch are included (LP: #1759251).
+      - Build with --enable-ubuntu-sso
+    + debian/control.*:
+      - Add b-d on libsnapd-glib-dev
+      - depends on python3-macaroonbakery for the ubuntu sso provide
+    + debian/gnome-online-accounts.install:
+      install usr/share/goa-1.0/scripts/lpa_helper.py
+    + debian/libgoa-backend-1.0-1.symbols:
+      Add goa_ubuntu_sso_provider_get_type
+    + debian/source/include-binaries:
+      Add debian/patches/0001-ubuntu-sso-provider.patch to properly deal with
+      new binary images.
+    + Ubuntu-specific patches:
+      - debian/patches/0001-ubuntu-sso-provider.patch
+      - debian/patches/0002-livepatch-auth
+
+ -- Andrea Azzarone <andrea.azzarone@canonical.com>  Tue, 21 Aug 2018 15:40:05 +0300
+
 gnome-online-accounts (3.29.91-1) experimental; urgency=medium
 
   * Team upload
