@@ -34,6 +34,7 @@ Package: gnome-online-accounts
 Architecture: any
 Depends: libgoa-1.0-0b (= ${binary:Version}),
          libgoa-backend-1.0-1 (= ${binary:Version}),
+         python3,
          python3-macaroonbakery,
          ${misc:Depends},
          ${shlibs:Depends}

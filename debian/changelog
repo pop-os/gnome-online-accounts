@@ -7,7 +7,8 @@ gnome-online-accounts (3.29.91-1ubuntu1) UNRELEASED; urgency=medium
       - Build with --enable-ubuntu-sso
     + debian/control.*:
       - Add b-d on libsnapd-glib-dev
-      - depends on python3-macaroonbakery for the ubuntu sso provide
+      - depends on python3 and python3-macaroonbakery for the ubuntu sso
+        provider.
     + debian/gnome-online-accounts.install:
       install usr/share/goa-1.0/scripts/lpa_helper.py
     + debian/libgoa-backend-1.0-1.symbols:
@@ -19,7 +20,7 @@ gnome-online-accounts (3.29.91-1ubuntu1) UNRELEASED; urgency=medium
       - debian/patches/0001-ubuntu-sso-provider.patch
       - debian/patches/0002-livepatch-auth
 
- -- Andrea Azzarone <andrea.azzarone@canonical.com>  Tue, 21 Aug 2018 15:40:05 +0300
+ -- Andrea Azzarone <andrea.azzarone@canonical.com>  Tue, 21 Aug 2018 15:00:25 +0000
 
 gnome-online-accounts (3.29.91-1) experimental; urgency=medium
 
