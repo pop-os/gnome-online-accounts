@@ -1,8 +1,9 @@
 #!/usr/bin/make -f
+
 -include /usr/share/gnome-pkg-tools/1/rules/gnome-get-source.mk
 
 export DEB_BUILD_MAINT_OPTIONS = hardening=+all
-export DEB_LDFLAGS_MAINT_APPEND = -Wl,-z,defs -Wl,--as-needed
+export DEB_LDFLAGS_MAINT_APPEND = -Wl,-z,defs -Wl,-O1 -Wl,--as-needed
 
 %:
 	dh $@ --with gir,gnome
@@ -15,10 +16,9 @@ override_dh_auto_configure:
 		--libexecdir=\$${prefix}/lib/gnome-online-accounts \
 		--enable-gtk-doc \
 		--enable-kerberos \
-		--disable-media-server \
+		--enable-media-server \
 		--enable-facebook \
 		--enable-flickr \
-		--enable-todoist \
 		--enable-windows-live \
 		--enable-google \
 		--enable-owncloud \
@@ -28,12 +28,8 @@ override_dh_auto_configure:
 		--enable-foursquare
 
 override_dh_install:
-	find debian/tmp -name '*.a' -print -delete
-	find debian/tmp -name '*.la' -print -delete
-	dh_install
-
-override_dh_missing:
-	dh_missing --fail-missing
+	dh_install --list-missing
 
 override_dh_makeshlibs:
-	dh_makeshlibs -- -c4
+	dh_makeshlibs -V -- -c4
+
