@@ -73,7 +73,6 @@ libgoa_backend_1_0_la_SOURCES =						\
 	goaewsclient.h			goaewsclient.c			\
 	goahttpclient.h			goahttpclient.c			\
 	goaprovider-priv.h		goaprovider.c			\
-	goaproviderfactory.h		goaproviderfactory.c		\
 	goamailauth.h			goamailauth.c			\
 	goaimapauthlogin.h		goaimapauthlogin.c		\
 	goarestproxy.h			goarestproxy.c			\
@@ -108,14 +107,6 @@ libgoa_backend_1_0_la_SOURCES =						\
 if BUILD_KERBEROS
 libgoa_backend_1_0_la_SOURCES +=					\
 	goakerberosprovider.h		goakerberosprovider.c
-endif
-
-if BUILD_TELEPATHY
-libgoa_backend_1_0_la_SOURCES +=					\
-	goatelepathyfactory.h		goatelepathyfactory.c		\
-	goatelepathyprovider.h		goatelepathyprovider.c		\
-	goatpaccountlinker.h		goatpaccountlinker.c		\
-	$(NULL)
 endif
 
 libgoa_backend_1_0_la_CFLAGS =					\

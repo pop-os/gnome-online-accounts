@@ -175,7 +175,6 @@ libgoa-backend-1.0.so.1 libgoa-backend-1.0-1 #MINVER#
  goa_oauth_provider_is_password_node@Base 3.10.0
  goa_oauth_provider_parse_request_token_error@Base 3.10.0
  goa_object_skeleton_attach_calendar@Base 3.20.1
- goa_object_skeleton_attach_chat@Base 3.20.1
  goa_object_skeleton_attach_contacts@Base 3.20.1
  goa_object_skeleton_attach_documents@Base 3.20.1
  goa_object_skeleton_attach_files@Base 3.20.1
@@ -193,10 +192,6 @@ libgoa-backend-1.0.so.1 libgoa-backend-1.0-1 #MINVER#
  goa_provider_ensure_credentials_finish@Base 3.10.0
  goa_provider_ensure_credentials_sync@Base 3.10.0
  goa_provider_ensure_extension_points_registered@Base 3.10.0
- goa_provider_factory_get_provider@Base 3.10.0
- goa_provider_factory_get_providers@Base 3.10.0
- goa_provider_factory_get_providers_finish@Base 3.10.0
- goa_provider_factory_get_type@Base 3.10.0
  goa_provider_features_get_type@Base 3.10.0
  goa_provider_get_all@Base 3.10.0
  goa_provider_get_all_finish@Base 3.10.0
@@ -210,7 +205,6 @@ libgoa-backend-1.0.so.1 libgoa-backend-1.0-1 #MINVER#
  goa_provider_get_provider_type@Base 3.10.0
  goa_provider_get_type@Base 3.10.0
  goa_provider_group_get_type@Base 3.10.0
- goa_provider_initialize@Base 3.20.3
  goa_provider_refresh_account@Base 3.10.0
  goa_provider_remove_account@Base 3.20.3
  goa_provider_remove_account_finish@Base 3.20.3
@@ -238,7 +232,6 @@ libgoa-backend-1.0.so.1 libgoa-backend-1.0-1 #MINVER#
  goa_utils_delete_credentials_for_account_sync@Base 3.21.90
  goa_utils_delete_credentials_for_id_sync@Base 3.21.90
  goa_utils_get_credentials@Base 3.20.1
- goa_utils_initialize_client_factory@Base 3.10.2
  goa_utils_keyfile_copy_group@Base 3.22.0
  goa_utils_keyfile_get_boolean@Base 3.22.0
  goa_utils_keyfile_remove_key@Base 3.10.0

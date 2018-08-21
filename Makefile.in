@@ -87,21 +87,18 @@ PRE_UNINSTALL = :
 POST_UNINSTALL = :
 build_triplet = @build@
 host_triplet = @host@
-@BUILD_BACKEND_TRUE@@BUILD_TELEPATHY_TRUE@am__append_1 = telepathy-account-widgets
-@BUILD_BACKEND_TRUE@am__append_2 = doc
+@BUILD_BACKEND_TRUE@am__append_1 = doc
 subdir = .
 ACLOCAL_M4 = $(top_srcdir)/aclocal.m4
 am__aclocal_m4_deps = $(top_srcdir)/m4/ax_append_compile_flags.m4 \
 	$(top_srcdir)/m4/ax_append_flag.m4 \
 	$(top_srcdir)/m4/ax_append_link_flags.m4 \
 	$(top_srcdir)/m4/ax_check_compile_flag.m4 \
-	$(top_srcdir)/m4/ax_check_enable_debug.m4 \
 	$(top_srcdir)/m4/ax_check_link_flag.m4 \
 	$(top_srcdir)/m4/ax_compiler_flags.m4 \
 	$(top_srcdir)/m4/ax_compiler_flags_cflags.m4 \
 	$(top_srcdir)/m4/ax_compiler_flags_gir.m4 \
 	$(top_srcdir)/m4/ax_compiler_flags_ldflags.m4 \
-	$(top_srcdir)/m4/ax_config_dir.m4 \
 	$(top_srcdir)/m4/ax_is_release.m4 \
 	$(top_srcdir)/m4/ax_require_defined.m4 \
 	$(top_srcdir)/m4/gettext.m4 $(top_srcdir)/m4/gsettings.m4 \
@@ -181,7 +178,7 @@ am__define_uniq_tagged_files = \
 ETAGS = etags
 CTAGS = ctags
 CSCOPE = cscope
-DIST_SUBDIRS = data telepathy-account-widgets src doc po
+DIST_SUBDIRS = data src doc po
 am__DIST_COMMON = $(srcdir)/Makefile.in $(srcdir)/config.h.in \
 	ABOUT-NLS COPYING NEWS README compile config.guess \
 	config.rpath config.sub install-sh ltmain.sh missing
@@ -348,10 +345,6 @@ SED = @SED@
 SET_MAKE = @SET_MAKE@
 SHELL = @SHELL@
 STRIP = @STRIP@
-TPAW_CFLAGS = @TPAW_CFLAGS@
-TPAW_LIBS = @TPAW_LIBS@
-TP_CFLAGS = @TP_CFLAGS@
-TP_LIBS = @TP_LIBS@
 USE_NLS = @USE_NLS@
 VAPIGEN = @VAPIGEN@
 VAPIGEN_MAKEFILE = @VAPIGEN_MAKEFILE@
@@ -420,9 +413,14 @@ top_build_prefix = @top_build_prefix@
 top_builddir = @top_builddir@
 top_srcdir = @top_srcdir@
 NULL = 
-SUBDIRS = data $(am__append_1) src $(am__append_2) po
+SUBDIRS = data src $(am__append_1) po
 ACLOCAL_AMFLAGS = -I m4 ${ACLOCAL_FLAGS}
-DISTCHECK_CONFIGURE_FLAGS = --enable-introspection --enable-gtk-doc --enable-telepathy
+DISTCHECK_CONFIGURE_FLAGS = \
+	--enable-documentation \
+	--enable-gtk-doc \
+	--enable-introspection \
+	$(NULL)
+
 MAINTAINERCLEANFILES = \
 	$(GITIGNORE_MAINTAINERCLEANFILES_TOPLEVEL) \
 	$(srcdir)/INSTALL \
