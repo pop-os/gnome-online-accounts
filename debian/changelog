@@ -9,6 +9,8 @@ gnome-online-accounts (3.29.91-1ubuntu1) UNRELEASED; urgency=medium
       - Add b-d on libsnapd-glib-dev
       - depends on python3 and python3-macaroonbakery for the ubuntu sso
         provider.
+    + debian/gbp.conf:
+      - Set the upstream branch to upstream/latest.
     + debian/gnome-online-accounts.install:
       install usr/share/goa-1.0/scripts/lpa_helper.py
     + debian/libgoa-backend-1.0-1.symbols:
