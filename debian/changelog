@@ -1,4 +1,4 @@
-gnome-online-accounts (3.29.91-1ubuntu1) UNRELEASED; urgency=medium
+gnome-online-accounts (3.29.91-1ubuntu1) cosmic; urgency=medium
 
   * Merge from Debian experimental (LP: #1788130). Remaining changes:
     + debian/rules:
@@ -22,7 +22,7 @@ gnome-online-accounts (3.29.91-1ubuntu1) UNRELEASED; urgency=medium
       - debian/patches/0001-ubuntu-sso-provider.patch
       - debian/patches/0002-livepatch-auth
 
- -- Andrea Azzarone <andrea.azzarone@canonical.com>  Tue, 21 Aug 2018 15:00:25 +0000
+ -- Andrea Azzarone <andrea.azzarone@canonical.com>  Wed, 22 Aug 2018 15:03:00 +0200
 
 gnome-online-accounts (3.29.91-1) experimental; urgency=medium
 
