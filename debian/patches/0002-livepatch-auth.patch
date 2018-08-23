@@ -17,7 +17,7 @@ Bug-Ubuntu: https://bugs.launchpad.net/bugs/1752472
  create mode 100644 data/scripts/lpa_helper.py
 
 diff --git a/configure.ac b/configure.ac
-index 87ea868..0efbf47 100644
+index 176c5b3..de81777 100644
 --- a/configure.ac
 +++ b/configure.ac
 @@ -545,6 +545,7 @@ data/icons/32x32/Makefile
@@ -225,7 +225,7 @@ index 133458a..40a669f 100644
  	-DPACKAGE_SYSCONF_DIR=\""$(sysconfdir)"\" 		\
  	-DPACKAGE_DATA_DIR=\""$(pkgdatadir)"\" 			\
 diff --git a/src/goabackend/goaubuntussoprovider.c b/src/goabackend/goaubuntussoprovider.c
-index be22a1b..f942cc7 100644
+index ca44c01..0ccd7f7 100644
 --- a/src/goabackend/goaubuntussoprovider.c
 +++ b/src/goabackend/goaubuntussoprovider.c
 @@ -20,6 +20,7 @@
