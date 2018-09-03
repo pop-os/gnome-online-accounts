@@ -8,7 +8,7 @@
 <link rel="up" href="ref-library-generated.html" title="Generated Code">
 <link rel="prev" href="GoaObject.html" title="GoaObject">
 <link rel="next" href="GoaManager.html" title="GoaManager">
-<meta name="generator" content="GTK-Doc V1.27 (XML mode)">
+<meta name="generator" content="GTK-Doc V1.28 (XML mode)">
 <link rel="stylesheet" href="style.css" type="text/css">
 </head>
 <body bgcolor="white" text="black" link="#0000FF" vlink="#840084" alink="#0000FF">
@@ -147,7 +147,7 @@ goa_object_manager_client_get_proxy_type
                                 <em class="parameter"><code>const <a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a> *interface_name</code></em>,
                                 <em class="parameter"><code><a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gpointer"><span class="type">gpointer</span></a> user_data</code></em>);</pre>
 <p>A <a href="/usr/share/gtk-doc/html/gio/GDBusObjectManagerClient.html#GDBusProxyTypeFunc"><span class="type">GDBusProxyTypeFunc</span></a> that maps <em class="parameter"><code>interface_name</code></em>
- to the generated <a href="/usr/share/gtk-doc/html/gio/GDBusObjectProxy.html#GDBusObjectProxy-struct"><span class="type">GDBusObjectProxy</span></a>- and <a href="/usr/share/gtk-doc/html/gio/GDBusProxy.html#GDBusProxy-struct"><span class="type">GDBusProxy</span></a>-derived types.</p>
+ to the generated <a href="/usr/share/gtk-doc/html/gio/GDBusObjectProxy.html#GDBusObjectProxy-struct"><span class="type">GDBusObjectProxy</span></a> derived and <a href="/usr/share/gtk-doc/html/gio/GDBusProxy.html#GDBusProxy-struct"><span class="type">GDBusProxy</span></a> derived types.</p>
 <div class="refsect3">
 <a name="goa-object-manager-client-get-proxy-type.parameters"></a><h4>Parameters</h4>
 <div class="informaltable"><table class="informaltable" width="100%" border="0">
@@ -170,7 +170,7 @@ goa_object_manager_client_get_proxy_type
 <tr>
 <td class="parameter_name"><p>interface_name</p></td>
 <td class="parameter_description"><p>Interface name of the remote object or <a href="/usr/share/gtk-doc/html/glib/glib-Standard-Macros.html#NULL:CAPS"><code class="literal">NULL</code></a> to get the object proxy <a href="/usr/share/gtk-doc/html/gobject/gobject-Type-Information.html#GType"><span class="type">GType</span></a>. </p></td>
-<td class="parameter_annotations"><span class="annotation">[<acronym title="NULL is OK, both for passing and for returning."><span class="acronym">allow-none</span></acronym>]</span></td>
+<td class="parameter_annotations"><span class="annotation">[<acronym title="NULL may be passed as the value in, out, in-out; or as a return value."><span class="acronym">nullable</span></acronym>]</span></td>
 </tr>
 <tr>
 <td class="parameter_name"><p>user_data</p></td>
@@ -182,7 +182,7 @@ goa_object_manager_client_get_proxy_type
 </div>
 <div class="refsect3">
 <a name="goa-object-manager-client-get-proxy-type.returns"></a><h4>Returns</h4>
-<p> A <a href="/usr/share/gtk-doc/html/gio/GDBusProxy.html#GDBusProxy-struct"><span class="type">GDBusProxy</span></a>-derived <a href="/usr/share/gtk-doc/html/gobject/gobject-Type-Information.html#GType"><span class="type">GType</span></a> if <em class="parameter"><code>interface_name</code></em>
+<p> A <a href="/usr/share/gtk-doc/html/gio/GDBusProxy.html#GDBusProxy-struct"><span class="type">GDBusProxy</span></a> derived <a href="/usr/share/gtk-doc/html/gobject/gobject-Type-Information.html#GType"><span class="type">GType</span></a> if <em class="parameter"><code>interface_name</code></em>
 is not <a href="/usr/share/gtk-doc/html/glib/glib-Standard-Macros.html#NULL:CAPS"><code class="literal">NULL</code></a>, otherwise the <a href="/usr/share/gtk-doc/html/gobject/gobject-Type-Information.html#GType"><span class="type">GType</span></a> for <a class="link" href="GoaObject.html#GoaObjectProxy"><span class="type">GoaObjectProxy</span></a>.</p>
 </div>
 </div>
@@ -225,7 +225,7 @@ You can then call <a class="link" href="GoaObjectManagerClient.html#goa-object-m
 <td class="parameter_name"><p>name</p></td>
 <td class="parameter_description"><p>A bus name (well-known or unique) or <a href="/usr/share/gtk-doc/html/glib/glib-Standard-Macros.html#NULL:CAPS"><code class="literal">NULL</code></a> if <em class="parameter"><code>connection</code></em>
 is not a message bus connection. </p></td>
-<td class="parameter_annotations"><span class="annotation">[<acronym title="NULL is OK, both for passing and for returning."><span class="acronym">allow-none</span></acronym>]</span></td>
+<td class="parameter_annotations"><span class="annotation">[<acronym title="NULL may be passed as the value in, out, in-out; or as a return value."><span class="acronym">nullable</span></acronym>]</span></td>
 </tr>
 <tr>
 <td class="parameter_name"><p>object_path</p></td>
@@ -235,7 +235,7 @@ is not a message bus connection. </p></td>
 <tr>
 <td class="parameter_name"><p>cancellable</p></td>
 <td class="parameter_description"><p>A <a href="/usr/share/gtk-doc/html/gio/GCancellable.html#GCancellable-struct"><span class="type">GCancellable</span></a> or <a href="/usr/share/gtk-doc/html/glib/glib-Standard-Macros.html#NULL:CAPS"><code class="literal">NULL</code></a>. </p></td>
-<td class="parameter_annotations"><span class="annotation">[<acronym title="NULL is OK, both for passing and for returning."><span class="acronym">allow-none</span></acronym>]</span></td>
+<td class="parameter_annotations"><span class="annotation">[<acronym title="NULL may be passed as the value in, out, in-out; or as a return value."><span class="acronym">nullable</span></acronym>]</span></td>
 </tr>
 <tr>
 <td class="parameter_name"><p>callback</p></td>
@@ -336,7 +336,7 @@ You can then call <a class="link" href="GoaObjectManagerClient.html#goa-object-m
 <tr>
 <td class="parameter_name"><p>cancellable</p></td>
 <td class="parameter_description"><p>A <a href="/usr/share/gtk-doc/html/gio/GCancellable.html#GCancellable-struct"><span class="type">GCancellable</span></a> or <a href="/usr/share/gtk-doc/html/glib/glib-Standard-Macros.html#NULL:CAPS"><code class="literal">NULL</code></a>. </p></td>
-<td class="parameter_annotations"><span class="annotation">[<acronym title="NULL is OK, both for passing and for returning."><span class="acronym">allow-none</span></acronym>]</span></td>
+<td class="parameter_annotations"><span class="annotation">[<acronym title="NULL may be passed as the value in, out, in-out; or as a return value."><span class="acronym">nullable</span></acronym>]</span></td>
 </tr>
 <tr>
 <td class="parameter_name"><p>callback</p></td>
@@ -436,7 +436,7 @@ goa_object_manager_client_new_for_bus_sync
 <tr>
 <td class="parameter_name"><p>cancellable</p></td>
 <td class="parameter_description"><p>A <a href="/usr/share/gtk-doc/html/gio/GCancellable.html#GCancellable-struct"><span class="type">GCancellable</span></a> or <a href="/usr/share/gtk-doc/html/glib/glib-Standard-Macros.html#NULL:CAPS"><code class="literal">NULL</code></a>. </p></td>
-<td class="parameter_annotations"><span class="annotation">[<acronym title="NULL is OK, both for passing and for returning."><span class="acronym">allow-none</span></acronym>]</span></td>
+<td class="parameter_annotations"><span class="annotation">[<acronym title="NULL may be passed as the value in, out, in-out; or as a return value."><span class="acronym">nullable</span></acronym>]</span></td>
 </tr>
 <tr>
 <td class="parameter_name"><p>error</p></td>
@@ -489,7 +489,7 @@ goa_object_manager_client_new_sync (<em class="parameter"><code><a href="/usr/sh
 <td class="parameter_name"><p>name</p></td>
 <td class="parameter_description"><p>A bus name (well-known or unique) or <a href="/usr/share/gtk-doc/html/glib/glib-Standard-Macros.html#NULL:CAPS"><code class="literal">NULL</code></a> if <em class="parameter"><code>connection</code></em>
 is not a message bus connection. </p></td>
-<td class="parameter_annotations"><span class="annotation">[<acronym title="NULL is OK, both for passing and for returning."><span class="acronym">allow-none</span></acronym>]</span></td>
+<td class="parameter_annotations"><span class="annotation">[<acronym title="NULL may be passed as the value in, out, in-out; or as a return value."><span class="acronym">nullable</span></acronym>]</span></td>
 </tr>
 <tr>
 <td class="parameter_name"><p>object_path</p></td>
@@ -499,7 +499,7 @@ is not a message bus connection. </p></td>
 <tr>
 <td class="parameter_name"><p>cancellable</p></td>
 <td class="parameter_description"><p>A <a href="/usr/share/gtk-doc/html/gio/GCancellable.html#GCancellable-struct"><span class="type">GCancellable</span></a> or <a href="/usr/share/gtk-doc/html/glib/glib-Standard-Macros.html#NULL:CAPS"><code class="literal">NULL</code></a>. </p></td>
-<td class="parameter_annotations"><span class="annotation">[<acronym title="NULL is OK, both for passing and for returning."><span class="acronym">allow-none</span></acronym>]</span></td>
+<td class="parameter_annotations"><span class="annotation">[<acronym title="NULL may be passed as the value in, out, in-out; or as a return value."><span class="acronym">nullable</span></acronym>]</span></td>
 </tr>
 <tr>
 <td class="parameter_name"><p>error</p></td>
@@ -547,6 +547,6 @@ is set. </p>
 </div>
 </div>
 <div class="footer">
-<hr>Generated by GTK-Doc V1.27</div>
+<hr>Generated by GTK-Doc V1.28</div>
 </body>
 </html>

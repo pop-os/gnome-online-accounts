@@ -1,3 +1,10 @@
+gnome-online-accounts (3.30.0-1) unstable; urgency=medium
+
+  * New upstream release
+  * Release to unstable
+
+ -- Jeremy Bicha <jbicha@debian.org>  Sun, 02 Sep 2018 09:40:41 -0400
+
 gnome-online-accounts (3.29.91-1ubuntu2) cosmic; urgency=medium
 
   * debian/control*:
