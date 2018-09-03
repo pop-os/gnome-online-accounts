@@ -1,4 +1,4 @@
-gnome-online-accounts (3.30.0-1ubuntu1) UNRELEASED; urgency=medium
+gnome-online-accounts (3.30.0-1ubuntu1) cosmic; urgency=medium
 
   * Merge from Debian unstable (LP: #1790458). Remaining changes:
     + debian/rules:
