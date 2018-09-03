@@ -17,7 +17,7 @@ Bug-Ubuntu: https://bugs.launchpad.net/bugs/1752472
  create mode 100644 data/scripts/lpa_helper.py
 
 diff --git a/configure.ac b/configure.ac
-index 176c5b3..de81777 100644
+index 932c978..d021fa1 100644
 --- a/configure.ac
 +++ b/configure.ac
 @@ -545,6 +545,7 @@ data/icons/32x32/Makefile

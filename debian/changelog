@@ -1,3 +1,34 @@
+gnome-online-accounts (3.30.0-1ubuntu1) UNRELEASED; urgency=medium
+
+  * Merge from Debian unstable (LP: #1790458). Remaining changes:
+    + debian/rules:
+      - Make sure that gnome-online-accounts.pot is refreshed so the
+        strings from 0001-ubuntu-sso-provider.patch are included (LP: #1759251).
+      - Build with --enable-ubuntu-sso
+    + debian/control.*:
+      - Add b-d on libsnapd-glib-dev
+      - depends on python3 and python3-macaroonbakery for the ubuntu sso
+        provider.
+    + debian/gbp.conf:
+      - Set the upstream branch to upstream/latest.
+    + debian/gnome-online-accounts.install:
+      install usr/share/goa-1.0/scripts/lpa_helper.py
+    + debian/libgoa-backend-1.0-1.symbols:
+      Add goa_ubuntu_sso_provider_get_type
+    + debian/source/include-binaries:
+      Add debian/patches/0001-Add-Ubuntu-Single-Sign-on-icons.patch to properly
+      deal with new binary images.
+    + Ubuntu-specific patches:
+      - debian/patches/0001-Add-Ubuntu-Single-Sign-on-icons.patch
+      - debian/patches/0001-ubuntu-sso-provider.patch
+      - debian/patches/0002-livepatch-auth.patch
+  * debian/patches/0001-ubuntu-sso-provider.patch:
+  * debian/patches/0001-Add-Ubuntu-Single-Sign-on-icons.patch:
+    - Split the patch in order to separate the binary files from the non-binary
+      ones.
+
+ -- Andrea Azzarone <andrea.azzarone@canonical.com>  Mon, 03 Sep 2018 10:35:24 +0200
+
 gnome-online-accounts (3.30.0-1) unstable; urgency=medium
 
   * New upstream release
