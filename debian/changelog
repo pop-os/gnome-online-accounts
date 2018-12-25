@@ -1,3 +1,11 @@
+gnome-online-accounts (3.30.0-2) unstable; urgency=medium
+
+  * Bump debhelper compat to 11
+  * Restore -Wl,-O1 to our LDFLAGS
+  * Bump Standards-Version to 4.3.0
+
+ -- Jeremy Bicha <jbicha@debian.org>  Tue, 25 Dec 2018 08:11:35 -0500
+
 gnome-online-accounts (3.30.0-1) unstable; urgency=medium
 
   * New upstream release
