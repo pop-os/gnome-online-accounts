@@ -1,4 +1,4 @@
-gnome-online-accounts (3.30.1-1ubuntu1) UNRELEASED; urgency=medium
+gnome-online-accounts (3.30.1-1ubuntu1) disco; urgency=medium
 
   * Resynchronize on Debian, remaining changes:
     + debian/rules:
