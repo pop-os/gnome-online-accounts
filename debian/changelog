@@ -1,8 +1,11 @@
-gnome-online-accounts (3.31.90-1) UNRELEASED; urgency=medium
+gnome-online-accounts (3.31.90-1) experimental; urgency=medium
 
-  * New upstream release
+  * New upstream development release
+  * debian/libgoa-backend-1.0-1.symbols: Update
+  * Build-Depend on dh-sequence-gir and dh-sequence-gnome
+  * Drop google-Only-request-the-email-filed.patch: Applied in new release
 
- -- Jeremy Bicha <jbicha@debian.org>  Sat, 09 Feb 2019 17:00:14 -0500
+ -- Jeremy Bicha <jbicha@debian.org>  Sat, 09 Feb 2019 17:08:02 -0500
 
 gnome-online-accounts (3.30.1-2) unstable; urgency=medium
 
