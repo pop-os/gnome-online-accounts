@@ -121,18 +121,6 @@
 /* Path to the template file */
 #undef GOA_TEMPLATE_FILE
 
-/* Todoist OAuth 2.0 client id */
-#undef GOA_TODOIST_CLIENT_ID
-
-/* Todoist client secret */
-#undef GOA_TODOIST_CLIENT_SECRET
-
-/* Enable Todoist data provider */
-#undef GOA_TODOIST_ENABLED
-
-/* ProviderType and extension point name */
-#undef GOA_TODOIST_NAME
-
 /* Windows Live OAuth 2.0 client id */
 #undef GOA_WINDOWS_LIVE_CLIENT_ID
 
