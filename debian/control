@@ -6,11 +6,11 @@ Source: gnome-online-accounts
 Section: gnome
 Priority: optional
 Maintainer: Debian GNOME Maintainers <pkg-gnome-maintainers@lists.alioth.debian.org>
-Uploaders: Jeremy Bicha <jbicha@debian.org>, Michael Biebl <biebl@debian.org>, Tim Lunn <tim@feathertop.org>
+Uploaders: Jeremy Bicha <jbicha@debian.org>, Tim Lunn <tim@feathertop.org>
 Build-Depends: debhelper (>= 11),
                autoconf-archive,
-               gnome-pkg-tools (>= 0.10),
-               gobject-introspection (>= 0.9.12-4~),
+               dh-sequence-gir,
+               dh-sequence-gnome,
                gtk-doc-tools,
                libgcr-3-dev,
                libgirepository1.0-dev (>= 0.9.3),
