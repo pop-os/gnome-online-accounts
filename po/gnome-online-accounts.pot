@@ -6,10 +6,10 @@
 #, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: gnome-online-accounts 3.30.1\n"
+"Project-Id-Version: gnome-online-accounts 3.31.90\n"
 "Report-Msgid-Bugs-To: https://gitlab.gnome.org/GNOME/gnome-online-accounts/"
 "issues\n"
-"POT-Creation-Date: 2019-01-17 11:28+0100\n"
+"POT-Creation-Date: 2019-02-09 22:18+0100\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -44,20 +44,20 @@ msgid "ProviderType property is not set for account"
 msgstr ""
 
 #. TODO: more specific
-#: src/goabackend/goaewsclient.c:238
+#: src/goabackend/goaewsclient.c:258
 msgid "Failed to parse autodiscover response XML"
 msgstr ""
 
 #. TODO: more specific
 #. Translators: the parameter is an XML element name.
-#: src/goabackend/goaewsclient.c:249 src/goabackend/goaewsclient.c:264
-#: src/goabackend/goaewsclient.c:279
+#: src/goabackend/goaewsclient.c:269 src/goabackend/goaewsclient.c:284
+#: src/goabackend/goaewsclient.c:299
 #, c-format
 msgid "Failed to find “%s” element"
 msgstr ""
 
 #. TODO: more specific
-#: src/goabackend/goaewsclient.c:300
+#: src/goabackend/goaewsclient.c:320
 msgid "Failed to find ASUrl and OABUrl in autodiscover response"
 msgstr ""
 
@@ -194,8 +194,7 @@ msgstr ""
 #: src/goabackend/goafacebookprovider.c:183
 #: src/goabackend/goaflickrprovider.c:155
 #: src/goabackend/goafoursquareprovider.c:154
-#: src/goabackend/goagoogleprovider.c:183
-#: src/goabackend/goatodoistprovider.c:193
+#: src/goabackend/goagoogleprovider.c:184
 #: src/goabackend/goawindowsliveprovider.c:159
 #, c-format
 msgid ""
@@ -217,8 +216,8 @@ msgstr ""
 #: src/goabackend/goafoursquareprovider.c:206
 #: src/goabackend/goafoursquareprovider.c:215
 #: src/goabackend/goafoursquareprovider.c:228
-#: src/goabackend/goagoogleprovider.c:202
-#: src/goabackend/goagoogleprovider.c:213
+#: src/goabackend/goagoogleprovider.c:203
+#: src/goabackend/goagoogleprovider.c:214
 #: src/goabackend/goalastfmprovider.c:212
 #: src/goabackend/goalastfmprovider.c:221
 #: src/goabackend/goalastfmprovider.c:230
@@ -230,10 +229,7 @@ msgstr ""
 #: src/goabackend/goalastfmprovider.c:544
 #: src/goabackend/goaoauth2provider.c:656
 #: src/goabackend/goaoauth2provider.c:686
-#: src/goabackend/goaoauth2provider.c:697
-#: src/goabackend/goatodoistprovider.c:212
-#: src/goabackend/goatodoistprovider.c:223
-#: src/goabackend/goatodoistprovider.c:234 src/goabackend/goautils.c:273
+#: src/goabackend/goaoauth2provider.c:697 src/goabackend/goautils.c:273
 #: src/goabackend/goawindowsliveprovider.c:178
 #: src/goabackend/goawindowsliveprovider.c:189
 #: src/goabackend/goawindowsliveprovider.c:198
@@ -391,7 +387,7 @@ msgid "Operation was cancelled"
 msgstr ""
 
 #: src/goabackend/goakerberosprovider.c:794
-#: src/goaidentity/goaidentityservice.c:1069
+#: src/goaidentity/goaidentityservice.c:1070
 msgid "Log In to Realm"
 msgstr ""
 
@@ -521,73 +517,73 @@ msgstr ""
 msgid "No username or access_token"
 msgstr ""
 
-#: src/goabackend/goaprovider.c:110
+#: src/goabackend/goaprovider.c:109
 msgid "_Mail"
 msgstr ""
 
-#: src/goabackend/goaprovider.c:115
+#: src/goabackend/goaprovider.c:114
 msgid "Cale_ndar"
 msgstr ""
 
-#: src/goabackend/goaprovider.c:120
+#: src/goabackend/goaprovider.c:119
 msgid "_Contacts"
 msgstr ""
 
-#: src/goabackend/goaprovider.c:125
+#: src/goabackend/goaprovider.c:124
 msgid "C_hat"
 msgstr ""
 
-#: src/goabackend/goaprovider.c:130
+#: src/goabackend/goaprovider.c:129
 msgid "_Documents"
 msgstr ""
 
-#: src/goabackend/goaprovider.c:135
+#: src/goabackend/goaprovider.c:134
 msgid "M_usic"
 msgstr ""
 
-#: src/goabackend/goaprovider.c:140
+#: src/goabackend/goaprovider.c:139
 msgid "_Photos"
 msgstr ""
 
-#: src/goabackend/goaprovider.c:145
+#: src/goabackend/goaprovider.c:144
 msgid "_Files"
 msgstr ""
 
-#: src/goabackend/goaprovider.c:150
+#: src/goabackend/goaprovider.c:149
 msgid "Network _Resources"
 msgstr ""
 
-#: src/goabackend/goaprovider.c:155
+#: src/goabackend/goaprovider.c:154
 msgid "_Read Later"
 msgstr ""
 
-#: src/goabackend/goaprovider.c:160
+#: src/goabackend/goaprovider.c:159
 msgid "Prin_ters"
 msgstr ""
 
-#: src/goabackend/goaprovider.c:165
+#: src/goabackend/goaprovider.c:164
 msgid "_Maps"
 msgstr ""
 
-#: src/goabackend/goaprovider.c:170
+#: src/goabackend/goaprovider.c:169
 msgid "T_o Do"
 msgstr ""
 
 #. Translators: This is a label for a series of
 #. * options switches. For example: “Use for Mail”.
-#: src/goabackend/goaprovider.c:568
+#: src/goabackend/goaprovider.c:567
 msgid "Use for"
 msgstr ""
 
-#: src/goabackend/goaprovider.c:823
+#: src/goabackend/goaprovider.c:822
 msgid "Account is disabled"
 msgstr ""
 
-#: src/goabackend/goaprovider.c:836
+#: src/goabackend/goaprovider.c:835
 msgid "Unknown error"
 msgstr ""
 
-#: src/goabackend/goaprovider.c:855
+#: src/goabackend/goaprovider.c:854
 #, c-format
 msgid "ensure_credentials_sync is not implemented on type %s"
 msgstr ""
@@ -599,10 +595,6 @@ msgstr ""
 
 #: src/goabackend/goasmtpauth.c:476
 msgid "Unknown authentication mechanism"
-msgstr ""
-
-#: src/goabackend/goatodoistprovider.c:58
-msgid "Todoist"
 msgstr ""
 
 #: src/goabackend/goautils.c:92
@@ -728,70 +720,70 @@ msgstr ""
 msgid "Microsoft"
 msgstr ""
 
-#: src/goaidentity/goaidentityservice.c:568
+#: src/goaidentity/goaidentityservice.c:569
 msgid "Initial secret key is invalid"
 msgstr ""
 
-#: src/goaidentity/goaidentityservice.c:1074
+#: src/goaidentity/goaidentityservice.c:1075
 #, c-format
 msgid "The network realm %s needs some information to sign you in."
 msgstr ""
 
-#: src/goaidentity/goakerberosidentity.c:275
-#: src/goaidentity/goakerberosidentity.c:283
-#: src/goaidentity/goakerberosidentity.c:707
+#: src/goaidentity/goakerberosidentity.c:274
+#: src/goaidentity/goakerberosidentity.c:282
+#: src/goaidentity/goakerberosidentity.c:706
 msgid "Could not find identity in credential cache: "
 msgstr ""
 
-#: src/goaidentity/goakerberosidentity.c:720
+#: src/goaidentity/goakerberosidentity.c:719
 msgid "Could not find identity credentials in cache: "
 msgstr ""
 
-#: src/goaidentity/goakerberosidentity.c:771
+#: src/goaidentity/goakerberosidentity.c:770
 msgid "Could not sift through identity credentials in cache: "
 msgstr ""
 
-#: src/goaidentity/goakerberosidentity.c:788
+#: src/goaidentity/goakerberosidentity.c:787
 msgid "Could not finish up sifting through identity credentials in cache: "
 msgstr ""
 
-#: src/goaidentity/goakerberosidentity.c:1103
+#: src/goaidentity/goakerberosidentity.c:1102
 msgid "No associated identification found"
 msgstr ""
 
-#: src/goaidentity/goakerberosidentity.c:1186
+#: src/goaidentity/goakerberosidentity.c:1185
 msgid "Could not create credential cache: "
 msgstr ""
 
-#: src/goaidentity/goakerberosidentity.c:1220
+#: src/goaidentity/goakerberosidentity.c:1219
 msgid "Could not initialize credentials cache: "
 msgstr ""
 
-#: src/goaidentity/goakerberosidentity.c:1236
+#: src/goaidentity/goakerberosidentity.c:1235
 msgid "Could not store new credentials in credentials cache: "
 msgstr ""
 
-#: src/goaidentity/goakerberosidentity.c:1534
+#: src/goaidentity/goakerberosidentity.c:1533
 msgid "Could not renew identity: Not signed in"
 msgstr ""
 
-#: src/goaidentity/goakerberosidentity.c:1546
+#: src/goaidentity/goakerberosidentity.c:1545
 msgid "Could not renew identity: "
 msgstr ""
 
-#: src/goaidentity/goakerberosidentity.c:1562
+#: src/goaidentity/goakerberosidentity.c:1561
 #, c-format
 msgid "Could not get new credentials to renew identity %s: "
 msgstr ""
 
-#: src/goaidentity/goakerberosidentity.c:1604
+#: src/goaidentity/goakerberosidentity.c:1603
 msgid "Could not erase identity: "
 msgstr ""
 
-#: src/goaidentity/goakerberosidentitymanager.c:749
+#: src/goaidentity/goakerberosidentitymanager.c:750
 msgid "Could not find identity"
 msgstr ""
 
-#: src/goaidentity/goakerberosidentitymanager.c:845
+#: src/goaidentity/goakerberosidentitymanager.c:846
 msgid "Could not create credential cache for identity"
 msgstr ""

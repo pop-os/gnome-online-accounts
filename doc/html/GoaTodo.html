@@ -43,7 +43,7 @@
 <tbody>
 <tr>
 <td class="function_type">
-<a href="/usr/share/gtk-doc/html/gio/gio-D-Bus-Introspection-Data.html#GDBusInterfaceInfo-struct"><span class="returnvalue">GDBusInterfaceInfo</span></a> *
+<span class="returnvalue">GDBusInterfaceInfo</span> *
 </td>
 <td class="function_name">
 <a class="link" href="GoaTodo.html#goa-todo-interface-info" title="goa_todo_interface_info ()">goa_todo_interface_info</a> <span class="c_punctuation">()</span>
@@ -51,66 +51,10 @@
 </tr>
 <tr>
 <td class="function_type">
-<a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#guint"><span class="returnvalue">guint</span></a>
+<span class="returnvalue">guint</span>
 </td>
 <td class="function_name">
 <a class="link" href="GoaTodo.html#goa-todo-override-properties" title="goa_todo_override_properties ()">goa_todo_override_properties</a> <span class="c_punctuation">()</span>
-</td>
-</tr>
-<tr>
-<td class="function_type">
-<span class="returnvalue">void</span>
-</td>
-<td class="function_name">
-<a class="link" href="GoaTodo.html#goa-todo-proxy-new" title="goa_todo_proxy_new ()">goa_todo_proxy_new</a> <span class="c_punctuation">()</span>
-</td>
-</tr>
-<tr>
-<td class="function_type">
-<a class="link" href="GoaTodo.html" title="GoaTodo"><span class="returnvalue">GoaTodo</span></a> *
-</td>
-<td class="function_name">
-<a class="link" href="GoaTodo.html#goa-todo-proxy-new-finish" title="goa_todo_proxy_new_finish ()">goa_todo_proxy_new_finish</a> <span class="c_punctuation">()</span>
-</td>
-</tr>
-<tr>
-<td class="function_type">
-<a class="link" href="GoaTodo.html" title="GoaTodo"><span class="returnvalue">GoaTodo</span></a> *
-</td>
-<td class="function_name">
-<a class="link" href="GoaTodo.html#goa-todo-proxy-new-sync" title="goa_todo_proxy_new_sync ()">goa_todo_proxy_new_sync</a> <span class="c_punctuation">()</span>
-</td>
-</tr>
-<tr>
-<td class="function_type">
-<span class="returnvalue">void</span>
-</td>
-<td class="function_name">
-<a class="link" href="GoaTodo.html#goa-todo-proxy-new-for-bus" title="goa_todo_proxy_new_for_bus ()">goa_todo_proxy_new_for_bus</a> <span class="c_punctuation">()</span>
-</td>
-</tr>
-<tr>
-<td class="function_type">
-<a class="link" href="GoaTodo.html" title="GoaTodo"><span class="returnvalue">GoaTodo</span></a> *
-</td>
-<td class="function_name">
-<a class="link" href="GoaTodo.html#goa-todo-proxy-new-for-bus-finish" title="goa_todo_proxy_new_for_bus_finish ()">goa_todo_proxy_new_for_bus_finish</a> <span class="c_punctuation">()</span>
-</td>
-</tr>
-<tr>
-<td class="function_type">
-<a class="link" href="GoaTodo.html" title="GoaTodo"><span class="returnvalue">GoaTodo</span></a> *
-</td>
-<td class="function_name">
-<a class="link" href="GoaTodo.html#goa-todo-proxy-new-for-bus-sync" title="goa_todo_proxy_new_for_bus_sync ()">goa_todo_proxy_new_for_bus_sync</a> <span class="c_punctuation">()</span>
-</td>
-</tr>
-<tr>
-<td class="function_type">
-<a class="link" href="GoaTodo.html" title="GoaTodo"><span class="returnvalue">GoaTodo</span></a> *
-</td>
-<td class="function_name">
-<a class="link" href="GoaTodo.html#goa-todo-skeleton-new" title="goa_todo_skeleton_new ()">goa_todo_skeleton_new</a> <span class="c_punctuation">()</span>
 </td>
 </tr>
 </tbody>
@@ -153,7 +97,7 @@
 </div>
 <div class="refsect1">
 <a name="GoaTodo.object-hierarchy"></a><h2>Object Hierarchy</h2>
-<pre class="screen">    <a href="/usr/share/gtk-doc/html/gobject/GTypeModule.html">GInterface</a>
+<pre class="screen">    GInterface
     <span class="lineart">╰──</span> GoaTodo
 </pre>
 </div>
@@ -161,7 +105,7 @@
 <a name="GoaTodo.prerequisites"></a><h2>Prerequisites</h2>
 <p>
 GoaTodo requires
- <a href="/usr/share/gtk-doc/html/gobject/gobject-The-Base-Object-Type.html#GObject-struct">GObject</a>.</p>
+ GObject.</p>
 </div>
 <div class="refsect1">
 <a name="GoaTodo.description"></a><h2>Description</h2>
@@ -171,12 +115,16 @@ GoaTodo requires
 <a name="GoaTodo.functions_details"></a><h2>Functions</h2>
 <div class="refsect2">
 <a name="goa-todo-interface-info"></a><h3>goa_todo_interface_info ()</h3>
-<pre class="programlisting"><a href="/usr/share/gtk-doc/html/gio/gio-D-Bus-Introspection-Data.html#GDBusInterfaceInfo-struct"><span class="returnvalue">GDBusInterfaceInfo</span></a> *
+<pre class="programlisting"><span class="returnvalue">GDBusInterfaceInfo</span> *
 goa_todo_interface_info (<em class="parameter"><code><span class="type">void</span></code></em>);</pre>
+<div class="warning">
+<p><code class="literal">goa_todo_interface_info</code> is deprecated and should not be used in newly-written code.</p>
+<p>The D-Bus interface has been deprecated.</p>
+</div>
 <p>Gets a machine-readable description of the <a class="link" href="gdbus-org.gnome.OnlineAccounts.Todo.html#gdbus-interface-org-gnome-OnlineAccounts-Todo.top_of_page">org.gnome.OnlineAccounts.Todo</a> D-Bus interface.</p>
 <div class="refsect3">
 <a name="goa-todo-interface-info.returns"></a><h4>Returns</h4>
-<p>A <a href="/usr/share/gtk-doc/html/gio/gio-D-Bus-Introspection-Data.html#GDBusInterfaceInfo-struct"><span class="type">GDBusInterfaceInfo</span></a>. Do not free. </p>
+<p>A <span class="type">GDBusInterfaceInfo</span>. Do not free. </p>
 <p><span class="annotation">[<acronym title="Don't free data after the code is done."><span class="acronym">transfer none</span></acronym>]</span></p>
 </div>
 <p class="since">Since: 3.26.0</p>
@@ -184,10 +132,14 @@ goa_todo_interface_info (<em class="parameter"><code><span class="type">void</sp
 <hr>
 <div class="refsect2">
 <a name="goa-todo-override-properties"></a><h3>goa_todo_override_properties ()</h3>
-<pre class="programlisting"><a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#guint"><span class="returnvalue">guint</span></a>
-goa_todo_override_properties (<em class="parameter"><code><a href="/usr/share/gtk-doc/html/gobject/gobject-The-Base-Object-Type.html#GObjectClass"><span class="type">GObjectClass</span></a> *klass</code></em>,
-                              <em class="parameter"><code><a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#guint"><span class="type">guint</span></a> property_id_begin</code></em>);</pre>
-<p>Overrides all <a href="/usr/share/gtk-doc/html/gobject/gobject-The-Base-Object-Type.html#GObject-struct"><span class="type">GObject</span></a> properties in the <a class="link" href="GoaTodo.html" title="GoaTodo"><span class="type">GoaTodo</span></a> interface for a concrete class.
+<pre class="programlisting"><span class="returnvalue">guint</span>
+goa_todo_override_properties (<em class="parameter"><code><span class="type">GObjectClass</span> *klass</code></em>,
+                              <em class="parameter"><code><span class="type">guint</span> property_id_begin</code></em>);</pre>
+<div class="warning">
+<p><code class="literal">goa_todo_override_properties</code> is deprecated and should not be used in newly-written code.</p>
+<p>The D-Bus interface has been deprecated.</p>
+</div>
+<p>Overrides all <span class="type">GObject</span> properties in the <a class="link" href="GoaTodo.html" title="GoaTodo"><span class="type">GoaTodo</span></a> interface for a concrete class.
 The properties are overridden in the order they are defined.</p>
 <div class="refsect3">
 <a name="goa-todo-override-properties.parameters"></a><h4>Parameters</h4>
@@ -200,7 +152,7 @@ The properties are overridden in the order they are defined.</p>
 <tbody>
 <tr>
 <td class="parameter_name"><p>klass</p></td>
-<td class="parameter_description"><p>The class structure for a <a href="/usr/share/gtk-doc/html/gobject/gobject-The-Base-Object-Type.html#GObject-struct"><span class="type">GObject</span></a> derived class.</p></td>
+<td class="parameter_description"><p>The class structure for a <span class="type">GObject</span> derived class.</p></td>
 <td class="parameter_annotations"> </td>
 </tr>
 <tr>
@@ -217,359 +169,16 @@ The properties are overridden in the order they are defined.</p>
 </div>
 <p class="since">Since: 3.26.0</p>
 </div>
-<hr>
-<div class="refsect2">
-<a name="goa-todo-proxy-new"></a><h3>goa_todo_proxy_new ()</h3>
-<pre class="programlisting"><span class="returnvalue">void</span>
-goa_todo_proxy_new (<em class="parameter"><code><a href="/usr/share/gtk-doc/html/gio/GDBusConnection.html#GDBusConnection-struct"><span class="type">GDBusConnection</span></a> *connection</code></em>,
-                    <em class="parameter"><code><a href="/usr/share/gtk-doc/html/gio/GDBusProxy.html#GDBusProxyFlags"><span class="type">GDBusProxyFlags</span></a> flags</code></em>,
-                    <em class="parameter"><code>const <a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a> *name</code></em>,
-                    <em class="parameter"><code>const <a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a> *object_path</code></em>,
-                    <em class="parameter"><code><a href="/usr/share/gtk-doc/html/gio/GCancellable.html#GCancellable-struct"><span class="type">GCancellable</span></a> *cancellable</code></em>,
-                    <em class="parameter"><code><a href="/usr/share/gtk-doc/html/gio/GAsyncResult.html#GAsyncReadyCallback"><span class="type">GAsyncReadyCallback</span></a> callback</code></em>,
-                    <em class="parameter"><code><a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gpointer"><span class="type">gpointer</span></a> user_data</code></em>);</pre>
-<p>Asynchronously creates a proxy for the D-Bus interface <a class="link" href="gdbus-org.gnome.OnlineAccounts.Todo.html#gdbus-interface-org-gnome-OnlineAccounts-Todo.top_of_page">org.gnome.OnlineAccounts.Todo</a>. See <a href="/usr/share/gtk-doc/html/gio/GDBusProxy.html#g-dbus-proxy-new"><code class="function">g_dbus_proxy_new()</code></a> for more details.</p>
-<p>When the operation is finished, <em class="parameter"><code>callback</code></em>
- will be invoked in the <a href="/usr/share/gtk-doc/html/glib/glib-The-Main-Event-Loop.html#g-main-context-push-thread-default">thread-default main loop</a> of the thread you are calling this method from.
-You can then call <a class="link" href="GoaTodo.html#goa-todo-proxy-new-finish" title="goa_todo_proxy_new_finish ()"><code class="function">goa_todo_proxy_new_finish()</code></a> to get the result of the operation.</p>
-<p>See <a class="link" href="GoaTodo.html#goa-todo-proxy-new-sync" title="goa_todo_proxy_new_sync ()"><code class="function">goa_todo_proxy_new_sync()</code></a> for the synchronous, blocking version of this constructor.</p>
-<div class="refsect3">
-<a name="goa-todo-proxy-new.parameters"></a><h4>Parameters</h4>
-<div class="informaltable"><table class="informaltable" width="100%" border="0">
-<colgroup>
-<col width="150px" class="parameters_name">
-<col class="parameters_description">
-<col width="200px" class="parameters_annotations">
-</colgroup>
-<tbody>
-<tr>
-<td class="parameter_name"><p>connection</p></td>
-<td class="parameter_description"><p>A <a href="/usr/share/gtk-doc/html/gio/GDBusConnection.html#GDBusConnection-struct"><span class="type">GDBusConnection</span></a>.</p></td>
-<td class="parameter_annotations"> </td>
-</tr>
-<tr>
-<td class="parameter_name"><p>flags</p></td>
-<td class="parameter_description"><p>Flags from the <a href="/usr/share/gtk-doc/html/gio/GDBusProxy.html#GDBusProxyFlags"><span class="type">GDBusProxyFlags</span></a> enumeration.</p></td>
-<td class="parameter_annotations"> </td>
-</tr>
-<tr>
-<td class="parameter_name"><p>name</p></td>
-<td class="parameter_description"><p>A bus name (well-known or unique) or <a href="/usr/share/gtk-doc/html/glib/glib-Standard-Macros.html#NULL:CAPS"><code class="literal">NULL</code></a> if <em class="parameter"><code>connection</code></em>
-is not a message bus connection. </p></td>
-<td class="parameter_annotations"><span class="annotation">[<acronym title="NULL may be passed as the value in, out, in-out; or as a return value."><span class="acronym">nullable</span></acronym>]</span></td>
-</tr>
-<tr>
-<td class="parameter_name"><p>object_path</p></td>
-<td class="parameter_description"><p>An object path.</p></td>
-<td class="parameter_annotations"> </td>
-</tr>
-<tr>
-<td class="parameter_name"><p>cancellable</p></td>
-<td class="parameter_description"><p>A <a href="/usr/share/gtk-doc/html/gio/GCancellable.html#GCancellable-struct"><span class="type">GCancellable</span></a> or <a href="/usr/share/gtk-doc/html/glib/glib-Standard-Macros.html#NULL:CAPS"><code class="literal">NULL</code></a>. </p></td>
-<td class="parameter_annotations"><span class="annotation">[<acronym title="NULL may be passed as the value in, out, in-out; or as a return value."><span class="acronym">nullable</span></acronym>]</span></td>
-</tr>
-<tr>
-<td class="parameter_name"><p>callback</p></td>
-<td class="parameter_description"><p>A <a href="/usr/share/gtk-doc/html/gio/GAsyncResult.html#GAsyncReadyCallback"><span class="type">GAsyncReadyCallback</span></a> to call when the request is satisfied.</p></td>
-<td class="parameter_annotations"> </td>
-</tr>
-<tr>
-<td class="parameter_name"><p>user_data</p></td>
-<td class="parameter_description"><p>User data to pass to <em class="parameter"><code>callback</code></em>
-.</p></td>
-<td class="parameter_annotations"> </td>
-</tr>
-</tbody>
-</table></div>
-</div>
-<p class="since">Since: 3.26.0</p>
-</div>
-<hr>
-<div class="refsect2">
-<a name="goa-todo-proxy-new-finish"></a><h3>goa_todo_proxy_new_finish ()</h3>
-<pre class="programlisting"><a class="link" href="GoaTodo.html" title="GoaTodo"><span class="returnvalue">GoaTodo</span></a> *
-goa_todo_proxy_new_finish (<em class="parameter"><code><a href="/usr/share/gtk-doc/html/gio/GAsyncResult.html#GAsyncResult-struct"><span class="type">GAsyncResult</span></a> *res</code></em>,
-                           <em class="parameter"><code><a href="/usr/share/gtk-doc/html/glib/glib-Error-Reporting.html#GError"><span class="type">GError</span></a> **error</code></em>);</pre>
-<p>Finishes an operation started with <a class="link" href="GoaTodo.html#goa-todo-proxy-new" title="goa_todo_proxy_new ()"><code class="function">goa_todo_proxy_new()</code></a>.</p>
-<div class="refsect3">
-<a name="goa-todo-proxy-new-finish.parameters"></a><h4>Parameters</h4>
-<div class="informaltable"><table class="informaltable" width="100%" border="0">
-<colgroup>
-<col width="150px" class="parameters_name">
-<col class="parameters_description">
-<col width="200px" class="parameters_annotations">
-</colgroup>
-<tbody>
-<tr>
-<td class="parameter_name"><p>res</p></td>
-<td class="parameter_description"><p>The <a href="/usr/share/gtk-doc/html/gio/GAsyncResult.html#GAsyncResult-struct"><span class="type">GAsyncResult</span></a> obtained from the <a href="/usr/share/gtk-doc/html/gio/GAsyncResult.html#GAsyncReadyCallback"><span class="type">GAsyncReadyCallback</span></a> passed to <a class="link" href="GoaTodo.html#goa-todo-proxy-new" title="goa_todo_proxy_new ()"><code class="function">goa_todo_proxy_new()</code></a>.</p></td>
-<td class="parameter_annotations"> </td>
-</tr>
-<tr>
-<td class="parameter_name"><p>error</p></td>
-<td class="parameter_description"><p>Return location for error or <a href="/usr/share/gtk-doc/html/glib/glib-Standard-Macros.html#NULL:CAPS"><code class="literal">NULL</code></a></p></td>
-<td class="parameter_annotations"> </td>
-</tr>
-</tbody>
-</table></div>
-</div>
-<div class="refsect3">
-<a name="goa-todo-proxy-new-finish.returns"></a><h4>Returns</h4>
-<p>The constructed proxy object or <a href="/usr/share/gtk-doc/html/glib/glib-Standard-Macros.html#NULL:CAPS"><code class="literal">NULL</code></a> if <em class="parameter"><code>error</code></em>
-is set. </p>
-<p><span class="annotation">[<acronym title="Free data after the code is done."><span class="acronym">transfer full</span></acronym>][<acronym title="Override the parsed C type with given type."><span class="acronym">type</span></acronym> GoaTodoProxy]</span></p>
-</div>
-<p class="since">Since: 3.26.0</p>
-</div>
-<hr>
-<div class="refsect2">
-<a name="goa-todo-proxy-new-sync"></a><h3>goa_todo_proxy_new_sync ()</h3>
-<pre class="programlisting"><a class="link" href="GoaTodo.html" title="GoaTodo"><span class="returnvalue">GoaTodo</span></a> *
-goa_todo_proxy_new_sync (<em class="parameter"><code><a href="/usr/share/gtk-doc/html/gio/GDBusConnection.html#GDBusConnection-struct"><span class="type">GDBusConnection</span></a> *connection</code></em>,
-                         <em class="parameter"><code><a href="/usr/share/gtk-doc/html/gio/GDBusProxy.html#GDBusProxyFlags"><span class="type">GDBusProxyFlags</span></a> flags</code></em>,
-                         <em class="parameter"><code>const <a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a> *name</code></em>,
-                         <em class="parameter"><code>const <a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a> *object_path</code></em>,
-                         <em class="parameter"><code><a href="/usr/share/gtk-doc/html/gio/GCancellable.html#GCancellable-struct"><span class="type">GCancellable</span></a> *cancellable</code></em>,
-                         <em class="parameter"><code><a href="/usr/share/gtk-doc/html/glib/glib-Error-Reporting.html#GError"><span class="type">GError</span></a> **error</code></em>);</pre>
-<p>Synchronously creates a proxy for the D-Bus interface <a class="link" href="gdbus-org.gnome.OnlineAccounts.Todo.html#gdbus-interface-org-gnome-OnlineAccounts-Todo.top_of_page">org.gnome.OnlineAccounts.Todo</a>. See <a href="/usr/share/gtk-doc/html/gio/GDBusProxy.html#g-dbus-proxy-new-sync"><code class="function">g_dbus_proxy_new_sync()</code></a> for more details.</p>
-<p>The calling thread is blocked until a reply is received.</p>
-<p>See <a class="link" href="GoaTodo.html#goa-todo-proxy-new" title="goa_todo_proxy_new ()"><code class="function">goa_todo_proxy_new()</code></a> for the asynchronous version of this constructor.</p>
-<div class="refsect3">
-<a name="goa-todo-proxy-new-sync.parameters"></a><h4>Parameters</h4>
-<div class="informaltable"><table class="informaltable" width="100%" border="0">
-<colgroup>
-<col width="150px" class="parameters_name">
-<col class="parameters_description">
-<col width="200px" class="parameters_annotations">
-</colgroup>
-<tbody>
-<tr>
-<td class="parameter_name"><p>connection</p></td>
-<td class="parameter_description"><p>A <a href="/usr/share/gtk-doc/html/gio/GDBusConnection.html#GDBusConnection-struct"><span class="type">GDBusConnection</span></a>.</p></td>
-<td class="parameter_annotations"> </td>
-</tr>
-<tr>
-<td class="parameter_name"><p>flags</p></td>
-<td class="parameter_description"><p>Flags from the <a href="/usr/share/gtk-doc/html/gio/GDBusProxy.html#GDBusProxyFlags"><span class="type">GDBusProxyFlags</span></a> enumeration.</p></td>
-<td class="parameter_annotations"> </td>
-</tr>
-<tr>
-<td class="parameter_name"><p>name</p></td>
-<td class="parameter_description"><p>A bus name (well-known or unique) or <a href="/usr/share/gtk-doc/html/glib/glib-Standard-Macros.html#NULL:CAPS"><code class="literal">NULL</code></a> if <em class="parameter"><code>connection</code></em>
-is not a message bus connection. </p></td>
-<td class="parameter_annotations"><span class="annotation">[<acronym title="NULL may be passed as the value in, out, in-out; or as a return value."><span class="acronym">nullable</span></acronym>]</span></td>
-</tr>
-<tr>
-<td class="parameter_name"><p>object_path</p></td>
-<td class="parameter_description"><p>An object path.</p></td>
-<td class="parameter_annotations"> </td>
-</tr>
-<tr>
-<td class="parameter_name"><p>cancellable</p></td>
-<td class="parameter_description"><p>A <a href="/usr/share/gtk-doc/html/gio/GCancellable.html#GCancellable-struct"><span class="type">GCancellable</span></a> or <a href="/usr/share/gtk-doc/html/glib/glib-Standard-Macros.html#NULL:CAPS"><code class="literal">NULL</code></a>. </p></td>
-<td class="parameter_annotations"><span class="annotation">[<acronym title="NULL may be passed as the value in, out, in-out; or as a return value."><span class="acronym">nullable</span></acronym>]</span></td>
-</tr>
-<tr>
-<td class="parameter_name"><p>error</p></td>
-<td class="parameter_description"><p>Return location for error or <a href="/usr/share/gtk-doc/html/glib/glib-Standard-Macros.html#NULL:CAPS"><code class="literal">NULL</code></a></p></td>
-<td class="parameter_annotations"> </td>
-</tr>
-</tbody>
-</table></div>
-</div>
-<div class="refsect3">
-<a name="goa-todo-proxy-new-sync.returns"></a><h4>Returns</h4>
-<p>The constructed proxy object or <a href="/usr/share/gtk-doc/html/glib/glib-Standard-Macros.html#NULL:CAPS"><code class="literal">NULL</code></a> if <em class="parameter"><code>error</code></em>
-is set. </p>
-<p><span class="annotation">[<acronym title="Free data after the code is done."><span class="acronym">transfer full</span></acronym>][<acronym title="Override the parsed C type with given type."><span class="acronym">type</span></acronym> GoaTodoProxy]</span></p>
-</div>
-<p class="since">Since: 3.26.0</p>
-</div>
-<hr>
-<div class="refsect2">
-<a name="goa-todo-proxy-new-for-bus"></a><h3>goa_todo_proxy_new_for_bus ()</h3>
-<pre class="programlisting"><span class="returnvalue">void</span>
-goa_todo_proxy_new_for_bus (<em class="parameter"><code><a href="/usr/share/gtk-doc/html/gio/GDBusConnection.html#GBusType"><span class="type">GBusType</span></a> bus_type</code></em>,
-                            <em class="parameter"><code><a href="/usr/share/gtk-doc/html/gio/GDBusProxy.html#GDBusProxyFlags"><span class="type">GDBusProxyFlags</span></a> flags</code></em>,
-                            <em class="parameter"><code>const <a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a> *name</code></em>,
-                            <em class="parameter"><code>const <a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a> *object_path</code></em>,
-                            <em class="parameter"><code><a href="/usr/share/gtk-doc/html/gio/GCancellable.html#GCancellable-struct"><span class="type">GCancellable</span></a> *cancellable</code></em>,
-                            <em class="parameter"><code><a href="/usr/share/gtk-doc/html/gio/GAsyncResult.html#GAsyncReadyCallback"><span class="type">GAsyncReadyCallback</span></a> callback</code></em>,
-                            <em class="parameter"><code><a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gpointer"><span class="type">gpointer</span></a> user_data</code></em>);</pre>
-<p>Like <a class="link" href="GoaTodo.html#goa-todo-proxy-new" title="goa_todo_proxy_new ()"><code class="function">goa_todo_proxy_new()</code></a> but takes a <a href="/usr/share/gtk-doc/html/gio/GDBusConnection.html#GBusType"><span class="type">GBusType</span></a> instead of a <a href="/usr/share/gtk-doc/html/gio/GDBusConnection.html#GDBusConnection-struct"><span class="type">GDBusConnection</span></a>.</p>
-<p>When the operation is finished, <em class="parameter"><code>callback</code></em>
- will be invoked in the <a href="/usr/share/gtk-doc/html/glib/glib-The-Main-Event-Loop.html#g-main-context-push-thread-default">thread-default main loop</a> of the thread you are calling this method from.
-You can then call <a class="link" href="GoaTodo.html#goa-todo-proxy-new-for-bus-finish" title="goa_todo_proxy_new_for_bus_finish ()"><code class="function">goa_todo_proxy_new_for_bus_finish()</code></a> to get the result of the operation.</p>
-<p>See <a class="link" href="GoaTodo.html#goa-todo-proxy-new-for-bus-sync" title="goa_todo_proxy_new_for_bus_sync ()"><code class="function">goa_todo_proxy_new_for_bus_sync()</code></a> for the synchronous, blocking version of this constructor.</p>
-<div class="refsect3">
-<a name="goa-todo-proxy-new-for-bus.parameters"></a><h4>Parameters</h4>
-<div class="informaltable"><table class="informaltable" width="100%" border="0">
-<colgroup>
-<col width="150px" class="parameters_name">
-<col class="parameters_description">
-<col width="200px" class="parameters_annotations">
-</colgroup>
-<tbody>
-<tr>
-<td class="parameter_name"><p>bus_type</p></td>
-<td class="parameter_description"><p>A <a href="/usr/share/gtk-doc/html/gio/GDBusConnection.html#GBusType"><span class="type">GBusType</span></a>.</p></td>
-<td class="parameter_annotations"> </td>
-</tr>
-<tr>
-<td class="parameter_name"><p>flags</p></td>
-<td class="parameter_description"><p>Flags from the <a href="/usr/share/gtk-doc/html/gio/GDBusProxy.html#GDBusProxyFlags"><span class="type">GDBusProxyFlags</span></a> enumeration.</p></td>
-<td class="parameter_annotations"> </td>
-</tr>
-<tr>
-<td class="parameter_name"><p>name</p></td>
-<td class="parameter_description"><p>A bus name (well-known or unique).</p></td>
-<td class="parameter_annotations"> </td>
-</tr>
-<tr>
-<td class="parameter_name"><p>object_path</p></td>
-<td class="parameter_description"><p>An object path.</p></td>
-<td class="parameter_annotations"> </td>
-</tr>
-<tr>
-<td class="parameter_name"><p>cancellable</p></td>
-<td class="parameter_description"><p>A <a href="/usr/share/gtk-doc/html/gio/GCancellable.html#GCancellable-struct"><span class="type">GCancellable</span></a> or <a href="/usr/share/gtk-doc/html/glib/glib-Standard-Macros.html#NULL:CAPS"><code class="literal">NULL</code></a>. </p></td>
-<td class="parameter_annotations"><span class="annotation">[<acronym title="NULL may be passed as the value in, out, in-out; or as a return value."><span class="acronym">nullable</span></acronym>]</span></td>
-</tr>
-<tr>
-<td class="parameter_name"><p>callback</p></td>
-<td class="parameter_description"><p>A <a href="/usr/share/gtk-doc/html/gio/GAsyncResult.html#GAsyncReadyCallback"><span class="type">GAsyncReadyCallback</span></a> to call when the request is satisfied.</p></td>
-<td class="parameter_annotations"> </td>
-</tr>
-<tr>
-<td class="parameter_name"><p>user_data</p></td>
-<td class="parameter_description"><p>User data to pass to <em class="parameter"><code>callback</code></em>
-.</p></td>
-<td class="parameter_annotations"> </td>
-</tr>
-</tbody>
-</table></div>
-</div>
-<p class="since">Since: 3.26.0</p>
-</div>
-<hr>
-<div class="refsect2">
-<a name="goa-todo-proxy-new-for-bus-finish"></a><h3>goa_todo_proxy_new_for_bus_finish ()</h3>
-<pre class="programlisting"><a class="link" href="GoaTodo.html" title="GoaTodo"><span class="returnvalue">GoaTodo</span></a> *
-goa_todo_proxy_new_for_bus_finish (<em class="parameter"><code><a href="/usr/share/gtk-doc/html/gio/GAsyncResult.html#GAsyncResult-struct"><span class="type">GAsyncResult</span></a> *res</code></em>,
-                                   <em class="parameter"><code><a href="/usr/share/gtk-doc/html/glib/glib-Error-Reporting.html#GError"><span class="type">GError</span></a> **error</code></em>);</pre>
-<p>Finishes an operation started with <a class="link" href="GoaTodo.html#goa-todo-proxy-new-for-bus" title="goa_todo_proxy_new_for_bus ()"><code class="function">goa_todo_proxy_new_for_bus()</code></a>.</p>
-<div class="refsect3">
-<a name="goa-todo-proxy-new-for-bus-finish.parameters"></a><h4>Parameters</h4>
-<div class="informaltable"><table class="informaltable" width="100%" border="0">
-<colgroup>
-<col width="150px" class="parameters_name">
-<col class="parameters_description">
-<col width="200px" class="parameters_annotations">
-</colgroup>
-<tbody>
-<tr>
-<td class="parameter_name"><p>res</p></td>
-<td class="parameter_description"><p>The <a href="/usr/share/gtk-doc/html/gio/GAsyncResult.html#GAsyncResult-struct"><span class="type">GAsyncResult</span></a> obtained from the <a href="/usr/share/gtk-doc/html/gio/GAsyncResult.html#GAsyncReadyCallback"><span class="type">GAsyncReadyCallback</span></a> passed to <a class="link" href="GoaTodo.html#goa-todo-proxy-new-for-bus" title="goa_todo_proxy_new_for_bus ()"><code class="function">goa_todo_proxy_new_for_bus()</code></a>.</p></td>
-<td class="parameter_annotations"> </td>
-</tr>
-<tr>
-<td class="parameter_name"><p>error</p></td>
-<td class="parameter_description"><p>Return location for error or <a href="/usr/share/gtk-doc/html/glib/glib-Standard-Macros.html#NULL:CAPS"><code class="literal">NULL</code></a></p></td>
-<td class="parameter_annotations"> </td>
-</tr>
-</tbody>
-</table></div>
-</div>
-<div class="refsect3">
-<a name="goa-todo-proxy-new-for-bus-finish.returns"></a><h4>Returns</h4>
-<p>The constructed proxy object or <a href="/usr/share/gtk-doc/html/glib/glib-Standard-Macros.html#NULL:CAPS"><code class="literal">NULL</code></a> if <em class="parameter"><code>error</code></em>
-is set. </p>
-<p><span class="annotation">[<acronym title="Free data after the code is done."><span class="acronym">transfer full</span></acronym>][<acronym title="Override the parsed C type with given type."><span class="acronym">type</span></acronym> GoaTodoProxy]</span></p>
-</div>
-<p class="since">Since: 3.26.0</p>
-</div>
-<hr>
-<div class="refsect2">
-<a name="goa-todo-proxy-new-for-bus-sync"></a><h3>goa_todo_proxy_new_for_bus_sync ()</h3>
-<pre class="programlisting"><a class="link" href="GoaTodo.html" title="GoaTodo"><span class="returnvalue">GoaTodo</span></a> *
-goa_todo_proxy_new_for_bus_sync (<em class="parameter"><code><a href="/usr/share/gtk-doc/html/gio/GDBusConnection.html#GBusType"><span class="type">GBusType</span></a> bus_type</code></em>,
-                                 <em class="parameter"><code><a href="/usr/share/gtk-doc/html/gio/GDBusProxy.html#GDBusProxyFlags"><span class="type">GDBusProxyFlags</span></a> flags</code></em>,
-                                 <em class="parameter"><code>const <a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a> *name</code></em>,
-                                 <em class="parameter"><code>const <a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a> *object_path</code></em>,
-                                 <em class="parameter"><code><a href="/usr/share/gtk-doc/html/gio/GCancellable.html#GCancellable-struct"><span class="type">GCancellable</span></a> *cancellable</code></em>,
-                                 <em class="parameter"><code><a href="/usr/share/gtk-doc/html/glib/glib-Error-Reporting.html#GError"><span class="type">GError</span></a> **error</code></em>);</pre>
-<p>Like <a class="link" href="GoaTodo.html#goa-todo-proxy-new-sync" title="goa_todo_proxy_new_sync ()"><code class="function">goa_todo_proxy_new_sync()</code></a> but takes a <a href="/usr/share/gtk-doc/html/gio/GDBusConnection.html#GBusType"><span class="type">GBusType</span></a> instead of a <a href="/usr/share/gtk-doc/html/gio/GDBusConnection.html#GDBusConnection-struct"><span class="type">GDBusConnection</span></a>.</p>
-<p>The calling thread is blocked until a reply is received.</p>
-<p>See <a class="link" href="GoaTodo.html#goa-todo-proxy-new-for-bus" title="goa_todo_proxy_new_for_bus ()"><code class="function">goa_todo_proxy_new_for_bus()</code></a> for the asynchronous version of this constructor.</p>
-<div class="refsect3">
-<a name="goa-todo-proxy-new-for-bus-sync.parameters"></a><h4>Parameters</h4>
-<div class="informaltable"><table class="informaltable" width="100%" border="0">
-<colgroup>
-<col width="150px" class="parameters_name">
-<col class="parameters_description">
-<col width="200px" class="parameters_annotations">
-</colgroup>
-<tbody>
-<tr>
-<td class="parameter_name"><p>bus_type</p></td>
-<td class="parameter_description"><p>A <a href="/usr/share/gtk-doc/html/gio/GDBusConnection.html#GBusType"><span class="type">GBusType</span></a>.</p></td>
-<td class="parameter_annotations"> </td>
-</tr>
-<tr>
-<td class="parameter_name"><p>flags</p></td>
-<td class="parameter_description"><p>Flags from the <a href="/usr/share/gtk-doc/html/gio/GDBusProxy.html#GDBusProxyFlags"><span class="type">GDBusProxyFlags</span></a> enumeration.</p></td>
-<td class="parameter_annotations"> </td>
-</tr>
-<tr>
-<td class="parameter_name"><p>name</p></td>
-<td class="parameter_description"><p>A bus name (well-known or unique).</p></td>
-<td class="parameter_annotations"> </td>
-</tr>
-<tr>
-<td class="parameter_name"><p>object_path</p></td>
-<td class="parameter_description"><p>An object path.</p></td>
-<td class="parameter_annotations"> </td>
-</tr>
-<tr>
-<td class="parameter_name"><p>cancellable</p></td>
-<td class="parameter_description"><p>A <a href="/usr/share/gtk-doc/html/gio/GCancellable.html#GCancellable-struct"><span class="type">GCancellable</span></a> or <a href="/usr/share/gtk-doc/html/glib/glib-Standard-Macros.html#NULL:CAPS"><code class="literal">NULL</code></a>. </p></td>
-<td class="parameter_annotations"><span class="annotation">[<acronym title="NULL may be passed as the value in, out, in-out; or as a return value."><span class="acronym">nullable</span></acronym>]</span></td>
-</tr>
-<tr>
-<td class="parameter_name"><p>error</p></td>
-<td class="parameter_description"><p>Return location for error or <a href="/usr/share/gtk-doc/html/glib/glib-Standard-Macros.html#NULL:CAPS"><code class="literal">NULL</code></a></p></td>
-<td class="parameter_annotations"> </td>
-</tr>
-</tbody>
-</table></div>
-</div>
-<div class="refsect3">
-<a name="goa-todo-proxy-new-for-bus-sync.returns"></a><h4>Returns</h4>
-<p>The constructed proxy object or <a href="/usr/share/gtk-doc/html/glib/glib-Standard-Macros.html#NULL:CAPS"><code class="literal">NULL</code></a> if <em class="parameter"><code>error</code></em>
-is set. </p>
-<p><span class="annotation">[<acronym title="Free data after the code is done."><span class="acronym">transfer full</span></acronym>][<acronym title="Override the parsed C type with given type."><span class="acronym">type</span></acronym> GoaTodoProxy]</span></p>
-</div>
-<p class="since">Since: 3.26.0</p>
-</div>
-<hr>
-<div class="refsect2">
-<a name="goa-todo-skeleton-new"></a><h3>goa_todo_skeleton_new ()</h3>
-<pre class="programlisting"><a class="link" href="GoaTodo.html" title="GoaTodo"><span class="returnvalue">GoaTodo</span></a> *
-goa_todo_skeleton_new (<em class="parameter"><code><span class="type">void</span></code></em>);</pre>
-<p>Creates a skeleton object for the D-Bus interface <a class="link" href="gdbus-org.gnome.OnlineAccounts.Todo.html#gdbus-interface-org-gnome-OnlineAccounts-Todo.top_of_page">org.gnome.OnlineAccounts.Todo</a>.</p>
-<div class="refsect3">
-<a name="goa-todo-skeleton-new.returns"></a><h4>Returns</h4>
-<p>The skeleton object. </p>
-<p><span class="annotation">[<acronym title="Free data after the code is done."><span class="acronym">transfer full</span></acronym>][<acronym title="Override the parsed C type with given type."><span class="acronym">type</span></acronym> GoaTodoSkeleton]</span></p>
-</div>
-<p class="since">Since: 3.26.0</p>
-</div>
 </div>
 <div class="refsect1">
 <a name="GoaTodo.other_details"></a><h2>Types and Values</h2>
 <div class="refsect2">
 <a name="GoaTodo-struct"></a><h3>GoaTodo</h3>
 <pre class="programlisting">typedef struct _GoaTodo GoaTodo;</pre>
+<div class="warning">
+<p><code class="literal">GoaTodo</code> is deprecated and should not be used in newly-written code.</p>
+<p>The D-Bus interface has been deprecated.</p>
+</div>
 <p>Abstract interface type for the D-Bus interface <a class="link" href="gdbus-org.gnome.OnlineAccounts.Todo.html#gdbus-interface-org-gnome-OnlineAccounts-Todo.top_of_page">org.gnome.OnlineAccounts.Todo</a>.</p>
 <p class="since">Since: 3.26.0</p>
 </div>
@@ -580,6 +189,10 @@ goa_todo_skeleton_new (<em class="parameter"><code><span class="type">void</span
   GTypeInterface parent_iface;
 };
 </pre>
+<div class="warning">
+<p><code class="literal">GoaTodoIface</code> is deprecated and should not be used in newly-written code.</p>
+<p>The D-Bus interface has been deprecated.</p>
+</div>
 <p>Virtual table for the D-Bus interface <a class="link" href="gdbus-org.gnome.OnlineAccounts.Todo.html#gdbus-interface-org-gnome-OnlineAccounts-Todo.top_of_page">org.gnome.OnlineAccounts.Todo</a>.</p>
 <div class="refsect3">
 <a name="GoaTodoIface.members"></a><h4>Members</h4>
@@ -590,7 +203,7 @@ goa_todo_skeleton_new (<em class="parameter"><code><span class="type">void</span
 <col width="200px" class="struct_members_annotations">
 </colgroup>
 <tbody><tr>
-<td class="struct_member_name"><p><a href="/usr/share/gtk-doc/html/gobject/gobject-Type-Information.html#GTypeInterface"><span class="type">GTypeInterface</span></a> <em class="structfield"><code><a name="GoaTodoIface.parent-iface"></a>parent_iface</code></em>;</p></td>
+<td class="struct_member_name"><p><span class="type">GTypeInterface</span> <em class="structfield"><code><a name="GoaTodoIface.parent-iface"></a>parent_iface</code></em>;</p></td>
 <td class="struct_member_description"><p>The parent interface.</p></td>
 <td class="struct_member_annotations"> </td>
 </tr></tbody>
@@ -604,6 +217,10 @@ goa_todo_skeleton_new (<em class="parameter"><code><span class="type">void</span
 <pre class="programlisting">struct GoaTodoProxy {
 };
 </pre>
+<div class="warning">
+<p><code class="literal">GoaTodoProxy</code> is deprecated and should not be used in newly-written code.</p>
+<p>The D-Bus interface has been deprecated.</p>
+</div>
 <p>The <a class="link" href="GoaTodo.html#GoaTodoProxy" title="struct GoaTodoProxy"><span class="type">GoaTodoProxy</span></a> structure contains only private data and should only be accessed using the provided API.</p>
 <p class="since">Since: 3.26.0</p>
 </div>
@@ -614,6 +231,10 @@ goa_todo_skeleton_new (<em class="parameter"><code><span class="type">void</span
   GDBusProxyClass parent_class;
 };
 </pre>
+<div class="warning">
+<p><code class="literal">GoaTodoProxyClass</code> is deprecated and should not be used in newly-written code.</p>
+<p>The D-Bus interface has been deprecated.</p>
+</div>
 <p>Class structure for <a class="link" href="GoaTodo.html#GoaTodoProxy" title="struct GoaTodoProxy"><span class="type">GoaTodoProxy</span></a>.</p>
 <div class="refsect3">
 <a name="GoaTodoProxyClass.members"></a><h4>Members</h4>
@@ -634,6 +255,10 @@ goa_todo_skeleton_new (<em class="parameter"><code><span class="type">void</span
 <pre class="programlisting">struct GoaTodoSkeleton {
 };
 </pre>
+<div class="warning">
+<p><code class="literal">GoaTodoSkeleton</code> is deprecated and should not be used in newly-written code.</p>
+<p>The D-Bus interface has been deprecated.</p>
+</div>
 <p>The <a class="link" href="GoaTodo.html#GoaTodoSkeleton" title="struct GoaTodoSkeleton"><span class="type">GoaTodoSkeleton</span></a> structure contains only private data and should only be accessed using the provided API.</p>
 <p class="since">Since: 3.26.0</p>
 </div>
@@ -644,6 +269,10 @@ goa_todo_skeleton_new (<em class="parameter"><code><span class="type">void</span
   GDBusInterfaceSkeletonClass parent_class;
 };
 </pre>
+<div class="warning">
+<p><code class="literal">GoaTodoSkeletonClass</code> is deprecated and should not be used in newly-written code.</p>
+<p>The D-Bus interface has been deprecated.</p>
+</div>
 <p>Class structure for <a class="link" href="GoaTodo.html#GoaTodoSkeleton" title="struct GoaTodoSkeleton"><span class="type">GoaTodoSkeleton</span></a>.</p>
 <div class="refsect3">
 <a name="GoaTodoSkeletonClass.members"></a><h4>Members</h4>

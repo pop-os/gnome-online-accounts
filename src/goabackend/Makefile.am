@@ -20,7 +20,6 @@ AM_CPPFLAGS = 							\
 	-DPACKAGE_LOCALE_DIR=\""$(localedir)"\" 		\
 	-DPACKAGE_LIB_DIR=\""$(libdir)"\" 			\
 	-DPACKAGE_WEB_EXTENSIONS_DIR=\""$(libdir)/goa-1.0/web-extensions"\" \
-	-D_POSIX_PTHREAD_SEMANTICS -D_REENTRANT			\
 	$(WARN_CFLAGS)						\
 	$(NULL)
 
@@ -95,7 +94,6 @@ libgoa_backend_1_0_la_SOURCES =						\
 	goawindowsliveprovider.h	goawindowsliveprovider.c	\
 	goapocketprovider.h		goapocketprovider.c		\
 	goalastfmprovider.h		goalastfmprovider.c		\
-	goatodoistprovider.h		goatodoistprovider.c		\
 	goaobjectskeletonutils.h	goaobjectskeletonutils.c	\
 	goautils.h			goautils.c			\
 	goawebview.h			goawebview.c			\
