@@ -17,13 +17,13 @@ Bug-Ubuntu: https://bugs.launchpad.net/bugs/1752472
  create mode 100644 data/scripts/lpa_helper.py
 
 diff --git a/configure.ac b/configure.ac
-index 932c978..d021fa1 100644
+index 7873083..4e192d7 100644
 --- a/configure.ac
 +++ b/configure.ac
-@@ -545,6 +545,7 @@ data/icons/32x32/Makefile
- data/icons/48x48/Makefile
- data/icons/96x96/Makefile
- data/icons/256x256/Makefile
+@@ -514,6 +514,7 @@ data/Makefile
+ data/icons/Makefile
+ data/icons/scalable/Makefile
+ data/icons/symbolic/Makefile
 +data/scripts/Makefile
  src/Makefile
  src/goa/Makefile
@@ -213,7 +213,7 @@ index 0000000..3836e9e
 +        print(generic_error, e, file=sys.stderr)
 +        sys.exit(1)
 diff --git a/src/goabackend/Makefile.am b/src/goabackend/Makefile.am
-index 133458a..40a669f 100644
+index 4343559..12952f1 100644
 --- a/src/goabackend/Makefile.am
 +++ b/src/goabackend/Makefile.am
 @@ -12,6 +12,7 @@ AM_CPPFLAGS = 							\
