@@ -1,3 +1,33 @@
+gnome-online-accounts (3.31.90-1ubuntu1) UNRELEASED; urgency=medium
+
+  * Resynchronize on Debian (LP: #1815317), remaining changes:
+    + debian/rules:
+      - Make sure that gnome-online-accounts.pot is refreshed so the
+        strings from 0001-ubuntu-sso-provider.patch are included (LP: #1759251).
+      - Build with --enable-ubuntu-sso
+    + debian/control.*:
+      - Add b-d on libsnapd-glib-dev
+      - depends on python3 and python3-macaroonbakery for the ubuntu sso
+        provider.
+    + debian/gnome-online-accounts.install:
+      install usr/share/goa-1.0/scripts/lpa_helper.py
+    + debian/libgoa-backend-1.0-1.symbols:
+      Add goa_ubuntu_sso_provider_get_type
+    + Ubuntu-specific patches:
+      - debian/patches/0001-ubuntu-sso-provider.patch
+      - debian/patches/0002-livepatch-auth.patch
+  * debian/patches/0001-ubuntu-sso-provider.patch:
+    - Move from binary icons to svg ones.
+  * debian/patches/0001-Add-Ubuntu-Single-Sign-on-icons.patch:
+    - Drop the patch because no longer required. The icons are now included in
+      the above d/p/0001-ubuntu-sso-provider.patch as svg (non binary) images.
+  * debian/patches/0002-livepatch-auth.patch:
+    - Refreshed using gbp pq rebase.
+  * debian/source/include-binaries:
+    - Drop as no longer required. Binary images have been removed from distro
+      patches.
+ -- Andrea Azzarone <andrea.azzarone@canonical.com>  Wed, 13 Feb 2019 16:25:24 +0000
+
 gnome-online-accounts (3.31.90-1) experimental; urgency=medium
 
   * New upstream development release
