@@ -1,4 +1,4 @@
-gnome-online-accounts (3.31.90-1ubuntu1) UNRELEASED; urgency=medium
+gnome-online-accounts (3.31.90-1ubuntu1) disco; urgency=medium
 
   * Resynchronize on Debian (LP: #1815317), remaining changes:
     + debian/rules:
@@ -26,6 +26,7 @@ gnome-online-accounts (3.31.90-1ubuntu1) UNRELEASED; urgency=medium
   * debian/source/include-binaries:
     - Drop as no longer required. Binary images have been removed from distro
       patches.
+
  -- Andrea Azzarone <andrea.azzarone@canonical.com>  Wed, 13 Feb 2019 16:25:24 +0000
 
 gnome-online-accounts (3.31.90-1) experimental; urgency=medium
