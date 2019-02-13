@@ -6,8 +6,8 @@ XSBC-Original-Maintainer: Debian GNOME Maintainers <pkg-gnome-maintainers@lists.
 Uploaders: @GNOME_TEAM@
 Build-Depends: debhelper (>= 11),
                autoconf-archive,
-               gnome-pkg-tools (>= 0.10),
-               gobject-introspection (>= 0.9.12-4~),
+               dh-sequence-gir,
+               dh-sequence-gnome,
                gtk-doc-tools,
                libgcr-3-dev,
                libgirepository1.0-dev (>= 0.9.3),

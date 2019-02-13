@@ -4,7 +4,7 @@ export DEB_BUILD_MAINT_OPTIONS = hardening=+all
 export DEB_LDFLAGS_MAINT_APPEND = -Wl,-O1 -Wl,-z,defs -Wl,--as-needed
 
 %:
-	dh $@ --with gir,gnome
+	dh $@
 
 override_dh_autoreconf:
 	dh_autoreconf --as-needed
@@ -18,7 +18,6 @@ override_dh_auto_configure:
 		--disable-media-server \
 		--enable-facebook \
 		--enable-flickr \
-		--enable-todoist \
 		--enable-windows-live \
 		--enable-google \
 		--enable-owncloud \

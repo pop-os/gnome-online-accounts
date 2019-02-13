@@ -184,7 +184,6 @@
     <keyword type="function" name="goa_object_get_printers ()" link="GoaObject.html#goa-object-get-printers" since="3.12.0"/>
     <keyword type="function" name="goa_object_get_files ()" link="GoaObject.html#goa-object-get-files" since="3.8.0"/>
     <keyword type="function" name="goa_object_get_exchange ()" link="GoaObject.html#goa-object-get-exchange" since="3.6.0"/>
-    <keyword type="function" name="goa_object_get_todo ()" link="GoaObject.html#goa-object-get-todo" since="3.26.0"/>
     <keyword type="function" name="goa_object_peek_manager ()" link="GoaObject.html#goa-object-peek-manager"/>
     <keyword type="function" name="goa_object_peek_account ()" link="GoaObject.html#goa-object-peek-account"/>
     <keyword type="function" name="goa_object_peek_oauth_based ()" link="GoaObject.html#goa-object-peek-oauth-based"/>
@@ -201,7 +200,6 @@
     <keyword type="function" name="goa_object_peek_printers ()" link="GoaObject.html#goa-object-peek-printers" since="3.12.0"/>
     <keyword type="function" name="goa_object_peek_files ()" link="GoaObject.html#goa-object-peek-files" since="3.8.0"/>
     <keyword type="function" name="goa_object_peek_exchange ()" link="GoaObject.html#goa-object-peek-exchange" since="3.6.0"/>
-    <keyword type="function" name="goa_object_peek_todo ()" link="GoaObject.html#goa-object-peek-todo" since="3.26.0"/>
     <keyword type="function" name="goa_object_proxy_new ()" link="GoaObject.html#goa-object-proxy-new"/>
     <keyword type="function" name="goa_object_skeleton_new ()" link="GoaObject.html#goa-object-skeleton-new"/>
     <keyword type="function" name="goa_object_skeleton_set_manager ()" link="GoaObject.html#goa-object-skeleton-set-manager"/>
@@ -321,8 +319,6 @@
     <keyword type="function" name="goa_account_set_files_disabled ()" link="GoaAccount.html#goa-account-set-files-disabled" since="3.8.0"/>
     <keyword type="function" name="goa_account_get_ticketing_disabled ()" link="GoaAccount.html#goa-account-get-ticketing-disabled" since="3.6.0"/>
     <keyword type="function" name="goa_account_set_ticketing_disabled ()" link="GoaAccount.html#goa-account-set-ticketing-disabled" since="3.6.0"/>
-    <keyword type="function" name="goa_account_get_todo_disabled ()" link="GoaAccount.html#goa-account-get-todo-disabled" since="3.26.0"/>
-    <keyword type="function" name="goa_account_set_todo_disabled ()" link="GoaAccount.html#goa-account-set-todo-disabled" since="3.26.0"/>
     <keyword type="function" name="goa_account_call_ensure_credentials ()" link="GoaAccount.html#goa-account-call-ensure-credentials"/>
     <keyword type="function" name="goa_account_call_ensure_credentials_finish ()" link="GoaAccount.html#goa-account-call-ensure-credentials-finish"/>
     <keyword type="function" name="goa_account_call_ensure_credentials_sync ()" link="GoaAccount.html#goa-account-call-ensure-credentials-sync"/>
@@ -725,21 +721,14 @@
     <keyword type="struct" name="struct GoaTicketingSkeletonClass" link="GoaTicketing.html#GoaTicketingSkeletonClass" since="3.6.0"/>
     <keyword type="property" name="The “details” property" link="GoaTicketing.html#GoaTicketing--details"/>
     <keyword type="signal" name="The “handle-get-ticket” signal" link="GoaTicketing.html#GoaTicketing-handle-get-ticket"/>
-    <keyword type="function" name="goa_todo_interface_info ()" link="GoaTodo.html#goa-todo-interface-info" since="3.26.0"/>
-    <keyword type="function" name="goa_todo_override_properties ()" link="GoaTodo.html#goa-todo-override-properties" since="3.26.0"/>
-    <keyword type="function" name="goa_todo_proxy_new ()" link="GoaTodo.html#goa-todo-proxy-new" since="3.26.0"/>
-    <keyword type="function" name="goa_todo_proxy_new_finish ()" link="GoaTodo.html#goa-todo-proxy-new-finish" since="3.26.0"/>
-    <keyword type="function" name="goa_todo_proxy_new_sync ()" link="GoaTodo.html#goa-todo-proxy-new-sync" since="3.26.0"/>
-    <keyword type="function" name="goa_todo_proxy_new_for_bus ()" link="GoaTodo.html#goa-todo-proxy-new-for-bus" since="3.26.0"/>
-    <keyword type="function" name="goa_todo_proxy_new_for_bus_finish ()" link="GoaTodo.html#goa-todo-proxy-new-for-bus-finish" since="3.26.0"/>
-    <keyword type="function" name="goa_todo_proxy_new_for_bus_sync ()" link="GoaTodo.html#goa-todo-proxy-new-for-bus-sync" since="3.26.0"/>
-    <keyword type="function" name="goa_todo_skeleton_new ()" link="GoaTodo.html#goa-todo-skeleton-new" since="3.26.0"/>
+    <keyword type="function" name="goa_todo_interface_info ()" link="GoaTodo.html#goa-todo-interface-info" deprecated="The D-Bus interface has been deprecated." since="3.26.0"/>
+    <keyword type="function" name="goa_todo_override_properties ()" link="GoaTodo.html#goa-todo-override-properties" deprecated="The D-Bus interface has been deprecated." since="3.26.0"/>
     <keyword type="struct" name="GoaTodo" link="GoaTodo.html#GoaTodo-struct"/>
-    <keyword type="struct" name="struct GoaTodoIface" link="GoaTodo.html#GoaTodoIface" since="3.26.0"/>
-    <keyword type="struct" name="struct GoaTodoProxy" link="GoaTodo.html#GoaTodoProxy" since="3.26.0"/>
-    <keyword type="struct" name="struct GoaTodoProxyClass" link="GoaTodo.html#GoaTodoProxyClass" since="3.26.0"/>
-    <keyword type="struct" name="struct GoaTodoSkeleton" link="GoaTodo.html#GoaTodoSkeleton" since="3.26.0"/>
-    <keyword type="struct" name="struct GoaTodoSkeletonClass" link="GoaTodo.html#GoaTodoSkeletonClass" since="3.26.0"/>
+    <keyword type="struct" name="struct GoaTodoIface" link="GoaTodo.html#GoaTodoIface" deprecated="The D-Bus interface has been deprecated." since="3.26.0"/>
+    <keyword type="struct" name="struct GoaTodoProxy" link="GoaTodo.html#GoaTodoProxy" deprecated="The D-Bus interface has been deprecated." since="3.26.0"/>
+    <keyword type="struct" name="struct GoaTodoProxyClass" link="GoaTodo.html#GoaTodoProxyClass" deprecated="The D-Bus interface has been deprecated." since="3.26.0"/>
+    <keyword type="struct" name="struct GoaTodoSkeleton" link="GoaTodo.html#GoaTodoSkeleton" deprecated="The D-Bus interface has been deprecated." since="3.26.0"/>
+    <keyword type="struct" name="struct GoaTodoSkeletonClass" link="GoaTodo.html#GoaTodoSkeletonClass" deprecated="The D-Bus interface has been deprecated." since="3.26.0"/>
     <keyword type="function" name="goa_read_later_interface_info ()" link="GoaReadLater.html#goa-read-later-interface-info" since="3.12.0"/>
     <keyword type="function" name="goa_read_later_override_properties ()" link="GoaReadLater.html#goa-read-later-override-properties" since="3.12.0"/>
     <keyword type="function" name="goa_read_later_proxy_new ()" link="GoaReadLater.html#goa-read-later-proxy-new" since="3.12.0"/>

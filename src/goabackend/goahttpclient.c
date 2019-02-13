@@ -1,6 +1,6 @@
 /* -*- mode: C; c-file-style: "gnu"; indent-tabs-mode: nil; -*- */
 /*
- * Copyright © 2012 – 2017 Red Hat, Inc.
+ * Copyright © 2012 – 2018 Red Hat, Inc.
  *
  * This library is free software; you can redistribute it and/or
  * modify it under the terms of the GNU Lesser General Public
@@ -56,6 +56,7 @@ goa_http_client_new (void)
 typedef struct
 {
   GCancellable *cancellable;
+  GError *error;
   SoupMessage *msg;
   SoupSession *session;
   gboolean accept_ssl_errors;
@@ -78,6 +79,8 @@ http_client_check_data_free (gpointer user_data)
       g_cancellable_disconnect (data->cancellable, data->cancellable_id);
       g_object_unref (data->cancellable);
     }
+
+  g_clear_error (&data->error);
 
   /* soup_session_queue_message stole the references to data->msg */
   g_object_unref (data->session);
@@ -114,18 +117,22 @@ http_client_request_started (SoupSession *session, SoupMessage *msg, SoupSocket 
 {
   CheckData *data;
   GTask *task = G_TASK (user_data);
-  GError *error;
   GTlsCertificateFlags cert_flags;
 
-  data = g_task_get_task_data (task);
-  error = NULL;
+  g_debug ("goa_http_client_check(): request started (%p)", msg);
+
+  data = (CheckData *) g_task_get_task_data (task);
 
   if (!data->accept_ssl_errors
       && soup_message_get_https_status (msg, NULL, &cert_flags)
-      && cert_flags != 0)
+      && cert_flags != 0
+      && data->error == NULL)
     {
-      goa_utils_set_error_ssl (&error, cert_flags);
-      g_task_return_error (task, error);
+      goa_utils_set_error_ssl (&data->error, cert_flags);
+
+      /* The callback will be invoked after we have returned to the
+       * main loop.
+       */
       soup_session_abort (data->session);
     }
 }
@@ -135,68 +142,60 @@ http_client_check_cancelled_cb (GCancellable *cancellable, gpointer user_data)
 {
   CheckData *data;
   GTask *task = G_TASK (user_data);
-  gboolean cancelled;
 
-  data = g_task_get_task_data (task);
+  g_debug ("goa_http_client_check(): cancelled");
 
-  cancelled = g_task_return_error_if_cancelled (task);
+  data = (CheckData *) g_task_get_task_data (task);
+
+  /* The callback will be invoked after we have returned to the main
+   * loop.
+   */
   soup_session_abort (data->session);
-
-  g_return_if_fail (cancelled);
-}
-
-static gboolean
-http_client_check_free_in_idle (gpointer user_data)
-{
-  GTask *task = G_TASK (user_data);
-
-  g_object_unref (task);
-  return G_SOURCE_REMOVE;
 }
 
 static void
 http_client_check_response_cb (SoupSession *session, SoupMessage *msg, gpointer user_data)
 {
-  GError *error;
-  GMainContext *context;
-  GSource *source;
+  CheckData *data;
+  GCancellable *cancellable;
   GTask *task = G_TASK (user_data);
 
-  error = NULL;
+  g_debug ("goa_http_client_check(): response (%p, %u)", msg, msg->status_code);
+
+  data = (CheckData *) g_task_get_task_data (task);
+  cancellable = g_task_get_cancellable (task);
 
   /* status == SOUP_STATUS_CANCELLED, if we are being aborted by the
-   * GCancellable or due to an SSL error. The GTask was already
-   * 'returned' by the respective callbacks.
+   * GCancellable or due to an SSL error.
    */
   if (msg->status_code == SOUP_STATUS_CANCELLED)
-    goto out;
+    {
+      /* If we are being aborted by the GCancellable then there might
+       * or might not be an error. The GCancellable can be triggered
+       * from a different thread, so it depends on the exact ordering
+       * of events across threads.
+       */
+      if (data->error == NULL)
+        g_cancellable_set_error_if_cancelled (cancellable, &data->error);
+
+      goto out;
+    }
   else if (msg->status_code != SOUP_STATUS_OK)
     {
       g_warning ("goa_http_client_check() failed: %u — %s", msg->status_code, msg->reason_phrase);
-      goa_utils_set_error_soup (&error, msg);
-      g_task_return_error (task, error);
+      g_return_if_fail (data->error == NULL);
+
+      goa_utils_set_error_soup (&data->error, msg);
       goto out;
     }
 
-  g_task_return_boolean (task, TRUE);
-
  out:
-  /* We might be invoked from a GCancellable::cancelled
-   * handler, and unreffing the GTask will disconnect the
-   * handler. Since disconnecting from inside the handler will cause a
-   * deadlock [1], we use an idle handler to break them up.
-   *
-   * [1] https://bugzilla.gnome.org/show_bug.cgi?id=705395
-   */
+  if (data->error != NULL)
+    g_task_return_error (task, g_steal_pointer (&data->error));
+  else
+    g_task_return_boolean (task, TRUE);
 
-  source = g_idle_source_new ();
-  g_source_set_priority (source, G_PRIORITY_DEFAULT_IDLE);
-  g_source_set_callback (source, http_client_check_free_in_idle, task, NULL);
-  g_source_set_name (source, "[goa] http_client_check_free_in_idle");
-
-  context = g_task_get_context (task);
-  g_source_attach (source, context);
-  g_source_unref (source);
+  g_object_unref (task);
 }
 
 void
@@ -226,8 +225,7 @@ goa_http_client_check (GoaHttpClient       *self,
   data = g_slice_new0 (CheckData);
   g_task_set_task_data (task, data, http_client_check_data_free);
 
-  data->session = soup_session_new_with_options (SOUP_SESSION_SSL_STRICT, FALSE,
-                                                 NULL);
+  data->session = soup_session_new_with_options (SOUP_SESSION_SSL_STRICT, FALSE, NULL);
 
   logger = goa_soup_logger_new (SOUP_LOGGER_LOG_BODY, -1);
   soup_session_add_feature (data->session, SOUP_SESSION_FEATURE (logger));
