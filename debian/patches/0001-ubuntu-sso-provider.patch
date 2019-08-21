@@ -23,7 +23,7 @@ https://bugzilla.gnome.org/show_bug.cgi?id=793755
  create mode 100644 src/goabackend/goaubuntussoprovider.h
 
 diff --git a/configure.ac b/configure.ac
-index 5ce5770..7873083 100644
+index 258503c..6ae7d45 100644
 --- a/configure.ac
 +++ b/configure.ac
 @@ -138,6 +138,12 @@ if test "$enable_backend" != "no"; then
@@ -39,7 +39,7 @@ index 5ce5770..7873083 100644
  fi
  
  AC_ARG_ENABLE([inspector],
-@@ -321,6 +327,16 @@ if test "$enable_pocket" != "no"; then
+@@ -359,6 +365,16 @@ if test "$enable_pocket" != "no"; then
    AC_DEFINE(GOA_POCKET_ENABLED, 1, [Enable Pocket data provider])
  fi
  
@@ -56,7 +56,7 @@ index 5ce5770..7873083 100644
  # Kerberos
  AC_DEFINE(GOA_KERBEROS_NAME, ["kerberos"], [ProviderType and extension point name])
  AC_ARG_ENABLE([kerberos],
-@@ -546,6 +562,7 @@ echo "
+@@ -594,6 +610,7 @@ echo "
  	Windows Live provider:          ${enable_windows_live} (OAuth 2.0, id:${with_windows_live_client_id})
          Pocket provider:                ${enable_pocket} (id:${with_pocket_client_id})
  	Last.fm provider:               ${enable_lastfm} (id:${with_lastfm_client_id} secret:${with_lastfm_client_secret})
@@ -65,10 +65,10 @@ index 5ce5770..7873083 100644
  	Maintainer mode:                ${USE_MAINTAINER_MODE}
  	Building api docs:              ${enable_gtk_doc}
 diff --git a/data/icons/scalable/Makefile.am b/data/icons/scalable/Makefile.am
-index 210b1c3..9195f57 100644
+index d3c0519..3750753 100644
 --- a/data/icons/scalable/Makefile.am
 +++ b/data/icons/scalable/Makefile.am
-@@ -9,6 +9,7 @@ icon_DATA =				\
+@@ -10,6 +10,7 @@ icon_DATA =				\
  	goa-account-owncloud.svg	\
  	goa-account-pocket.svg		\
  	goa-account-foursquare.svg	\
@@ -241,10 +241,10 @@ index 0000000..258a5db
 +     style="display:inline;fill:#241f31;fill-opacity:1;stroke-width:0.05452156;enable-background:new" />
 +</svg>
 diff --git a/po/POTFILES.in b/po/POTFILES.in
-index 735f974..38100fe 100644
+index e948515..a049fa5 100644
 --- a/po/POTFILES.in
 +++ b/po/POTFILES.in
-@@ -17,6 +17,7 @@ src/goabackend/goaoauth2provider.c
+@@ -18,6 +18,7 @@ src/goabackend/goaoauth2provider.c
  src/goabackend/goaoauthprovider.c
  src/goabackend/goaowncloudprovider.c
  src/goabackend/goapocketprovider.c
@@ -253,7 +253,7 @@ index 735f974..38100fe 100644
  src/goabackend/goasmtpauth.c
  src/goabackend/goautils.c
 diff --git a/src/goabackend/Makefile.am b/src/goabackend/Makefile.am
-index f9517e1..4343559 100644
+index 18b1e5d..539b211 100644
 --- a/src/goabackend/Makefile.am
 +++ b/src/goabackend/Makefile.am
 @@ -94,6 +94,7 @@ libgoa_backend_1_0_la_SOURCES =						\
@@ -264,7 +264,7 @@ index f9517e1..4343559 100644
  	goaobjectskeletonutils.h	goaobjectskeletonutils.c	\
  	goautils.h			goautils.c			\
  	goawebview.h			goawebview.c			\
-@@ -119,6 +120,7 @@ libgoa_backend_1_0_la_CFLAGS =					\
+@@ -124,6 +125,7 @@ libgoa_backend_1_0_la_CFLAGS =					\
  	$(LIBXML_CFLAGS)					\
  	$(TP_CFLAGS)						\
  	$(TPAW_CFLAGS)						\
@@ -272,7 +272,7 @@ index f9517e1..4343559 100644
  	$(NULL)
  
  libgoa_backend_1_0_la_LIBADD = 					\
-@@ -134,6 +136,7 @@ libgoa_backend_1_0_la_LIBADD = 					\
+@@ -139,6 +141,7 @@ libgoa_backend_1_0_la_LIBADD = 					\
  	$(LIBXML_LIBS)						\
  	$(TP_LIBS)						\
  	$(TPAW_LIBS)						\
@@ -281,7 +281,7 @@ index f9517e1..4343559 100644
  
  libgoa_backend_1_0_la_LDFLAGS = 				\
 diff --git a/src/goabackend/goaprovider.c b/src/goabackend/goaprovider.c
-index f112279..0f7ebfd 100644
+index 74433b5..e19b296 100644
 --- a/src/goabackend/goaprovider.c
 +++ b/src/goabackend/goaprovider.c
 @@ -33,6 +33,7 @@
@@ -290,9 +290,9 @@ index f112279..0f7ebfd 100644
  #include "goalastfmprovider.h"
 +#include "goaubuntussoprovider.h"
  
- #ifdef GOA_KERBEROS_ENABLED
- #include "goakerberosprovider.h"
-@@ -932,6 +933,9 @@ static struct
+ #ifdef GOA_FEDORA_ENABLED
+ #include "goafedoraprovider.h"
+@@ -936,6 +937,9 @@ static struct
     * important because it affects the order in which they are
     * returned by goa_provider_get_all.
     */
