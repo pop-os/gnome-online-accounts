@@ -1,4 +1,4 @@
-gnome-online-accounts (3.33.91-1) UNRELEASED; urgency=medium
+gnome-online-accounts (3.33.91-1) experimental; urgency=medium
 
   * New upstream release
     - owncloud: Use "Nextcloud", not "ownCloud", in user-visible errors
