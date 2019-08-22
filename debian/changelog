@@ -1,3 +1,17 @@
+gnome-online-accounts (3.33.91-1) experimental; urgency=medium
+
+  * New upstream release
+    - owncloud: Use "Nextcloud", not "ownCloud", in user-visible errors
+    - webview: Make it more flexible in terms of its size
+    - kerberos: Use GTask's task data slot to leverage the compiler
+    - daemon: Return a D-Bus error if AddAccount fails to list all providers
+    - kerberos: Use GTask's task data slot to leverage the compiler
+    - build: Support the use of g_autolist with GoaObject
+    - Port to GTask from GSimpleAsyncResult
+  * debian/rules: Disable fedora account system
+
+ -- Marco Trevisan (Treviño) <marco@ubuntu.com>  Thu, 22 Aug 2019 00:55:51 +0200
+
 gnome-online-accounts (3.32.0-1ubuntu1) disco; urgency=medium
 
   * Update to the stable version, based on the Debian update
