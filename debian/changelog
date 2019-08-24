@@ -1,4 +1,4 @@
-gnome-online-accounts (3.33.91-1ubuntu1) UNRELEASED; urgency=medium
+gnome-online-accounts (3.33.91-1ubuntu1) eoan; urgency=medium
 
   * Merge with debian, remaining changes:
     + debian/rules:
@@ -18,7 +18,7 @@ gnome-online-accounts (3.33.91-1ubuntu1) UNRELEASED; urgency=medium
       - debian/patches/0002-livepatch-auth.patch
   * Refresh patches
 
- -- Marco Trevisan (Treviño) <marco@ubuntu.com>  Thu, 22 Aug 2019 12:38:14 +0200
+ -- Marco Trevisan (Treviño) <marco@ubuntu.com>  Sat, 24 Aug 2019 10:28:38 +0300
 
 gnome-online-accounts (3.33.91-1) experimental; urgency=medium
 
