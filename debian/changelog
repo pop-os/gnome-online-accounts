@@ -1,4 +1,4 @@
-gnome-online-accounts (3.33.91-1ubuntu1) eoan; urgency=medium
+gnome-online-accounts (3.34.0-1ubuntu1) UNRELEASED; urgency=medium
 
   * Merge with debian, remaining changes:
     + debian/rules:
@@ -16,9 +16,14 @@ gnome-online-accounts (3.33.91-1ubuntu1) eoan; urgency=medium
     + Ubuntu-specific patches:
       - debian/patches/0001-ubuntu-sso-provider.patch
       - debian/patches/0002-livepatch-auth.patch
-  * Refresh patches
 
- -- Marco Trevisan (Treviño) <marco@ubuntu.com>  Sat, 24 Aug 2019 10:28:38 +0300
+ -- Sebastien Bacher <seb128@ubuntu.com>  Fri, 13 Sep 2019 16:23:06 +0200
+
+gnome-online-accounts (3.34.0-1) experimental; urgency=medium
+
+  * New upstream release
+
+ -- Sebastien Bacher <seb128@ubuntu.com>  Fri, 13 Sep 2019 16:17:23 +0200
 
 gnome-online-accounts (3.33.91-1) experimental; urgency=medium
 
