@@ -1,8 +1,10 @@
-gnome-online-accounts (3.34.1-1) UNRELEASED; urgency=medium
+gnome-online-accounts (3.34.1-1) unstable; urgency=medium
 
   * New upstream release
+  * Build-Depend on debhelper-compat 12 and drop debian/compat
+  * Bump Standards-Version to 4.4.1
 
- -- Jeremy Bicha <jbicha@debian.org>  Sat, 19 Oct 2019 17:30:42 -0400
+ -- Jeremy Bicha <jbicha@debian.org>  Sat, 19 Oct 2019 17:44:53 -0400
 
 gnome-online-accounts (3.34.0-2) unstable; urgency=medium
 
