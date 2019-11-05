@@ -1,4 +1,4 @@
-gnome-online-accounts (3.34.1-1ubuntu1) UNRELEASED; urgency=medium
+gnome-online-accounts (3.34.1-1ubuntu1) focal; urgency=medium
 
   * Merge with debian, remaining changes:
     + debian/rules:
@@ -17,7 +17,7 @@ gnome-online-accounts (3.34.1-1ubuntu1) UNRELEASED; urgency=medium
       - debian/patches/0001-ubuntu-sso-provider.patch
       - debian/patches/0002-livepatch-auth.patch
 
- -- Sebastien Bacher <seb128@ubuntu.com>  Fri, 13 Sep 2019 16:23:06 +0200
+ -- Sebastien Bacher <seb128@ubuntu.com>  Tue, 05 Nov 2019 16:23:32 +0100
 
 gnome-online-accounts (3.34.1-1) unstable; urgency=medium
 
