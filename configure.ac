@@ -1,6 +1,6 @@
 m4_define([goa_major_version], [3])
-m4_define([goa_minor_version], [34])
-m4_define([goa_micro_version], [1])
+m4_define([goa_minor_version], [35])
+m4_define([goa_micro_version], [90])
 m4_define([goa_nano_version], [0])
 
 m4_define([goa_base_version],
@@ -31,8 +31,6 @@ AX_COMPILER_FLAGS([WARN_CFLAGS],
                   [-Wno-cast-function-type -Wno-error=cast-function-type])
 
 AC_PROG_CC
-AC_ISC_POSIX
-AC_HEADER_STDC
 AC_PROG_LIBTOOL
 
 PKG_PROG_PKG_CONFIG(0.16)
@@ -114,6 +112,10 @@ if test "$enable_backend" != "no"; then
   PKG_CHECK_MODULES(GTK, [gtk+-3.0 >= 3.19.12])
   AC_SUBST(GTK_CFLAGS)
   AC_SUBST(GTK_LIBS)
+
+  PKG_CHECK_MODULES(JAVASCRIPT_CORE_GTK, [javascriptcoregtk-4.0 >= 2.12.0])
+  AC_SUBST(JAVASCRIPT_CORE_GTK_CFLAGS)
+  AC_SUBST(JAVASCRIPT_CORE_GTK_LIBS)
 
   PKG_CHECK_MODULES(WEBKIT_GTK, [webkit2gtk-4.0 >= 2.12.0])
   AC_SUBST(WEBKIT_GTK_CFLAGS)
@@ -339,24 +341,6 @@ fi
 AC_DEFINE_UNQUOTED(GOA_WINDOWS_LIVE_CLIENT_ID, ["$with_windows_live_client_id"], [Windows Live OAuth 2.0 client id])
 if test "$enable_windows_live" != "no"; then
   AC_DEFINE(GOA_WINDOWS_LIVE_ENABLED, 1, [Enable Windows Live data provider])
-fi
-
-# Pocket
-AC_DEFINE(GOA_POCKET_NAME, ["pocket"], [ProviderType and extension point name])
-AC_ARG_ENABLE([pocket],
-              [AS_HELP_STRING([--enable-pocket], [Enable Pocket provider])],
-              [],
-              [enable_pocket=yes])
-AC_ARG_WITH(pocket-client-id,
-            [AS_HELP_STRING([--with-pocket-client-id], [Pocket OAuth 2.0 client id])],
-            [],
-            [])
-if test "$with_pocket_client_id" = ""; then
-  with_pocket_client_id="16630-40b25246b56e8ad5310b2883"
-fi
-AC_DEFINE_UNQUOTED(GOA_POCKET_CLIENT_ID, ["$with_pocket_client_id"], [Pocket OAuth 2.0 client id])
-if test "$enable_pocket" != "no"; then
-  AC_DEFINE(GOA_POCKET_ENABLED, 1, [Enable Pocket data provider])
 fi
 
 # Kerberos
@@ -592,7 +576,6 @@ echo "
 	Kerberos provider:              ${enable_kerberos}
 	Facebook provider:              ${enable_facebook} (OAuth 2.0, id:${with_facebook_client_id})
 	Windows Live provider:          ${enable_windows_live} (OAuth 2.0, id:${with_windows_live_client_id})
-        Pocket provider:                ${enable_pocket} (id:${with_pocket_client_id})
 	Last.fm provider:               ${enable_lastfm} (id:${with_lastfm_client_id} secret:${with_lastfm_client_secret})
 
 	Maintainer mode:                ${USE_MAINTAINER_MODE}

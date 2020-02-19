@@ -16,11 +16,11 @@ Bug-Ubuntu: https://bugs.launchpad.net/bugs/1752472
  create mode 100644 data/scripts/Makefile.am
  create mode 100644 data/scripts/lpa_helper.py
 
-diff --git a/configure.ac b/configure.ac
-index 6ae7d45..c820447 100644
---- a/configure.ac
-+++ b/configure.ac
-@@ -561,6 +561,7 @@ data/Makefile
+Index: gnome-online-accounts-3.35.90/configure.ac
+===================================================================
+--- gnome-online-accounts-3.35.90.orig/configure.ac
++++ gnome-online-accounts-3.35.90/configure.ac
+@@ -545,6 +545,7 @@ data/Makefile
  data/icons/Makefile
  data/icons/scalable/Makefile
  data/icons/symbolic/Makefile
@@ -28,10 +28,10 @@ index 6ae7d45..c820447 100644
  src/Makefile
  src/goa/Makefile
  src/goa/goa-1.0.pc
-diff --git a/data/Makefile.am b/data/Makefile.am
-index e3608a1..87c89c5 100644
---- a/data/Makefile.am
-+++ b/data/Makefile.am
+Index: gnome-online-accounts-3.35.90/data/Makefile.am
+===================================================================
+--- gnome-online-accounts-3.35.90.orig/data/Makefile.am
++++ gnome-online-accounts-3.35.90/data/Makefile.am
 @@ -1,7 +1,7 @@
  
  NULL =
@@ -46,11 +46,10 @@ index e3608a1..87c89c5 100644
  
  -include $(top_srcdir)/git.mk
 +
-diff --git a/data/scripts/Makefile.am b/data/scripts/Makefile.am
-new file mode 100644
-index 0000000..5133c5b
+Index: gnome-online-accounts-3.35.90/data/scripts/Makefile.am
+===================================================================
 --- /dev/null
-+++ b/data/scripts/Makefile.am
++++ gnome-online-accounts-3.35.90/data/scripts/Makefile.am
 @@ -0,0 +1,14 @@
 +NULL =
 +
@@ -67,11 +66,10 @@ index 0000000..5133c5b
 +
 +-include $(top_srcdir)/git.mk
 \ No newline at end of file
-diff --git a/data/scripts/lpa_helper.py b/data/scripts/lpa_helper.py
-new file mode 100644
-index 0000000..3836e9e
+Index: gnome-online-accounts-3.35.90/data/scripts/lpa_helper.py
+===================================================================
 --- /dev/null
-+++ b/data/scripts/lpa_helper.py
++++ gnome-online-accounts-3.35.90/data/scripts/lpa_helper.py
 @@ -0,0 +1,139 @@
 +#!/usr/bin/env python3
 +import json
@@ -212,10 +210,10 @@ index 0000000..3836e9e
 +    except Exception as e:
 +        print(generic_error, e, file=sys.stderr)
 +        sys.exit(1)
-diff --git a/src/goabackend/Makefile.am b/src/goabackend/Makefile.am
-index 539b211..da6b733 100644
---- a/src/goabackend/Makefile.am
-+++ b/src/goabackend/Makefile.am
+Index: gnome-online-accounts-3.35.90/src/goabackend/Makefile.am
+===================================================================
+--- gnome-online-accounts-3.35.90.orig/src/goabackend/Makefile.am
++++ gnome-online-accounts-3.35.90/src/goabackend/Makefile.am
 @@ -12,6 +12,7 @@ AM_CPPFLAGS = 							\
  	-DG_LOG_DOMAIN=\"GoaBackend\"				\
  	-DGOA_BACKEND_COMPILATION				\
@@ -224,10 +222,10 @@ index 539b211..da6b733 100644
  	-DPACKAGE_LIBEXEC_DIR=\""$(libexecdir)"\" 		\
  	-DPACKAGE_SYSCONF_DIR=\""$(sysconfdir)"\" 		\
  	-DPACKAGE_DATA_DIR=\""$(pkgdatadir)"\" 			\
-diff --git a/src/goabackend/goaubuntussoprovider.c b/src/goabackend/goaubuntussoprovider.c
-index ca44c01..0ccd7f7 100644
---- a/src/goabackend/goaubuntussoprovider.c
-+++ b/src/goabackend/goaubuntussoprovider.c
+Index: gnome-online-accounts-3.35.90/src/goabackend/goaubuntussoprovider.c
+===================================================================
+--- gnome-online-accounts-3.35.90.orig/src/goabackend/goaubuntussoprovider.c
++++ gnome-online-accounts-3.35.90/src/goabackend/goaubuntussoprovider.c
 @@ -20,6 +20,7 @@
  
  #include "config.h"
@@ -244,7 +242,7 @@ index ca44c01..0ccd7f7 100644
    gchar  *account_object_path;
  
    GError *error;
-@@ -91,6 +93,7 @@ add_account_data_clear (AddAccountData *data)
+@@ -91,6 +93,7 @@ add_account_data_clear (AddAccountData *
    g_clear_object (&data->snapd_client);
    g_free (data->macaroon);
    g_strfreev (data->discharges);
@@ -252,7 +250,7 @@ index ca44c01..0ccd7f7 100644
    g_free (data->account_object_path);
    g_clear_error (&data->error);
  }
-@@ -196,6 +199,9 @@ ensure_credentials_sync (GoaProvider   *provider,
+@@ -196,6 +199,9 @@ ensure_credentials_sync (GoaProvider   *
    if (!goa_utils_get_credentials (provider, object, "discharges", NULL, &discharges_str, cancellable, error))
      goto edit_error_and_return;
  
@@ -262,7 +260,7 @@ index ca44c01..0ccd7f7 100644
    if (discharges_str)
      discharges_var = g_variant_parse (G_VARIANT_TYPE ("as"), discharges_str, NULL, NULL, NULL);
    if (discharges_var)
-@@ -467,7 +473,6 @@ create_account_details_ui (GoaProvider    *provider,
+@@ -467,7 +473,6 @@ create_account_details_ui (GoaProvider
  
    row = 0;
    add_entry (grid2, row++, _("Passc_ode:"), &data->otp_entry);
@@ -313,11 +311,10 @@ index ca44c01..0ccd7f7 100644
  static void
  dialog_response_cb (GtkDialog *dialog,
                      gint response_id,
-@@ -579,6 +609,120 @@ snapd_login_ready_cb (GObject *object,
-   g_main_loop_quit (data->loop);
+@@ -580,6 +610,120 @@ snapd_login_ready_cb (GObject *object,
  }
  
-+static void
+ static void
 +subprocess_wait_cb (GObject      *object,
 +                    GAsyncResult *res,
 +                    gpointer      user_data)
@@ -431,10 +428,11 @@ index ca44c01..0ccd7f7 100644
 +  g_main_loop_quit (data->loop);
 +}
 +
- static void
++static void
  add_account_cb (GoaManager *manager,
                  GAsyncResult *res,
-@@ -603,8 +747,8 @@ add_credentials_key_values (GVariantBuilder *builder,
+                 gpointer user_data)
+@@ -603,8 +747,8 @@ add_credentials_key_values (GVariantBuil
    discharges_var = g_variant_new_strv ((const gchar * const*) data->discharges, -1);
    discharges_str = g_variant_print (discharges_var, FALSE);
    g_variant_builder_add (builder, "{sv}", "discharges", g_variant_new_string (discharges_str));
@@ -444,7 +442,7 @@ index ca44c01..0ccd7f7 100644
  static gboolean
  get_tokens_and_identity (GoaProvider    *provider,
                           gboolean        add_account,
-@@ -618,6 +762,7 @@ get_tokens_and_identity (GoaProvider    *provider,
+@@ -618,6 +762,7 @@ get_tokens_and_identity (GoaProvider
    const gchar *username;
    const gchar *otp;
    gint response;
@@ -452,7 +450,7 @@ index ca44c01..0ccd7f7 100644
  
    g_return_val_if_fail (GOA_IS_UBUNTU_SSO_PROVIDER (provider), FALSE);
    g_return_val_if_fail ((!add_account && existing_identity != NULL && existing_identity[0] != '\0')
-@@ -662,6 +807,9 @@ get_tokens_and_identity (GoaProvider    *provider,
+@@ -662,6 +807,9 @@ get_tokens_and_identity (GoaProvider
    otp = gtk_entry_get_text (GTK_ENTRY (data->otp_entry));
    otp = otp && strlen (otp) > 0 ? otp : NULL;
  
@@ -462,7 +460,7 @@ index ca44c01..0ccd7f7 100644
    g_clear_object (&data->cancellable);
    data->cancellable = g_cancellable_new ();
  
-@@ -722,6 +870,59 @@ get_tokens_and_identity (GoaProvider    *provider,
+@@ -722,6 +870,59 @@ get_tokens_and_identity (GoaProvider
        goto login_again;
      }
  

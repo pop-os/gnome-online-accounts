@@ -22,11 +22,11 @@ https://bugzilla.gnome.org/show_bug.cgi?id=793755
  create mode 100644 src/goabackend/goaubuntussoprovider.c
  create mode 100644 src/goabackend/goaubuntussoprovider.h
 
-diff --git a/configure.ac b/configure.ac
-index 258503c..6ae7d45 100644
---- a/configure.ac
-+++ b/configure.ac
-@@ -138,6 +138,12 @@ if test "$enable_backend" != "no"; then
+Index: gnome-online-accounts-3.35.90/configure.ac
+===================================================================
+--- gnome-online-accounts-3.35.90.orig/configure.ac
++++ gnome-online-accounts-3.35.90/configure.ac
+@@ -140,6 +140,12 @@ if test "$enable_backend" != "no"; then
    PKG_CHECK_MODULES(LIBXML, [libxml-2.0])
    AC_SUBST(LIBXML_CFLAGS)
    AC_SUBST(LIBXML_LIBS)
@@ -39,8 +39,8 @@ index 258503c..6ae7d45 100644
  fi
  
  AC_ARG_ENABLE([inspector],
-@@ -359,6 +365,16 @@ if test "$enable_pocket" != "no"; then
-   AC_DEFINE(GOA_POCKET_ENABLED, 1, [Enable Pocket data provider])
+@@ -343,6 +349,16 @@ if test "$enable_windows_live" != "no";
+   AC_DEFINE(GOA_WINDOWS_LIVE_ENABLED, 1, [Enable Windows Live data provider])
  fi
  
 +# Ubuntu SSO
@@ -56,31 +56,30 @@ index 258503c..6ae7d45 100644
  # Kerberos
  AC_DEFINE(GOA_KERBEROS_NAME, ["kerberos"], [ProviderType and extension point name])
  AC_ARG_ENABLE([kerberos],
-@@ -594,6 +610,7 @@ echo "
+@@ -577,6 +593,7 @@ echo "
+ 	Facebook provider:              ${enable_facebook} (OAuth 2.0, id:${with_facebook_client_id})
  	Windows Live provider:          ${enable_windows_live} (OAuth 2.0, id:${with_windows_live_client_id})
-         Pocket provider:                ${enable_pocket} (id:${with_pocket_client_id})
  	Last.fm provider:               ${enable_lastfm} (id:${with_lastfm_client_id} secret:${with_lastfm_client_secret})
 +        Ubuntu SSO provider:            ${enable_ubuntu_sso}
  
  	Maintainer mode:                ${USE_MAINTAINER_MODE}
  	Building api docs:              ${enable_gtk_doc}
-diff --git a/data/icons/scalable/Makefile.am b/data/icons/scalable/Makefile.am
-index d3c0519..3750753 100644
---- a/data/icons/scalable/Makefile.am
-+++ b/data/icons/scalable/Makefile.am
-@@ -10,6 +10,7 @@ icon_DATA =				\
+Index: gnome-online-accounts-3.35.90/data/icons/scalable/Makefile.am
+===================================================================
+--- gnome-online-accounts-3.35.90.orig/data/icons/scalable/Makefile.am
++++ gnome-online-accounts-3.35.90/data/icons/scalable/Makefile.am
+@@ -12,6 +12,7 @@ icon_DATA =				\
+ 	goa-account-msn.svg		\
  	goa-account-owncloud.svg	\
- 	goa-account-pocket.svg		\
  	goa-account-foursquare.svg	\
 +	goa-account-ubuntusso.svg	\
  	$(NULL)
  
  EXTRA_DIST = \
-diff --git a/data/icons/scalable/goa-account-ubuntusso.svg b/data/icons/scalable/goa-account-ubuntusso.svg
-new file mode 100644
-index 0000000..194da26
+Index: gnome-online-accounts-3.35.90/data/icons/scalable/goa-account-ubuntusso.svg
+===================================================================
 --- /dev/null
-+++ b/data/icons/scalable/goa-account-ubuntusso.svg
++++ gnome-online-accounts-3.35.90/data/icons/scalable/goa-account-ubuntusso.svg
 @@ -0,0 +1,109 @@
 +<?xml version="1.0" encoding="UTF-8" standalone="no"?>
 +<svg
@@ -191,23 +190,22 @@ index 0000000..194da26
 +    </g>
 +  </g>
 +</svg>
-diff --git a/data/icons/symbolic/Makefile.am b/data/icons/symbolic/Makefile.am
-index efde087..6abe62e 100644
---- a/data/icons/symbolic/Makefile.am
-+++ b/data/icons/symbolic/Makefile.am
-@@ -9,6 +9,7 @@ icon_DATA =					\
+Index: gnome-online-accounts-3.35.90/data/icons/symbolic/Makefile.am
+===================================================================
+--- gnome-online-accounts-3.35.90.orig/data/icons/symbolic/Makefile.am
++++ gnome-online-accounts-3.35.90/data/icons/symbolic/Makefile.am
+@@ -11,6 +11,7 @@ icon_DATA =					\
+ 	goa-account-msn-symbolic.svg		\
  	goa-account-owncloud-symbolic.svg	\
- 	goa-account-pocket-symbolic.svg		\
  	goa-account-foursquare-symbolic.svg	\
 +	goa-account-ubuntusso-symbolic.svg	\
  	$(NULL)
  
  EXTRA_DIST = \
-diff --git a/data/icons/symbolic/goa-account-ubuntusso-symbolic.svg b/data/icons/symbolic/goa-account-ubuntusso-symbolic.svg
-new file mode 100644
-index 0000000..258a5db
+Index: gnome-online-accounts-3.35.90/data/icons/symbolic/goa-account-ubuntusso-symbolic.svg
+===================================================================
 --- /dev/null
-+++ b/data/icons/symbolic/goa-account-ubuntusso-symbolic.svg
++++ gnome-online-accounts-3.35.90/data/icons/symbolic/goa-account-ubuntusso-symbolic.svg
 @@ -0,0 +1,31 @@
 +<?xml version="1.0" encoding="UTF-8" standalone="no"?>
 +<svg
@@ -240,25 +238,25 @@ index 0000000..258a5db
 +     d="m 5.0932841,2.4075749 c -0.5342753,0.00813 -1.0855491,0.016086 -1.2250546,0.017792 l -0.2536459,0.00301 -3.279e-4,0.7325869 c -8.547e-4,1.9145293 0.045926,6.762984 0.066917,6.9347842 0.023581,0.192838 0.029733,0.225229 0.1064234,0.561832 0.2126841,0.933469 0.9069714,1.906928 1.6510707,2.315083 0.5932069,0.325367 1.0662826,0.491659 1.6970502,0.596534 0.61447,0.102122 2.3448198,0.01184 3.42983,-0.17896 0.100919,-0.01779 0.275772,-0.04798 0.388564,-0.0672 0.474425,-0.0807 0.805458,-0.146406 1.176483,-0.233546 0.04749,-0.01113 0.12434,-0.02655 0.170752,-0.03421 l 0.08441,-0.01394 -0.01538,-5.3004009 c -0.01182,-4.0776962 -0.02137,-5.3042552 -0.04123,-5.3172542 -0.01419,-0.00925 -0.662122,-0.014495 -1.439789,-0.011614 l -1.4139402,0.0053 -0.0055,4.1367996 -0.0055,4.1367984 L 8.1206869,10.68527 6.7769585,10.67957 6.7662066,7.947609 6.7554146,5.215557 6.1813124,5.2045352 5.6071554,5.1935134 5.898362,4.5876142 C 6.0585366,4.2543702 6.358162,3.6366846 6.5642631,3.2150348 6.7703095,2.7933849 6.9389029,2.4339759 6.9389029,2.4163499 c 0,-0.035743 -0.052351,-0.035964 -1.8456763,-0.00875"
 +     style="display:inline;fill:#241f31;fill-opacity:1;stroke-width:0.05452156;enable-background:new" />
 +</svg>
-diff --git a/po/POTFILES.in b/po/POTFILES.in
-index e948515..a049fa5 100644
---- a/po/POTFILES.in
-+++ b/po/POTFILES.in
-@@ -18,6 +18,7 @@ src/goabackend/goaoauth2provider.c
+Index: gnome-online-accounts-3.35.90/po/POTFILES.in
+===================================================================
+--- gnome-online-accounts-3.35.90.orig/po/POTFILES.in
++++ gnome-online-accounts-3.35.90/po/POTFILES.in
+@@ -17,6 +17,7 @@ src/goabackend/goamediaserverprovider.c
+ src/goabackend/goaoauth2provider.c
  src/goabackend/goaoauthprovider.c
  src/goabackend/goaowncloudprovider.c
- src/goabackend/goapocketprovider.c
 +src/goabackend/goaubuntussoprovider.c
  src/goabackend/goaprovider.c
  src/goabackend/goasmtpauth.c
  src/goabackend/goautils.c
-diff --git a/src/goabackend/Makefile.am b/src/goabackend/Makefile.am
-index 18b1e5d..539b211 100644
---- a/src/goabackend/Makefile.am
-+++ b/src/goabackend/Makefile.am
-@@ -94,6 +94,7 @@ libgoa_backend_1_0_la_SOURCES =						\
+Index: gnome-online-accounts-3.35.90/src/goabackend/Makefile.am
+===================================================================
+--- gnome-online-accounts-3.35.90.orig/src/goabackend/Makefile.am
++++ gnome-online-accounts-3.35.90/src/goabackend/Makefile.am
+@@ -93,6 +93,7 @@ libgoa_backend_1_0_la_SOURCES =						\
+ 	goafoursquareprovider.h		goafoursquareprovider.c		\
  	goawindowsliveprovider.h	goawindowsliveprovider.c	\
- 	goapocketprovider.h		goapocketprovider.c		\
  	goalastfmprovider.h		goalastfmprovider.c		\
 +	goaubuntussoprovider.h		goaubuntussoprovider.c		\
  	goaobjectskeletonutils.h	goaobjectskeletonutils.c	\
@@ -272,7 +270,7 @@ index 18b1e5d..539b211 100644
  	$(NULL)
  
  libgoa_backend_1_0_la_LIBADD = 					\
-@@ -139,6 +141,7 @@ libgoa_backend_1_0_la_LIBADD = 					\
+@@ -140,6 +142,7 @@ libgoa_backend_1_0_la_LIBADD = 					\
  	$(LIBXML_LIBS)						\
  	$(TP_LIBS)						\
  	$(TPAW_LIBS)						\
@@ -280,19 +278,19 @@ index 18b1e5d..539b211 100644
  	$(NULL)
  
  libgoa_backend_1_0_la_LDFLAGS = 				\
-diff --git a/src/goabackend/goaprovider.c b/src/goabackend/goaprovider.c
-index 74433b5..e19b296 100644
---- a/src/goabackend/goaprovider.c
-+++ b/src/goabackend/goaprovider.c
-@@ -33,6 +33,7 @@
- #include "goapocketprovider.h"
+Index: gnome-online-accounts-3.35.90/src/goabackend/goaprovider.c
+===================================================================
+--- gnome-online-accounts-3.35.90.orig/src/goabackend/goaprovider.c
++++ gnome-online-accounts-3.35.90/src/goabackend/goaprovider.c
+@@ -32,6 +32,7 @@
+ #include "goawindowsliveprovider.h"
  #include "goamediaserverprovider.h"
  #include "goalastfmprovider.h"
 +#include "goaubuntussoprovider.h"
  
  #ifdef GOA_FEDORA_ENABLED
  #include "goafedoraprovider.h"
-@@ -936,6 +937,9 @@ static struct
+@@ -935,6 +936,9 @@ static struct
     * important because it affects the order in which they are
     * returned by goa_provider_get_all.
     */
@@ -302,11 +300,10 @@ index 74433b5..e19b296 100644
  #ifdef GOA_GOOGLE_ENABLED
    { GOA_GOOGLE_NAME, goa_google_provider_get_type },
  #endif
-diff --git a/src/goabackend/goaubuntussoprovider.c b/src/goabackend/goaubuntussoprovider.c
-new file mode 100644
-index 0000000..ca44c01
+Index: gnome-online-accounts-3.35.90/src/goabackend/goaubuntussoprovider.c
+===================================================================
 --- /dev/null
-+++ b/src/goabackend/goaubuntussoprovider.c
++++ gnome-online-accounts-3.35.90/src/goabackend/goaubuntussoprovider.c
 @@ -0,0 +1,943 @@
 +/* -*- mode: C; c-file-style: "gnu"; indent-tabs-mode: nil; -*- */
 +/*
@@ -1251,11 +1248,10 @@ index 0000000..ca44c01
 +
 +  return TRUE; // invocation was handled
 +}
-diff --git a/src/goabackend/goaubuntussoprovider.h b/src/goabackend/goaubuntussoprovider.h
-new file mode 100644
-index 0000000..d349eca
+Index: gnome-online-accounts-3.35.90/src/goabackend/goaubuntussoprovider.h
+===================================================================
 --- /dev/null
-+++ b/src/goabackend/goaubuntussoprovider.h
++++ gnome-online-accounts-3.35.90/src/goabackend/goaubuntussoprovider.h
 @@ -0,0 +1,39 @@
 +/* -*- mode: C; c-file-style: "gnu"; indent-tabs-mode: nil; -*- */
 +/*

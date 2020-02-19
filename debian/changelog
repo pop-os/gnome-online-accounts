@@ -1,4 +1,4 @@
-gnome-online-accounts (3.34.1-1ubuntu1) focal; urgency=medium
+gnome-online-accounts (3.35.90-1ubuntu1) UNRELEASED; urgency=medium
 
   * Merge with debian, remaining changes:
     + debian/rules:
@@ -17,7 +17,28 @@ gnome-online-accounts (3.34.1-1ubuntu1) focal; urgency=medium
       - debian/patches/0001-ubuntu-sso-provider.patch
       - debian/patches/0002-livepatch-auth.patch
 
- -- Sebastien Bacher <seb128@ubuntu.com>  Tue, 05 Nov 2019 16:23:32 +0100
+ -- Sebastien Bacher <seb128@ubuntu.com>  Wed, 19 Feb 2020 11:03:07 +0100
+
+gnome-online-accounts (3.35.90-1) experimental; urgency=medium
+
+  [ Laurent Bigonville ]
+  * debian/rules, debian/gnome-online-accounts.install: Move the daemons to
+    /usr/libexec now that this is allowed in the debian policy
+
+  [ Steve Langasek ]
+  * debian/rules: Omit the gnome-online-accounts binary package on 
+    Ubuntu/i386 (Closes: ##947257)
+
+  [ Sebastien Bacher ]
+  * New upstream release
+  * debian/control.in:
+    - Build-Depends on libjavascriptcoregtk-4.0-dev
+  * debian/libgoa-backend-1.0-1.symbols,
+    debian/rules:
+    - the 'pocket' provider has been removed upstream, don't try to build
+      with it enabled
+
+ -- Sebastien Bacher <seb128@ubuntu.com>  Wed, 19 Feb 2020 10:07:20 +0100
 
 gnome-online-accounts (3.34.1-1) unstable; urgency=medium
 

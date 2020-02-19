@@ -1,5 +1,5 @@
 # Turkish translation for gnome-online-accounts.
-# Copyright (C) 2011-2019 gnome-online-accounts's COPYRIGHT HOLDER
+# Copyright (C) 2011 gnome-online-accounts's COPYRIGHT HOLDER
 # This file is distributed under the same license as the gnome-online-accounts package.
 #
 # Osman Karagöz <osmank3@gmail.com>, 2013.
@@ -7,24 +7,23 @@
 # Gökhan Gurbetoğlu <ggurbet@gmail.com>, 2014.
 # Furkan Tokaç <developmentft@gmail.com>, 2017.
 # Muhammet Kara <muhammetk@gmail.com>, 2011, 2013, 2014, 2015, 2016, 2017.
-# Emin Tufan Çetin <etcetin@gmail.com>, 2017, 2019.
-# Sabri Ünal <libreajans@gmail.com>, 2019.
+# Emin Tufan Çetin <etcetin@gmail.com>, 2017-2019.
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: gnome-online-accounts master\n"
 "Report-Msgid-Bugs-To: https://gitlab.gnome.org/GNOME/gnome-online-accounts/"
 "issues\n"
-"POT-Creation-Date: 2019-09-05 05:20+0000\n"
-"PO-Revision-Date: 2019-09-05 16:13+0300\n"
-"Last-Translator: Sabri Ünal <libreajans@gmail.com>\n"
-"Language-Team: Türkçe <gnome-turk@gnome.org>\n"
+"POT-Creation-Date: 2019-08-20 21:45+0000\n"
+"PO-Revision-Date: 2019-08-28 00:15+0300\n"
+"Last-Translator: Emin Tufan Çetin <etcetin@gmail.com>\n"
+"Language-Team: Turkish <gnome-turk@gnome.org>\n"
 "Language: tr\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=1; plural=0;\n"
-"X-Generator: Poedit 2.0.6\n"
+"Plural-Forms: nplurals=1; plural=0\n"
+"X-Generator: Gtranslator 3.32.1\n"
 
 #: data/org.gnome.online-accounts.gschema.xml:6
 msgid "List of providers that are allowed to be loaded"
@@ -203,7 +202,7 @@ msgstr "_Yeniden Dene"
 #: src/goabackend/goaexchangeprovider.c:598
 #: src/goabackend/goaexchangeprovider.c:771
 msgid "Error connecting to Microsoft Exchange server"
-msgstr "Microsoft Exchange sunucusuna bağlanırken hata oluştu"
+msgstr "Microsoft Exchange sunucusuna bağlanılamadı"
 
 #: src/goabackend/goafacebookprovider.c:56
 msgid "Facebook"
@@ -280,8 +279,9 @@ msgid "Did not find password for principal “%s” in credentials"
 msgstr "Tanıtıcı kimlik “%s” için kimlik bilgilerinde parola bulunamadı"
 
 #: src/goabackend/goafedoraprovider.c:805
+#| msgid "Error connecting to Last.fm"
 msgid "Error connecting to Fedora"
-msgstr "Fedora’ya bağlanırken hata oluştu"
+msgstr "Fedoraʼya bağlanırken hata"
 
 #: src/goabackend/goafedoraprovider.c:1198
 #: src/goabackend/goakerberosprovider.c:1374
@@ -447,7 +447,7 @@ msgstr "Last.fm"
 #: src/goabackend/goalastfmprovider.c:700
 #: src/goabackend/goalastfmprovider.c:850
 msgid "Error connecting to Last.fm"
-msgstr "Last.fm’e bağlanırken hata oluştu"
+msgstr "Last.fm’e bağlanırken hata"
 
 #: src/goabackend/goamediaserverprovider.c:63
 msgid "Media Server"
@@ -545,8 +545,9 @@ msgstr "Nextcloud"
 
 #: src/goabackend/goaowncloudprovider.c:729
 #: src/goabackend/goaowncloudprovider.c:920
+#| msgid "Error connecting to ownCloud server"
 msgid "Error connecting to Nextcloud server"
-msgstr "Nextcloud sunucusuna bağlanırken hata oluştu"
+msgstr "Nextcloud sunucusuna bağlanırken hata"
 
 #: src/goabackend/goapocketprovider.c:74
 msgid "Pocket"
@@ -769,12 +770,12 @@ msgstr "İlk gizli anahtar geçersiz"
 #: src/goaidentity/goaidentityservice.c:910
 #, c-format
 msgid "Couldn't get GoaObject for object path %s"
-msgstr "%s nesne yolu için GoaObject alınamadı"
+msgstr "%s nesne yolu için GoaObject alınırken hata"
 
 #: src/goaidentity/goaidentityservice.c:1292
 #, c-format
 msgid "The network realm %s needs some information to sign you in."
-msgstr "Ağ alanı %s size oturum açabilmek için bazı bilgilere ihtiyaç duyuyor."
+msgstr "%s ağ alanı size oturum açabilmek için bazı bilgilere gereksiniyor."
 
 #: src/goaidentity/goakerberosidentity.c:274
 #: src/goaidentity/goakerberosidentity.c:282

@@ -166,7 +166,7 @@ libgoa_backend_1_0_la_DEPENDENCIES =  \
 	$(am__DEPENDENCIES_1) $(am__DEPENDENCIES_1) \
 	$(am__DEPENDENCIES_1) $(am__DEPENDENCIES_1) \
 	$(am__DEPENDENCIES_1) $(am__DEPENDENCIES_1) \
-	$(am__DEPENDENCIES_1)
+	$(am__DEPENDENCIES_1) $(am__DEPENDENCIES_1)
 am__libgoa_backend_1_0_la_SOURCES_DIST = goabackend.h \
 	goabackendenums-priv.h goabackendenumtypes.h \
 	goabackendenumtypes.c gconstructor.h goabackendinit.c \
@@ -187,10 +187,10 @@ am__libgoa_backend_1_0_la_SOURCES_DIST = goabackend.h \
 	goaowncloudprovider.c goaflickrprovider.h goaflickrprovider.c \
 	goafoursquareprovider.h goafoursquareprovider.c \
 	goawindowsliveprovider.h goawindowsliveprovider.c \
-	goapocketprovider.h goapocketprovider.c goalastfmprovider.h \
-	goalastfmprovider.c goaobjectskeletonutils.h \
-	goaobjectskeletonutils.c goautils.h goautils.c goawebview.h \
-	goawebview.c nautilus-floating-bar.h nautilus-floating-bar.c \
+	goalastfmprovider.h goalastfmprovider.c \
+	goaobjectskeletonutils.h goaobjectskeletonutils.c goautils.h \
+	goautils.c goawebview.h goawebview.c nautilus-floating-bar.h \
+	nautilus-floating-bar.c \
 	$(top_builddir)/src/goaidentity/org.gnome.Identity.c \
 	$(top_srcdir)/src/goaidentity/goaidentitymanagererror.c \
 	goafedoraprovider.h goafedoraprovider.c goakerberosprovider.h \
@@ -223,7 +223,6 @@ am_libgoa_backend_1_0_la_OBJECTS =  \
 	libgoa_backend_1_0_la-goaflickrprovider.lo \
 	libgoa_backend_1_0_la-goafoursquareprovider.lo \
 	libgoa_backend_1_0_la-goawindowsliveprovider.lo \
-	libgoa_backend_1_0_la-goapocketprovider.lo \
 	libgoa_backend_1_0_la-goalastfmprovider.lo \
 	libgoa_backend_1_0_la-goaobjectskeletonutils.lo \
 	libgoa_backend_1_0_la-goautils.lo \
@@ -299,7 +298,6 @@ am__depfiles_remade =  \
 	./$(DEPDIR)/libgoa_backend_1_0_la-goaoauthprovider.Plo \
 	./$(DEPDIR)/libgoa_backend_1_0_la-goaobjectskeletonutils.Plo \
 	./$(DEPDIR)/libgoa_backend_1_0_la-goaowncloudprovider.Plo \
-	./$(DEPDIR)/libgoa_backend_1_0_la-goapocketprovider.Plo \
 	./$(DEPDIR)/libgoa_backend_1_0_la-goaprovider.Plo \
 	./$(DEPDIR)/libgoa_backend_1_0_la-goarestproxy.Plo \
 	./$(DEPDIR)/libgoa_backend_1_0_la-goasmtpauth.Plo \
@@ -429,6 +427,8 @@ INTROSPECTION_LIBS = @INTROSPECTION_LIBS@
 INTROSPECTION_MAKEFILE = @INTROSPECTION_MAKEFILE@
 INTROSPECTION_SCANNER = @INTROSPECTION_SCANNER@
 INTROSPECTION_TYPELIBDIR = @INTROSPECTION_TYPELIBDIR@
+JAVASCRIPT_CORE_GTK_CFLAGS = @JAVASCRIPT_CORE_GTK_CFLAGS@
+JAVASCRIPT_CORE_GTK_LIBS = @JAVASCRIPT_CORE_GTK_LIBS@
 JSON_GLIB_CFLAGS = @JSON_GLIB_CFLAGS@
 JSON_GLIB_LIBS = @JSON_GLIB_LIBS@
 KRB5_CFLAGS = @KRB5_CFLAGS@
@@ -622,14 +622,15 @@ libgoa_backend_1_0_la_SOURCES = goabackend.h goabackendenums-priv.h \
 	goaowncloudprovider.c goaflickrprovider.h goaflickrprovider.c \
 	goafoursquareprovider.h goafoursquareprovider.c \
 	goawindowsliveprovider.h goawindowsliveprovider.c \
-	goapocketprovider.h goapocketprovider.c goalastfmprovider.h \
-	goalastfmprovider.c goaobjectskeletonutils.h \
-	goaobjectskeletonutils.c goautils.h goautils.c goawebview.h \
-	goawebview.c nautilus-floating-bar.h nautilus-floating-bar.c \
+	goalastfmprovider.h goalastfmprovider.c \
+	goaobjectskeletonutils.h goaobjectskeletonutils.c goautils.h \
+	goautils.c goawebview.h goawebview.c nautilus-floating-bar.h \
+	nautilus-floating-bar.c \
 	$(top_builddir)/src/goaidentity/org.gnome.Identity.c \
 	$(top_srcdir)/src/goaidentity/goaidentitymanagererror.c \
 	$(NULL) $(am__append_1) $(am__append_2)
 libgoa_backend_1_0_la_CFLAGS = \
+	$(JAVASCRIPT_CORE_GTK_CFLAGS)				\
 	$(WEBKIT_GTK_CFLAGS)					\
 	$(JSON_GLIB_CFLAGS)					\
 	$(GCR_CFLAGS) 						\
@@ -645,6 +646,7 @@ libgoa_backend_1_0_la_CFLAGS = \
 
 libgoa_backend_1_0_la_LIBADD = \
 	$(top_builddir)/src/goa/libgoa-1.0.la			\
+	$(JAVASCRIPT_CORE_GTK_LIBS)				\
 	$(WEBKIT_GTK_LIBS)					\
 	$(JSON_GLIB_LIBS)					\
 	$(GCR_LIBS) 						\
@@ -848,7 +850,6 @@ distclean-compile:
 @AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/libgoa_backend_1_0_la-goaoauthprovider.Plo@am__quote@ # am--include-marker
 @AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/libgoa_backend_1_0_la-goaobjectskeletonutils.Plo@am__quote@ # am--include-marker
 @AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/libgoa_backend_1_0_la-goaowncloudprovider.Plo@am__quote@ # am--include-marker
-@AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/libgoa_backend_1_0_la-goapocketprovider.Plo@am__quote@ # am--include-marker
 @AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/libgoa_backend_1_0_la-goaprovider.Plo@am__quote@ # am--include-marker
 @AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/libgoa_backend_1_0_la-goarestproxy.Plo@am__quote@ # am--include-marker
 @AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/libgoa_backend_1_0_la-goasmtpauth.Plo@am__quote@ # am--include-marker
@@ -1048,13 +1049,6 @@ libgoa_backend_1_0_la-goawindowsliveprovider.lo: goawindowsliveprovider.c
 @AMDEP_TRUE@@am__fastdepCC_FALSE@	$(AM_V_CC)source='goawindowsliveprovider.c' object='libgoa_backend_1_0_la-goawindowsliveprovider.lo' libtool=yes @AMDEPBACKSLASH@
 @AMDEP_TRUE@@am__fastdepCC_FALSE@	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
 @am__fastdepCC_FALSE@	$(AM_V_CC@am__nodep@)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(libgoa_backend_1_0_la_CFLAGS) $(CFLAGS) -c -o libgoa_backend_1_0_la-goawindowsliveprovider.lo `test -f 'goawindowsliveprovider.c' || echo '$(srcdir)/'`goawindowsliveprovider.c
-
-libgoa_backend_1_0_la-goapocketprovider.lo: goapocketprovider.c
-@am__fastdepCC_TRUE@	$(AM_V_CC)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(libgoa_backend_1_0_la_CFLAGS) $(CFLAGS) -MT libgoa_backend_1_0_la-goapocketprovider.lo -MD -MP -MF $(DEPDIR)/libgoa_backend_1_0_la-goapocketprovider.Tpo -c -o libgoa_backend_1_0_la-goapocketprovider.lo `test -f 'goapocketprovider.c' || echo '$(srcdir)/'`goapocketprovider.c
-@am__fastdepCC_TRUE@	$(AM_V_at)$(am__mv) $(DEPDIR)/libgoa_backend_1_0_la-goapocketprovider.Tpo $(DEPDIR)/libgoa_backend_1_0_la-goapocketprovider.Plo
-@AMDEP_TRUE@@am__fastdepCC_FALSE@	$(AM_V_CC)source='goapocketprovider.c' object='libgoa_backend_1_0_la-goapocketprovider.lo' libtool=yes @AMDEPBACKSLASH@
-@AMDEP_TRUE@@am__fastdepCC_FALSE@	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
-@am__fastdepCC_FALSE@	$(AM_V_CC@am__nodep@)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(libgoa_backend_1_0_la_CFLAGS) $(CFLAGS) -c -o libgoa_backend_1_0_la-goapocketprovider.lo `test -f 'goapocketprovider.c' || echo '$(srcdir)/'`goapocketprovider.c
 
 libgoa_backend_1_0_la-goalastfmprovider.lo: goalastfmprovider.c
 @am__fastdepCC_TRUE@	$(AM_V_CC)$(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(libgoa_backend_1_0_la_CFLAGS) $(CFLAGS) -MT libgoa_backend_1_0_la-goalastfmprovider.lo -MD -MP -MF $(DEPDIR)/libgoa_backend_1_0_la-goalastfmprovider.Tpo -c -o libgoa_backend_1_0_la-goalastfmprovider.lo `test -f 'goalastfmprovider.c' || echo '$(srcdir)/'`goalastfmprovider.c
@@ -1352,7 +1346,6 @@ distclean: distclean-am
 	-rm -f ./$(DEPDIR)/libgoa_backend_1_0_la-goaoauthprovider.Plo
 	-rm -f ./$(DEPDIR)/libgoa_backend_1_0_la-goaobjectskeletonutils.Plo
 	-rm -f ./$(DEPDIR)/libgoa_backend_1_0_la-goaowncloudprovider.Plo
-	-rm -f ./$(DEPDIR)/libgoa_backend_1_0_la-goapocketprovider.Plo
 	-rm -f ./$(DEPDIR)/libgoa_backend_1_0_la-goaprovider.Plo
 	-rm -f ./$(DEPDIR)/libgoa_backend_1_0_la-goarestproxy.Plo
 	-rm -f ./$(DEPDIR)/libgoa_backend_1_0_la-goasmtpauth.Plo
@@ -1435,7 +1428,6 @@ maintainer-clean: maintainer-clean-am
 	-rm -f ./$(DEPDIR)/libgoa_backend_1_0_la-goaoauthprovider.Plo
 	-rm -f ./$(DEPDIR)/libgoa_backend_1_0_la-goaobjectskeletonutils.Plo
 	-rm -f ./$(DEPDIR)/libgoa_backend_1_0_la-goaowncloudprovider.Plo
-	-rm -f ./$(DEPDIR)/libgoa_backend_1_0_la-goapocketprovider.Plo
 	-rm -f ./$(DEPDIR)/libgoa_backend_1_0_la-goaprovider.Plo
 	-rm -f ./$(DEPDIR)/libgoa_backend_1_0_la-goarestproxy.Plo
 	-rm -f ./$(DEPDIR)/libgoa_backend_1_0_la-goasmtpauth.Plo

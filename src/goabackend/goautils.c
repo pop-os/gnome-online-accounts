@@ -251,6 +251,29 @@ goa_utils_check_duplicate (GoaClient              *client,
   return ret;
 }
 
+gint
+goa_utils_convert_abs_usec_to_duration_sec (gint64 abs_usec)
+{
+  gint64 now;
+  gint64 ret;
+
+  now = g_get_real_time ();
+  ret = abs_usec - now;
+  ret /= 1000L * 1000L;
+  return (gint) ret;
+}
+
+gint64
+goa_utils_convert_duration_sec_to_abs_usec (gint duration_sec)
+{
+  gint64 now;
+  gint64 ret;
+
+  now = g_get_real_time ();
+  ret = now + ((gint64) duration_sec) * 1000L * 1000L;
+  return ret;
+}
+
 gchar *
 goa_utils_data_input_stream_read_line (GDataInputStream  *stream,
                                        gsize             *length,
