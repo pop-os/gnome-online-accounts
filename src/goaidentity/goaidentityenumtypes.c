@@ -100,10 +100,10 @@ goa_identity_manager_error_get_type (void)
 }
 #include "goakerberosidentity.h"
 /* enumerations from "goakerberosidentity.h" */
-GType struct_struct_get_type (void) G_GNUC_CONST;
+GType goa_kerberos_identity_description_level_get_type (void) G_GNUC_CONST;
 
 GType
-struct_struct_get_type (void)
+goa_kerberos_identity_description_level_get_type (void)
 {
         static GType etype = 0;
 
@@ -115,7 +115,7 @@ struct_struct_get_type (void)
                 { 0, NULL, NULL }
         };
 
-        etype = g_enum_register_static (g_intern_static_string ("struct"), values);
+        etype = g_enum_register_static (g_intern_static_string ("GoaKerberosIdentityDescriptionLevel"), values);
     }
 
     return etype;

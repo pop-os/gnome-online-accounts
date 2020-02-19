@@ -23,8 +23,8 @@ GType goa_identity_manager_error_get_type (void) G_GNUC_CONST;
 #define GOA_TYPE_IDENTITY_MANAGER_ERROR (goa_identity_manager_error_get_type ())
 
 /* enumerations from "goakerberosidentity.h" */
-GType struct_struct_get_type (void) G_GNUC_CONST;
-#define STRUCT_TYPE_STRUCT (struct_struct_get_type ())
+GType goa_kerberos_identity_description_level_get_type (void) G_GNUC_CONST;
+#define GOA_TYPE_KERBEROS_IDENTITY_DESCRIPTION_LEVEL (goa_kerberos_identity_description_level_get_type ())
 
 /* enumerations from "goakerberosidentityinquiry.h" */
 GType goa_kerberos_identity_query_mode_get_type (void) G_GNUC_CONST;
