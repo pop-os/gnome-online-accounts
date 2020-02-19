@@ -4,6 +4,10 @@ gnome-online-accounts (3.35.90-1) UNRELEASED; urgency=medium
   * debian/rules, debian/gnome-online-accounts.install: Move the daemons to
     /usr/libexec now that this is allowed in the debian policy
 
+  [ Steve Langasek ]
+  * debian/rules: Omit the gnome-online-accounts binary package on 
+    Ubuntu/i386 (Closes: ##947257)
+
   [ Sebastien Bacher ]
   * New upstream release
   * debian/control.in:
