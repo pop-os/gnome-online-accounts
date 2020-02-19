@@ -118,15 +118,6 @@
 /* ProviderType and extension point name */
 #undef GOA_OWNCLOUD_NAME
 
-/* Pocket OAuth 2.0 client id */
-#undef GOA_POCKET_CLIENT_ID
-
-/* Enable Pocket data provider */
-#undef GOA_POCKET_ENABLED
-
-/* ProviderType and extension point name */
-#undef GOA_POCKET_NAME
-
 /* Path to the template file */
 #undef GOA_TEMPLATE_FILE
 

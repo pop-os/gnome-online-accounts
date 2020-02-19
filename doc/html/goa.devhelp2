@@ -109,6 +109,7 @@
     <keyword type="property" name="The &quot;TodoDisabled&quot; property" link="gdbus-org.gnome.OnlineAccounts.Account.html#gdbus-property-org-gnome-OnlineAccounts-Account.TodoDisabled"/>
     <keyword type="property" name="The &quot;ReadLaterDisabled&quot; property" link="gdbus-org.gnome.OnlineAccounts.Account.html#gdbus-property-org-gnome-OnlineAccounts-Account.ReadLaterDisabled"/>
     <keyword type="method" name="The AddAccount() method" link="gdbus-org.gnome.OnlineAccounts.Manager.html#gdbus-method-org-gnome-OnlineAccounts-Manager.AddAccount"/>
+    <keyword type="method" name="The IsSupportedProvider() method" link="gdbus-org.gnome.OnlineAccounts.Manager.html#gdbus-method-org-gnome-OnlineAccounts-Manager.IsSupportedProvider"/>
     <keyword type="method" name="The GetAccessToken() method" link="gdbus-org.gnome.OnlineAccounts.OAuthBased.html#gdbus-method-org-gnome-OnlineAccounts-OAuthBased.GetAccessToken"/>
     <keyword type="property" name="The &quot;ConsumerKey&quot; property" link="gdbus-org.gnome.OnlineAccounts.OAuthBased.html#gdbus-property-org-gnome-OnlineAccounts-OAuthBased.ConsumerKey"/>
     <keyword type="property" name="The &quot;ConsumerSecret&quot; property" link="gdbus-org.gnome.OnlineAccounts.OAuthBased.html#gdbus-property-org-gnome-OnlineAccounts-OAuthBased.ConsumerSecret"/>
@@ -181,7 +182,7 @@
     <keyword type="function" name="goa_object_get_media_server ()" link="GoaObject.html#goa-object-get-media-server" since="3.14"/>
     <keyword type="function" name="goa_object_get_music ()" link="GoaObject.html#goa-object-get-music" since="3.18.0"/>
     <keyword type="function" name="goa_object_get_photos ()" link="GoaObject.html#goa-object-get-photos" since="3.8.0"/>
-    <keyword type="function" name="goa_object_get_printers ()" link="GoaObject.html#goa-object-get-printers" since="3.12.0"/>
+    <keyword type="function" name="goa_object_get_printers ()" link="GoaObject.html#goa-object-get-printers" deprecated="" since="3.12.0"/>
     <keyword type="function" name="goa_object_get_files ()" link="GoaObject.html#goa-object-get-files" since="3.8.0"/>
     <keyword type="function" name="goa_object_get_exchange ()" link="GoaObject.html#goa-object-get-exchange" since="3.6.0"/>
     <keyword type="function" name="goa_object_peek_manager ()" link="GoaObject.html#goa-object-peek-manager"/>
@@ -197,7 +198,7 @@
     <keyword type="function" name="goa_object_peek_media_server ()" link="GoaObject.html#goa-object-peek-media-server" since="3.14"/>
     <keyword type="function" name="goa_object_peek_music ()" link="GoaObject.html#goa-object-peek-music" since="3.18.0"/>
     <keyword type="function" name="goa_object_peek_photos ()" link="GoaObject.html#goa-object-peek-photos" since="3.8.0"/>
-    <keyword type="function" name="goa_object_peek_printers ()" link="GoaObject.html#goa-object-peek-printers" since="3.12.0"/>
+    <keyword type="function" name="goa_object_peek_printers ()" link="GoaObject.html#goa-object-peek-printers" deprecated="" since="3.12.0"/>
     <keyword type="function" name="goa_object_peek_files ()" link="GoaObject.html#goa-object-peek-files" since="3.8.0"/>
     <keyword type="function" name="goa_object_peek_exchange ()" link="GoaObject.html#goa-object-peek-exchange" since="3.6.0"/>
     <keyword type="function" name="goa_object_proxy_new ()" link="GoaObject.html#goa-object-proxy-new"/>
@@ -256,7 +257,11 @@
     <keyword type="function" name="goa_manager_call_add_account ()" link="GoaManager.html#goa-manager-call-add-account"/>
     <keyword type="function" name="goa_manager_call_add_account_finish ()" link="GoaManager.html#goa-manager-call-add-account-finish"/>
     <keyword type="function" name="goa_manager_call_add_account_sync ()" link="GoaManager.html#goa-manager-call-add-account-sync"/>
+    <keyword type="function" name="goa_manager_call_is_supported_provider ()" link="GoaManager.html#goa-manager-call-is-supported-provider"/>
+    <keyword type="function" name="goa_manager_call_is_supported_provider_finish ()" link="GoaManager.html#goa-manager-call-is-supported-provider-finish"/>
+    <keyword type="function" name="goa_manager_call_is_supported_provider_sync ()" link="GoaManager.html#goa-manager-call-is-supported-provider-sync"/>
     <keyword type="function" name="goa_manager_complete_add_account ()" link="GoaManager.html#goa-manager-complete-add-account"/>
+    <keyword type="function" name="goa_manager_complete_is_supported_provider ()" link="GoaManager.html#goa-manager-complete-is-supported-provider"/>
     <keyword type="function" name="goa_manager_proxy_new ()" link="GoaManager.html#goa-manager-proxy-new"/>
     <keyword type="function" name="goa_manager_proxy_new_finish ()" link="GoaManager.html#goa-manager-proxy-new-finish"/>
     <keyword type="function" name="goa_manager_proxy_new_sync ()" link="GoaManager.html#goa-manager-proxy-new-sync"/>
@@ -271,6 +276,7 @@
     <keyword type="struct" name="struct GoaManagerSkeleton" link="GoaManager.html#GoaManagerSkeleton-struct"/>
     <keyword type="struct" name="struct GoaManagerSkeletonClass" link="GoaManager.html#GoaManagerSkeletonClass"/>
     <keyword type="signal" name="The “handle-add-account” signal" link="GoaManager.html#GoaManager-handle-add-account"/>
+    <keyword type="signal" name="The “handle-is-supported-provider” signal" link="GoaManager.html#GoaManager-handle-is-supported-provider"/>
     <keyword type="function" name="goa_account_interface_info ()" link="GoaAccount.html#goa-account-interface-info"/>
     <keyword type="function" name="goa_account_override_properties ()" link="GoaAccount.html#goa-account-override-properties"/>
     <keyword type="function" name="goa_account_get_provider_type ()" link="GoaAccount.html#goa-account-get-provider-type"/>
@@ -729,21 +735,14 @@
     <keyword type="struct" name="struct GoaTodoProxyClass" link="GoaTodo.html#GoaTodoProxyClass" deprecated="The D-Bus interface has been deprecated." since="3.26.0"/>
     <keyword type="struct" name="struct GoaTodoSkeleton" link="GoaTodo.html#GoaTodoSkeleton" deprecated="The D-Bus interface has been deprecated." since="3.26.0"/>
     <keyword type="struct" name="struct GoaTodoSkeletonClass" link="GoaTodo.html#GoaTodoSkeletonClass" deprecated="The D-Bus interface has been deprecated." since="3.26.0"/>
-    <keyword type="function" name="goa_read_later_interface_info ()" link="GoaReadLater.html#goa-read-later-interface-info" since="3.12.0"/>
-    <keyword type="function" name="goa_read_later_override_properties ()" link="GoaReadLater.html#goa-read-later-override-properties" since="3.12.0"/>
-    <keyword type="function" name="goa_read_later_proxy_new ()" link="GoaReadLater.html#goa-read-later-proxy-new" since="3.12.0"/>
-    <keyword type="function" name="goa_read_later_proxy_new_finish ()" link="GoaReadLater.html#goa-read-later-proxy-new-finish" since="3.12.0"/>
-    <keyword type="function" name="goa_read_later_proxy_new_sync ()" link="GoaReadLater.html#goa-read-later-proxy-new-sync" since="3.12.0"/>
-    <keyword type="function" name="goa_read_later_proxy_new_for_bus ()" link="GoaReadLater.html#goa-read-later-proxy-new-for-bus" since="3.12.0"/>
-    <keyword type="function" name="goa_read_later_proxy_new_for_bus_finish ()" link="GoaReadLater.html#goa-read-later-proxy-new-for-bus-finish" since="3.12.0"/>
-    <keyword type="function" name="goa_read_later_proxy_new_for_bus_sync ()" link="GoaReadLater.html#goa-read-later-proxy-new-for-bus-sync" since="3.12.0"/>
-    <keyword type="function" name="goa_read_later_skeleton_new ()" link="GoaReadLater.html#goa-read-later-skeleton-new" since="3.12.0"/>
+    <keyword type="function" name="goa_read_later_interface_info ()" link="GoaReadLater.html#goa-read-later-interface-info" deprecated="The D-Bus interface has been deprecated." since="3.12.0"/>
+    <keyword type="function" name="goa_read_later_override_properties ()" link="GoaReadLater.html#goa-read-later-override-properties" deprecated="The D-Bus interface has been deprecated." since="3.12.0"/>
     <keyword type="struct" name="GoaReadLater" link="GoaReadLater.html#GoaReadLater-struct"/>
-    <keyword type="struct" name="struct GoaReadLaterIface" link="GoaReadLater.html#GoaReadLaterIface" since="3.12.0"/>
+    <keyword type="struct" name="struct GoaReadLaterIface" link="GoaReadLater.html#GoaReadLaterIface" deprecated="The D-Bus interface has been deprecated." since="3.12.0"/>
     <keyword type="struct" name="struct GoaReadLaterProxy" link="GoaReadLater.html#GoaReadLaterProxy-struct"/>
-    <keyword type="struct" name="struct GoaReadLaterProxyClass" link="GoaReadLater.html#GoaReadLaterProxyClass" since="3.12.0"/>
+    <keyword type="struct" name="struct GoaReadLaterProxyClass" link="GoaReadLater.html#GoaReadLaterProxyClass" deprecated="The D-Bus interface has been deprecated." since="3.12.0"/>
     <keyword type="struct" name="struct GoaReadLaterSkeleton" link="GoaReadLater.html#GoaReadLaterSkeleton-struct"/>
-    <keyword type="struct" name="struct GoaReadLaterSkeletonClass" link="GoaReadLater.html#GoaReadLaterSkeletonClass" since="3.12.0"/>
+    <keyword type="struct" name="struct GoaReadLaterSkeletonClass" link="GoaReadLater.html#GoaReadLaterSkeletonClass" deprecated="The D-Bus interface has been deprecated." since="3.12.0"/>
     <keyword type="function" name="goa_printers_interface_info ()" link="GoaPrinters.html#goa-printers-interface-info" since="3.12.0"/>
     <keyword type="function" name="goa_printers_override_properties ()" link="GoaPrinters.html#goa-printers-override-properties" since="3.12.0"/>
     <keyword type="function" name="goa_printers_proxy_new ()" link="GoaPrinters.html#goa-printers-proxy-new" since="3.12.0"/>
@@ -850,6 +849,7 @@
     <keyword type="member" name="GoaObjectIface.parent-iface" link="GoaObject.html#GoaObjectIface.parent-iface"/>
     <keyword type="member" name="GoaManagerIface.parent-iface" link="GoaManager.html#GoaManagerIface.parent-iface"/>
     <keyword type="member" name="GoaManagerIface.handle-add-account" link="GoaManager.html#GoaManagerIface.handle-add-account"/>
+    <keyword type="member" name="GoaManagerIface.handle-is-supported-provider" link="GoaManager.html#GoaManagerIface.handle-is-supported-provider"/>
     <keyword type="member" name="GoaAccountIface.parent-iface" link="GoaAccount.html#GoaAccountIface.parent-iface"/>
     <keyword type="member" name="GoaAccountIface.handle-ensure-credentials" link="GoaAccount.html#GoaAccountIface.handle-ensure-credentials"/>
     <keyword type="member" name="GoaAccountIface.handle-remove" link="GoaAccount.html#GoaAccountIface.handle-remove"/>

@@ -34,12 +34,14 @@
 <div class="refsynopsisdiv">
 <h2>Methods</h2>
 <pre class="synopsis">
-<a class="link" href="gdbus-org.gnome.OnlineAccounts.Manager.html#gdbus-method-org-gnome-OnlineAccounts-Manager.AddAccount" title="The AddAccount() method">AddAccount</a> (IN  s     provider,
-            IN  s     identity,
-            IN  s     presentation_identity,
-            IN  a{sv} credentials,
-            IN  a{ss} details,
-            OUT o     account_object_path);
+<a class="link" href="gdbus-org.gnome.OnlineAccounts.Manager.html#gdbus-method-org-gnome-OnlineAccounts-Manager.AddAccount" title="The AddAccount() method">AddAccount</a>          (IN  s     provider,
+                     IN  s     identity,
+                     IN  s     presentation_identity,
+                     IN  a{sv} credentials,
+                     IN  a{ss} details,
+                     OUT o     account_object_path);
+<a class="link" href="gdbus-org.gnome.OnlineAccounts.Manager.html#gdbus-method-org-gnome-OnlineAccounts-Manager.IsSupportedProvider" title="The IsSupportedProvider() method">IsSupportedProvider</a> (IN  s     provider_type,
+                     OUT b     is_supported);
 </pre>
 </div>
 <div class="refsect1">
@@ -91,6 +93,34 @@ AddAccount (IN  s     provider,
 <tr>
 <td><p><span class="term"><code class="literal">OUT o <em class="parameter"><code>account_object_path</code></em></code>:</span></p></td>
 <td><p>The object path of the created account.</p></td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="gdbus-method-org-gnome-OnlineAccounts-Manager.IsSupportedProvider"></a><h3>The IsSupportedProvider() method</h3>
+<pre class="programlisting">
+IsSupportedProvider (IN  s provider_type,
+                     OUT b is_supported);
+</pre>
+<p>        Checks if a certain type of provider of online accounts (for example,
+        "google" or "lastfm") is supported. If <em class="parameter"><code>provider_type</code></em> is supported,
+        then <em class="parameter"><code>is_supported</code></em> is set to <code class="constant">TRUE</code>.
+</p>
+<div class="variablelist"><table border="0" class="variablelist">
+<colgroup>
+<col align="left" valign="top">
+<col>
+</colgroup>
+<tbody>
+<tr>
+<td><p><span class="term"><code class="literal">IN s <em class="parameter"><code>provider_type</code></em></code>:</span></p></td>
+<td><p>A provider of online accounts</p></td>
+</tr>
+<tr>
+<td><p><span class="term"><code class="literal">OUT b <em class="parameter"><code>is_supported</code></em></code>:</span></p></td>
+<td><p>Whether the provider is supported or not</p></td>
 </tr>
 </tbody>
 </table></div>

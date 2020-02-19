@@ -92,7 +92,6 @@ libgoa_backend_1_0_la_SOURCES =						\
 	goaflickrprovider.h		goaflickrprovider.c		\
 	goafoursquareprovider.h		goafoursquareprovider.c		\
 	goawindowsliveprovider.h	goawindowsliveprovider.c	\
-	goapocketprovider.h		goapocketprovider.c		\
 	goalastfmprovider.h		goalastfmprovider.c		\
 	goaobjectskeletonutils.h	goaobjectskeletonutils.c	\
 	goautils.h			goautils.c			\
@@ -113,6 +112,7 @@ libgoa_backend_1_0_la_SOURCES +=					\
 endif
 
 libgoa_backend_1_0_la_CFLAGS =					\
+	$(JAVASCRIPT_CORE_GTK_CFLAGS)				\
 	$(WEBKIT_GTK_CFLAGS)					\
 	$(JSON_GLIB_CFLAGS)					\
 	$(GCR_CFLAGS) 						\
@@ -128,6 +128,7 @@ libgoa_backend_1_0_la_CFLAGS =					\
 
 libgoa_backend_1_0_la_LIBADD = 					\
 	$(top_builddir)/src/goa/libgoa-1.0.la			\
+	$(JAVASCRIPT_CORE_GTK_LIBS)				\
 	$(WEBKIT_GTK_LIBS)					\
 	$(JSON_GLIB_LIBS)					\
 	$(GCR_LIBS) 						\

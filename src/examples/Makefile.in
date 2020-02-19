@@ -90,7 +90,7 @@ build_triplet = @build@
 host_triplet = @host@
 noinst_PROGRAMS = list-accounts$(EXEEXT) lastfm-shout$(EXEEXT) \
 	$(am__EXEEXT_1)
-@BUILD_BACKEND_TRUE@am__append_1 = introspect-providers list-providers add-pocket
+@BUILD_BACKEND_TRUE@am__append_1 = introspect-providers list-providers
 subdir = src/examples
 ACLOCAL_M4 = $(top_srcdir)/aclocal.m4
 am__aclocal_m4_deps = $(top_srcdir)/m4/ax_append_compile_flags.m4 \
@@ -123,31 +123,21 @@ CONFIG_HEADER = $(top_builddir)/config.h
 CONFIG_CLEAN_FILES =
 CONFIG_CLEAN_VPATH_FILES =
 @BUILD_BACKEND_TRUE@am__EXEEXT_1 = introspect-providers$(EXEEXT) \
-@BUILD_BACKEND_TRUE@	list-providers$(EXEEXT) \
-@BUILD_BACKEND_TRUE@	add-pocket$(EXEEXT)
+@BUILD_BACKEND_TRUE@	list-providers$(EXEEXT)
 PROGRAMS = $(noinst_PROGRAMS)
-am__add_pocket_SOURCES_DIST = add-pocket.c
-@BUILD_BACKEND_TRUE@am_add_pocket_OBJECTS =  \
-@BUILD_BACKEND_TRUE@	add_pocket-add-pocket.$(OBJEXT)
-add_pocket_OBJECTS = $(am_add_pocket_OBJECTS)
-am__DEPENDENCIES_1 =
-@BUILD_BACKEND_TRUE@add_pocket_DEPENDENCIES = $(am__DEPENDENCIES_1) \
-@BUILD_BACKEND_TRUE@	$(am__DEPENDENCIES_1) ../goa/libgoa-1.0.la
-AM_V_lt = $(am__v_lt_@AM_V@)
-am__v_lt_ = $(am__v_lt_@AM_DEFAULT_V@)
-am__v_lt_0 = --silent
-am__v_lt_1 = 
-add_pocket_LINK = $(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) \
-	$(LIBTOOLFLAGS) --mode=link $(CCLD) $(add_pocket_CFLAGS) \
-	$(CFLAGS) $(add_pocket_LDFLAGS) $(LDFLAGS) -o $@
 am__introspect_providers_SOURCES_DIST = introspect-providers.c
 @BUILD_BACKEND_TRUE@am_introspect_providers_OBJECTS = introspect_providers-introspect-providers.$(OBJEXT)
 introspect_providers_OBJECTS = $(am_introspect_providers_OBJECTS)
+am__DEPENDENCIES_1 =
 @BUILD_BACKEND_TRUE@introspect_providers_DEPENDENCIES =  \
 @BUILD_BACKEND_TRUE@	$(am__DEPENDENCIES_1) \
 @BUILD_BACKEND_TRUE@	$(am__DEPENDENCIES_1) \
 @BUILD_BACKEND_TRUE@	../goabackend/libgoa-backend-1.0.la \
 @BUILD_BACKEND_TRUE@	../goa/libgoa-1.0.la
+AM_V_lt = $(am__v_lt_@AM_V@)
+am__v_lt_ = $(am__v_lt_@AM_DEFAULT_V@)
+am__v_lt_0 = --silent
+am__v_lt_1 = 
 introspect_providers_LINK = $(LIBTOOL) $(AM_V_lt) --tag=CC \
 	$(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=link $(CCLD) \
 	$(introspect_providers_CFLAGS) $(CFLAGS) \
@@ -194,7 +184,7 @@ am__v_at_1 =
 DEFAULT_INCLUDES = -I.@am__isrc@ -I$(top_builddir)
 depcomp = $(SHELL) $(top_srcdir)/depcomp
 am__maybe_remake_depfiles = depfiles
-am__depfiles_remade = ./$(DEPDIR)/add_pocket-add-pocket.Po \
+am__depfiles_remade =  \
 	./$(DEPDIR)/introspect_providers-introspect-providers.Po \
 	./$(DEPDIR)/lastfm_shout-lastfm-shout.Po \
 	./$(DEPDIR)/list_accounts-list-accounts.Po \
@@ -218,11 +208,9 @@ AM_V_CCLD = $(am__v_CCLD_@AM_V@)
 am__v_CCLD_ = $(am__v_CCLD_@AM_DEFAULT_V@)
 am__v_CCLD_0 = @echo "  CCLD    " $@;
 am__v_CCLD_1 = 
-SOURCES = $(add_pocket_SOURCES) $(introspect_providers_SOURCES) \
-	$(lastfm_shout_SOURCES) $(list_accounts_SOURCES) \
-	$(list_providers_SOURCES)
-DIST_SOURCES = $(am__add_pocket_SOURCES_DIST) \
-	$(am__introspect_providers_SOURCES_DIST) \
+SOURCES = $(introspect_providers_SOURCES) $(lastfm_shout_SOURCES) \
+	$(list_accounts_SOURCES) $(list_providers_SOURCES)
+DIST_SOURCES = $(am__introspect_providers_SOURCES_DIST) \
 	$(lastfm_shout_SOURCES) $(list_accounts_SOURCES) \
 	$(am__list_providers_SOURCES_DIST)
 am__can_run_installinfo = \
@@ -316,6 +304,8 @@ INTROSPECTION_LIBS = @INTROSPECTION_LIBS@
 INTROSPECTION_MAKEFILE = @INTROSPECTION_MAKEFILE@
 INTROSPECTION_SCANNER = @INTROSPECTION_SCANNER@
 INTROSPECTION_TYPELIBDIR = @INTROSPECTION_TYPELIBDIR@
+JAVASCRIPT_CORE_GTK_CFLAGS = @JAVASCRIPT_CORE_GTK_CFLAGS@
+JAVASCRIPT_CORE_GTK_LIBS = @JAVASCRIPT_CORE_GTK_LIBS@
 JSON_GLIB_CFLAGS = @JSON_GLIB_CFLAGS@
 JSON_GLIB_LIBS = @JSON_GLIB_LIBS@
 KRB5_CFLAGS = @KRB5_CFLAGS@
@@ -469,10 +459,6 @@ lastfm_shout_LDFLAGS = $(WARN_LDFLAGS)
 @BUILD_BACKEND_TRUE@list_providers_CFLAGS = $(GLIB_CFLAGS) $(GTK_CFLAGS)
 @BUILD_BACKEND_TRUE@list_providers_LDADD = $(GLIB_LIBS) $(GTK_LIBS) ../goabackend/libgoa-backend-1.0.la ../goa/libgoa-1.0.la
 @BUILD_BACKEND_TRUE@list_providers_LDFLAGS = $(WARN_LDFLAGS)
-@BUILD_BACKEND_TRUE@add_pocket_SOURCES = add-pocket.c
-@BUILD_BACKEND_TRUE@add_pocket_CFLAGS = $(GLIB_CFLAGS) $(REST_CFLAGS)
-@BUILD_BACKEND_TRUE@add_pocket_LDADD = $(GLIB_LIBS) $(REST_LIBS) ../goa/libgoa-1.0.la
-@BUILD_BACKEND_TRUE@add_pocket_LDFLAGS = $(WARN_LDFLAGS)
 all: all-am
 
 .SUFFIXES:
@@ -516,10 +502,6 @@ clean-noinstPROGRAMS:
 	echo " rm -f" $$list; \
 	rm -f $$list
 
-add-pocket$(EXEEXT): $(add_pocket_OBJECTS) $(add_pocket_DEPENDENCIES) $(EXTRA_add_pocket_DEPENDENCIES) 
-	@rm -f add-pocket$(EXEEXT)
-	$(AM_V_CCLD)$(add_pocket_LINK) $(add_pocket_OBJECTS) $(add_pocket_LDADD) $(LIBS)
-
 introspect-providers$(EXEEXT): $(introspect_providers_OBJECTS) $(introspect_providers_DEPENDENCIES) $(EXTRA_introspect_providers_DEPENDENCIES) 
 	@rm -f introspect-providers$(EXEEXT)
 	$(AM_V_CCLD)$(introspect_providers_LINK) $(introspect_providers_OBJECTS) $(introspect_providers_LDADD) $(LIBS)
@@ -542,7 +524,6 @@ mostlyclean-compile:
 distclean-compile:
 	-rm -f *.tab.c
 
-@AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/add_pocket-add-pocket.Po@am__quote@ # am--include-marker
 @AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/introspect_providers-introspect-providers.Po@am__quote@ # am--include-marker
 @AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/lastfm_shout-lastfm-shout.Po@am__quote@ # am--include-marker
 @AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/list_accounts-list-accounts.Po@am__quote@ # am--include-marker
@@ -574,20 +555,6 @@ am--depfiles: $(am__depfiles_remade)
 @AMDEP_TRUE@@am__fastdepCC_FALSE@	$(AM_V_CC)source='$<' object='$@' libtool=yes @AMDEPBACKSLASH@
 @AMDEP_TRUE@@am__fastdepCC_FALSE@	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
 @am__fastdepCC_FALSE@	$(AM_V_CC@am__nodep@)$(LTCOMPILE) -c -o $@ $<
-
-add_pocket-add-pocket.o: add-pocket.c
-@am__fastdepCC_TRUE@	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(add_pocket_CFLAGS) $(CFLAGS) -MT add_pocket-add-pocket.o -MD -MP -MF $(DEPDIR)/add_pocket-add-pocket.Tpo -c -o add_pocket-add-pocket.o `test -f 'add-pocket.c' || echo '$(srcdir)/'`add-pocket.c
-@am__fastdepCC_TRUE@	$(AM_V_at)$(am__mv) $(DEPDIR)/add_pocket-add-pocket.Tpo $(DEPDIR)/add_pocket-add-pocket.Po
-@AMDEP_TRUE@@am__fastdepCC_FALSE@	$(AM_V_CC)source='add-pocket.c' object='add_pocket-add-pocket.o' libtool=no @AMDEPBACKSLASH@
-@AMDEP_TRUE@@am__fastdepCC_FALSE@	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
-@am__fastdepCC_FALSE@	$(AM_V_CC@am__nodep@)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(add_pocket_CFLAGS) $(CFLAGS) -c -o add_pocket-add-pocket.o `test -f 'add-pocket.c' || echo '$(srcdir)/'`add-pocket.c
-
-add_pocket-add-pocket.obj: add-pocket.c
-@am__fastdepCC_TRUE@	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(add_pocket_CFLAGS) $(CFLAGS) -MT add_pocket-add-pocket.obj -MD -MP -MF $(DEPDIR)/add_pocket-add-pocket.Tpo -c -o add_pocket-add-pocket.obj `if test -f 'add-pocket.c'; then $(CYGPATH_W) 'add-pocket.c'; else $(CYGPATH_W) '$(srcdir)/add-pocket.c'; fi`
-@am__fastdepCC_TRUE@	$(AM_V_at)$(am__mv) $(DEPDIR)/add_pocket-add-pocket.Tpo $(DEPDIR)/add_pocket-add-pocket.Po
-@AMDEP_TRUE@@am__fastdepCC_FALSE@	$(AM_V_CC)source='add-pocket.c' object='add_pocket-add-pocket.obj' libtool=no @AMDEPBACKSLASH@
-@AMDEP_TRUE@@am__fastdepCC_FALSE@	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
-@am__fastdepCC_FALSE@	$(AM_V_CC@am__nodep@)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(add_pocket_CFLAGS) $(CFLAGS) -c -o add_pocket-add-pocket.obj `if test -f 'add-pocket.c'; then $(CYGPATH_W) 'add-pocket.c'; else $(CYGPATH_W) '$(srcdir)/add-pocket.c'; fi`
 
 introspect_providers-introspect-providers.o: introspect-providers.c
 @am__fastdepCC_TRUE@	$(AM_V_CC)$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(introspect_providers_CFLAGS) $(CFLAGS) -MT introspect_providers-introspect-providers.o -MD -MP -MF $(DEPDIR)/introspect_providers-introspect-providers.Tpo -c -o introspect_providers-introspect-providers.o `test -f 'introspect-providers.c' || echo '$(srcdir)/'`introspect-providers.c
@@ -776,8 +743,7 @@ clean-am: clean-generic clean-libtool clean-local clean-noinstPROGRAMS \
 	mostlyclean-am
 
 distclean: distclean-am
-		-rm -f ./$(DEPDIR)/add_pocket-add-pocket.Po
-	-rm -f ./$(DEPDIR)/introspect_providers-introspect-providers.Po
+		-rm -f ./$(DEPDIR)/introspect_providers-introspect-providers.Po
 	-rm -f ./$(DEPDIR)/lastfm_shout-lastfm-shout.Po
 	-rm -f ./$(DEPDIR)/list_accounts-list-accounts.Po
 	-rm -f ./$(DEPDIR)/list_providers-list-providers.Po
@@ -826,8 +792,7 @@ install-ps-am:
 installcheck-am:
 
 maintainer-clean: maintainer-clean-am
-		-rm -f ./$(DEPDIR)/add_pocket-add-pocket.Po
-	-rm -f ./$(DEPDIR)/introspect_providers-introspect-providers.Po
+		-rm -f ./$(DEPDIR)/introspect_providers-introspect-providers.Po
 	-rm -f ./$(DEPDIR)/lastfm_shout-lastfm-shout.Po
 	-rm -f ./$(DEPDIR)/list_accounts-list-accounts.Po
 	-rm -f ./$(DEPDIR)/list_providers-list-providers.Po
