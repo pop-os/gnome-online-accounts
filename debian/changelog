@@ -1,4 +1,4 @@
-gnome-online-accounts (3.35.90-1) UNRELEASED; urgency=medium
+gnome-online-accounts (3.35.90-1) experimental; urgency=medium
 
   [ Laurent Bigonville ]
   * debian/rules, debian/gnome-online-accounts.install: Move the daemons to
