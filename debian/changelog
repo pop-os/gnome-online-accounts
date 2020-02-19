@@ -6,6 +6,12 @@ gnome-online-accounts (3.35.90-1) UNRELEASED; urgency=medium
 
   [ Sebastien Bacher ]
   * New upstream release
+  * debian/control.in:
+    - Build-Depends on libjavascriptcoregtk-4.0-dev
+  * debian/libgoa-backend-1.0-1.symbols,
+    debian/rules:
+    - the 'pocket' provider has been removed upstream, don't try to build
+      with it enabled
 
  -- Sebastien Bacher <seb128@ubuntu.com>  Wed, 19 Feb 2020 10:07:20 +0100
 

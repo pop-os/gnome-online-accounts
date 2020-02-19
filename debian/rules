@@ -21,7 +21,6 @@ override_dh_auto_configure:
 		--enable-windows-live \
 		--enable-google \
 		--enable-owncloud \
-		--enable-pocket \
 		--enable-imap-smtp \
 		--enable-exchange \
 		--enable-foursquare

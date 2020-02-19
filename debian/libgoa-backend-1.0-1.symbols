@@ -181,9 +181,7 @@ libgoa-backend-1.0.so.1 libgoa-backend-1.0-1 #MINVER#
  goa_object_skeleton_attach_maps@Base 3.20.1
  goa_object_skeleton_attach_photos@Base 3.20.1
  goa_object_skeleton_attach_printers@Base 3.20.1
- goa_object_skeleton_attach_read_later@Base 3.20.1
  goa_owncloud_provider_get_type@Base 3.10.0
- goa_pocket_provider_get_type@Base 3.11.90
  goa_provider_add_account@Base 3.10.0
  goa_provider_build_object@Base 3.10.0
  goa_provider_ensure_builtins_loaded@Base 3.20.3
@@ -225,6 +223,8 @@ libgoa-backend-1.0.so.1 libgoa-backend-1.0-1 #MINVER#
  goa_utils_account_add_attention_needed@Base 3.21.90
  goa_utils_account_add_header@Base 3.21.90
  goa_utils_check_duplicate@Base 3.10.0
+ goa_utils_convert_abs_usec_to_duration_sec@Base 3.35.90
+ goa_utils_convert_duration_sec_to_abs_usec@Base 3.35.90
  goa_utils_data_input_stream_read_line@Base 3.18.3
  goa_utils_delete_credentials_for_account_sync@Base 3.21.90
  goa_utils_delete_credentials_for_id_sync@Base 3.21.90

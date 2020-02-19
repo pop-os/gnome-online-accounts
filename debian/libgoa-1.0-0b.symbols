@@ -231,7 +231,11 @@ libgoa-1.0.so.0 libgoa-1.0-0b #MINVER#
  goa_manager_call_add_account@Base 3.1.1
  goa_manager_call_add_account_finish@Base 3.1.1
  goa_manager_call_add_account_sync@Base 3.1.1
+ goa_manager_call_is_supported_provider@Base 3.35.90
+ goa_manager_call_is_supported_provider_finish@Base 3.35.90
+ goa_manager_call_is_supported_provider_sync@Base 3.35.90
  goa_manager_complete_add_account@Base 3.1.1
+ goa_manager_complete_is_supported_provider@Base 3.35.90
  goa_manager_get_type@Base 3.1.1
  goa_manager_interface_info@Base 3.1.1
  goa_manager_override_properties@Base 3.2.0
