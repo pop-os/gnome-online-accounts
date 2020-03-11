@@ -1,47 +1,49 @@
-# SOME DESCRIPTIVE TITLE.
-# Copyright (C) YEAR GNOME Online Accounts Authors
+# Kurdish (Sorani) translation for gnome-online-accounts
+# Copyright (c) 2020 Rosetta Contributors and Canonical Ltd 2020
 # This file is distributed under the same license as the gnome-online-accounts package.
-# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+# Jwtiyar Nariman <jwtiyar@gmail.com>, 2020.
 #
-#, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: gnome-online-accounts 3.36.0\n"
-"Report-Msgid-Bugs-To: https://gitlab.gnome.org/GNOME/gnome-online-accounts/"
-"issues\n"
-"POT-Creation-Date: 2020-03-10 14:10+0100\n"
-"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
-"Language-Team: LANGUAGE <LL@li.org>\n"
-"Language: \n"
+"Project-Id-Version: gnome-online-accounts\n"
+"Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
+"POT-Creation-Date: 2020-02-19 10:20+0000\n"
+"PO-Revision-Date: 2020-02-22 10:04+0300\n"
+"Last-Translator: Jwtiyar Nariman <jwtiyar@gmail.com>\n"
+"Language-Team: Kurdish (Sorani) <ckb@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"X-Launchpad-Export-Date: 2020-02-22 06:56+0000\n"
+"X-Generator: Poedit 2.3\n"
+"Language: ckb\n"
 
 #: data/org.gnome.online-accounts.gschema.xml:6
 msgid "List of providers that are allowed to be loaded"
-msgstr ""
+msgstr "لیستی ئەو دابینکەرانەی کە ڕێگەپێدراون باربکرێن"
 
 #: data/org.gnome.online-accounts.gschema.xml:7
 msgid ""
 "A list of strings representing the providers that are allowed to be loaded "
 "(default: 'all'). This is only evaluated on startup."
 msgstr ""
+"لیست بریتییە لەو زنجیرەنووسانەی کە نوێنەری دابینکەرەکان دەکەن ڕێگەپێدراون "
+"بەوەی باربکرێن(بنەڕەت:'هەمووی'). ئەمە تەنها لە کاتی دەستپێکردن ئەنجام دەدرێت."
 
 #. TODO: more specific
 #: src/daemon/goadaemon.c:1143 src/daemon/goadaemon.c:1460
 #, c-format
 msgid "Failed to find a provider for: %s"
-msgstr ""
+msgstr "نەتوانرا دابینکەر بدۆزرێتەوە بۆ : %s"
 
 #: src/daemon/goadaemon.c:1403
 msgid "IsLocked property is set for account"
-msgstr ""
+msgstr "تایبەتمەندی IsLocked دانرا بۆ هەژمار"
 
 #. TODO: more specific
 #: src/daemon/goadaemon.c:1448
 msgid "ProviderType property is not set for account"
-msgstr ""
+msgstr "تایبەتمەندی ProviderType دانەنرا بۆ هەژمار"
 
 #. TODO: more specific
 #: src/goabackend/goaewsclient.c:258
@@ -54,7 +56,7 @@ msgstr ""
 #: src/goabackend/goaewsclient.c:299
 #, c-format
 msgid "Failed to find “%s” element"
-msgstr ""
+msgstr "نەتوانرا توخمی  \"%s\" بدۆزرێتەوە."
 
 #. TODO: more specific
 #: src/goabackend/goaewsclient.c:320
@@ -63,7 +65,7 @@ msgstr ""
 
 #: src/goabackend/goaexchangeprovider.c:51
 msgid "Microsoft Exchange"
-msgstr ""
+msgstr "Microsoft Exchange"
 
 #. Translators: the first %s is the username
 #. * (eg., debarshi.ray@gmail.com or rishi), and the
@@ -74,12 +76,12 @@ msgstr ""
 #: src/goabackend/goaowncloudprovider.c:291
 #, c-format
 msgid "Invalid password with username “%s” (%s, %d): "
-msgstr ""
+msgstr "وشەی تپەڕبوون هەڵەیە بۆ ناوی بەکارهێنەری  “%s” (%s, %d): "
 
 #: src/goabackend/goaexchangeprovider.c:394
 #: src/goabackend/goaimapsmtpprovider.c:647
 msgid "_E-mail"
-msgstr ""
+msgstr "ـپۆستی ئەلکترۆنی"
 
 #: src/goabackend/goaexchangeprovider.c:395
 #: src/goabackend/goafedoraprovider.c:574
@@ -88,11 +90,11 @@ msgstr ""
 #: src/goabackend/goalastfmprovider.c:421
 #: src/goabackend/goaowncloudprovider.c:509
 msgid "_Password"
-msgstr ""
+msgstr "_تێپەڕەوشە"
 
 #: src/goabackend/goaexchangeprovider.c:398
 msgid "_Custom"
-msgstr ""
+msgstr "ـڕاسپێراو"
 
 #: src/goabackend/goaexchangeprovider.c:409
 #: src/goabackend/goafedoraprovider.c:573
@@ -101,12 +103,12 @@ msgstr ""
 #: src/goabackend/goalastfmprovider.c:420
 #: src/goabackend/goaowncloudprovider.c:508
 msgid "User_name"
-msgstr ""
+msgstr "ناویـبەکارهێنەر"
 
 #: src/goabackend/goaexchangeprovider.c:410
 #: src/goabackend/goaowncloudprovider.c:507
 msgid "_Server"
-msgstr ""
+msgstr "ـڕاژە"
 
 #. --
 #: src/goabackend/goaexchangeprovider.c:420
@@ -115,16 +117,20 @@ msgstr ""
 #: src/goabackend/goakerberosprovider.c:583
 #: src/goabackend/goalastfmprovider.c:429
 #: src/goabackend/goaowncloudprovider.c:523
+#: src/goabackend/goaubuntussoprovider.c:478
 msgid "_Cancel"
-msgstr ""
+msgstr "ـپاشگەزبوونەوە"
 
 #: src/goabackend/goaexchangeprovider.c:421
 #: src/goabackend/goafedoraprovider.c:582
 #: src/goabackend/goakerberosprovider.c:584
 #: src/goabackend/goalastfmprovider.c:430
 #: src/goabackend/goaowncloudprovider.c:524
+#: src/goabackend/goaubuntussoprovider.c:479
+#: src/goabackend/goaubuntussoprovider.c:841
+#: src/goabackend/goaubuntussoprovider.c:904
 msgid "C_onnect"
-msgstr ""
+msgstr "پە_یوەندی"
 
 #: src/goabackend/goaexchangeprovider.c:437
 #: src/goabackend/goafedoraprovider.c:597
@@ -132,8 +138,9 @@ msgstr ""
 #: src/goabackend/goakerberosprovider.c:599
 #: src/goabackend/goalastfmprovider.c:446
 #: src/goabackend/goaowncloudprovider.c:539
+#: src/goabackend/goaubuntussoprovider.c:498
 msgid "Connecting…"
-msgstr ""
+msgstr "پەیوەندی گرتن..."
 
 #: src/goabackend/goaexchangeprovider.c:537
 #: src/goabackend/goaexchangeprovider.c:731
@@ -150,8 +157,9 @@ msgstr ""
 #: src/goabackend/goaoauth2provider.c:995 src/goabackend/goaoauthprovider.c:859
 #: src/goabackend/goaowncloudprovider.c:661
 #: src/goabackend/goaowncloudprovider.c:881
+#: src/goabackend/goaubuntussoprovider.c:787
 msgid "Dialog was dismissed"
-msgstr ""
+msgstr "پەنجەرەی گفتوگۆ پشتگوێخرا"
 
 #: src/goabackend/goaexchangeprovider.c:575
 #: src/goabackend/goaexchangeprovider.c:759
@@ -164,16 +172,18 @@ msgstr ""
 #: src/goabackend/goalastfmprovider.c:831
 #: src/goabackend/goaowncloudprovider.c:706
 #: src/goabackend/goaowncloudprovider.c:908
+#: src/goabackend/goaubuntussoprovider.c:827
+#: src/goabackend/goaubuntussoprovider.c:887
 #, c-format
 msgid "Dialog was dismissed (%s, %d): "
-msgstr ""
+msgstr "پەنجەرەی گفتوگۆ پشتگوێخرا (%s, %d): "
 
 #: src/goabackend/goaexchangeprovider.c:588
 #: src/goabackend/goaimapsmtpprovider.c:946
 #: src/goabackend/goaimapsmtpprovider.c:1043
 #: src/goabackend/goaowncloudprovider.c:719
 msgid "_Ignore"
-msgstr ""
+msgstr "_فه‌رامۆشکردن"
 
 #: src/goabackend/goaexchangeprovider.c:593
 #: src/goabackend/goaexchangeprovider.c:778
@@ -187,17 +197,19 @@ msgstr ""
 #: src/goabackend/goalastfmprovider.c:848
 #: src/goabackend/goaowncloudprovider.c:724
 #: src/goabackend/goaowncloudprovider.c:927
+#: src/goabackend/goaubuntussoprovider.c:859
+#: src/goabackend/goaubuntussoprovider.c:914
 msgid "_Try Again"
-msgstr ""
+msgstr "_دووبارە هەوڵ بدە"
 
 #: src/goabackend/goaexchangeprovider.c:598
 #: src/goabackend/goaexchangeprovider.c:771
 msgid "Error connecting to Microsoft Exchange server"
-msgstr ""
+msgstr "هەڵە کاتی پەیوەندی کردن بە ڕاژەی Microsoft Exchangeـەوە"
 
 #: src/goabackend/goafacebookprovider.c:56
 msgid "Facebook"
-msgstr ""
+msgstr "Facebook"
 
 #: src/goabackend/goafacebookprovider.c:183
 #: src/goabackend/goaflickrprovider.c:155
@@ -208,6 +220,8 @@ msgstr ""
 msgid ""
 "Expected status 200 when requesting your identity, instead got status %d (%s)"
 msgstr ""
+"پێشبینی دەکرا کە باری ٢٠٠ بێت کاتی داوای پێناست کرا، لە جیاتی ئەوە باری %d "
+"(%s) بەدەستکەوت."
 
 #. TODO: more specific
 #: src/goabackend/goafacebookprovider.c:202
@@ -243,76 +257,79 @@ msgstr ""
 #: src/goabackend/goawindowsliveprovider.c:198
 #: src/goabackend/goawindowsliveprovider.c:211
 msgid "Could not parse response"
-msgstr ""
+msgstr "ناتوانرێت وەڵام شیبکرێتەوە"
 
 #: src/goabackend/goafedoraprovider.c:94
 msgid "Fedora"
-msgstr ""
+msgstr "فیدۆرا"
 
 #: src/goabackend/goafedoraprovider.c:208
 #: src/goabackend/goakerberosprovider.c:240
 msgid "Ticketing is disabled for account"
-msgstr ""
+msgstr "تکتکردن ناچالاک کرا بۆ ئەم هەژمارە"
 
 #: src/goabackend/goafedoraprovider.c:233
 #: src/goabackend/goakerberosprovider.c:265
 #, c-format
 msgid "Could not find saved credentials for principal “%s” in keyring"
 msgstr ""
+"نەتوانرا بەڵگەنامەی باوەڕپێکردنی پاشەکەوتکراو بدۆزرێتەوە بۆ  “%s” لەناو "
+"زنجیرەکلیل"
 
 #: src/goabackend/goafedoraprovider.c:246
 #: src/goabackend/goakerberosprovider.c:278
 #, c-format
 msgid "Did not find password for principal “%s” in credentials"
 msgstr ""
+"نەتوانرا وشەی تێپەڕبوون بدۆزرێتەوە بۆ “%s” لەناو بەڵگەنامەی باوەڕپیکراو"
 
 #: src/goabackend/goafedoraprovider.c:805
 msgid "Error connecting to Fedora"
-msgstr ""
+msgstr "هەڵە لە کاتی پەیوەندیکردن بە فیدۆراوە"
 
 #: src/goabackend/goafedoraprovider.c:1198
 #: src/goabackend/goakerberosprovider.c:1366
 msgid "Identity service returned invalid key"
-msgstr ""
+msgstr "خزمەتگوزاری پێناسی بە کلیلێکی نادروستەوە گەڕایەوە"
 
 #: src/goabackend/goaflickrprovider.c:56
 msgid "Flickr"
-msgstr ""
+msgstr "Flickr"
 
 #: src/goabackend/goaflickrprovider.c:271
 msgid "Your system time is invalid. Check your date and time settings."
-msgstr ""
+msgstr "کاتژمێری سیستمەکەت نادرووستە. ڕێکخستنی کات و ڕۆژ بپشکنە."
 
 #: src/goabackend/goafoursquareprovider.c:57
 msgid "Foursquare"
-msgstr ""
+msgstr "Foursquare"
 
 #: src/goabackend/goagoogleprovider.c:56
 msgid "Google"
-msgstr ""
+msgstr "گووگڵ"
 
 #. TODO: more specific
 #: src/goabackend/goaimapauthlogin.c:84 src/goabackend/goasmtpauth.c:149
 msgid "Service not available"
-msgstr ""
+msgstr "خزمەتگوزاری بەردەست نیە"
 
 #. TODO: more specific
 #: src/goabackend/goaimapauthlogin.c:104 src/goabackend/goalastfmprovider.c:521
 #: src/goabackend/goasmtpauth.c:102 src/goabackend/goautils.c:861
 msgid "Authentication failed"
-msgstr ""
+msgstr "ڕێپێدان سەرکەوتوو نەبوو"
 
 #: src/goabackend/goaimapauthlogin.c:129
 msgid "Server does not support PLAIN"
-msgstr ""
+msgstr "ڕاژە پشتگیری PLAIN ناکات"
 
 #: src/goabackend/goaimapauthlogin.c:181 src/goabackend/goasmtpauth.c:600
 msgid "Server does not support STARTTLS"
-msgstr ""
+msgstr "ڕاژە پشتگیری STARTTLS ناکات"
 
 #: src/goabackend/goaimapsmtpprovider.c:53
 msgid "IMAP and SMTP"
-msgstr ""
+msgstr "IMAP و SMTP"
 
 #. Translators: the first %s is a field name. The
 #. * second %s is the IMAP
@@ -328,7 +345,7 @@ msgstr ""
 #: src/goabackend/goaimapsmtpprovider.c:378
 #, c-format
 msgid "Invalid %s with username “%s” (%s, %d): "
-msgstr ""
+msgstr "%sـی نادرووست لەگەڵ ناوی بەکارهێنەر “%s” (%s, %d): "
 
 #. Translators: the following four strings are used to show a
 #. * combo box similar to the one in the evolution module.
@@ -338,15 +355,15 @@ msgstr ""
 #.
 #: src/goabackend/goaimapsmtpprovider.c:564
 msgid "_Encryption"
-msgstr ""
+msgstr "ـنهێنیکردن"
 
 #: src/goabackend/goaimapsmtpprovider.c:567
 msgid "None"
-msgstr ""
+msgstr "نییە"
 
 #: src/goabackend/goaimapsmtpprovider.c:570
 msgid "STARTTLS after connecting"
-msgstr ""
+msgstr "STARTTLS دووای پەیوەندیکردن"
 
 #: src/goabackend/goaimapsmtpprovider.c:573
 msgid "SSL on a dedicated port"
@@ -354,61 +371,61 @@ msgstr ""
 
 #: src/goabackend/goaimapsmtpprovider.c:648
 msgid "_Name"
-msgstr ""
+msgstr "ـناو"
 
 #: src/goabackend/goaimapsmtpprovider.c:665
 msgid "IMAP _Server"
-msgstr ""
+msgstr "ڕاژەیـ IMAP"
 
 #: src/goabackend/goaimapsmtpprovider.c:685
 msgid "SMTP _Server"
-msgstr ""
+msgstr "ڕاژەیـ SMTP"
 
 #: src/goabackend/goaimapsmtpprovider.c:700
 #: src/goabackend/goaimapsmtpprovider.c:972
 #: src/goabackend/goaimapsmtpprovider.c:1305
 msgid "_Forward"
-msgstr ""
+msgstr "ـناردنەوە"
 
 #: src/goabackend/goaimapsmtpprovider.c:956
 #: src/goabackend/goaimapsmtpprovider.c:1288
 msgid "Error connecting to IMAP server"
-msgstr ""
+msgstr "هەڵە لە کاتی پەیوەندی کردن بە ڕاژەی IMAP"
 
 #: src/goabackend/goaimapsmtpprovider.c:1053
 #: src/goabackend/goaimapsmtpprovider.c:1365
 msgid "Error connecting to SMTP server"
-msgstr ""
+msgstr "هەڵە لە کاتی پەیوەندی کردن بە ڕاژەی SMTP"
 
 #: src/goabackend/goaimapsmtpprovider.c:1476
 msgid "E-mail"
-msgstr ""
+msgstr "پۆستی ئەلیکترۆنی"
 
 #: src/goabackend/goaimapsmtpprovider.c:1480
 msgid "Name"
-msgstr ""
+msgstr "ناو"
 
 #: src/goabackend/goaimapsmtpprovider.c:1490
 #: src/goabackend/goaimapsmtpprovider.c:1494
 msgid "IMAP"
-msgstr ""
+msgstr "IMAP"
 
 #: src/goabackend/goaimapsmtpprovider.c:1505
 #: src/goabackend/goaimapsmtpprovider.c:1509
 msgid "SMTP"
-msgstr ""
+msgstr "SMTP"
 
 #: src/goabackend/goakerberosprovider.c:92
 msgid "Enterprise Login (Kerberos)"
-msgstr ""
+msgstr "چوونەژورەوەی دەزگاکان"
 
 #: src/goabackend/goakerberosprovider.c:578
 msgid "_Principal"
-msgstr ""
+msgstr "ـبنەما"
 
 #: src/goabackend/goakerberosprovider.c:793
 msgid "Operation was cancelled"
-msgstr ""
+msgstr "کردارەکە هەڵوەشێنرایەوە"
 
 #: src/goabackend/goakerberosprovider.c:837
 #: src/goaidentity/goaidentityservice.c:1265
@@ -417,28 +434,28 @@ msgstr ""
 
 #: src/goabackend/goakerberosprovider.c:838
 msgid "Please enter your password below."
-msgstr ""
+msgstr "تکایە وشەی تێپەڕبوونەکەت بنووسە لە خوارەوە."
 
 #: src/goabackend/goakerberosprovider.c:839
 msgid "Remember this password"
-msgstr ""
+msgstr "وشەی تێپەڕبوونم بیربێنەوە"
 
 #: src/goabackend/goakerberosprovider.c:1027
 msgid "Error connecting to enterprise identity server"
-msgstr ""
+msgstr "هەڵە لە کاتی پەیوەندی کردن بە راژەی پێناسی دەزگا"
 
 #: src/goabackend/goalastfmprovider.c:57
 msgid "Last.fm"
-msgstr ""
+msgstr "Last.fm"
 
 #: src/goabackend/goalastfmprovider.c:692
 #: src/goabackend/goalastfmprovider.c:842
 msgid "Error connecting to Last.fm"
-msgstr ""
+msgstr "هەڵە لە کاتی پەیوەندی کردن بە Last.fm"
 
 #: src/goabackend/goamediaserverprovider.c:55
 msgid "Media Server"
-msgstr ""
+msgstr "خزمەتگوزاری میدیا"
 
 #: src/goabackend/goamediaserverprovider.c:308
 msgid ""
@@ -448,11 +465,11 @@ msgstr ""
 
 #: src/goabackend/goamediaserverprovider.c:321
 msgid "Available Media Servers"
-msgstr ""
+msgstr "راژە میدیاییە بەردەستەکان"
 
 #: src/goabackend/goamediaserverprovider.c:352
 msgid "No media servers found"
-msgstr ""
+msgstr "هیچ ڕاژەیەکی میدیایی نەدۆزرایەوە"
 
 #. Translators: the %d is a HTTP status code and the %s is a textual description of it
 #: src/goabackend/goaoauth2provider.c:632 src/goabackend/goaoauthprovider.c:542
@@ -463,32 +480,32 @@ msgstr ""
 
 #: src/goabackend/goaoauth2provider.c:814
 msgid "Authorization response: "
-msgstr ""
+msgstr "ڕێگەپێدان: "
 
 #: src/goabackend/goaoauth2provider.c:884
 #, c-format
 msgid "Authorization response: %s"
-msgstr ""
+msgstr "ڕێگەپێدان: %s"
 
 #: src/goabackend/goaoauth2provider.c:1021
 #: src/goabackend/goaoauthprovider.c:890
 msgid "Error getting an Access Token: "
-msgstr ""
+msgstr "هەڵە لە بەدەستگەیشتنی هێمای جوونەژورەوە "
 
 #: src/goabackend/goaoauth2provider.c:1036
 #: src/goabackend/goaoauthprovider.c:903
 msgid "Error getting identity: "
-msgstr ""
+msgstr "هەڵە لە کاتی بەدەستهێنانی پێناس: "
 
 #: src/goabackend/goaoauth2provider.c:1230
 #: src/goabackend/goaoauthprovider.c:1168
 #, c-format
 msgid "Was asked to log in as %s, but logged in as %s"
-msgstr ""
+msgstr "داواکرا بچیتە ژورەوە وەک %s، بەڵام چوویتە ژورەوە وەک %s"
 
 #: src/goabackend/goaoauth2provider.c:1382
 msgid "Credentials do not contain access_token"
-msgstr ""
+msgstr "بەڵگەنامەی ڕێپیدانەکان هێمایـجوونانوی تێدا نیە"
 
 #: src/goabackend/goaoauth2provider.c:1421
 #: src/goabackend/goaoauthprovider.c:1383
@@ -521,80 +538,141 @@ msgstr ""
 
 #: src/goabackend/goaowncloudprovider.c:60
 msgid "Nextcloud"
-msgstr ""
+msgstr "Nextcloud"
 
 #: src/goabackend/goaowncloudprovider.c:729
 #: src/goabackend/goaowncloudprovider.c:920
 msgid "Error connecting to Nextcloud server"
-msgstr ""
+msgstr "هەڵە لە کاتی پەیوەندیکردن بە ڕاژەی Nextcloud"
 
-#: src/goabackend/goaprovider.c:112
+#: src/goabackend/goaubuntussoprovider.c:114
+msgid "Ubuntu Single Sign-On"
+msgstr "چوونەژوورەوەی یەکجاری ئوبونتوو"
+
+#: src/goabackend/goaubuntussoprovider.c:444
+msgid "_Email address:"
+msgstr "_پۆستی ئەلیکترۆنی:"
+
+#: src/goabackend/goaubuntussoprovider.c:445
+msgid "I have an Ubuntu Single Sign-On account"
+msgstr "من هەژماری چوونەناوەوەی یەکجاری ئوبونتووم هەیە"
+
+#: src/goabackend/goaubuntussoprovider.c:446
+msgid "_Password:"
+msgstr "_وشەی تێپەڕبوون"
+
+#: src/goabackend/goaubuntussoprovider.c:447
+msgid "I want to register for an account now"
+msgstr "دەمەوێت هەژمارێک تۆماربکەم ئێستا"
+
+#: src/goabackend/goaubuntussoprovider.c:448
+msgid "I've forgotten my password"
+msgstr "وشەی تێپەڕبوونم ون کردووە"
+
+#: src/goabackend/goaubuntussoprovider.c:475
+msgid "Passc_ode:"
+msgstr "کۆدیـتێپەڕبوون:"
+
+#: src/goabackend/goaubuntussoprovider.c:509
+msgid "Privacy Policy"
+msgstr "ڕێبازی تایبەتێتی"
+
+#: src/goabackend/goaubuntussoprovider.c:547
+msgid "Provided email/password is not correct"
+msgstr "پۆستی ئەلکترۆنی/وشەی تێپەڕبوونی دراو ڕاست نیە"
+
+#: src/goabackend/goaubuntussoprovider.c:549
+msgid "The provided 2-factor key is not recognised"
+msgstr "٢-کلیلە ڕێگای دابینکراو ناسراو نیە"
+
+#: src/goabackend/goaubuntussoprovider.c:551
+msgid "Something went wrong, please try again"
+msgstr "هەڵەیەل ڕوویدا، تکایە هەوڵ بدەرەوە"
+
+#: src/goabackend/goaubuntussoprovider.c:845
+msgid "Please enter a passcode from your authentication device or app"
+msgstr "تکایە کۆدی تێپەڕبوون لێبدە لە داوانامە یان ئامێری ڕێگەپێدانەکەتەوە"
+
+#: src/goabackend/goaubuntussoprovider.c:861
+#: src/goabackend/goaubuntussoprovider.c:911
+msgid "Error connecting to Ubuntu Single Sign-On server"
+msgstr "هەڵە لە کاتی پەیوەندیکردن بە ڕاژیە چوونەناوەوەی یەکجاری ئوبونتوو"
+
+#: src/goabackend/goaubuntussoprovider.c:899
+msgid ""
+"This account requires a second passcode from your authentication device or "
+"app"
+msgstr ""
+"ئەم هەژمارە کۆدی چونەژورەوەی دووەمت لێ داوادەکات کە لە بەرنامە یا ئامێری "
+"ڕێگەپێدانەوە دەستدەکەوێت"
+
+#: src/goabackend/goaprovider.c:113
 msgid "_Mail"
-msgstr ""
+msgstr "ـپۆست"
 
-#: src/goabackend/goaprovider.c:117
+#: src/goabackend/goaprovider.c:118
 msgid "Cale_ndar"
-msgstr ""
+msgstr "رۆژـژمێر"
 
-#: src/goabackend/goaprovider.c:122
+#: src/goabackend/goaprovider.c:123
 msgid "_Contacts"
-msgstr ""
+msgstr "ـهاوڕێکان"
 
-#: src/goabackend/goaprovider.c:127
+#: src/goabackend/goaprovider.c:128
 msgid "C_hat"
-msgstr ""
+msgstr "دەمەـتەقێ"
 
-#: src/goabackend/goaprovider.c:132
+#: src/goabackend/goaprovider.c:133
 msgid "_Documents"
-msgstr ""
+msgstr "ـبەڵگەنامەکان"
 
-#: src/goabackend/goaprovider.c:137
+#: src/goabackend/goaprovider.c:138
 msgid "M_usic"
-msgstr ""
+msgstr "مۆـسیقا"
 
-#: src/goabackend/goaprovider.c:142
+#: src/goabackend/goaprovider.c:143
 msgid "_Photos"
-msgstr ""
+msgstr "ـوێنەکان"
 
-#: src/goabackend/goaprovider.c:147
+#: src/goabackend/goaprovider.c:148
 msgid "_Files"
-msgstr ""
+msgstr "_پەڕگەکان"
 
-#: src/goabackend/goaprovider.c:152
+#: src/goabackend/goaprovider.c:153
 msgid "Network _Resources"
-msgstr ""
+msgstr "سەرچاوەکانیـڕایەڵە"
 
-#: src/goabackend/goaprovider.c:157
+#: src/goabackend/goaprovider.c:158
 msgid "_Read Later"
-msgstr ""
+msgstr "ـدوواتر بیخوێنەوە"
 
-#: src/goabackend/goaprovider.c:162
+#: src/goabackend/goaprovider.c:163
 msgid "Prin_ters"
-msgstr ""
+msgstr "چاپـکەر"
 
-#: src/goabackend/goaprovider.c:167
+#: src/goabackend/goaprovider.c:168
 msgid "_Maps"
-msgstr ""
+msgstr "ـنەخشە"
 
-#: src/goabackend/goaprovider.c:172
+#: src/goabackend/goaprovider.c:173
 msgid "T_o Do"
-msgstr ""
+msgstr "بۆـئەنجامدان"
 
 #. Translators: This is a label for a series of
 #. * options switches. For example: “Use for Mail”.
-#: src/goabackend/goaprovider.c:570
+#: src/goabackend/goaprovider.c:571
 msgid "Use for"
-msgstr ""
+msgstr "بەکاریبێنە بۆ"
 
-#: src/goabackend/goaprovider.c:825
+#: src/goabackend/goaprovider.c:826
 msgid "Account is disabled"
-msgstr ""
+msgstr "هەژمار ناچالاکە"
 
-#: src/goabackend/goaprovider.c:838
+#: src/goabackend/goaprovider.c:839
 msgid "Unknown error"
-msgstr ""
+msgstr "هەڵەیەکی نەزانراو"
 
-#: src/goabackend/goaprovider.c:857
+#: src/goabackend/goaprovider.c:858
 #, c-format
 msgid "ensure_credentials_sync is not implemented on type %s"
 msgstr ""
@@ -602,32 +680,32 @@ msgstr ""
 #. TODO: more specific
 #: src/goabackend/goasmtpauth.c:164
 msgid "TLS not available"
-msgstr ""
+msgstr "TLS بەردەست نیە"
 
 #: src/goabackend/goasmtpauth.c:470
 msgid "Unknown authentication mechanism"
-msgstr ""
+msgstr "شێوازی ڕێگەپێدان نەناسراوە"
 
 #: src/goabackend/goautils.c:92
 msgid "Error logging into the account"
-msgstr ""
+msgstr "هەڵە لە کاتی چوونەژورەوە بۆ هەژمار"
 
 #: src/goabackend/goautils.c:136
 msgid "Credentials have expired"
-msgstr ""
+msgstr "بەڵگەنامەی ڕێپێدانەکان بەسەرچووە"
 
 #: src/goabackend/goautils.c:140
 msgid "Sign in to enable this account."
-msgstr ""
+msgstr "بچۆ ژوورەوە بۆ چالاک کردنی ئەم هەژمارە."
 
 #: src/goabackend/goautils.c:144
 msgid "_Sign In"
-msgstr ""
+msgstr "ـبچۆ ژوورەوە"
 
 #: src/goabackend/goautils.c:240
 #, c-format
 msgid "A %s account already exists for %s"
-msgstr ""
+msgstr "هەژماری %s پێشتر هەیە بۆ %s"
 
 #. Translators: this is the title of the "Add Account" and "Refresh
 #. * Account" dialogs. The %s is the name of the provider. eg.,
@@ -636,26 +714,26 @@ msgstr ""
 #: src/goabackend/goautils.c:316
 #, c-format
 msgid "%s Account"
-msgstr ""
+msgstr "هەژماری %s"
 
 #. TODO: more specific
 #: src/goabackend/goautils.c:370
 msgid "Failed to delete credentials from the keyring"
-msgstr ""
+msgstr "نەتوانرا بەڵگەنامەی ڕێپێدانەکان بسڕێتەوە لە زنجیرەکلیل"
 
 #. TODO: more specific
 #: src/goabackend/goautils.c:418
 msgid "Failed to retrieve credentials from the keyring"
-msgstr ""
+msgstr "هەتوانرا بەڵگەنامەی ڕێپێدانەکان بەدستبهێنرێت لە زنجیرەکلیلەوە"
 
 #. TODO: more specific
 #: src/goabackend/goautils.c:428
 msgid "No credentials found in the keyring"
-msgstr ""
+msgstr "هیچ بەڵگەنامییەکی ڕێپێدان نەدۆزرایەوە لە زنجیرە کلیل"
 
 #: src/goabackend/goautils.c:441
 msgid "Error parsing result obtained from the keyring: "
-msgstr ""
+msgstr "هەڵە لە کاتی شیکردنەوەی ئەنجامەکان کە لە زنجیرەکلیلەوە بەدەستهاتبوون: "
 
 #. Translators: The %s is the type of the provider, e.g. 'google' or 'yahoo'
 #: src/goabackend/goautils.c:482
@@ -666,15 +744,15 @@ msgstr ""
 #. TODO: more specific
 #: src/goabackend/goautils.c:499
 msgid "Failed to store credentials in the keyring"
-msgstr ""
+msgstr "هەڵە لە کاتی پاشەکەوتکردنی بەڵگەنامەی ڕێپێدان لە ناو زنجیرەکلیل"
 
 #: src/goabackend/goautils.c:848
 msgid "Cannot resolve hostname"
-msgstr ""
+msgstr "ناتوانریت ناوی خانەخوێ چارەسەربکرێت"
 
 #: src/goabackend/goautils.c:852
 msgid "Cannot resolve proxy hostname"
-msgstr ""
+msgstr "ناتوانرێت ناوی خانەخوێی پرۆکسی"
 
 #: src/goabackend/goautils.c:857
 msgid "Cannot find WebDAV endpoint"
@@ -687,7 +765,7 @@ msgstr ""
 
 #: src/goabackend/goautils.c:882
 msgid "The signing certificate authority is not known."
-msgstr ""
+msgstr "دەسەڵاتی واژوکردنی بڕوانامەکان نەناسراوە."
 
 #: src/goabackend/goautils.c:886
 msgid ""
@@ -701,35 +779,36 @@ msgstr ""
 
 #: src/goabackend/goautils.c:895
 msgid "The certificate has expired."
-msgstr ""
+msgstr "یروانامە بەسەرچووە."
 
 #: src/goabackend/goautils.c:899
 msgid "The certificate has been revoked."
-msgstr ""
+msgstr "یروانامە پوچەڵکرایەوە"
 
 #: src/goabackend/goautils.c:903
 msgid "The certificate’s algorithm is considered insecure."
-msgstr ""
+msgstr "ئەلگۆریتمی بڕوانامە دانراوە بەوەی پارێزراو نیە."
 
 #: src/goabackend/goautils.c:909
 msgid "Invalid certificate."
-msgstr ""
+msgstr "بڕوانامەی نادرووست."
 
 #. TODO: more specific
 #: src/goabackend/goautils.c:944
 #, c-format
 msgid "Did not find %s with identity “%s” in credentials"
 msgstr ""
+"نەتوانرا  %s  بدۆزرێتەوە لەگەڵ پێناسی \"%s \" لەناو بەڵگەنامەی ڕێپێدانەکان"
 
 #. translators: %s here is the address of the web page
 #: src/goabackend/goawebview.c:89
 #, c-format
 msgid "Loading “%s”…"
-msgstr ""
+msgstr "بارکردنی \"%s \"..."
 
 #: src/goabackend/goawindowsliveprovider.c:56
 msgid "Microsoft"
-msgstr ""
+msgstr "Microsoft"
 
 #: src/goaidentity/goaidentityservice.c:564
 msgid "Initial secret key is invalid"
@@ -767,7 +846,7 @@ msgstr ""
 
 #: src/goaidentity/goakerberosidentity.c:1019
 msgid "No associated identification found"
-msgstr ""
+msgstr "هیچ پێناسێکی پێوەبەستراوە نەدۆزرایەوە"
 
 #: src/goaidentity/goakerberosidentity.c:1098
 msgid "Could not create credential cache: "
@@ -783,11 +862,11 @@ msgstr ""
 
 #: src/goaidentity/goakerberosidentity.c:1431
 msgid "Could not renew identity: Not signed in"
-msgstr ""
+msgstr "ناتوانیت پێناس نوێبکەیتەوە: لە ژورەوەنیت"
 
 #: src/goaidentity/goakerberosidentity.c:1441
 msgid "Could not renew identity: "
-msgstr ""
+msgstr "ناتوانیت پێناس نوێبکەیتەوە: "
 
 #: src/goaidentity/goakerberosidentity.c:1454
 #, c-format
@@ -796,12 +875,15 @@ msgstr ""
 
 #: src/goaidentity/goakerberosidentity.c:1495
 msgid "Could not erase identity: "
-msgstr ""
+msgstr "نەتوانرا پێناس بسڕێتەوە: "
 
 #: src/goaidentity/goakerberosidentitymanager.c:816
 msgid "Could not find identity"
-msgstr ""
+msgstr "نەتوانرا پێناس بدۆزرێتەوە"
 
 #: src/goaidentity/goakerberosidentitymanager.c:897
 msgid "Could not create credential cache for identity"
-msgstr ""
+msgstr "نەتوانرا حەشارگەی بەڵگەنامەی ڕێپێدان درووستبکرێت بۆ پێناس"
+
+#~ msgid "Pocket"
+#~ msgstr "Pocket"
