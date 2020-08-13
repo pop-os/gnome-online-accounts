@@ -8,7 +8,7 @@
 <link rel="up" href="ch07.html" title="Core">
 <link rel="prev" href="goa-goautil.html" title="goautil">
 <link rel="next" href="GoaOAuthProvider.html" title="GoaOAuthProvider">
-<meta name="generator" content="GTK-Doc V1.29 (XML mode)">
+<meta name="generator" content="GTK-Doc V1.32 (XML mode)">
 <link rel="stylesheet" href="style.css" type="text/css">
 </head>
 <body bgcolor="white" text="black" link="#0000FF" vlink="#840084" alink="#0000FF">
@@ -37,8 +37,8 @@
 <a name="GoaProvider.functions"></a><h2>Functions</h2>
 <div class="informaltable"><table class="informaltable" width="100%" border="0">
 <colgroup>
-<col width="150px" class="functions_return">
-<col class="functions_name">
+<col width="150px" class="functions_proto_type">
+<col class="functions_proto_name">
 </colgroup>
 <tbody>
 <tr>
@@ -199,8 +199,8 @@
 <a name="GoaProvider.other"></a><h2>Types and Values</h2>
 <div class="informaltable"><table class="informaltable" width="100%" border="0">
 <colgroup>
-<col width="150px" class="name">
-<col class="description">
+<col width="150px" class="other_proto_type">
+<col class="other_proto_name">
 </colgroup>
 <tbody>
 <tr>
@@ -1201,7 +1201,7 @@ user interface.</p>
 <td class="enum_member_name"><p><a name="GOA-PROVIDER-GROUP-BRANDED:CAPS"></a>GOA_PROVIDER_GROUP_BRANDED</p></td>
 <td class="enum_member_description">
 <p>Providers with a well-known brand. For
-  example, Google and Facebook.</p>
+example, Google and Facebook.</p>
 </td>
 <td class="enum_member_annotations"> </td>
 </tr>
@@ -1209,7 +1209,7 @@ user interface.</p>
 <td class="enum_member_name"><p><a name="GOA-PROVIDER-GROUP-CONTACTS:CAPS"></a>GOA_PROVIDER_GROUP_CONTACTS</p></td>
 <td class="enum_member_description">
 <p>Providers that offer address book services.
-  For example, CardDAV.</p>
+For example, CardDAV.</p>
 </td>
 <td class="enum_member_annotations"> </td>
 </tr>
@@ -1217,7 +1217,7 @@ user interface.</p>
 <td class="enum_member_name"><p><a name="GOA-PROVIDER-GROUP-MAIL:CAPS"></a>GOA_PROVIDER_GROUP_MAIL</p></td>
 <td class="enum_member_description">
 <p>Providers that offer email-like messaging
-  services. For example, IMAP and SMTP.</p>
+services. For example, IMAP and SMTP.</p>
 </td>
 <td class="enum_member_annotations"> </td>
 </tr>
@@ -1225,7 +1225,7 @@ user interface.</p>
 <td class="enum_member_name"><p><a name="GOA-PROVIDER-GROUP-TICKETING:CAPS"></a>GOA_PROVIDER_GROUP_TICKETING</p></td>
 <td class="enum_member_description">
 <p>Providers with ticketing
-  capabilities. For example, Kerberos.</p>
+capabilities. For example, Kerberos.</p>
 </td>
 <td class="enum_member_annotations"> </td>
 </tr>
@@ -1233,7 +1233,7 @@ user interface.</p>
 <td class="enum_member_name"><p><a name="GOA-PROVIDER-GROUP-CHAT:CAPS"></a>GOA_PROVIDER_GROUP_CHAT</p></td>
 <td class="enum_member_description">
 <p>Providers that offer chat-like messaging
-  capabilities. For example, XMPP, IRC.</p>
+capabilities. For example, XMPP, IRC.</p>
 </td>
 <td class="enum_member_annotations"> </td>
 </tr>
@@ -1241,7 +1241,7 @@ user interface.</p>
 <td class="enum_member_name"><p><a name="GOA-PROVIDER-GROUP-INVALID:CAPS"></a>GOA_PROVIDER_GROUP_INVALID</p></td>
 <td class="enum_member_description">
 <p>Used for error handling. No provider
-  should belong to this group.</p>
+should belong to this group.</p>
 </td>
 <td class="enum_member_annotations"> </td>
 </tr>
@@ -1367,7 +1367,7 @@ chat program).</p>
 <td class="enum_member_name"><p><a name="GOA-PROVIDER-FEATURE-INVALID:CAPS"></a>GOA_PROVIDER_FEATURE_INVALID</p></td>
 <td class="enum_member_description">
 <p>Used for error handling. No provider
-  should provide this feature.</p>
+should provide this feature.</p>
 </td>
 <td class="enum_member_annotations"> </td>
 </tr>
@@ -1412,20 +1412,20 @@ a <a href="/usr/share/gtk-doc/html/glib/glib-GVariant.html#GVariant"><span class
 12
 13
 14</pre></td>
-        <td class="listing_code"><pre class="programlisting"><span class="cbracket">{</span>
-<span class="normal">  </span><span class="string">"cookies"</span><span class="symbol">:</span><span class="normal"> </span><span class="symbol">[</span>
-<span class="normal">    </span><span class="cbracket">{</span>
-<span class="normal">      </span><span class="string">"domain"</span><span class="symbol">:</span><span class="normal"> </span><span class="string">"example.com"</span><span class="symbol">,</span>
-<span class="normal">      </span><span class="string">"name"</span><span class="symbol">:</span><span class="normal"> </span><span class="string">"LSID"</span><span class="symbol">,</span>
-<span class="normal">      </span><span class="string">"value"</span><span class="symbol">:</span><span class="normal"> </span><span class="string">"asdfasdfasdf"</span>
-<span class="normal">    </span><span class="cbracket">}</span><span class="symbol">,</span>
-<span class="normal">    </span><span class="cbracket">{</span>
-<span class="normal">      </span><span class="string">"domain"</span><span class="symbol">:</span><span class="normal"> </span><span class="string">"accounts.example.com"</span><span class="symbol">,</span>
-<span class="normal">      </span><span class="string">"name"</span><span class="symbol">:</span><span class="normal"> </span><span class="string">"SSID"</span><span class="symbol">,</span>
-<span class="normal">      </span><span class="string">"value"</span><span class="symbol">:</span><span class="normal"> </span><span class="string">"asdfasdfasdf"</span>
-<span class="normal">    </span><span class="cbracket">}</span>
-<span class="normal">  </span><span class="symbol">]</span>
-<span class="cbracket">}</span></pre></td>
+        <td class="listing_code"><pre class="programlisting"><span class="p">{</span>
+  <span class="s">&quot;cookies&quot;</span><span class="o">:</span> <span class="p">[</span>
+    <span class="p">{</span>
+      <span class="s">&quot;domain&quot;</span><span class="o">:</span> <span class="s">&quot;example.com&quot;</span><span class="p">,</span>
+      <span class="s">&quot;name&quot;</span><span class="o">:</span> <span class="s">&quot;LSID&quot;</span><span class="p">,</span>
+      <span class="s">&quot;value&quot;</span><span class="o">:</span> <span class="s">&quot;asdfasdfasdf&quot;</span>
+    <span class="p">},</span>
+    <span class="p">{</span>
+      <span class="s">&quot;domain&quot;</span><span class="o">:</span> <span class="s">&quot;accounts.example.com&quot;</span><span class="p">,</span>
+      <span class="s">&quot;name&quot;</span><span class="o">:</span> <span class="s">&quot;SSID&quot;</span><span class="p">,</span>
+      <span class="s">&quot;value&quot;</span><span class="o">:</span> <span class="s">&quot;asdfasdfasdf&quot;</span>
+    <span class="p">}</span>
+  <span class="p">]</span>
+<span class="p">}</span></pre></td>
       </tr>
     </tbody>
   </table>
@@ -1436,6 +1436,7 @@ a <a href="/usr/share/gtk-doc/html/glib/glib-GVariant.html#GVariant"><span class
 <p><code class="literal">GoaProvider:preseed-data</code> has been deprecated since version 3.28 and should not be used in newly-written code.</p>
 <p>This property does nothing.</p>
 </div>
+<p>Owner: GoaProvider</p>
 <p>Flags: Read / Write</p>
 <p>Allowed values: GVariant&lt;a{sv}&gt;</p>
 <p>Default value: NULL</p>
@@ -1443,6 +1444,6 @@ a <a href="/usr/share/gtk-doc/html/glib/glib-GVariant.html#GVariant"><span class
 </div>
 </div>
 <div class="footer">
-<hr>Generated by GTK-Doc V1.29</div>
+<hr>Generated by GTK-Doc V1.32</div>
 </body>
 </html>
