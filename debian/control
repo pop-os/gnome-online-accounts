@@ -23,7 +23,7 @@ Build-Depends: debhelper-compat (= 12),
                libsecret-1-dev,
                libsoup2.4-dev (>= 2.42),
                libjavascriptcoregtk-4.0-dev,
-               libwebkit2gtk-4.0-dev (>= 2.12.0),
+               libwebkit2gtk-4.0-dev (>= 2.26),
                valac
 Rules-Requires-Root: no
 Standards-Version: 4.4.1

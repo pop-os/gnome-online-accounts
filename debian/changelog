@@ -1,6 +1,8 @@
 gnome-online-accounts (3.37.90-1) UNRELEASED; urgency=medium
 
   * New upstream release
+  * debian/control.in:
+    - updated webkitgtk requirement
 
  -- Sebastien Bacher <seb128@ubuntu.com>  Thu, 13 Aug 2020 17:19:08 +0200
 
