@@ -1,4 +1,4 @@
-gnome-online-accounts (3.37.90-1) UNRELEASED; urgency=medium
+gnome-online-accounts (3.37.90-1) experimental; urgency=medium
 
   * New upstream release
   * debian/control.in:
