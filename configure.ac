@@ -1,6 +1,6 @@
 m4_define([goa_major_version], [3])
-m4_define([goa_minor_version], [36])
-m4_define([goa_micro_version], [0])
+m4_define([goa_minor_version], [37])
+m4_define([goa_micro_version], [90])
 m4_define([goa_nano_version], [0])
 
 m4_define([goa_base_version],
@@ -117,7 +117,7 @@ if test "$enable_backend" != "no"; then
   AC_SUBST(JAVASCRIPT_CORE_GTK_CFLAGS)
   AC_SUBST(JAVASCRIPT_CORE_GTK_LIBS)
 
-  PKG_CHECK_MODULES(WEBKIT_GTK, [webkit2gtk-4.0 >= 2.12.0])
+  PKG_CHECK_MODULES(WEBKIT_GTK, [webkit2gtk-4.0 >= 2.26.0])
   AC_SUBST(WEBKIT_GTK_CFLAGS)
   AC_SUBST(WEBKIT_GTK_LIBS)
 
