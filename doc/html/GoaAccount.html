@@ -8,7 +8,7 @@
 <link rel="up" href="ref-library-generated.html" title="Generated Code">
 <link rel="prev" href="GoaManager.html" title="GoaManager">
 <link rel="next" href="GoaOAuthBased.html" title="GoaOAuthBased">
-<meta name="generator" content="GTK-Doc V1.29 (XML mode)">
+<meta name="generator" content="GTK-Doc V1.32 (XML mode)">
 <link rel="stylesheet" href="style.css" type="text/css">
 </head>
 <body bgcolor="white" text="black" link="#0000FF" vlink="#840084" alink="#0000FF">
@@ -41,8 +41,8 @@
 <a name="GoaAccount.functions"></a><h2>Functions</h2>
 <div class="informaltable"><table class="informaltable" width="100%" border="0">
 <colgroup>
-<col width="150px" class="functions_return">
-<col class="functions_name">
+<col width="150px" class="functions_proto_type">
+<col class="functions_proto_name">
 </colgroup>
 <tbody>
 <tr>
@@ -678,9 +678,9 @@
 <a name="GoaAccount.signals"></a><h2>Signals</h2>
 <div class="informaltable"><table class="informaltable" border="0">
 <colgroup>
-<col width="150px" class="signals_return">
-<col width="300px" class="signals_name">
-<col width="200px" class="signals_flags">
+<col width="150px" class="signal_proto_type">
+<col width="300px" class="signal_proto_name">
+<col width="200px" class="signal_proto_flags">
 </colgroup>
 <tbody>
 <tr>
@@ -700,8 +700,8 @@
 <a name="GoaAccount.other"></a><h2>Types and Values</h2>
 <div class="informaltable"><table class="informaltable" width="100%" border="0">
 <colgroup>
-<col width="150px" class="name">
-<col class="description">
+<col width="150px" class="other_proto_type">
+<col class="other_proto_name">
 </colgroup>
 <tbody>
 <tr>
@@ -2948,7 +2948,6 @@ goa_account_skeleton_new (<em class="parameter"><code><span class="type">void</s
 <pre class="programlisting">struct GoaAccountIface {
   GTypeInterface parent_iface;
 
-
   gboolean (*handle_ensure_credentials) (
     GoaAccount *object,
     GDBusMethodInvocation *invocation);
@@ -3201,6 +3200,7 @@ goa_account_skeleton_new (<em class="parameter"><code><span class="type">void</s
 <pre class="programlisting">  “attention-needed”         <a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gboolean"><span class="type">gboolean</span></a></pre>
 <p>Represents the D-Bus property <a class="link" href="gdbus-org.gnome.OnlineAccounts.Account.html#gdbus-property-org-gnome-OnlineAccounts-Account.AttentionNeeded" title='The "AttentionNeeded" property'>"AttentionNeeded"</a>.</p>
 <p>Since the D-Bus property for this <a href="/usr/share/gtk-doc/html/gobject/gobject-The-Base-Object-Type.html#GObject-struct"><span class="type">GObject</span></a> property is readable but not writable, it is meaningful to read from it on both the client- and service-side. It is only meaningful, however, to write to it on the service-side.</p>
+<p>Owner: GoaAccount</p>
 <p>Flags: Read / Write</p>
 <p>Default value: FALSE</p>
 </div>
@@ -3210,6 +3210,7 @@ goa_account_skeleton_new (<em class="parameter"><code><span class="type">void</s
 <pre class="programlisting">  “calendar-disabled”        <a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gboolean"><span class="type">gboolean</span></a></pre>
 <p>Represents the D-Bus property <a class="link" href="gdbus-org.gnome.OnlineAccounts.Account.html#gdbus-property-org-gnome-OnlineAccounts-Account.CalendarDisabled" title='The "CalendarDisabled" property'>"CalendarDisabled"</a>.</p>
 <p>Since the D-Bus property for this <a href="/usr/share/gtk-doc/html/gobject/gobject-The-Base-Object-Type.html#GObject-struct"><span class="type">GObject</span></a> property is both readable and writable, it is meaningful to both read from it and write to it on both the service- and client-side.</p>
+<p>Owner: GoaAccount</p>
 <p>Flags: Read / Write</p>
 <p>Default value: FALSE</p>
 </div>
@@ -3219,6 +3220,7 @@ goa_account_skeleton_new (<em class="parameter"><code><span class="type">void</s
 <pre class="programlisting">  “chat-disabled”            <a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gboolean"><span class="type">gboolean</span></a></pre>
 <p>Represents the D-Bus property <a class="link" href="gdbus-org.gnome.OnlineAccounts.Account.html#gdbus-property-org-gnome-OnlineAccounts-Account.ChatDisabled" title='The "ChatDisabled" property'>"ChatDisabled"</a>.</p>
 <p>Since the D-Bus property for this <a href="/usr/share/gtk-doc/html/gobject/gobject-The-Base-Object-Type.html#GObject-struct"><span class="type">GObject</span></a> property is both readable and writable, it is meaningful to both read from it and write to it on both the service- and client-side.</p>
+<p>Owner: GoaAccount</p>
 <p>Flags: Read / Write</p>
 <p>Default value: FALSE</p>
 </div>
@@ -3228,6 +3230,7 @@ goa_account_skeleton_new (<em class="parameter"><code><span class="type">void</s
 <pre class="programlisting">  “contacts-disabled”        <a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gboolean"><span class="type">gboolean</span></a></pre>
 <p>Represents the D-Bus property <a class="link" href="gdbus-org.gnome.OnlineAccounts.Account.html#gdbus-property-org-gnome-OnlineAccounts-Account.ContactsDisabled" title='The "ContactsDisabled" property'>"ContactsDisabled"</a>.</p>
 <p>Since the D-Bus property for this <a href="/usr/share/gtk-doc/html/gobject/gobject-The-Base-Object-Type.html#GObject-struct"><span class="type">GObject</span></a> property is both readable and writable, it is meaningful to both read from it and write to it on both the service- and client-side.</p>
+<p>Owner: GoaAccount</p>
 <p>Flags: Read / Write</p>
 <p>Default value: FALSE</p>
 </div>
@@ -3237,6 +3240,7 @@ goa_account_skeleton_new (<em class="parameter"><code><span class="type">void</s
 <pre class="programlisting">  “documents-disabled”       <a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gboolean"><span class="type">gboolean</span></a></pre>
 <p>Represents the D-Bus property <a class="link" href="gdbus-org.gnome.OnlineAccounts.Account.html#gdbus-property-org-gnome-OnlineAccounts-Account.DocumentsDisabled" title='The "DocumentsDisabled" property'>"DocumentsDisabled"</a>.</p>
 <p>Since the D-Bus property for this <a href="/usr/share/gtk-doc/html/gobject/gobject-The-Base-Object-Type.html#GObject-struct"><span class="type">GObject</span></a> property is both readable and writable, it is meaningful to both read from it and write to it on both the service- and client-side.</p>
+<p>Owner: GoaAccount</p>
 <p>Flags: Read / Write</p>
 <p>Default value: FALSE</p>
 </div>
@@ -3246,6 +3250,7 @@ goa_account_skeleton_new (<em class="parameter"><code><span class="type">void</s
 <pre class="programlisting">  “files-disabled”           <a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gboolean"><span class="type">gboolean</span></a></pre>
 <p>Represents the D-Bus property <a class="link" href="gdbus-org.gnome.OnlineAccounts.Account.html#gdbus-property-org-gnome-OnlineAccounts-Account.FilesDisabled" title='The "FilesDisabled" property'>"FilesDisabled"</a>.</p>
 <p>Since the D-Bus property for this <a href="/usr/share/gtk-doc/html/gobject/gobject-The-Base-Object-Type.html#GObject-struct"><span class="type">GObject</span></a> property is both readable and writable, it is meaningful to both read from it and write to it on both the service- and client-side.</p>
+<p>Owner: GoaAccount</p>
 <p>Flags: Read / Write</p>
 <p>Default value: FALSE</p>
 <p class="since">Since: 3.8.0</p>
@@ -3256,6 +3261,7 @@ goa_account_skeleton_new (<em class="parameter"><code><span class="type">void</s
 <pre class="programlisting">  “id”                       <a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a> *</pre>
 <p>Represents the D-Bus property <a class="link" href="gdbus-org.gnome.OnlineAccounts.Account.html#gdbus-property-org-gnome-OnlineAccounts-Account.Id" title='The "Id" property'>"Id"</a>.</p>
 <p>Since the D-Bus property for this <a href="/usr/share/gtk-doc/html/gobject/gobject-The-Base-Object-Type.html#GObject-struct"><span class="type">GObject</span></a> property is readable but not writable, it is meaningful to read from it on both the client- and service-side. It is only meaningful, however, to write to it on the service-side.</p>
+<p>Owner: GoaAccount</p>
 <p>Flags: Read / Write</p>
 <p>Default value: NULL</p>
 </div>
@@ -3265,6 +3271,7 @@ goa_account_skeleton_new (<em class="parameter"><code><span class="type">void</s
 <pre class="programlisting">  “identity”                 <a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a> *</pre>
 <p>Represents the D-Bus property <a class="link" href="gdbus-org.gnome.OnlineAccounts.Account.html#gdbus-property-org-gnome-OnlineAccounts-Account.Identity" title='The "Identity" property'>"Identity"</a>.</p>
 <p>Since the D-Bus property for this <a href="/usr/share/gtk-doc/html/gobject/gobject-The-Base-Object-Type.html#GObject-struct"><span class="type">GObject</span></a> property is readable but not writable, it is meaningful to read from it on both the client- and service-side. It is only meaningful, however, to write to it on the service-side.</p>
+<p>Owner: GoaAccount</p>
 <p>Flags: Read / Write</p>
 <p>Default value: NULL</p>
 </div>
@@ -3274,6 +3281,7 @@ goa_account_skeleton_new (<em class="parameter"><code><span class="type">void</s
 <pre class="programlisting">  “is-locked”                <a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gboolean"><span class="type">gboolean</span></a></pre>
 <p>Represents the D-Bus property <a class="link" href="gdbus-org.gnome.OnlineAccounts.Account.html#gdbus-property-org-gnome-OnlineAccounts-Account.IsLocked" title='The "IsLocked" property'>"IsLocked"</a>.</p>
 <p>Since the D-Bus property for this <a href="/usr/share/gtk-doc/html/gobject/gobject-The-Base-Object-Type.html#GObject-struct"><span class="type">GObject</span></a> property is readable but not writable, it is meaningful to read from it on both the client- and service-side. It is only meaningful, however, to write to it on the service-side.</p>
+<p>Owner: GoaAccount</p>
 <p>Flags: Read / Write</p>
 <p>Default value: FALSE</p>
 <p class="since">Since: 3.16.0</p>
@@ -3284,6 +3292,7 @@ goa_account_skeleton_new (<em class="parameter"><code><span class="type">void</s
 <pre class="programlisting">  “is-temporary”             <a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gboolean"><span class="type">gboolean</span></a></pre>
 <p>Represents the D-Bus property <a class="link" href="gdbus-org.gnome.OnlineAccounts.Account.html#gdbus-property-org-gnome-OnlineAccounts-Account.IsTemporary" title='The "IsTemporary" property'>"IsTemporary"</a>.</p>
 <p>Since the D-Bus property for this <a href="/usr/share/gtk-doc/html/gobject/gobject-The-Base-Object-Type.html#GObject-struct"><span class="type">GObject</span></a> property is both readable and writable, it is meaningful to both read from it and write to it on both the service- and client-side.</p>
+<p>Owner: GoaAccount</p>
 <p>Flags: Read / Write</p>
 <p>Default value: FALSE</p>
 </div>
@@ -3293,6 +3302,7 @@ goa_account_skeleton_new (<em class="parameter"><code><span class="type">void</s
 <pre class="programlisting">  “mail-disabled”            <a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gboolean"><span class="type">gboolean</span></a></pre>
 <p>Represents the D-Bus property <a class="link" href="gdbus-org.gnome.OnlineAccounts.Account.html#gdbus-property-org-gnome-OnlineAccounts-Account.MailDisabled" title='The "MailDisabled" property'>"MailDisabled"</a>.</p>
 <p>Since the D-Bus property for this <a href="/usr/share/gtk-doc/html/gobject/gobject-The-Base-Object-Type.html#GObject-struct"><span class="type">GObject</span></a> property is both readable and writable, it is meaningful to both read from it and write to it on both the service- and client-side.</p>
+<p>Owner: GoaAccount</p>
 <p>Flags: Read / Write</p>
 <p>Default value: FALSE</p>
 </div>
@@ -3302,6 +3312,7 @@ goa_account_skeleton_new (<em class="parameter"><code><span class="type">void</s
 <pre class="programlisting">  “maps-disabled”            <a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gboolean"><span class="type">gboolean</span></a></pre>
 <p>Represents the D-Bus property <a class="link" href="gdbus-org.gnome.OnlineAccounts.Account.html#gdbus-property-org-gnome-OnlineAccounts-Account.MapsDisabled" title='The "MapsDisabled" property'>"MapsDisabled"</a>.</p>
 <p>Since the D-Bus property for this <a href="/usr/share/gtk-doc/html/gobject/gobject-The-Base-Object-Type.html#GObject-struct"><span class="type">GObject</span></a> property is both readable and writable, it is meaningful to both read from it and write to it on both the service- and client-side.</p>
+<p>Owner: GoaAccount</p>
 <p>Flags: Read / Write</p>
 <p>Default value: FALSE</p>
 <p class="since">Since: 3.14.0</p>
@@ -3312,6 +3323,7 @@ goa_account_skeleton_new (<em class="parameter"><code><span class="type">void</s
 <pre class="programlisting">  “music-disabled”           <a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gboolean"><span class="type">gboolean</span></a></pre>
 <p>Represents the D-Bus property <a class="link" href="gdbus-org.gnome.OnlineAccounts.Account.html#gdbus-property-org-gnome-OnlineAccounts-Account.MusicDisabled" title='The "MusicDisabled" property'>"MusicDisabled"</a>.</p>
 <p>Since the D-Bus property for this <a href="/usr/share/gtk-doc/html/gobject/gobject-The-Base-Object-Type.html#GObject-struct"><span class="type">GObject</span></a> property is both readable and writable, it is meaningful to both read from it and write to it on both the service- and client-side.</p>
+<p>Owner: GoaAccount</p>
 <p>Flags: Read / Write</p>
 <p>Default value: FALSE</p>
 <p class="since">Since: 3.18.0</p>
@@ -3322,6 +3334,7 @@ goa_account_skeleton_new (<em class="parameter"><code><span class="type">void</s
 <pre class="programlisting">  “photos-disabled”          <a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gboolean"><span class="type">gboolean</span></a></pre>
 <p>Represents the D-Bus property <a class="link" href="gdbus-org.gnome.OnlineAccounts.Account.html#gdbus-property-org-gnome-OnlineAccounts-Account.PhotosDisabled" title='The "PhotosDisabled" property'>"PhotosDisabled"</a>.</p>
 <p>Since the D-Bus property for this <a href="/usr/share/gtk-doc/html/gobject/gobject-The-Base-Object-Type.html#GObject-struct"><span class="type">GObject</span></a> property is both readable and writable, it is meaningful to both read from it and write to it on both the service- and client-side.</p>
+<p>Owner: GoaAccount</p>
 <p>Flags: Read / Write</p>
 <p>Default value: FALSE</p>
 <p class="since">Since: 3.8.0</p>
@@ -3332,6 +3345,7 @@ goa_account_skeleton_new (<em class="parameter"><code><span class="type">void</s
 <pre class="programlisting">  “presentation-identity”    <a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a> *</pre>
 <p>Represents the D-Bus property <a class="link" href="gdbus-org.gnome.OnlineAccounts.Account.html#gdbus-property-org-gnome-OnlineAccounts-Account.PresentationIdentity" title='The "PresentationIdentity" property'>"PresentationIdentity"</a>.</p>
 <p>Since the D-Bus property for this <a href="/usr/share/gtk-doc/html/gobject/gobject-The-Base-Object-Type.html#GObject-struct"><span class="type">GObject</span></a> property is readable but not writable, it is meaningful to read from it on both the client- and service-side. It is only meaningful, however, to write to it on the service-side.</p>
+<p>Owner: GoaAccount</p>
 <p>Flags: Read / Write</p>
 <p>Default value: NULL</p>
 </div>
@@ -3341,6 +3355,7 @@ goa_account_skeleton_new (<em class="parameter"><code><span class="type">void</s
 <pre class="programlisting">  “printers-disabled”        <a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gboolean"><span class="type">gboolean</span></a></pre>
 <p>Represents the D-Bus property <a class="link" href="gdbus-org.gnome.OnlineAccounts.Account.html#gdbus-property-org-gnome-OnlineAccounts-Account.PrintersDisabled" title='The "PrintersDisabled" property'>"PrintersDisabled"</a>.</p>
 <p>Since the D-Bus property for this <a href="/usr/share/gtk-doc/html/gobject/gobject-The-Base-Object-Type.html#GObject-struct"><span class="type">GObject</span></a> property is both readable and writable, it is meaningful to both read from it and write to it on both the service- and client-side.</p>
+<p>Owner: GoaAccount</p>
 <p>Flags: Read / Write</p>
 <p>Default value: FALSE</p>
 <p class="since">Since: 3.12.0</p>
@@ -3351,6 +3366,7 @@ goa_account_skeleton_new (<em class="parameter"><code><span class="type">void</s
 <pre class="programlisting">  “provider-icon”            <a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a> *</pre>
 <p>Represents the D-Bus property <a class="link" href="gdbus-org.gnome.OnlineAccounts.Account.html#gdbus-property-org-gnome-OnlineAccounts-Account.ProviderIcon" title='The "ProviderIcon" property'>"ProviderIcon"</a>.</p>
 <p>Since the D-Bus property for this <a href="/usr/share/gtk-doc/html/gobject/gobject-The-Base-Object-Type.html#GObject-struct"><span class="type">GObject</span></a> property is readable but not writable, it is meaningful to read from it on both the client- and service-side. It is only meaningful, however, to write to it on the service-side.</p>
+<p>Owner: GoaAccount</p>
 <p>Flags: Read / Write</p>
 <p>Default value: NULL</p>
 </div>
@@ -3360,6 +3376,7 @@ goa_account_skeleton_new (<em class="parameter"><code><span class="type">void</s
 <pre class="programlisting">  “provider-name”            <a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a> *</pre>
 <p>Represents the D-Bus property <a class="link" href="gdbus-org.gnome.OnlineAccounts.Account.html#gdbus-property-org-gnome-OnlineAccounts-Account.ProviderName" title='The "ProviderName" property'>"ProviderName"</a>.</p>
 <p>Since the D-Bus property for this <a href="/usr/share/gtk-doc/html/gobject/gobject-The-Base-Object-Type.html#GObject-struct"><span class="type">GObject</span></a> property is readable but not writable, it is meaningful to read from it on both the client- and service-side. It is only meaningful, however, to write to it on the service-side.</p>
+<p>Owner: GoaAccount</p>
 <p>Flags: Read / Write</p>
 <p>Default value: NULL</p>
 </div>
@@ -3369,6 +3386,7 @@ goa_account_skeleton_new (<em class="parameter"><code><span class="type">void</s
 <pre class="programlisting">  “provider-type”            <a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a> *</pre>
 <p>Represents the D-Bus property <a class="link" href="gdbus-org.gnome.OnlineAccounts.Account.html#gdbus-property-org-gnome-OnlineAccounts-Account.ProviderType" title='The "ProviderType" property'>"ProviderType"</a>.</p>
 <p>Since the D-Bus property for this <a href="/usr/share/gtk-doc/html/gobject/gobject-The-Base-Object-Type.html#GObject-struct"><span class="type">GObject</span></a> property is readable but not writable, it is meaningful to read from it on both the client- and service-side. It is only meaningful, however, to write to it on the service-side.</p>
+<p>Owner: GoaAccount</p>
 <p>Flags: Read / Write</p>
 <p>Default value: NULL</p>
 </div>
@@ -3378,6 +3396,7 @@ goa_account_skeleton_new (<em class="parameter"><code><span class="type">void</s
 <pre class="programlisting">  “read-later-disabled”      <a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gboolean"><span class="type">gboolean</span></a></pre>
 <p>Represents the D-Bus property <a class="link" href="gdbus-org.gnome.OnlineAccounts.Account.html#gdbus-property-org-gnome-OnlineAccounts-Account.ReadLaterDisabled" title='The "ReadLaterDisabled" property'>"ReadLaterDisabled"</a>.</p>
 <p>Since the D-Bus property for this <a href="/usr/share/gtk-doc/html/gobject/gobject-The-Base-Object-Type.html#GObject-struct"><span class="type">GObject</span></a> property is both readable and writable, it is meaningful to both read from it and write to it on both the service- and client-side.</p>
+<p>Owner: GoaAccount</p>
 <p>Flags: Read / Write</p>
 <p>Default value: FALSE</p>
 <p class="since">Since: 3.12.0</p>
@@ -3388,6 +3407,7 @@ goa_account_skeleton_new (<em class="parameter"><code><span class="type">void</s
 <pre class="programlisting">  “ticketing-disabled”       <a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gboolean"><span class="type">gboolean</span></a></pre>
 <p>Represents the D-Bus property <a class="link" href="gdbus-org.gnome.OnlineAccounts.Account.html#gdbus-property-org-gnome-OnlineAccounts-Account.TicketingDisabled" title='The "TicketingDisabled" property'>"TicketingDisabled"</a>.</p>
 <p>Since the D-Bus property for this <a href="/usr/share/gtk-doc/html/gobject/gobject-The-Base-Object-Type.html#GObject-struct"><span class="type">GObject</span></a> property is both readable and writable, it is meaningful to both read from it and write to it on both the service- and client-side.</p>
+<p>Owner: GoaAccount</p>
 <p>Flags: Read / Write</p>
 <p>Default value: FALSE</p>
 <p class="since">Since: 3.6.0</p>
@@ -3402,6 +3422,7 @@ goa_account_skeleton_new (<em class="parameter"><code><span class="type">void</s
 <p><code class="literal">GoaAccount:todo-disabled</code> is deprecated and should not be used in newly-written code.</p>
 <p>The D-Bus property has been deprecated.</p>
 </div>
+<p>Owner: GoaAccount</p>
 <p>Flags: Read / Write</p>
 <p>Default value: FALSE</p>
 <p class="since">Since: 3.26.0</p>
@@ -3497,6 +3518,6 @@ user_function (<a class="link" href="GoaAccount.html" title="GoaAccount"><span c
 </div>
 </div>
 <div class="footer">
-<hr>Generated by GTK-Doc V1.29</div>
+<hr>Generated by GTK-Doc V1.32</div>
 </body>
 </html>

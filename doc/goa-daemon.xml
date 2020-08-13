@@ -1,14 +1,14 @@
 <refentry id="goa-daemon.8">
   <refentryinfo>
     <title>goa-daemon</title>
-    <date>April 2011</date>
+    <date>June 2020</date>
     <productname>GNOME</productname>
   </refentryinfo>
 
   <refmeta>
     <refentrytitle>goa-daemon</refentrytitle>
     <manvolnum>8</manvolnum>
-    <refmiscinfo class="version"></refmiscinfo>
+    <refmiscinfo class="manual">System Management Commands</refmiscinfo>
   </refmeta>
 
   <refnamediv>
@@ -105,6 +105,8 @@
       Please send bug reports to either the distribution bug tracker
       or the upstream bug tracker at
       <ulink url="https://gitlab.gnome.org/GNOME/gnome-online-accounts/issues"></ulink>.
+      There are some debugging tips at
+      <ulink url="https://wiki.gnome.org/Projects/GnomeOnlineAccounts/Debugging"></ulink>
     </para>
   </refsect1>
 
