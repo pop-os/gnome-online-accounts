@@ -1,3 +1,12 @@
+gnome-online-accounts (3.37.90-2) unstable; urgency=medium
+
+  * Team upload
+  * Add superficial autopkgtests for libgoa-1.0-dev and gir1.2-goa-1.0
+  * Release to unstable, to get WebKitGTK sandboxing (introduced upstream
+    in 3.37.90) for online account provider login prompts
+
+ -- Simon McVittie <smcv@debian.org>  Sun, 27 Sep 2020 19:11:21 +0100
+
 gnome-online-accounts (3.37.90-1) experimental; urgency=medium
 
   * New upstream release
