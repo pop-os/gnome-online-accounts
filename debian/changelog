@@ -1,3 +1,9 @@
+gnome-online-accounts (3.38.0-1) UNRELEASED; urgency=medium
+
+  * New upstream release
+
+ -- Jeremy Bicha <jbicha@debian.org>  Sun, 18 Oct 2020 09:55:24 -0400
+
 gnome-online-accounts (3.37.90-2) unstable; urgency=medium
 
   * Team upload
