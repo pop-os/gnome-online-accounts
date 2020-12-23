@@ -12,14 +12,14 @@ Build-Depends: debhelper-compat (= 12),
                libgirepository1.0-dev (>= 0.9.3),
                libglib2.0-dev (>= 2.52),
                libglib2.0-doc,
-               libgtk-3-dev (>= 3.19.12),
-               libjson-glib-dev,
+               libgtk-3-dev (>= 3.19.12) [!kfreebsd-any],
+               libjson-glib-dev [!kfreebsd-any],
                libkrb5-dev,
-               librest-dev,
-               libsecret-1-dev,
-               libsoup2.4-dev (>= 2.42),
-               libjavascriptcoregtk-4.0-dev,
-               libwebkit2gtk-4.0-dev (>= 2.26),
+               librest-dev [!kfreebsd-any],
+               libsecret-1-dev [!kfreebsd-any],
+               libsoup2.4-dev (>= 2.42) [!kfreebsd-any],
+               libjavascriptcoregtk-4.0-dev [!kfreebsd-any],
+               libwebkit2gtk-4.0-dev (>= 2.26) [!kfreebsd-any],
                valac
 Rules-Requires-Root: no
 Standards-Version: 4.5.1
@@ -28,7 +28,7 @@ Vcs-Git: https://salsa.debian.org/gnome-team/gnome-online-accounts.git
 Homepage: https://wiki.gnome.org/Projects/GnomeOnlineAccounts
 
 Package: gnome-online-accounts
-Architecture: any
+Architecture: linux-any hurd-i386
 Depends: libgoa-1.0-0b (= ${binary:Version}),
          libgoa-backend-1.0-1 (= ${binary:Version}),
          ${misc:Depends},
@@ -75,7 +75,7 @@ Description: library for GNOME Online Accounts - development files
  the service.
 
 Package: libgoa-backend-1.0-1
-Architecture: any
+Architecture: linux-any hurd-i386
 Section: libs
 Depends: libgoa-1.0-common (>= ${source:Version}),
          ${misc:Depends},
@@ -90,7 +90,7 @@ Description: backend library for GNOME Online Accounts
  This package contains the backend libraries used by GOA applications.
 
 Package: libgoa-backend-1.0-dev
-Architecture: any
+Architecture: linux-any hurd-i386
 Section: libdevel
 Depends: gir1.2-goa-1.0 (= ${binary:Version}),
          libgoa-1.0-dev (= ${binary:Version}),

@@ -9,6 +9,10 @@ ifeq ($(shell dpkg-vendor --is Ubuntu && echo yes) $(DEB_HOST_ARCH), yes i386)
    skip_packages = -Ngnome-online-accounts
 endif
 
+ifneq ($(filter kfreebsd,$(DEB_HOST_ARCH_OS)),)
+  DISABLE_BACKEND := --disable-backend
+endif
+
 %:
 	dh $@
 
@@ -29,7 +33,8 @@ override_dh_auto_configure:
 		--enable-owncloud \
 		--enable-imap-smtp \
 		--enable-exchange \
-		--enable-foursquare
+		--enable-foursquare \
+		$(DISABLE_BACKEND)
 
 override_dh_install:
 	find debian/tmp -name '*.a' -print -delete
