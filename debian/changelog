@@ -1,3 +1,55 @@
+gnome-online-accounts (3.38.0-3ubuntu1) UNRELEASED; urgency=medium
+
+  * Merge with debian, remaining changes:
+    + debian/rules:
+      - Make sure that gnome-online-accounts.pot is refreshed so the
+        strings from 0001-ubuntu-sso-provider.patch are included (LP: #1759251).
+      - Build with --enable-ubuntu-sso
+    + debian/control.*:
+      - Add b-d on libsnapd-glib-dev
+      - depends on python3 and python3-macaroonbakery for the ubuntu sso
+        provider.
+    + debian/gnome-online-accounts.install:
+      install usr/share/goa-1.0/scripts/lpa_helper.py
+    + debian/libgoa-backend-1.0-1.symbols:
+      Add goa_ubuntu_sso_provider_get_type
+    + Ubuntu-specific patches:
+      - debian/patches/0001-ubuntu-sso-provider.patch
+      - debian/patches/0002-livepatch-auth.patch
+
+ -- Sebastien Bacher <seb128@ubuntu.com>  Thu, 14 Jan 2021 13:47:31 +0100
+
+gnome-online-accounts (3.38.0-3) unstable; urgency=medium
+
+  * Split the dep8 tests for libgoa-1.0-dev and libgoa-backend-1.0-dev
+
+ -- Laurent Bigonville <bigon@debian.org>  Fri, 25 Dec 2020 23:25:48 +0100
+
+gnome-online-accounts (3.38.0-2) unstable; urgency=medium
+
+  * debian/control.in: Bump Standards-Version to 4.5.1 (no further changes)
+  * debian/control.in: Adjust the dependencies of the -dev packages
+    libgoa-backend-1.0-dev should depend on libgoa-1.0-dev and not the
+    other way around. Remove unnecessary dependencies
+  * Disable the backends on kfreebsd architectures
+
+ -- Laurent Bigonville <bigon@debian.org>  Thu, 24 Dec 2020 09:51:22 +0100
+
+gnome-online-accounts (3.38.0-1) unstable; urgency=medium
+
+  * New upstream release
+
+ -- Jeremy Bicha <jbicha@debian.org>  Sun, 18 Oct 2020 09:56:56 -0400
+
+gnome-online-accounts (3.37.90-2) unstable; urgency=medium
+
+  * Team upload
+  * Add superficial autopkgtests for libgoa-1.0-dev and gir1.2-goa-1.0
+  * Release to unstable, to get WebKitGTK sandboxing (introduced upstream
+    in 3.37.90) for online account provider login prompts
+
+ -- Simon McVittie <smcv@debian.org>  Sun, 27 Sep 2020 19:11:21 +0100
+
 gnome-online-accounts (3.37.90-1ubuntu1) groovy; urgency=medium
 
   * Merge with debian, remaining changes:
