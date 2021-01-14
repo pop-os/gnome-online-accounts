@@ -1,4 +1,4 @@
-gnome-online-accounts (3.38.0-3ubuntu1) UNRELEASED; urgency=medium
+gnome-online-accounts (3.38.0-3ubuntu1) hirsute; urgency=medium
 
   * Merge with debian, remaining changes:
     + debian/rules:
