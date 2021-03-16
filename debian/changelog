@@ -1,8 +1,8 @@
-gnome-online-accounts (3.38.1-1) UNRELEASED; urgency=medium
+gnome-online-accounts (3.38.1-1) unstable; urgency=medium
 
   * New upstream release
 
- -- Sebastien Bacher <seb128@ubuntu.com>  Tue, 16 Mar 2021 11:26:11 +0100
+ -- Sebastien Bacher <seb128@ubuntu.com>  Tue, 16 Mar 2021 11:36:39 +0100
 
 gnome-online-accounts (3.38.0-3) unstable; urgency=medium
 
