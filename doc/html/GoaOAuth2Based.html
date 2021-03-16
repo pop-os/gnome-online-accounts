@@ -8,7 +8,7 @@
 <link rel="up" href="ref-library-generated.html" title="Generated Code">
 <link rel="prev" href="GoaOAuthBased.html" title="GoaOAuthBased">
 <link rel="next" href="GoaPasswordBased.html" title="GoaPasswordBased">
-<meta name="generator" content="GTK-Doc V1.32 (XML mode)">
+<meta name="generator" content="GTK-Doc V1.33.1 (XML mode)">
 <link rel="stylesheet" href="style.css" type="text/css">
 </head>
 <body bgcolor="white" text="black" link="#0000FF" vlink="#840084" alink="#0000FF">
@@ -209,13 +209,13 @@
 <tbody>
 <tr>
 <td class="property_type">
-<a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a> *</td>
+<span class="type">char</span> *</td>
 <td class="property_name"><a class="link" href="GoaOAuth2Based.html#GoaOAuth2Based--client-id" title="The “client-id” property">client-id</a></td>
 <td class="property_flags">Read / Write</td>
 </tr>
 <tr>
 <td class="property_type">
-<a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a> *</td>
+<span class="type">char</span> *</td>
 <td class="property_name"><a class="link" href="GoaOAuth2Based.html#GoaOAuth2Based--client-secret" title="The “client-secret” property">client-secret</a></td>
 <td class="property_flags">Read / Write</td>
 </tr>
@@ -318,7 +318,7 @@ goa_oauth2_based_interface_info (<em class="parameter"><code><span class="type">
 <div class="refsect3">
 <a name="goa-oauth2-based-interface-info.returns"></a><h4>Returns</h4>
 <p>A <a href="/usr/share/gtk-doc/html/gio/gio-D-Bus-Introspection-Data.html#GDBusInterfaceInfo-struct"><span class="type">GDBusInterfaceInfo</span></a>. Do not free. </p>
-<p><span class="annotation">[<acronym title="Don't free data after the code is done."><span class="acronym">transfer none</span></acronym>]</span></p>
+<p><span class="annotation">[<acronym title="The data is owned by the callee, which is responsible of freeing it."><span class="acronym">transfer none</span></acronym>]</span></p>
 </div>
 </div>
 <hr>
@@ -363,7 +363,8 @@ The properties are overridden in the order they are defined.</p>
 goa_oauth2_based_get_client_id (<em class="parameter"><code><a class="link" href="GoaOAuth2Based.html" title="GoaOAuth2Based"><span class="type">GoaOAuth2Based</span></a> *object</code></em>);</pre>
 <p>Gets the value of the <a class="link" href="gdbus-org.gnome.OnlineAccounts.OAuth2Based.html#gdbus-property-org-gnome-OnlineAccounts-OAuth2Based.ClientId" title='The "ClientId" property'>"ClientId"</a> D-Bus property.</p>
 <p>Since this D-Bus property is readable, it is meaningful to use this function on both the client- and service-side.</p>
-<div class="warning">The returned value is only valid until the property changes so on the client-side it is only safe to use this function on the thread where <em class="parameter"><code>object</code></em> was constructed. Use <a class="link" href="GoaOAuth2Based.html#goa-oauth2-based-dup-client-id" title="goa_oauth2_based_dup_client_id ()"><code class="function">goa_oauth2_based_dup_client_id()</code></a> if on another thread.</div>
+<p>The returned value is only valid until the property changes so on the client-side it is only safe to use this function on the thread where <em class="parameter"><code>object</code></em>
+ was constructed. Use <a class="link" href="GoaOAuth2Based.html#goa-oauth2-based-dup-client-id" title="goa_oauth2_based_dup_client_id ()"><code class="function">goa_oauth2_based_dup_client_id()</code></a> if on another thread.</p>
 <p><span class="annotation">[<acronym title="Exposed in C code, not necessarily available in other languages."><span class="acronym">skip</span></acronym>]</span></p>
 <div class="refsect3">
 <a name="goa-oauth2-based-get-client-id.parameters"></a><h4>Parameters</h4>
@@ -384,7 +385,7 @@ goa_oauth2_based_get_client_id (<em class="parameter"><code><a class="link" href
 <a name="goa-oauth2-based-get-client-id.returns"></a><h4>Returns</h4>
 <p>The property value or <a href="/usr/share/gtk-doc/html/glib/glib-Standard-Macros.html#NULL:CAPS"><code class="literal">NULL</code></a> if the property is not set. Do not free the returned value, it belongs to <em class="parameter"><code>object</code></em>
 . </p>
-<p><span class="annotation">[<acronym title="Don't free data after the code is done."><span class="acronym">transfer none</span></acronym>][<acronym title="NULL may be passed as the value in, out, in-out; or as a return value."><span class="acronym">nullable</span></acronym>]</span></p>
+<p><span class="annotation">[<acronym title="The data is owned by the callee, which is responsible of freeing it."><span class="acronym">transfer none</span></acronym>][<acronym title="NULL may be passed as the value in, out, in-out; or as a return value."><span class="acronym">nullable</span></acronym>]</span></p>
 </div>
 </div>
 <hr>
@@ -446,7 +447,7 @@ goa_oauth2_based_dup_client_id (<em class="parameter"><code><a class="link" href
 <div class="refsect3">
 <a name="goa-oauth2-based-dup-client-id.returns"></a><h4>Returns</h4>
 <p>The property value or <a href="/usr/share/gtk-doc/html/glib/glib-Standard-Macros.html#NULL:CAPS"><code class="literal">NULL</code></a> if the property is not set. The returned value should be freed with <a href="/usr/share/gtk-doc/html/glib/glib-Memory-Allocation.html#g-free"><code class="function">g_free()</code></a>. </p>
-<p><span class="annotation">[<acronym title="Free data after the code is done."><span class="acronym">transfer full</span></acronym>][<acronym title="NULL may be passed as the value in, out, in-out; or as a return value."><span class="acronym">nullable</span></acronym>]</span></p>
+<p><span class="annotation">[<acronym title="The caller owns the data, and is responsible for free it."><span class="acronym">transfer full</span></acronym>][<acronym title="NULL may be passed as the value in, out, in-out; or as a return value."><span class="acronym">nullable</span></acronym>]</span></p>
 </div>
 </div>
 <hr>
@@ -456,7 +457,8 @@ goa_oauth2_based_dup_client_id (<em class="parameter"><code><a class="link" href
 goa_oauth2_based_get_client_secret (<em class="parameter"><code><a class="link" href="GoaOAuth2Based.html" title="GoaOAuth2Based"><span class="type">GoaOAuth2Based</span></a> *object</code></em>);</pre>
 <p>Gets the value of the <a class="link" href="gdbus-org.gnome.OnlineAccounts.OAuth2Based.html#gdbus-property-org-gnome-OnlineAccounts-OAuth2Based.ClientSecret" title='The "ClientSecret" property'>"ClientSecret"</a> D-Bus property.</p>
 <p>Since this D-Bus property is readable, it is meaningful to use this function on both the client- and service-side.</p>
-<div class="warning">The returned value is only valid until the property changes so on the client-side it is only safe to use this function on the thread where <em class="parameter"><code>object</code></em> was constructed. Use <a class="link" href="GoaOAuth2Based.html#goa-oauth2-based-dup-client-secret" title="goa_oauth2_based_dup_client_secret ()"><code class="function">goa_oauth2_based_dup_client_secret()</code></a> if on another thread.</div>
+<p>The returned value is only valid until the property changes so on the client-side it is only safe to use this function on the thread where <em class="parameter"><code>object</code></em>
+ was constructed. Use <a class="link" href="GoaOAuth2Based.html#goa-oauth2-based-dup-client-secret" title="goa_oauth2_based_dup_client_secret ()"><code class="function">goa_oauth2_based_dup_client_secret()</code></a> if on another thread.</p>
 <p><span class="annotation">[<acronym title="Exposed in C code, not necessarily available in other languages."><span class="acronym">skip</span></acronym>]</span></p>
 <div class="refsect3">
 <a name="goa-oauth2-based-get-client-secret.parameters"></a><h4>Parameters</h4>
@@ -477,7 +479,7 @@ goa_oauth2_based_get_client_secret (<em class="parameter"><code><a class="link" 
 <a name="goa-oauth2-based-get-client-secret.returns"></a><h4>Returns</h4>
 <p>The property value or <a href="/usr/share/gtk-doc/html/glib/glib-Standard-Macros.html#NULL:CAPS"><code class="literal">NULL</code></a> if the property is not set. Do not free the returned value, it belongs to <em class="parameter"><code>object</code></em>
 . </p>
-<p><span class="annotation">[<acronym title="Don't free data after the code is done."><span class="acronym">transfer none</span></acronym>][<acronym title="NULL may be passed as the value in, out, in-out; or as a return value."><span class="acronym">nullable</span></acronym>]</span></p>
+<p><span class="annotation">[<acronym title="The data is owned by the callee, which is responsible of freeing it."><span class="acronym">transfer none</span></acronym>][<acronym title="NULL may be passed as the value in, out, in-out; or as a return value."><span class="acronym">nullable</span></acronym>]</span></p>
 </div>
 </div>
 <hr>
@@ -539,7 +541,7 @@ goa_oauth2_based_dup_client_secret (<em class="parameter"><code><a class="link" 
 <div class="refsect3">
 <a name="goa-oauth2-based-dup-client-secret.returns"></a><h4>Returns</h4>
 <p>The property value or <a href="/usr/share/gtk-doc/html/glib/glib-Standard-Macros.html#NULL:CAPS"><code class="literal">NULL</code></a> if the property is not set. The returned value should be freed with <a href="/usr/share/gtk-doc/html/glib/glib-Memory-Allocation.html#g-free"><code class="function">g_free()</code></a>. </p>
-<p><span class="annotation">[<acronym title="Free data after the code is done."><span class="acronym">transfer full</span></acronym>][<acronym title="NULL may be passed as the value in, out, in-out; or as a return value."><span class="acronym">nullable</span></acronym>]</span></p>
+<p><span class="annotation">[<acronym title="The caller owns the data, and is responsible for free it."><span class="acronym">transfer full</span></acronym>][<acronym title="NULL may be passed as the value in, out, in-out; or as a return value."><span class="acronym">nullable</span></acronym>]</span></p>
 </div>
 </div>
 <hr>
@@ -554,7 +556,7 @@ goa_oauth2_based_call_get_access_token
 <p>Asynchronously invokes the <a class="link" href="gdbus-org.gnome.OnlineAccounts.OAuth2Based.html#gdbus-method-org-gnome-OnlineAccounts-OAuth2Based.GetAccessToken" title="The GetAccessToken() method"><code class="function">GetAccessToken()</code></a> D-Bus method on <em class="parameter"><code>proxy</code></em>
 .
 When the operation is finished, <em class="parameter"><code>callback</code></em>
- will be invoked in the <a href="/usr/share/gtk-doc/html/glib/glib-The-Main-Event-Loop.html#g-main-context-push-thread-default">thread-default main loop</a> of the thread you are calling this method from.
+ will be invoked in the thread-default main loop of the thread you are calling this method from (see <a href="/usr/share/gtk-doc/html/glib/glib-The-Main-Event-Loop.html#g-main-context-push-thread-default"><code class="function">g_main_context_push_thread_default()</code></a>).
 You can then call <a class="link" href="GoaOAuth2Based.html#goa-oauth2-based-call-get-access-token-finish" title="goa_oauth2_based_call_get_access_token_finish ()"><code class="function">goa_oauth2_based_call_get_access_token_finish()</code></a> to get the result of the operation.</p>
 <p>See <a class="link" href="GoaOAuth2Based.html#goa-oauth2-based-call-get-access-token-sync" title="goa_oauth2_based_call_get_access_token_sync ()"><code class="function">goa_oauth2_based_call_get_access_token_sync()</code></a> for the synchronous, blocking version of this method.</p>
 <div class="refsect3">
@@ -641,7 +643,7 @@ goa_oauth2_based_call_get_access_token_finish
 </div>
 <div class="refsect3">
 <a name="goa-oauth2-based-call-get-access-token-finish.returns"></a><h4>Returns</h4>
-<p><a href="/usr/share/gtk-doc/html/glib/glib-Standard-Macros.html#TRUE:CAPS"><code class="literal">TRUE</code></a> if the call succeded, <a href="/usr/share/gtk-doc/html/glib/glib-Standard-Macros.html#FALSE:CAPS"><code class="literal">FALSE</code></a> if <em class="parameter"><code>error</code></em>
+<p><a href="/usr/share/gtk-doc/html/glib/glib-Standard-Macros.html#TRUE:CAPS"><code class="literal">TRUE</code></a> if the call succeeded, <a href="/usr/share/gtk-doc/html/glib/glib-Standard-Macros.html#FALSE:CAPS"><code class="literal">FALSE</code></a> if <em class="parameter"><code>error</code></em>
 is set. </p>
 <p><span class="annotation">[<acronym title="Exposed in C code, not necessarily available in other languages."><span class="acronym">skip</span></acronym>]</span></p>
 </div>
@@ -698,7 +700,7 @@ goa_oauth2_based_call_get_access_token_sync
 </div>
 <div class="refsect3">
 <a name="goa-oauth2-based-call-get-access-token-sync.returns"></a><h4>Returns</h4>
-<p><a href="/usr/share/gtk-doc/html/glib/glib-Standard-Macros.html#TRUE:CAPS"><code class="literal">TRUE</code></a> if the call succeded, <a href="/usr/share/gtk-doc/html/glib/glib-Standard-Macros.html#FALSE:CAPS"><code class="literal">FALSE</code></a> if <em class="parameter"><code>error</code></em>
+<p><a href="/usr/share/gtk-doc/html/glib/glib-Standard-Macros.html#TRUE:CAPS"><code class="literal">TRUE</code></a> if the call succeeded, <a href="/usr/share/gtk-doc/html/glib/glib-Standard-Macros.html#FALSE:CAPS"><code class="literal">FALSE</code></a> if <em class="parameter"><code>error</code></em>
 is set. </p>
 <p><span class="annotation">[<acronym title="Exposed in C code, not necessarily available in other languages."><span class="acronym">skip</span></acronym>]</span></p>
 </div>
@@ -732,7 +734,7 @@ goa_oauth2_based_complete_get_access_token
 <tr>
 <td class="parameter_name"><p>invocation</p></td>
 <td class="parameter_description"><p>A <a href="/usr/share/gtk-doc/html/gio/GDBusMethodInvocation.html#GDBusMethodInvocation-struct"><span class="type">GDBusMethodInvocation</span></a>. </p></td>
-<td class="parameter_annotations"><span class="annotation">[<acronym title="Free data after the code is done."><span class="acronym">transfer full</span></acronym>]</span></td>
+<td class="parameter_annotations"><span class="annotation">[<acronym title="The caller owns the data, and is responsible for free it."><span class="acronym">transfer full</span></acronym>]</span></td>
 </tr>
 <tr>
 <td class="parameter_name"><p>access_token</p></td>
@@ -761,7 +763,7 @@ goa_oauth2_based_proxy_new (<em class="parameter"><code><a href="/usr/share/gtk-
                             <em class="parameter"><code><a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gpointer"><span class="type">gpointer</span></a> user_data</code></em>);</pre>
 <p>Asynchronously creates a proxy for the D-Bus interface <a class="link" href="gdbus-org.gnome.OnlineAccounts.OAuth2Based.html#gdbus-interface-org-gnome-OnlineAccounts-OAuth2Based.top_of_page">org.gnome.OnlineAccounts.OAuth2Based</a>. See <a href="/usr/share/gtk-doc/html/gio/GDBusProxy.html#g-dbus-proxy-new"><code class="function">g_dbus_proxy_new()</code></a> for more details.</p>
 <p>When the operation is finished, <em class="parameter"><code>callback</code></em>
- will be invoked in the <a href="/usr/share/gtk-doc/html/glib/glib-The-Main-Event-Loop.html#g-main-context-push-thread-default">thread-default main loop</a> of the thread you are calling this method from.
+ will be invoked in the thread-default main loop of the thread you are calling this method from (see <a href="/usr/share/gtk-doc/html/glib/glib-The-Main-Event-Loop.html#g-main-context-push-thread-default"><code class="function">g_main_context_push_thread_default()</code></a>).
 You can then call <a class="link" href="GoaOAuth2Based.html#goa-oauth2-based-proxy-new-finish" title="goa_oauth2_based_proxy_new_finish ()"><code class="function">goa_oauth2_based_proxy_new_finish()</code></a> to get the result of the operation.</p>
 <p>See <a class="link" href="GoaOAuth2Based.html#goa-oauth2-based-proxy-new-sync" title="goa_oauth2_based_proxy_new_sync ()"><code class="function">goa_oauth2_based_proxy_new_sync()</code></a> for the synchronous, blocking version of this constructor.</p>
 <div class="refsect3">
@@ -847,7 +849,7 @@ goa_oauth2_based_proxy_new_finish (<em class="parameter"><code><a href="/usr/sha
 <a name="goa-oauth2-based-proxy-new-finish.returns"></a><h4>Returns</h4>
 <p>The constructed proxy object or <a href="/usr/share/gtk-doc/html/glib/glib-Standard-Macros.html#NULL:CAPS"><code class="literal">NULL</code></a> if <em class="parameter"><code>error</code></em>
 is set. </p>
-<p><span class="annotation">[<acronym title="Free data after the code is done."><span class="acronym">transfer full</span></acronym>][<acronym title="Override the parsed C type with given type."><span class="acronym">type</span></acronym> GoaOAuth2BasedProxy]</span></p>
+<p><span class="annotation">[<acronym title="The caller owns the data, and is responsible for free it."><span class="acronym">transfer full</span></acronym>][<acronym title="Override the parsed C type with given type."><span class="acronym">type</span></acronym> GoaOAuth2BasedProxy]</span></p>
 </div>
 </div>
 <hr>
@@ -910,7 +912,7 @@ is not a message bus connection. </p></td>
 <a name="goa-oauth2-based-proxy-new-sync.returns"></a><h4>Returns</h4>
 <p>The constructed proxy object or <a href="/usr/share/gtk-doc/html/glib/glib-Standard-Macros.html#NULL:CAPS"><code class="literal">NULL</code></a> if <em class="parameter"><code>error</code></em>
 is set. </p>
-<p><span class="annotation">[<acronym title="Free data after the code is done."><span class="acronym">transfer full</span></acronym>][<acronym title="Override the parsed C type with given type."><span class="acronym">type</span></acronym> GoaOAuth2BasedProxy]</span></p>
+<p><span class="annotation">[<acronym title="The caller owns the data, and is responsible for free it."><span class="acronym">transfer full</span></acronym>][<acronym title="Override the parsed C type with given type."><span class="acronym">type</span></acronym> GoaOAuth2BasedProxy]</span></p>
 </div>
 </div>
 <hr>
@@ -926,7 +928,7 @@ goa_oauth2_based_proxy_new_for_bus (<em class="parameter"><code><a href="/usr/sh
                                     <em class="parameter"><code><a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gpointer"><span class="type">gpointer</span></a> user_data</code></em>);</pre>
 <p>Like <a class="link" href="GoaOAuth2Based.html#goa-oauth2-based-proxy-new" title="goa_oauth2_based_proxy_new ()"><code class="function">goa_oauth2_based_proxy_new()</code></a> but takes a <a href="/usr/share/gtk-doc/html/gio/GDBusConnection.html#GBusType"><span class="type">GBusType</span></a> instead of a <a href="/usr/share/gtk-doc/html/gio/GDBusConnection.html#GDBusConnection-struct"><span class="type">GDBusConnection</span></a>.</p>
 <p>When the operation is finished, <em class="parameter"><code>callback</code></em>
- will be invoked in the <a href="/usr/share/gtk-doc/html/glib/glib-The-Main-Event-Loop.html#g-main-context-push-thread-default">thread-default main loop</a> of the thread you are calling this method from.
+ will be invoked in the thread-default main loop of the thread you are calling this method from (see <a href="/usr/share/gtk-doc/html/glib/glib-The-Main-Event-Loop.html#g-main-context-push-thread-default"><code class="function">g_main_context_push_thread_default()</code></a>).
 You can then call <a class="link" href="GoaOAuth2Based.html#goa-oauth2-based-proxy-new-for-bus-finish" title="goa_oauth2_based_proxy_new_for_bus_finish ()"><code class="function">goa_oauth2_based_proxy_new_for_bus_finish()</code></a> to get the result of the operation.</p>
 <p>See <a class="link" href="GoaOAuth2Based.html#goa-oauth2-based-proxy-new-for-bus-sync" title="goa_oauth2_based_proxy_new_for_bus_sync ()"><code class="function">goa_oauth2_based_proxy_new_for_bus_sync()</code></a> for the synchronous, blocking version of this constructor.</p>
 <div class="refsect3">
@@ -1012,7 +1014,7 @@ goa_oauth2_based_proxy_new_for_bus_finish
 <a name="goa-oauth2-based-proxy-new-for-bus-finish.returns"></a><h4>Returns</h4>
 <p>The constructed proxy object or <a href="/usr/share/gtk-doc/html/glib/glib-Standard-Macros.html#NULL:CAPS"><code class="literal">NULL</code></a> if <em class="parameter"><code>error</code></em>
 is set. </p>
-<p><span class="annotation">[<acronym title="Free data after the code is done."><span class="acronym">transfer full</span></acronym>][<acronym title="Override the parsed C type with given type."><span class="acronym">type</span></acronym> GoaOAuth2BasedProxy]</span></p>
+<p><span class="annotation">[<acronym title="The caller owns the data, and is responsible for free it."><span class="acronym">transfer full</span></acronym>][<acronym title="Override the parsed C type with given type."><span class="acronym">type</span></acronym> GoaOAuth2BasedProxy]</span></p>
 </div>
 </div>
 <hr>
@@ -1075,7 +1077,7 @@ goa_oauth2_based_proxy_new_for_bus_sync
 <a name="goa-oauth2-based-proxy-new-for-bus-sync.returns"></a><h4>Returns</h4>
 <p>The constructed proxy object or <a href="/usr/share/gtk-doc/html/glib/glib-Standard-Macros.html#NULL:CAPS"><code class="literal">NULL</code></a> if <em class="parameter"><code>error</code></em>
 is set. </p>
-<p><span class="annotation">[<acronym title="Free data after the code is done."><span class="acronym">transfer full</span></acronym>][<acronym title="Override the parsed C type with given type."><span class="acronym">type</span></acronym> GoaOAuth2BasedProxy]</span></p>
+<p><span class="annotation">[<acronym title="The caller owns the data, and is responsible for free it."><span class="acronym">transfer full</span></acronym>][<acronym title="Override the parsed C type with given type."><span class="acronym">type</span></acronym> GoaOAuth2BasedProxy]</span></p>
 </div>
 </div>
 <hr>
@@ -1087,7 +1089,7 @@ goa_oauth2_based_skeleton_new (<em class="parameter"><code><span class="type">vo
 <div class="refsect3">
 <a name="goa-oauth2-based-skeleton-new.returns"></a><h4>Returns</h4>
 <p>The skeleton object. </p>
-<p><span class="annotation">[<acronym title="Free data after the code is done."><span class="acronym">transfer full</span></acronym>][<acronym title="Override the parsed C type with given type."><span class="acronym">type</span></acronym> GoaOAuth2BasedSkeleton]</span></p>
+<p><span class="annotation">[<acronym title="The caller owns the data, and is responsible for free it."><span class="acronym">transfer full</span></acronym>][<acronym title="Override the parsed C type with given type."><span class="acronym">type</span></acronym> GoaOAuth2BasedSkeleton]</span></p>
 </div>
 </div>
 </div>
@@ -1204,7 +1206,7 @@ goa_oauth2_based_skeleton_new (<em class="parameter"><code><span class="type">vo
 <a name="GoaOAuth2Based.property-details"></a><h2>Property Details</h2>
 <div class="refsect2">
 <a name="GoaOAuth2Based--client-id"></a><h3>The <code class="literal">“client-id”</code> property</h3>
-<pre class="programlisting">  “client-id”                <a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a> *</pre>
+<pre class="programlisting">  “client-id”                <span class="type">char</span> *</pre>
 <p>Represents the D-Bus property <a class="link" href="gdbus-org.gnome.OnlineAccounts.OAuth2Based.html#gdbus-property-org-gnome-OnlineAccounts-OAuth2Based.ClientId" title='The "ClientId" property'>"ClientId"</a>.</p>
 <p>Since the D-Bus property for this <a href="/usr/share/gtk-doc/html/gobject/gobject-The-Base-Object-Type.html#GObject-struct"><span class="type">GObject</span></a> property is readable but not writable, it is meaningful to read from it on both the client- and service-side. It is only meaningful, however, to write to it on the service-side.</p>
 <p>Owner: GoaOAuth2Based</p>
@@ -1214,7 +1216,7 @@ goa_oauth2_based_skeleton_new (<em class="parameter"><code><span class="type">vo
 <hr>
 <div class="refsect2">
 <a name="GoaOAuth2Based--client-secret"></a><h3>The <code class="literal">“client-secret”</code> property</h3>
-<pre class="programlisting">  “client-secret”            <a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a> *</pre>
+<pre class="programlisting">  “client-secret”            <span class="type">char</span> *</pre>
 <p>Represents the D-Bus property <a class="link" href="gdbus-org.gnome.OnlineAccounts.OAuth2Based.html#gdbus-property-org-gnome-OnlineAccounts-OAuth2Based.ClientSecret" title='The "ClientSecret" property'>"ClientSecret"</a>.</p>
 <p>Since the D-Bus property for this <a href="/usr/share/gtk-doc/html/gobject/gobject-The-Base-Object-Type.html#GObject-struct"><span class="type">GObject</span></a> property is readable but not writable, it is meaningful to read from it on both the client- and service-side. It is only meaningful, however, to write to it on the service-side.</p>
 <p>Owner: GoaOAuth2Based</p>
@@ -1269,6 +1271,6 @@ user_function (<a class="link" href="GoaOAuth2Based.html" title="GoaOAuth2Based"
 </div>
 </div>
 <div class="footer">
-<hr>Generated by GTK-Doc V1.32</div>
+<hr>Generated by GTK-Doc V1.33.1</div>
 </body>
 </html>
