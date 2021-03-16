@@ -6,10 +6,10 @@
 #, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: gnome-online-accounts 3.38.0\n"
+"Project-Id-Version: gnome-online-accounts 3.38.1\n"
 "Report-Msgid-Bugs-To: https://gitlab.gnome.org/GNOME/gnome-online-accounts/"
 "issues\n"
-"POT-Creation-Date: 2020-10-09 15:45+0200\n"
+"POT-Creation-Date: 2021-03-16 00:43+0100\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -769,32 +769,32 @@ msgstr ""
 msgid "No associated identification found"
 msgstr ""
 
-#: src/goaidentity/goakerberosidentity.c:1098
+#: src/goaidentity/goakerberosidentity.c:1100
 msgid "Could not create credential cache: "
 msgstr ""
 
-#: src/goaidentity/goakerberosidentity.c:1130
+#: src/goaidentity/goakerberosidentity.c:1132
 msgid "Could not initialize credentials cache: "
 msgstr ""
 
-#: src/goaidentity/goakerberosidentity.c:1143
+#: src/goaidentity/goakerberosidentity.c:1145
 msgid "Could not store new credentials in credentials cache: "
 msgstr ""
 
-#: src/goaidentity/goakerberosidentity.c:1431
+#: src/goaidentity/goakerberosidentity.c:1433
 msgid "Could not renew identity: Not signed in"
 msgstr ""
 
-#: src/goaidentity/goakerberosidentity.c:1441
+#: src/goaidentity/goakerberosidentity.c:1443
 msgid "Could not renew identity: "
 msgstr ""
 
-#: src/goaidentity/goakerberosidentity.c:1454
+#: src/goaidentity/goakerberosidentity.c:1456
 #, c-format
 msgid "Could not get new credentials to renew identity %s: "
 msgstr ""
 
-#: src/goaidentity/goakerberosidentity.c:1495
+#: src/goaidentity/goakerberosidentity.c:1497
 msgid "Could not erase identity: "
 msgstr ""
 
