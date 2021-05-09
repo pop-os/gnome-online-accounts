@@ -16,14 +16,14 @@ Build-Depends: debhelper-compat (= 12),
                libgirepository1.0-dev (>= 0.9.3),
                libglib2.0-dev (>= 2.52),
                libglib2.0-doc,
-               libgtk-3-dev (>= 3.19.12) [!kfreebsd-any],
-               libjson-glib-dev [!kfreebsd-any],
+               libgtk-3-dev (>= 3.19.12) [!ia64 !kfreebsd-amd64 !kfreebsd-i386 !m68k !sh4],
+               libjson-glib-dev [!ia64 !kfreebsd-amd64 !kfreebsd-i386 !m68k !sh4],
                libkrb5-dev,
-               librest-dev [!kfreebsd-any],
-               libsecret-1-dev [!kfreebsd-any],
-               libsoup2.4-dev (>= 2.42) [!kfreebsd-any],
-               libjavascriptcoregtk-4.0-dev [!kfreebsd-any],
-               libwebkit2gtk-4.0-dev (>= 2.26) [!kfreebsd-any],
+               librest-dev [!ia64 !kfreebsd-amd64 !kfreebsd-i386 !m68k !sh4],
+               libsecret-1-dev [!ia64 !kfreebsd-amd64 !kfreebsd-i386 !m68k !sh4],
+               libsoup2.4-dev (>= 2.42) [!ia64 !kfreebsd-amd64 !kfreebsd-i386 !m68k !sh4],
+               libjavascriptcoregtk-4.0-dev [!ia64 !kfreebsd-amd64 !kfreebsd-i386 !m68k !sh4],
+               libwebkit2gtk-4.0-dev (>= 2.26) [!ia64 !kfreebsd-amd64 !kfreebsd-i386 !m68k !sh4],
                valac
 Rules-Requires-Root: no
 Standards-Version: 4.5.1
@@ -32,7 +32,7 @@ Vcs-Git: https://salsa.debian.org/gnome-team/gnome-online-accounts.git
 Homepage: https://wiki.gnome.org/Projects/GnomeOnlineAccounts
 
 Package: gnome-online-accounts
-Architecture: linux-any hurd-i386
+Architecture: alpha amd64 arm64 armel armhf hppa hurd-i386 i386 mips64el mipsel powerpc ppc64 ppc64el riscv64 s390x sparc64 x32
 Depends: libgoa-1.0-0b (= ${binary:Version}),
          libgoa-backend-1.0-1 (= ${binary:Version}),
          ${misc:Depends},
@@ -79,7 +79,7 @@ Description: library for GNOME Online Accounts - development files
  the service.
 
 Package: libgoa-backend-1.0-1
-Architecture: linux-any hurd-i386
+Architecture: alpha amd64 arm64 armel armhf hppa hurd-i386 i386 mips64el mipsel powerpc ppc64 ppc64el riscv64 s390x sparc64 x32
 Section: libs
 Depends: libgoa-1.0-common (>= ${source:Version}),
          ${misc:Depends},
@@ -94,7 +94,7 @@ Description: backend library for GNOME Online Accounts
  This package contains the backend libraries used by GOA applications.
 
 Package: libgoa-backend-1.0-dev
-Architecture: linux-any hurd-i386
+Architecture: alpha amd64 arm64 armel armhf hppa hurd-i386 i386 mips64el mipsel powerpc ppc64 ppc64el riscv64 s390x sparc64 x32
 Section: libdevel
 Depends: gir1.2-goa-1.0 (= ${binary:Version}),
          libgoa-1.0-dev (= ${binary:Version}),
