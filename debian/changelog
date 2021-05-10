@@ -1,3 +1,13 @@
+gnome-online-accounts (3.38.1-2) unstable; urgency=medium
+
+  * Disable the backends on all architectures where webkit is not building
+  * debian/control.in: Move the -doc packages from BD to BDI.
+    And mark libgoa-1.0-doc with Build-Profile: !nodoc
+  * debian/copyright: Stop excluding m4 files, these should be updated during
+    build
+
+ -- Laurent Bigonville <bigon@debian.org>  Mon, 10 May 2021 16:44:24 +0200
+
 gnome-online-accounts (3.38.1-1) unstable; urgency=medium
 
   * New upstream release
