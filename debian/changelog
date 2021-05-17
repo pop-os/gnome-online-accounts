@@ -1,18 +1,11 @@
-gnome-online-accounts (3.38.1-1ubuntu2) impish; urgency=medium
-
-  * debian/rules:
-    - disable the facebook provider since it's current not working
-      (lp: #1926843)
-
- -- Sebastien Bacher <seb128@ubuntu.com>  Fri, 07 May 2021 17:16:05 +0200
-
-gnome-online-accounts (3.38.1-1ubuntu1) hirsute; urgency=medium
+gnome-online-accounts (3.38.2-1ubuntu1) UNRELEASED; urgency=medium
 
   * Merge with debian, remaining changes:
     + debian/rules:
       - Make sure that gnome-online-accounts.pot is refreshed so the
         strings from 0001-ubuntu-sso-provider.patch are included (LP: #1759251).
       - Build with --enable-ubuntu-sso
+      - disable the facebook provider since it's current not working
     + debian/control.*:
       - Add b-d on libsnapd-glib-dev
       - depends on python3 and python3-macaroonbakery for the ubuntu sso
@@ -26,6 +19,30 @@ gnome-online-accounts (3.38.1-1ubuntu1) hirsute; urgency=medium
       - debian/patches/0002-livepatch-auth.patch
 
  -- Sebastien Bacher <seb128@ubuntu.com>  Tue, 16 Mar 2021 11:51:47 +0100
+
+gnome-online-accounts (3.38.2-1) experimental; urgency=medium
+
+  * New upstream release
+
+ -- Sebastien Bacher <seb128@ubuntu.com>  Mon, 17 May 2021 16:35:03 +0200
+
+gnome-online-accounts (3.38.1-2) unstable; urgency=medium
+
+  * Disable the backends on all architectures where webkit is not building
+  * debian/control.in: Move the -doc packages from BD to BDI.
+    And mark libgoa-1.0-doc with Build-Profile: !nodoc
+  * debian/copyright: Stop excluding m4 files, these should be updated during
+    build
+
+ -- Laurent Bigonville <bigon@debian.org>  Mon, 10 May 2021 16:44:24 +0200
+
+gnome-online-accounts (3.38.1-1ubuntu2) impish; urgency=medium
+
+  * debian/rules:
+    - disable the facebook provider since it's current not working
+      (lp: #1926843)
+
+ -- Sebastien Bacher <seb128@ubuntu.com>  Fri, 07 May 2021 17:16:05 +0200
 
 gnome-online-accounts (3.38.1-1) unstable; urgency=medium
 
