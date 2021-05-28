@@ -1,6 +1,6 @@
 m4_define([goa_major_version], [3])
-m4_define([goa_minor_version], [38])
-m4_define([goa_micro_version], [2])
+m4_define([goa_minor_version], [40])
+m4_define([goa_micro_version], [0])
 m4_define([goa_nano_version], [0])
 
 m4_define([goa_base_version],
@@ -385,7 +385,7 @@ AC_DEFINE(GOA_LASTFM_NAME, ["lastfm"], [ProviderType and extension point name])
 AC_ARG_ENABLE([lastfm],
               [AS_HELP_STRING([--enable-lastfm], [Enable Last.fm provider])],
               [],
-              [enable_lastfm=no])
+              [enable_lastfm=yes])
 AC_ARG_WITH(lastfm-client-id,
             [AS_HELP_STRING([--with-lastfm-client-id], [Last.fm client id])],
             [],
