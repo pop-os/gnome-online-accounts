@@ -1,4 +1,4 @@
-gnome-online-accounts (3.38.2-1ubuntu1) impish; urgency=medium
+gnome-online-accounts (3.40.0-1ubuntu1) UNRELEASED; urgency=medium
 
   * Merge with debian, remaining changes:
     + debian/rules:
@@ -18,7 +18,13 @@ gnome-online-accounts (3.38.2-1ubuntu1) impish; urgency=medium
       - debian/patches/0001-ubuntu-sso-provider.patch
       - debian/patches/0002-livepatch-auth.patch
 
- -- Sebastien Bacher <seb128@ubuntu.com>  Mon, 17 May 2021 16:38:42 +0200
+ -- Sebastien Bacher <seb128@ubuntu.com>  Fri, 28 May 2021 12:31:53 +0200
+
+gnome-online-accounts (3.40.0-1) experimental; urgency=medium
+
+  * New upstream release
+
+ -- Sebastien Bacher <seb128@ubuntu.com>  Fri, 28 May 2021 12:30:06 +0200
 
 gnome-online-accounts (3.38.2-1) experimental; urgency=medium
 
