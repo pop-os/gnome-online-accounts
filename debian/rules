@@ -9,7 +9,7 @@ ifeq ($(shell dpkg-vendor --is Ubuntu && echo yes) $(DEB_HOST_ARCH), yes i386)
    skip_packages = -Ngnome-online-accounts
 endif
 
-ifneq ($(filter ia64 kfreebsd-amd64 kfreebsd-i386 sh4,$(DEB_HOST_ARCH)),)
+ifneq ($(filter ia64 kfreebsd-amd64 kfreebsd-i386,$(DEB_HOST_ARCH)),)
   DISABLE_BACKEND := --disable-backend
 endif
 
