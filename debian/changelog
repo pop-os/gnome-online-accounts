@@ -1,3 +1,48 @@
+gnome-online-accounts (3.40.1-2ubuntu1) UNRELEASED; urgency=medium
+
+  * Merge with debian, remaining changes:
+    + debian/rules:
+      - Make sure that gnome-online-accounts.pot is refreshed so the
+        strings from 0001-ubuntu-sso-provider.patch are included (LP: #1759251).
+      - Build with --enable-ubuntu-sso
+      - disable the facebook provider since it's current not working
+    + debian/control.*:
+      - Add b-d on libsnapd-glib-dev
+      - depends on python3 and python3-macaroonbakery for the ubuntu sso
+        provider.
+    + debian/gnome-online-accounts.install:
+      install usr/share/goa-1.0/scripts/lpa_helper.py
+    + debian/libgoa-backend-1.0-1.symbols:
+      Add goa_ubuntu_sso_provider_get_type
+    + Ubuntu-specific patches:
+      - debian/patches/0001-ubuntu-sso-provider.patch
+      - debian/patches/0002-livepatch-auth.patch
+
+ -- Sebastien Bacher <seb128@ubuntu.com>  Thu, 11 Nov 2021 16:25:27 +0100
+
+gnome-online-accounts (3.40.1-2) unstable; urgency=medium
+
+  * Reenable the backend on sh4, webkit now builds on that architecture
+  * Build libgoa-backend-1.0-dev on m68k too, oups
+
+ -- Laurent Bigonville <bigon@debian.org>  Mon, 01 Nov 2021 01:54:05 +0100
+
+gnome-online-accounts (3.40.1-1) unstable; urgency=medium
+
+  * Reenable the backend on m68k, webkit builds again on that architecture
+  * New upstream release
+
+ -- Laurent Bigonville <bigon@debian.org>  Sun, 31 Oct 2021 23:58:01 +0100
+
+gnome-online-accounts (3.40.0-2) unstable; urgency=medium
+
+  * Bump debhelper-compat to 13
+  * debian/rules: minor cleanup
+  * Release to unstable
+    - This enables last.fm support for the GNOME Music app
+
+ -- Jeremy Bicha <jbicha@debian.org>  Sun, 22 Aug 2021 08:17:12 -0400
+
 gnome-online-accounts (3.40.0-1ubuntu1) impish; urgency=medium
 
   * Merge with debian, remaining changes:
