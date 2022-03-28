@@ -1,4 +1,4 @@
-gnome-online-accounts (3.43.1-1ubuntu1) UNRELEASED; urgency=medium
+gnome-online-accounts (3.43.1-1ubuntu1) jammy; urgency=medium
 
   * Merge with debian, remaining changes:
     + debian/rules:
@@ -17,8 +17,11 @@ gnome-online-accounts (3.43.1-1ubuntu1) UNRELEASED; urgency=medium
     + Ubuntu-specific patches:
       - debian/patches/0001-ubuntu-sso-provider.patch
       - debian/patches/0002-livepatch-auth.patch
+  * debian/rules: Disable last.fm provider
+    - Only used by GNOME Music which isn't installed by default
+    - This provider had been disabled until now
 
- -- Jeremy Bicha <jbicha@ubuntu.com>  Mon, 28 Mar 2022 10:23:52 -0400
+ -- Jeremy Bicha <jbicha@ubuntu.com>  Mon, 28 Mar 2022 10:33:16 -0400
 
 gnome-online-accounts (3.43.1-1) unstable; urgency=medium
 
