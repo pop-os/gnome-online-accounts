@@ -398,6 +398,20 @@ static const _ExtendedGDBusPropertyInfo _goa_account_property_info_chat_disabled
   TRUE
 };
 
+static const GDBusAnnotationInfo _goa_account_property_documents_disabled_annotation_info_0 =
+{
+  -1,
+  (gchar *) "org.freedesktop.DBus.Deprecated",
+  (gchar *) "true",
+  NULL
+};
+
+static const GDBusAnnotationInfo * const _goa_account_property_documents_disabled_annotation_info_pointers[] =
+{
+  &_goa_account_property_documents_disabled_annotation_info_0,
+  NULL
+};
+
 static const _ExtendedGDBusPropertyInfo _goa_account_property_info_documents_disabled =
 {
   {
@@ -405,7 +419,7 @@ static const _ExtendedGDBusPropertyInfo _goa_account_property_info_documents_dis
     (gchar *) "DocumentsDisabled",
     (gchar *) "b",
     G_DBUS_PROPERTY_INFO_FLAGS_READABLE | G_DBUS_PROPERTY_INFO_FLAGS_WRITABLE,
-    NULL
+    (GDBusAnnotationInfo **) &_goa_account_property_documents_disabled_annotation_info_pointers
   },
   "documents-disabled",
   FALSE,
@@ -846,9 +860,11 @@ goa_account_default_init (GoaAccountIface *iface)
    * Represents the D-Bus property <link linkend="gdbus-property-org-gnome-OnlineAccounts-Account.DocumentsDisabled">"DocumentsDisabled"</link>.
    *
    * Since the D-Bus property for this #GObject property is both readable and writable, it is meaningful to both read from it and write to it on both the service- and client-side.
+   *
+   * Deprecated: The D-Bus property has been deprecated.
    */
   g_object_interface_install_property (iface,
-    g_param_spec_boolean ("documents-disabled", "DocumentsDisabled", "DocumentsDisabled", FALSE, G_PARAM_READWRITE | G_PARAM_STATIC_STRINGS));
+    g_param_spec_boolean ("documents-disabled", "DocumentsDisabled", "DocumentsDisabled", FALSE, G_PARAM_DEPRECATED | G_PARAM_READWRITE | G_PARAM_STATIC_STRINGS));
   /**
    * GoaAccount:maps-disabled:
    *
@@ -1477,6 +1493,8 @@ goa_account_set_chat_disabled (GoaAccount *object, gboolean value)
  * Since this D-Bus property is both readable and writable, it is meaningful to use this function on both the client- and service-side.
  *
  * Returns: The property value.
+ *
+ * Deprecated: The D-Bus property has been deprecated.
  */
 gboolean 
 goa_account_get_documents_disabled (GoaAccount *object)
@@ -1492,6 +1510,8 @@ goa_account_get_documents_disabled (GoaAccount *object)
  * Sets the <link linkend="gdbus-property-org-gnome-OnlineAccounts-Account.DocumentsDisabled">"DocumentsDisabled"</link> D-Bus property to @value.
  *
  * Since this D-Bus property is both readable and writable, it is meaningful to use this function on both the client- and service-side.
+ *
+ * Deprecated: The D-Bus property has been deprecated.
  */
 void
 goa_account_set_documents_disabled (GoaAccount *object, gboolean value)
@@ -14036,6 +14056,20 @@ goa_chat_skeleton_new (void)
 
 /* ---- Introspection data for org.gnome.OnlineAccounts.Documents ---- */
 
+static const GDBusAnnotationInfo _goa_documents_annotation_info_0 =
+{
+  -1,
+  (gchar *) "org.freedesktop.DBus.Deprecated",
+  (gchar *) "true",
+  NULL
+};
+
+static const GDBusAnnotationInfo * const _goa_documents_annotation_info_pointers[] =
+{
+  &_goa_documents_annotation_info_0,
+  NULL
+};
+
 static const _ExtendedGDBusInterfaceInfo _goa_documents_interface_info =
 {
   {
@@ -14044,7 +14078,7 @@ static const _ExtendedGDBusInterfaceInfo _goa_documents_interface_info =
     NULL,
     NULL,
     NULL,
-    NULL
+    (GDBusAnnotationInfo **) &_goa_documents_annotation_info_pointers
   },
   "documents",
 };
@@ -14056,6 +14090,8 @@ static const _ExtendedGDBusInterfaceInfo _goa_documents_interface_info =
  * Gets a machine-readable description of the <link linkend="gdbus-interface-org-gnome-OnlineAccounts-Documents.top_of_page">org.gnome.OnlineAccounts.Documents</link> D-Bus interface.
  *
  * Returns: (transfer none): A #GDBusInterfaceInfo. Do not free.
+ *
+ * Deprecated: The D-Bus interface has been deprecated.
  */
 GDBusInterfaceInfo *
 goa_documents_interface_info (void)
@@ -14072,6 +14108,8 @@ goa_documents_interface_info (void)
  * The properties are overridden in the order they are defined.
  *
  * Returns: The last property id.
+ *
+ * Deprecated: The D-Bus interface has been deprecated.
  */
 guint
 goa_documents_override_properties (GObjectClass *klass, guint property_id_begin)
@@ -14085,6 +14123,8 @@ goa_documents_override_properties (GObjectClass *klass, guint property_id_begin)
  * GoaDocuments:
  *
  * Abstract interface type for the D-Bus interface <link linkend="gdbus-interface-org-gnome-OnlineAccounts-Documents.top_of_page">org.gnome.OnlineAccounts.Documents</link>.
+ *
+ * Deprecated: The D-Bus interface has been deprecated.
  */
 
 /**
@@ -14092,6 +14132,8 @@ goa_documents_override_properties (GObjectClass *klass, guint property_id_begin)
  * @parent_iface: The parent interface.
  *
  * Virtual table for the D-Bus interface <link linkend="gdbus-interface-org-gnome-OnlineAccounts-Documents.top_of_page">org.gnome.OnlineAccounts.Documents</link>.
+ *
+ * Deprecated: The D-Bus interface has been deprecated.
  */
 
 typedef GoaDocumentsIface GoaDocumentsInterface;
@@ -14108,6 +14150,8 @@ goa_documents_default_init (GoaDocumentsIface *iface)
  * GoaDocumentsProxy:
  *
  * The #GoaDocumentsProxy structure contains only private data and should only be accessed using the provided API.
+ *
+ * Deprecated: The D-Bus interface has been deprecated.
  */
 
 /**
@@ -14115,6 +14159,8 @@ goa_documents_default_init (GoaDocumentsIface *iface)
  * @parent_class: The parent class.
  *
  * Class structure for #GoaDocumentsProxy.
+ *
+ * Deprecated: The D-Bus interface has been deprecated.
  */
 
 struct _GoaDocumentsProxyPrivate
@@ -14281,6 +14327,8 @@ goa_documents_proxy_iface_init (GoaDocumentsIface *iface)
  * You can then call goa_documents_proxy_new_finish() to get the result of the operation.
  *
  * See goa_documents_proxy_new_sync() for the synchronous, blocking version of this constructor.
+ *
+ * Deprecated: The D-Bus interface has been deprecated.
  */
 void
 goa_documents_proxy_new (
@@ -14303,6 +14351,8 @@ goa_documents_proxy_new (
  * Finishes an operation started with goa_documents_proxy_new().
  *
  * Returns: (transfer full) (type GoaDocumentsProxy): The constructed proxy object or %NULL if @error is set.
+ *
+ * Deprecated: The D-Bus interface has been deprecated.
  */
 GoaDocuments *
 goa_documents_proxy_new_finish (
@@ -14336,6 +14386,8 @@ goa_documents_proxy_new_finish (
  * See goa_documents_proxy_new() for the asynchronous version of this constructor.
  *
  * Returns: (transfer full) (type GoaDocumentsProxy): The constructed proxy object or %NULL if @error is set.
+ *
+ * Deprecated: The D-Bus interface has been deprecated.
  */
 GoaDocuments *
 goa_documents_proxy_new_sync (
@@ -14371,6 +14423,8 @@ goa_documents_proxy_new_sync (
  * You can then call goa_documents_proxy_new_for_bus_finish() to get the result of the operation.
  *
  * See goa_documents_proxy_new_for_bus_sync() for the synchronous, blocking version of this constructor.
+ *
+ * Deprecated: The D-Bus interface has been deprecated.
  */
 void
 goa_documents_proxy_new_for_bus (
@@ -14393,6 +14447,8 @@ goa_documents_proxy_new_for_bus (
  * Finishes an operation started with goa_documents_proxy_new_for_bus().
  *
  * Returns: (transfer full) (type GoaDocumentsProxy): The constructed proxy object or %NULL if @error is set.
+ *
+ * Deprecated: The D-Bus interface has been deprecated.
  */
 GoaDocuments *
 goa_documents_proxy_new_for_bus_finish (
@@ -14426,6 +14482,8 @@ goa_documents_proxy_new_for_bus_finish (
  * See goa_documents_proxy_new_for_bus() for the asynchronous version of this constructor.
  *
  * Returns: (transfer full) (type GoaDocumentsProxy): The constructed proxy object or %NULL if @error is set.
+ *
+ * Deprecated: The D-Bus interface has been deprecated.
  */
 GoaDocuments *
 goa_documents_proxy_new_for_bus_sync (
@@ -14451,6 +14509,8 @@ goa_documents_proxy_new_for_bus_sync (
  * GoaDocumentsSkeleton:
  *
  * The #GoaDocumentsSkeleton structure contains only private data and should only be accessed using the provided API.
+ *
+ * Deprecated: The D-Bus interface has been deprecated.
  */
 
 /**
@@ -14458,6 +14518,8 @@ goa_documents_proxy_new_for_bus_sync (
  * @parent_class: The parent class.
  *
  * Class structure for #GoaDocumentsSkeleton.
+ *
+ * Deprecated: The D-Bus interface has been deprecated.
  */
 
 struct _GoaDocumentsSkeletonPrivate
@@ -14724,6 +14786,8 @@ goa_documents_skeleton_iface_init (GoaDocumentsIface *iface)
  * Creates a skeleton object for the D-Bus interface <link linkend="gdbus-interface-org-gnome-OnlineAccounts-Documents.top_of_page">org.gnome.OnlineAccounts.Documents</link>.
  *
  * Returns: (transfer full) (type GoaDocumentsSkeleton): The skeleton object.
+ *
+ * Deprecated: The D-Bus interface has been deprecated.
  */
 GoaDocuments *
 goa_documents_skeleton_new (void)
@@ -24145,8 +24209,10 @@ goa_object_default_init (GoaObjectIface *iface)
    * The #GoaDocuments instance corresponding to the D-Bus interface <link linkend="gdbus-interface-org-gnome-OnlineAccounts-Documents.top_of_page">org.gnome.OnlineAccounts.Documents</link>, if any.
    *
    * Connect to the #GObject::notify signal to get informed of property changes.
+   *
+   * Deprecated: The D-Bus interface has been deprecated.
    */
-  g_object_interface_install_property (iface, g_param_spec_object ("documents", "documents", "documents", GOA_TYPE_DOCUMENTS, G_PARAM_READWRITE | G_PARAM_STATIC_STRINGS));
+  g_object_interface_install_property (iface, g_param_spec_object ("documents", "documents", "documents", GOA_TYPE_DOCUMENTS, G_PARAM_DEPRECATED | G_PARAM_READWRITE | G_PARAM_STATIC_STRINGS));
 
   /**
    * GoaObject:maps:
@@ -24426,6 +24492,8 @@ GoaChat *goa_object_get_chat (GoaObject *object)
  * Gets the #GoaDocuments instance for the D-Bus interface <link linkend="gdbus-interface-org-gnome-OnlineAccounts-Documents.top_of_page">org.gnome.OnlineAccounts.Documents</link> on @object, if any.
  *
  * Returns: (transfer full) (nullable): A #GoaDocuments that must be freed with g_object_unref() or %NULL if @object does not implement the interface.
+ *
+ * Deprecated: The D-Bus interface has been deprecated.
  */
 GoaDocuments *goa_object_get_documents (GoaObject *object)
 {
@@ -24822,6 +24890,8 @@ GoaChat *goa_object_peek_chat (GoaObject *object)
  * It is not safe to use the returned object if you are on another thread than the one where the #GDBusObjectManagerClient or #GDBusObjectManagerServer for @object is running.
  *
  * Returns: (transfer none) (nullable): A #GoaDocuments or %NULL if @object does not implement the interface. Do not free the returned object, it is owned by @object.
+ *
+ * Deprecated: The D-Bus interface has been deprecated.
  */
 GoaDocuments *goa_object_peek_documents (GoaObject *object)
 {
@@ -25868,6 +25938,8 @@ void goa_object_skeleton_set_chat (GoaObjectSkeleton *object, GoaChat *interface
  * @interface_: (nullable): A #GoaDocuments or %NULL to clear the interface.
  *
  * Sets the #GoaDocuments instance for the D-Bus interface <link linkend="gdbus-interface-org-gnome-OnlineAccounts-Documents.top_of_page">org.gnome.OnlineAccounts.Documents</link> on @object.
+ *
+ * Deprecated: The D-Bus interface has been deprecated.
  */
 void goa_object_skeleton_set_documents (GoaObjectSkeleton *object, GoaDocuments *interface_)
 {

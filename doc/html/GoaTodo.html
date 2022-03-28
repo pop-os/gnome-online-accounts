@@ -16,8 +16,10 @@
 <td width="100%" align="left" class="shortcuts">
 <a href="#" class="shortcut">Top</a><span id="nav_description">  <span class="dim">|</span> 
                   <a href="#GoaTodo.description" class="shortcut">Description</a></span><span id="nav_hierarchy">  <span class="dim">|</span> 
-                  <a href="#GoaTodo.object-hierarchy" class="shortcut">Object Hierarchy</a></span><span id="nav_prerequisites">  <span class="dim">|</span> 
-                  <a href="#GoaTodo.prerequisites" class="shortcut">Prerequisites</a></span>
+                  <a href="#GoaTodo.object-hierarchy" class="shortcut">Object Hierarchy</a></span><span id="nav_interfaces">  <span class="dim">|</span> 
+                  <a href="#GoaTodo.implemented-interfaces" class="shortcut">Implemented Interfaces</a></span><span id="nav_prerequisites">  <span class="dim">|</span> 
+                  <a href="#GoaTodo.prerequisites" class="shortcut">Prerequisites</a></span><span id="nav_implementations">  <span class="dim">|</span> 
+                  <a href="#GoaTodo.implementations" class="shortcut">Known Implementations</a></span>
 </td>
 <td><a accesskey="h" href="index.html"><img src="home.png" width="16" height="16" border="0" alt="Home"></a></td>
 <td><a accesskey="u" href="ref-library-generated.html"><img src="up.png" width="16" height="16" border="0" alt="Up"></a></td>
@@ -60,7 +62,7 @@
 </tbody>
 </table></div>
 </div>
-<div class="refsect1">
+<a name="GoaTodoProxy"></a><a name="GoaTodoSkeleton"></a><div class="refsect1">
 <a name="GoaTodo.other"></a><h2>Types and Values</h2>
 <div class="informaltable"><table class="informaltable" width="100%" border="0">
 <colgroup>
@@ -78,7 +80,7 @@
 </tr>
 <tr>
 <td class="datatype_keyword">struct</td>
-<td class="function_name"><a class="link" href="GoaTodo.html#GoaTodoProxy" title="struct GoaTodoProxy">GoaTodoProxy</a></td>
+<td class="function_name"><a class="link" href="GoaTodo.html#GoaTodoProxy-struct" title="struct GoaTodoProxy">GoaTodoProxy</a></td>
 </tr>
 <tr>
 <td class="datatype_keyword">struct</td>
@@ -86,7 +88,7 @@
 </tr>
 <tr>
 <td class="datatype_keyword">struct</td>
-<td class="function_name"><a class="link" href="GoaTodo.html#GoaTodoSkeleton" title="struct GoaTodoSkeleton">GoaTodoSkeleton</a></td>
+<td class="function_name"><a class="link" href="GoaTodo.html#GoaTodoSkeleton-struct" title="struct GoaTodoSkeleton">GoaTodoSkeleton</a></td>
 </tr>
 <tr>
 <td class="datatype_keyword">struct</td>
@@ -99,6 +101,11 @@
 <a name="GoaTodo.object-hierarchy"></a><h2>Object Hierarchy</h2>
 <pre class="screen">    <a href="/usr/share/gtk-doc/html/gobject/GTypeModule.html">GInterface</a>
     <span class="lineart">╰──</span> GoaTodo
+    <a href="/usr/share/gtk-doc/html/gobject/gobject-The-Base-Object-Type.html#GObject-struct">GObject</a>
+    <span class="lineart">├──</span> <a href="/usr/share/gtk-doc/html/gio/GDBusInterfaceSkeleton.html#GDBusInterfaceSkeleton-struct">GDBusInterfaceSkeleton</a>
+    <span class="lineart">│</span>   <span class="lineart">╰──</span> GoaTodoSkeleton
+    <span class="lineart">╰──</span> <a href="/usr/share/gtk-doc/html/gio/GDBusProxy.html#GDBusProxy-struct">GDBusProxy</a>
+        <span class="lineart">╰──</span> GoaTodoProxy
 </pre>
 </div>
 <div class="refsect1">
@@ -106,6 +113,21 @@
 <p>
 GoaTodo requires
  <a href="/usr/share/gtk-doc/html/gobject/gobject-The-Base-Object-Type.html#GObject-struct">GObject</a>.</p>
+</div>
+<div class="refsect1">
+<a name="GoaTodo.implemented-interfaces"></a><h2>Implemented Interfaces</h2>
+<p>
+GoaTodoProxy implements
+ <a href="/usr/share/gtk-doc/html/gio/GDBusInterface.html#GDBusInterface-struct">GDBusInterface</a>,  <a href="/usr/share/gtk-doc/html/gio/GInitable.html#GInitable-struct">GInitable</a>,  <a href="/usr/share/gtk-doc/html/gio/GAsyncInitable.html#GAsyncInitable-struct">GAsyncInitable</a> and  <a class="link" href="GoaTodo.html" title="GoaTodo">GoaTodo</a>.</p>
+<p>
+GoaTodoSkeleton implements
+ <a href="/usr/share/gtk-doc/html/gio/GDBusInterface.html#GDBusInterface-struct">GDBusInterface</a> and  <a class="link" href="GoaTodo.html" title="GoaTodo">GoaTodo</a>.</p>
+</div>
+<div class="refsect1">
+<a name="GoaTodo.implementations"></a><h2>Known Implementations</h2>
+<p>
+GoaTodo is implemented by
+ <a class="link" href="GoaTodo.html#GoaTodoProxy">GoaTodoProxy</a> and  <a class="link" href="GoaTodo.html#GoaTodoSkeleton">GoaTodoSkeleton</a>.</p>
 </div>
 <div class="refsect1">
 <a name="GoaTodo.description"></a><h2>Description</h2>
@@ -213,15 +235,13 @@ The properties are overridden in the order they are defined.</p>
 </div>
 <hr>
 <div class="refsect2">
-<a name="GoaTodoProxy"></a><h3>struct GoaTodoProxy</h3>
-<pre class="programlisting">struct GoaTodoProxy {
-};
-</pre>
+<a name="GoaTodoProxy-struct"></a><h3>struct GoaTodoProxy</h3>
+<pre class="programlisting">struct GoaTodoProxy;</pre>
 <div class="warning">
 <p><code class="literal">GoaTodoProxy</code> is deprecated and should not be used in newly-written code.</p>
 <p>The D-Bus interface has been deprecated.</p>
 </div>
-<p>The <a class="link" href="GoaTodo.html#GoaTodoProxy" title="struct GoaTodoProxy"><span class="type">GoaTodoProxy</span></a> structure contains only private data and should only be accessed using the provided API.</p>
+<p>The <a class="link" href="GoaTodo.html#GoaTodoProxy"><span class="type">GoaTodoProxy</span></a> structure contains only private data and should only be accessed using the provided API.</p>
 <p class="since">Since: 3.26.0</p>
 </div>
 <hr>
@@ -235,7 +255,7 @@ The properties are overridden in the order they are defined.</p>
 <p><code class="literal">GoaTodoProxyClass</code> is deprecated and should not be used in newly-written code.</p>
 <p>The D-Bus interface has been deprecated.</p>
 </div>
-<p>Class structure for <a class="link" href="GoaTodo.html#GoaTodoProxy" title="struct GoaTodoProxy"><span class="type">GoaTodoProxy</span></a>.</p>
+<p>Class structure for <a class="link" href="GoaTodo.html#GoaTodoProxy"><span class="type">GoaTodoProxy</span></a>.</p>
 <div class="refsect3">
 <a name="GoaTodoProxyClass.members"></a><h4>Members</h4>
 <div class="informaltable"><table class="informaltable" width="100%" border="0">
@@ -251,15 +271,13 @@ The properties are overridden in the order they are defined.</p>
 </div>
 <hr>
 <div class="refsect2">
-<a name="GoaTodoSkeleton"></a><h3>struct GoaTodoSkeleton</h3>
-<pre class="programlisting">struct GoaTodoSkeleton {
-};
-</pre>
+<a name="GoaTodoSkeleton-struct"></a><h3>struct GoaTodoSkeleton</h3>
+<pre class="programlisting">struct GoaTodoSkeleton;</pre>
 <div class="warning">
 <p><code class="literal">GoaTodoSkeleton</code> is deprecated and should not be used in newly-written code.</p>
 <p>The D-Bus interface has been deprecated.</p>
 </div>
-<p>The <a class="link" href="GoaTodo.html#GoaTodoSkeleton" title="struct GoaTodoSkeleton"><span class="type">GoaTodoSkeleton</span></a> structure contains only private data and should only be accessed using the provided API.</p>
+<p>The <a class="link" href="GoaTodo.html#GoaTodoSkeleton"><span class="type">GoaTodoSkeleton</span></a> structure contains only private data and should only be accessed using the provided API.</p>
 <p class="since">Since: 3.26.0</p>
 </div>
 <hr>
@@ -273,7 +291,7 @@ The properties are overridden in the order they are defined.</p>
 <p><code class="literal">GoaTodoSkeletonClass</code> is deprecated and should not be used in newly-written code.</p>
 <p>The D-Bus interface has been deprecated.</p>
 </div>
-<p>Class structure for <a class="link" href="GoaTodo.html#GoaTodoSkeleton" title="struct GoaTodoSkeleton"><span class="type">GoaTodoSkeleton</span></a>.</p>
+<p>Class structure for <a class="link" href="GoaTodo.html#GoaTodoSkeleton"><span class="type">GoaTodoSkeleton</span></a>.</p>
 <div class="refsect3">
 <a name="GoaTodoSkeletonClass.members"></a><h4>Members</h4>
 <div class="informaltable"><table class="informaltable" width="100%" border="0">
