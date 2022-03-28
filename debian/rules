@@ -28,6 +28,7 @@ override_dh_auto_configure:
 		--disable-facebook \
 		--enable-flickr \
 		--disable-fedora \
+		--disable-lastfm \
 		--enable-windows-live \
 		--enable-google \
 		--enable-owncloud \
