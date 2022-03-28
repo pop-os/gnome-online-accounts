@@ -176,7 +176,6 @@ libgoa-backend-1.0.so.1 libgoa-backend-1.0-1 #MINVER#
  goa_oauth_provider_parse_request_token_error@Base 3.10.0
  goa_object_skeleton_attach_calendar@Base 3.20.1
  goa_object_skeleton_attach_contacts@Base 3.20.1
- goa_object_skeleton_attach_documents@Base 3.20.1
  goa_object_skeleton_attach_files@Base 3.20.1
  goa_object_skeleton_attach_maps@Base 3.20.1
  goa_object_skeleton_attach_photos@Base 3.20.1

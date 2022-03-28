@@ -6,10 +6,10 @@
 #, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: gnome-online-accounts 3.40.1\n"
+"Project-Id-Version: gnome-online-accounts 3.43.1\n"
 "Report-Msgid-Bugs-To: https://gitlab.gnome.org/GNOME/gnome-online-accounts/"
 "issues\n"
-"POT-Creation-Date: 2021-10-18 21:11+0200\n"
+"POT-Creation-Date: 2021-10-15 20:03+0200\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -71,7 +71,7 @@ msgstr ""
 #.
 #: src/goabackend/goaexchangeprovider.c:248
 #: src/goabackend/goalastfmprovider.c:279
-#: src/goabackend/goaowncloudprovider.c:291
+#: src/goabackend/goaowncloudprovider.c:280
 #, c-format
 msgid "Invalid password with username “%s” (%s, %d): "
 msgstr ""
@@ -86,7 +86,7 @@ msgstr ""
 #: src/goabackend/goaimapsmtpprovider.c:667
 #: src/goabackend/goaimapsmtpprovider.c:687
 #: src/goabackend/goalastfmprovider.c:421
-#: src/goabackend/goaowncloudprovider.c:509
+#: src/goabackend/goaowncloudprovider.c:498
 msgid "_Password"
 msgstr ""
 
@@ -99,12 +99,12 @@ msgstr ""
 #: src/goabackend/goaimapsmtpprovider.c:666
 #: src/goabackend/goaimapsmtpprovider.c:686
 #: src/goabackend/goalastfmprovider.c:420
-#: src/goabackend/goaowncloudprovider.c:508
+#: src/goabackend/goaowncloudprovider.c:497
 msgid "User_name"
 msgstr ""
 
 #: src/goabackend/goaexchangeprovider.c:410
-#: src/goabackend/goaowncloudprovider.c:507
+#: src/goabackend/goaowncloudprovider.c:496
 msgid "_Server"
 msgstr ""
 
@@ -114,7 +114,7 @@ msgstr ""
 #: src/goabackend/goaimapsmtpprovider.c:699
 #: src/goabackend/goakerberosprovider.c:583
 #: src/goabackend/goalastfmprovider.c:429
-#: src/goabackend/goaowncloudprovider.c:523
+#: src/goabackend/goaowncloudprovider.c:512
 msgid "_Cancel"
 msgstr ""
 
@@ -122,7 +122,7 @@ msgstr ""
 #: src/goabackend/goafedoraprovider.c:582
 #: src/goabackend/goakerberosprovider.c:584
 #: src/goabackend/goalastfmprovider.c:430
-#: src/goabackend/goaowncloudprovider.c:524
+#: src/goabackend/goaowncloudprovider.c:513
 msgid "C_onnect"
 msgstr ""
 
@@ -131,7 +131,7 @@ msgstr ""
 #: src/goabackend/goaimapsmtpprovider.c:715
 #: src/goabackend/goakerberosprovider.c:599
 #: src/goabackend/goalastfmprovider.c:446
-#: src/goabackend/goaowncloudprovider.c:539
+#: src/goabackend/goaowncloudprovider.c:528
 msgid "Connecting…"
 msgstr ""
 
@@ -148,8 +148,8 @@ msgstr ""
 #: src/goabackend/goalastfmprovider.c:812
 #: src/goabackend/goamediaserverprovider.c:412
 #: src/goabackend/goaoauth2provider.c:995 src/goabackend/goaoauthprovider.c:859
-#: src/goabackend/goaowncloudprovider.c:661
-#: src/goabackend/goaowncloudprovider.c:881
+#: src/goabackend/goaowncloudprovider.c:650
+#: src/goabackend/goaowncloudprovider.c:869
 msgid "Dialog was dismissed"
 msgstr ""
 
@@ -162,8 +162,8 @@ msgstr ""
 #: src/goabackend/goaimapsmtpprovider.c:1353
 #: src/goabackend/goalastfmprovider.c:678
 #: src/goabackend/goalastfmprovider.c:831
-#: src/goabackend/goaowncloudprovider.c:706
-#: src/goabackend/goaowncloudprovider.c:908
+#: src/goabackend/goaowncloudprovider.c:695
+#: src/goabackend/goaowncloudprovider.c:896
 #, c-format
 msgid "Dialog was dismissed (%s, %d): "
 msgstr ""
@@ -171,7 +171,7 @@ msgstr ""
 #: src/goabackend/goaexchangeprovider.c:588
 #: src/goabackend/goaimapsmtpprovider.c:946
 #: src/goabackend/goaimapsmtpprovider.c:1043
-#: src/goabackend/goaowncloudprovider.c:719
+#: src/goabackend/goaowncloudprovider.c:708
 msgid "_Ignore"
 msgstr ""
 
@@ -185,8 +185,8 @@ msgstr ""
 #: src/goabackend/goakerberosprovider.c:1032
 #: src/goabackend/goalastfmprovider.c:690
 #: src/goabackend/goalastfmprovider.c:848
-#: src/goabackend/goaowncloudprovider.c:724
-#: src/goabackend/goaowncloudprovider.c:927
+#: src/goabackend/goaowncloudprovider.c:713
+#: src/goabackend/goaowncloudprovider.c:915
 msgid "_Try Again"
 msgstr ""
 
@@ -202,8 +202,8 @@ msgstr ""
 #: src/goabackend/goafacebookprovider.c:183
 #: src/goabackend/goaflickrprovider.c:155
 #: src/goabackend/goafoursquareprovider.c:154
-#: src/goabackend/goagoogleprovider.c:184
-#: src/goabackend/goawindowsliveprovider.c:159
+#: src/goabackend/goagoogleprovider.c:183
+#: src/goabackend/goawindowsliveprovider.c:157
 #, c-format
 msgid ""
 "Expected status 200 when requesting your identity, instead got status %d (%s)"
@@ -224,8 +224,8 @@ msgstr ""
 #: src/goabackend/goafoursquareprovider.c:206
 #: src/goabackend/goafoursquareprovider.c:215
 #: src/goabackend/goafoursquareprovider.c:228
-#: src/goabackend/goagoogleprovider.c:203
-#: src/goabackend/goagoogleprovider.c:214
+#: src/goabackend/goagoogleprovider.c:202
+#: src/goabackend/goagoogleprovider.c:213
 #: src/goabackend/goalastfmprovider.c:204
 #: src/goabackend/goalastfmprovider.c:213
 #: src/goabackend/goalastfmprovider.c:222
@@ -238,10 +238,10 @@ msgstr ""
 #: src/goabackend/goaoauth2provider.c:656
 #: src/goabackend/goaoauth2provider.c:686
 #: src/goabackend/goaoauth2provider.c:697 src/goabackend/goautils.c:296
-#: src/goabackend/goawindowsliveprovider.c:178
-#: src/goabackend/goawindowsliveprovider.c:189
-#: src/goabackend/goawindowsliveprovider.c:198
-#: src/goabackend/goawindowsliveprovider.c:211
+#: src/goabackend/goawindowsliveprovider.c:176
+#: src/goabackend/goawindowsliveprovider.c:187
+#: src/goabackend/goawindowsliveprovider.c:196
+#: src/goabackend/goawindowsliveprovider.c:209
 msgid "Could not parse response"
 msgstr ""
 
@@ -523,8 +523,8 @@ msgstr ""
 msgid "Nextcloud"
 msgstr ""
 
-#: src/goabackend/goaowncloudprovider.c:729
-#: src/goabackend/goaowncloudprovider.c:920
+#: src/goabackend/goaowncloudprovider.c:718
+#: src/goabackend/goaowncloudprovider.c:908
 msgid "Error connecting to Nextcloud server"
 msgstr ""
 

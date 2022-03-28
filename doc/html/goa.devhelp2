@@ -177,8 +177,7 @@
     <keyword type="function" name="goa_object_get_calendar ()" link="GoaObject.html#goa-object-get-calendar"/>
     <keyword type="function" name="goa_object_get_contacts ()" link="GoaObject.html#goa-object-get-contacts"/>
     <keyword type="function" name="goa_object_get_chat ()" link="GoaObject.html#goa-object-get-chat"/>
-    <keyword type="function" name="goa_object_get_documents ()" link="GoaObject.html#goa-object-get-documents"/>
-    <keyword type="function" name="goa_object_get_maps ()" link="GoaObject.html#goa-object-get-maps" since="3.14.0"/>
+    <keyword type="function" name="goa_object_get_maps ()" link="GoaObject.html#goa-object-get-maps" deprecated="" since="3.14.0"/>
     <keyword type="function" name="goa_object_get_media_server ()" link="GoaObject.html#goa-object-get-media-server" since="3.14"/>
     <keyword type="function" name="goa_object_get_music ()" link="GoaObject.html#goa-object-get-music" since="3.18.0"/>
     <keyword type="function" name="goa_object_get_photos ()" link="GoaObject.html#goa-object-get-photos" since="3.8.0"/>
@@ -193,8 +192,7 @@
     <keyword type="function" name="goa_object_peek_calendar ()" link="GoaObject.html#goa-object-peek-calendar"/>
     <keyword type="function" name="goa_object_peek_contacts ()" link="GoaObject.html#goa-object-peek-contacts"/>
     <keyword type="function" name="goa_object_peek_chat ()" link="GoaObject.html#goa-object-peek-chat"/>
-    <keyword type="function" name="goa_object_peek_documents ()" link="GoaObject.html#goa-object-peek-documents"/>
-    <keyword type="function" name="goa_object_peek_maps ()" link="GoaObject.html#goa-object-peek-maps" since="3.14.0"/>
+    <keyword type="function" name="goa_object_peek_maps ()" link="GoaObject.html#goa-object-peek-maps" deprecated="" since="3.14.0"/>
     <keyword type="function" name="goa_object_peek_media_server ()" link="GoaObject.html#goa-object-peek-media-server" since="3.14"/>
     <keyword type="function" name="goa_object_peek_music ()" link="GoaObject.html#goa-object-peek-music" since="3.18.0"/>
     <keyword type="function" name="goa_object_peek_photos ()" link="GoaObject.html#goa-object-peek-photos" since="3.8.0"/>
@@ -211,8 +209,7 @@
     <keyword type="function" name="goa_object_skeleton_set_calendar ()" link="GoaObject.html#goa-object-skeleton-set-calendar"/>
     <keyword type="function" name="goa_object_skeleton_set_contacts ()" link="GoaObject.html#goa-object-skeleton-set-contacts"/>
     <keyword type="function" name="goa_object_skeleton_set_chat ()" link="GoaObject.html#goa-object-skeleton-set-chat"/>
-    <keyword type="function" name="goa_object_skeleton_set_documents ()" link="GoaObject.html#goa-object-skeleton-set-documents"/>
-    <keyword type="function" name="goa_object_skeleton_set_maps ()" link="GoaObject.html#goa-object-skeleton-set-maps" since="3.14.0"/>
+    <keyword type="function" name="goa_object_skeleton_set_maps ()" link="GoaObject.html#goa-object-skeleton-set-maps" deprecated="" since="3.14.0"/>
     <keyword type="function" name="goa_object_skeleton_set_music ()" link="GoaObject.html#goa-object-skeleton-set-music" since="3.18.0"/>
     <keyword type="function" name="goa_object_skeleton_set_photos ()" link="GoaObject.html#goa-object-skeleton-set-photos" since="3.8.0"/>
     <keyword type="function" name="goa_object_skeleton_set_files ()" link="GoaObject.html#goa-object-skeleton-set-files" since="3.8.0"/>
@@ -311,9 +308,7 @@
     <keyword type="function" name="goa_account_set_contacts_disabled ()" link="GoaAccount.html#goa-account-set-contacts-disabled"/>
     <keyword type="function" name="goa_account_get_chat_disabled ()" link="GoaAccount.html#goa-account-get-chat-disabled"/>
     <keyword type="function" name="goa_account_set_chat_disabled ()" link="GoaAccount.html#goa-account-set-chat-disabled"/>
-    <keyword type="function" name="goa_account_get_documents_disabled ()" link="GoaAccount.html#goa-account-get-documents-disabled"/>
-    <keyword type="function" name="goa_account_set_documents_disabled ()" link="GoaAccount.html#goa-account-set-documents-disabled"/>
-    <keyword type="function" name="goa_account_get_maps_disabled ()" link="GoaAccount.html#goa-account-get-maps-disabled" since="3.14.0"/>
+    <keyword type="function" name="goa_account_get_maps_disabled ()" link="GoaAccount.html#goa-account-get-maps-disabled" deprecated="" since="3.14.0"/>
     <keyword type="function" name="goa_account_set_maps_disabled ()" link="GoaAccount.html#goa-account-set-maps-disabled" since="3.14.0"/>
     <keyword type="function" name="goa_account_get_music_disabled ()" link="GoaAccount.html#goa-account-get-music-disabled" since="3.18.0"/>
     <keyword type="function" name="goa_account_set_music_disabled ()" link="GoaAccount.html#goa-account-set-music-disabled" since="3.18.0"/>
@@ -580,21 +575,14 @@
     <keyword type="struct" name="struct GoaChatProxyClass" link="GoaChat.html#GoaChatProxyClass"/>
     <keyword type="struct" name="struct GoaChatSkeleton" link="GoaChat.html#GoaChatSkeleton-struct"/>
     <keyword type="struct" name="struct GoaChatSkeletonClass" link="GoaChat.html#GoaChatSkeletonClass"/>
-    <keyword type="function" name="goa_documents_interface_info ()" link="GoaDocuments.html#goa-documents-interface-info"/>
-    <keyword type="function" name="goa_documents_override_properties ()" link="GoaDocuments.html#goa-documents-override-properties"/>
-    <keyword type="function" name="goa_documents_proxy_new ()" link="GoaDocuments.html#goa-documents-proxy-new"/>
-    <keyword type="function" name="goa_documents_proxy_new_finish ()" link="GoaDocuments.html#goa-documents-proxy-new-finish"/>
-    <keyword type="function" name="goa_documents_proxy_new_sync ()" link="GoaDocuments.html#goa-documents-proxy-new-sync"/>
-    <keyword type="function" name="goa_documents_proxy_new_for_bus ()" link="GoaDocuments.html#goa-documents-proxy-new-for-bus"/>
-    <keyword type="function" name="goa_documents_proxy_new_for_bus_finish ()" link="GoaDocuments.html#goa-documents-proxy-new-for-bus-finish"/>
-    <keyword type="function" name="goa_documents_proxy_new_for_bus_sync ()" link="GoaDocuments.html#goa-documents-proxy-new-for-bus-sync"/>
-    <keyword type="function" name="goa_documents_skeleton_new ()" link="GoaDocuments.html#goa-documents-skeleton-new"/>
+    <keyword type="function" name="goa_documents_interface_info ()" link="GoaDocuments.html#goa-documents-interface-info" deprecated="The D-Bus interface has been deprecated."/>
+    <keyword type="function" name="goa_documents_override_properties ()" link="GoaDocuments.html#goa-documents-override-properties" deprecated="The D-Bus interface has been deprecated."/>
     <keyword type="struct" name="GoaDocuments" link="GoaDocuments.html#GoaDocuments-struct"/>
-    <keyword type="struct" name="struct GoaDocumentsIface" link="GoaDocuments.html#GoaDocumentsIface"/>
+    <keyword type="struct" name="struct GoaDocumentsIface" link="GoaDocuments.html#GoaDocumentsIface" deprecated="The D-Bus interface has been deprecated."/>
     <keyword type="struct" name="struct GoaDocumentsProxy" link="GoaDocuments.html#GoaDocumentsProxy-struct"/>
-    <keyword type="struct" name="struct GoaDocumentsProxyClass" link="GoaDocuments.html#GoaDocumentsProxyClass"/>
+    <keyword type="struct" name="struct GoaDocumentsProxyClass" link="GoaDocuments.html#GoaDocumentsProxyClass" deprecated="The D-Bus interface has been deprecated."/>
     <keyword type="struct" name="struct GoaDocumentsSkeleton" link="GoaDocuments.html#GoaDocumentsSkeleton-struct"/>
-    <keyword type="struct" name="struct GoaDocumentsSkeletonClass" link="GoaDocuments.html#GoaDocumentsSkeletonClass"/>
+    <keyword type="struct" name="struct GoaDocumentsSkeletonClass" link="GoaDocuments.html#GoaDocumentsSkeletonClass" deprecated="The D-Bus interface has been deprecated."/>
     <keyword type="function" name="goa_maps_interface_info ()" link="GoaMaps.html#goa-maps-interface-info" since="3.14.0"/>
     <keyword type="function" name="goa_maps_override_properties ()" link="GoaMaps.html#goa-maps-override-properties" since="3.14.0"/>
     <keyword type="function" name="goa_maps_proxy_new ()" link="GoaMaps.html#goa-maps-proxy-new" since="3.14.0"/>
@@ -731,9 +719,9 @@
     <keyword type="function" name="goa_todo_override_properties ()" link="GoaTodo.html#goa-todo-override-properties" deprecated="The D-Bus interface has been deprecated." since="3.26.0"/>
     <keyword type="struct" name="GoaTodo" link="GoaTodo.html#GoaTodo-struct"/>
     <keyword type="struct" name="struct GoaTodoIface" link="GoaTodo.html#GoaTodoIface" deprecated="The D-Bus interface has been deprecated." since="3.26.0"/>
-    <keyword type="struct" name="struct GoaTodoProxy" link="GoaTodo.html#GoaTodoProxy" deprecated="The D-Bus interface has been deprecated." since="3.26.0"/>
+    <keyword type="struct" name="struct GoaTodoProxy" link="GoaTodo.html#GoaTodoProxy-struct"/>
     <keyword type="struct" name="struct GoaTodoProxyClass" link="GoaTodo.html#GoaTodoProxyClass" deprecated="The D-Bus interface has been deprecated." since="3.26.0"/>
-    <keyword type="struct" name="struct GoaTodoSkeleton" link="GoaTodo.html#GoaTodoSkeleton" deprecated="The D-Bus interface has been deprecated." since="3.26.0"/>
+    <keyword type="struct" name="struct GoaTodoSkeleton" link="GoaTodo.html#GoaTodoSkeleton-struct"/>
     <keyword type="struct" name="struct GoaTodoSkeletonClass" link="GoaTodo.html#GoaTodoSkeletonClass" deprecated="The D-Bus interface has been deprecated." since="3.26.0"/>
     <keyword type="function" name="goa_read_later_interface_info ()" link="GoaReadLater.html#goa-read-later-interface-info" deprecated="The D-Bus interface has been deprecated." since="3.12.0"/>
     <keyword type="function" name="goa_read_later_override_properties ()" link="GoaReadLater.html#goa-read-later-override-properties" deprecated="The D-Bus interface has been deprecated." since="3.12.0"/>
