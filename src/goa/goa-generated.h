@@ -190,8 +190,8 @@ void goa_account_set_contacts_disabled (GoaAccount *object, gboolean value);
 gboolean goa_account_get_chat_disabled (GoaAccount *object);
 void goa_account_set_chat_disabled (GoaAccount *object, gboolean value);
 
-gboolean goa_account_get_documents_disabled (GoaAccount *object);
-void goa_account_set_documents_disabled (GoaAccount *object, gboolean value);
+G_GNUC_DEPRECATED gboolean goa_account_get_documents_disabled (GoaAccount *object);
+G_GNUC_DEPRECATED void goa_account_set_documents_disabled (GoaAccount *object, gboolean value);
 
 gboolean goa_account_get_maps_disabled (GoaAccount *object);
 void goa_account_set_maps_disabled (GoaAccount *object, gboolean value);
@@ -1778,7 +1778,7 @@ GType goa_documents_proxy_get_type (void) G_GNUC_CONST;
 G_DEFINE_AUTOPTR_CLEANUP_FUNC (GoaDocumentsProxy, g_object_unref)
 #endif
 
-void goa_documents_proxy_new (
+G_GNUC_DEPRECATED void goa_documents_proxy_new (
     GDBusConnection     *connection,
     GDBusProxyFlags      flags,
     const gchar         *name,
@@ -1786,10 +1786,10 @@ void goa_documents_proxy_new (
     GCancellable        *cancellable,
     GAsyncReadyCallback  callback,
     gpointer             user_data);
-GoaDocuments *goa_documents_proxy_new_finish (
+G_GNUC_DEPRECATED GoaDocuments *goa_documents_proxy_new_finish (
     GAsyncResult        *res,
     GError             **error);
-GoaDocuments *goa_documents_proxy_new_sync (
+G_GNUC_DEPRECATED GoaDocuments *goa_documents_proxy_new_sync (
     GDBusConnection     *connection,
     GDBusProxyFlags      flags,
     const gchar         *name,
@@ -1797,7 +1797,7 @@ GoaDocuments *goa_documents_proxy_new_sync (
     GCancellable        *cancellable,
     GError             **error);
 
-void goa_documents_proxy_new_for_bus (
+G_GNUC_DEPRECATED void goa_documents_proxy_new_for_bus (
     GBusType             bus_type,
     GDBusProxyFlags      flags,
     const gchar         *name,
@@ -1805,10 +1805,10 @@ void goa_documents_proxy_new_for_bus (
     GCancellable        *cancellable,
     GAsyncReadyCallback  callback,
     gpointer             user_data);
-GoaDocuments *goa_documents_proxy_new_for_bus_finish (
+G_GNUC_DEPRECATED GoaDocuments *goa_documents_proxy_new_for_bus_finish (
     GAsyncResult        *res,
     GError             **error);
-GoaDocuments *goa_documents_proxy_new_for_bus_sync (
+G_GNUC_DEPRECATED GoaDocuments *goa_documents_proxy_new_for_bus_sync (
     GBusType             bus_type,
     GDBusProxyFlags      flags,
     const gchar         *name,
@@ -1848,7 +1848,7 @@ GType goa_documents_skeleton_get_type (void) G_GNUC_CONST;
 G_DEFINE_AUTOPTR_CLEANUP_FUNC (GoaDocumentsSkeleton, g_object_unref)
 #endif
 
-GoaDocuments *goa_documents_skeleton_new (void);
+G_GNUC_DEPRECATED GoaDocuments *goa_documents_skeleton_new (void);
 
 
 /* ------------------------------------------------------------------------ */
@@ -3274,7 +3274,7 @@ GoaMail *goa_object_get_mail (GoaObject *object);
 GoaCalendar *goa_object_get_calendar (GoaObject *object);
 GoaContacts *goa_object_get_contacts (GoaObject *object);
 GoaChat *goa_object_get_chat (GoaObject *object);
-GoaDocuments *goa_object_get_documents (GoaObject *object);
+G_GNUC_DEPRECATED GoaDocuments *goa_object_get_documents (GoaObject *object);
 GoaMaps *goa_object_get_maps (GoaObject *object);
 GoaMusic *goa_object_get_music (GoaObject *object);
 GoaPhotos *goa_object_get_photos (GoaObject *object);
@@ -3294,7 +3294,7 @@ GoaMail *goa_object_peek_mail (GoaObject *object);
 GoaCalendar *goa_object_peek_calendar (GoaObject *object);
 GoaContacts *goa_object_peek_contacts (GoaObject *object);
 GoaChat *goa_object_peek_chat (GoaObject *object);
-GoaDocuments *goa_object_peek_documents (GoaObject *object);
+G_GNUC_DEPRECATED GoaDocuments *goa_object_peek_documents (GoaObject *object);
 GoaMaps *goa_object_peek_maps (GoaObject *object);
 GoaMusic *goa_object_peek_music (GoaObject *object);
 GoaPhotos *goa_object_peek_photos (GoaObject *object);
@@ -3376,7 +3376,7 @@ void goa_object_skeleton_set_mail (GoaObjectSkeleton *object, GoaMail *interface
 void goa_object_skeleton_set_calendar (GoaObjectSkeleton *object, GoaCalendar *interface_);
 void goa_object_skeleton_set_contacts (GoaObjectSkeleton *object, GoaContacts *interface_);
 void goa_object_skeleton_set_chat (GoaObjectSkeleton *object, GoaChat *interface_);
-void goa_object_skeleton_set_documents (GoaObjectSkeleton *object, GoaDocuments *interface_);
+G_GNUC_DEPRECATED void goa_object_skeleton_set_documents (GoaObjectSkeleton *object, GoaDocuments *interface_);
 void goa_object_skeleton_set_maps (GoaObjectSkeleton *object, GoaMaps *interface_);
 void goa_object_skeleton_set_music (GoaObjectSkeleton *object, GoaMusic *interface_);
 void goa_object_skeleton_set_photos (GoaObjectSkeleton *object, GoaPhotos *interface_);
