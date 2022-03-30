@@ -360,7 +360,7 @@ goa_identity_service_manager_interface_info (void)
  * Returns: The last property id.
  */
 guint
-goa_identity_service_manager_override_properties (GObjectClass *klass, guint property_id_begin)
+goa_identity_service_manager_override_properties (GObjectClass *klass G_GNUC_UNUSED, guint property_id_begin)
 {
   return property_id_begin - 1;
 }
@@ -401,7 +401,7 @@ goa_identity_service_manager_default_init (GoaIdentityServiceManagerIface *iface
    *
    * If a signal handler returns %TRUE, it means the signal handler will handle the invocation (e.g. take a reference to @invocation and eventually call goa_identity_service_manager_complete_exchange_secret_keys() or e.g. g_dbus_method_invocation_return_error() on it) and no order signal handlers will run. If no signal handler handles the invocation, the %G_DBUS_ERROR_UNKNOWN_METHOD error is returned.
    *
-   * Returns: %TRUE if the invocation was handled, %FALSE to let other signal handlers run.
+   * Returns: %G_DBUS_METHOD_INVOCATION_HANDLED or %TRUE if the invocation was handled, %G_DBUS_METHOD_INVOCATION_UNHANDLED or %FALSE to let other signal handlers run.
    */
   g_signal_new ("handle-exchange-secret-keys",
     G_TYPE_FROM_INTERFACE (iface),
@@ -425,7 +425,7 @@ goa_identity_service_manager_default_init (GoaIdentityServiceManagerIface *iface
    *
    * If a signal handler returns %TRUE, it means the signal handler will handle the invocation (e.g. take a reference to @invocation and eventually call goa_identity_service_manager_complete_sign_in() or e.g. g_dbus_method_invocation_return_error() on it) and no order signal handlers will run. If no signal handler handles the invocation, the %G_DBUS_ERROR_UNKNOWN_METHOD error is returned.
    *
-   * Returns: %TRUE if the invocation was handled, %FALSE to let other signal handlers run.
+   * Returns: %G_DBUS_METHOD_INVOCATION_HANDLED or %TRUE if the invocation was handled, %G_DBUS_METHOD_INVOCATION_UNHANDLED or %FALSE to let other signal handlers run.
    */
   g_signal_new ("handle-sign-in",
     G_TYPE_FROM_INTERFACE (iface),
@@ -448,7 +448,7 @@ goa_identity_service_manager_default_init (GoaIdentityServiceManagerIface *iface
    *
    * If a signal handler returns %TRUE, it means the signal handler will handle the invocation (e.g. take a reference to @invocation and eventually call goa_identity_service_manager_complete_sign_out() or e.g. g_dbus_method_invocation_return_error() on it) and no order signal handlers will run. If no signal handler handles the invocation, the %G_DBUS_ERROR_UNKNOWN_METHOD error is returned.
    *
-   * Returns: %TRUE if the invocation was handled, %FALSE to let other signal handlers run.
+   * Returns: %G_DBUS_METHOD_INVOCATION_HANDLED or %TRUE if the invocation was handled, %G_DBUS_METHOD_INVOCATION_UNHANDLED or %FALSE to let other signal handlers run.
    */
   g_signal_new ("handle-sign-out",
     G_TYPE_FROM_INTERFACE (iface),
@@ -793,7 +793,7 @@ _out:
  */
 void
 goa_identity_service_manager_complete_exchange_secret_keys (
-    GoaIdentityServiceManager *object,
+    GoaIdentityServiceManager *object G_GNUC_UNUSED,
     GDBusMethodInvocation *invocation,
     const gchar *output_key)
 {
@@ -814,7 +814,7 @@ goa_identity_service_manager_complete_exchange_secret_keys (
  */
 void
 goa_identity_service_manager_complete_sign_in (
-    GoaIdentityServiceManager *object,
+    GoaIdentityServiceManager *object G_GNUC_UNUSED,
     GDBusMethodInvocation *invocation,
     const gchar *identity_object_path)
 {
@@ -834,7 +834,7 @@ goa_identity_service_manager_complete_sign_in (
  */
 void
 goa_identity_service_manager_complete_sign_out (
-    GoaIdentityServiceManager *object,
+    GoaIdentityServiceManager *object G_GNUC_UNUSED,
     GDBusMethodInvocation *invocation)
 {
   g_dbus_method_invocation_return_value (invocation,
@@ -882,17 +882,17 @@ goa_identity_service_manager_proxy_finalize (GObject *object)
 }
 
 static void
-goa_identity_service_manager_proxy_get_property (GObject      *object,
-  guint         prop_id,
-  GValue       *value,
+goa_identity_service_manager_proxy_get_property (GObject      *object G_GNUC_UNUSED,
+  guint         prop_id G_GNUC_UNUSED,
+  GValue       *value G_GNUC_UNUSED,
   GParamSpec   *pspec G_GNUC_UNUSED)
 {
 }
 
 static void
-goa_identity_service_manager_proxy_set_property (GObject      *object,
-  guint         prop_id,
-  const GValue *value,
+goa_identity_service_manager_proxy_set_property (GObject      *object G_GNUC_UNUSED,
+  guint         prop_id G_GNUC_UNUSED,
+  const GValue *value G_GNUC_UNUSED,
   GParamSpec   *pspec G_GNUC_UNUSED)
 {
 }
@@ -1000,7 +1000,7 @@ goa_identity_service_manager_proxy_class_init (GoaIdentityServiceManagerProxyCla
 }
 
 static void
-goa_identity_service_manager_proxy_iface_init (GoaIdentityServiceManagerIface *iface)
+goa_identity_service_manager_proxy_iface_init (GoaIdentityServiceManagerIface *iface G_GNUC_UNUSED)
 {
 }
 
@@ -1392,7 +1392,7 @@ out:
 }
 
 static void
-goa_identity_service_manager_skeleton_dbus_interface_flush (GDBusInterfaceSkeleton *_skeleton)
+goa_identity_service_manager_skeleton_dbus_interface_flush (GDBusInterfaceSkeleton *_skeleton G_GNUC_UNUSED)
 {
 }
 
@@ -1453,7 +1453,7 @@ goa_identity_service_manager_skeleton_class_init (GoaIdentityServiceManagerSkele
 }
 
 static void
-goa_identity_service_manager_skeleton_iface_init (GoaIdentityServiceManagerIface *iface)
+goa_identity_service_manager_skeleton_iface_init (GoaIdentityServiceManagerIface *iface G_GNUC_UNUSED)
 {
 }
 
