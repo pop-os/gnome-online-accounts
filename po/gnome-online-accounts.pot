@@ -6,10 +6,10 @@
 #, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: gnome-online-accounts 3.43.1\n"
+"Project-Id-Version: gnome-online-accounts 3.44.0\n"
 "Report-Msgid-Bugs-To: https://gitlab.gnome.org/GNOME/gnome-online-accounts/"
 "issues\n"
-"POT-Creation-Date: 2021-10-15 20:03+0200\n"
+"POT-Creation-Date: 2022-03-30 16:48+0200\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -29,17 +29,17 @@ msgid ""
 msgstr ""
 
 #. TODO: more specific
-#: src/daemon/goadaemon.c:1143 src/daemon/goadaemon.c:1460
+#: src/daemon/goadaemon.c:1141 src/daemon/goadaemon.c:1458
 #, c-format
 msgid "Failed to find a provider for: %s"
 msgstr ""
 
-#: src/daemon/goadaemon.c:1403
+#: src/daemon/goadaemon.c:1401
 msgid "IsLocked property is set for account"
 msgstr ""
 
 #. TODO: more specific
-#: src/daemon/goadaemon.c:1448
+#: src/daemon/goadaemon.c:1446
 msgid "ProviderType property is not set for account"
 msgstr ""
 
