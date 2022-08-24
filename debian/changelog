@@ -1,4 +1,4 @@
-gnome-online-accounts (3.44.0-1ubuntu1) UNRELEASED; urgency=medium
+gnome-online-accounts (3.44.0-1ubuntu1) jammy; urgency=medium
 
   * Merge with Debian (LP: #1967155). Remaining changes:
     + debian/rules:
