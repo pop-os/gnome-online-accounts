@@ -699,7 +699,7 @@ goa_account_default_init (GoaAccountIface *iface)
    *
    * If a signal handler returns %TRUE, it means the signal handler will handle the invocation (e.g. take a reference to @invocation and eventually call goa_account_complete_remove() or e.g. g_dbus_method_invocation_return_error() on it) and no order signal handlers will run. If no signal handler handles the invocation, the %G_DBUS_ERROR_UNKNOWN_METHOD error is returned.
    *
-   * Returns: %TRUE if the invocation was handled, %FALSE to let other signal handlers run.
+   * Returns: %G_DBUS_METHOD_INVOCATION_HANDLED or %TRUE if the invocation was handled, %G_DBUS_METHOD_INVOCATION_UNHANDLED or %FALSE to let other signal handlers run.
    */
   g_signal_new ("handle-remove",
     G_TYPE_FROM_INTERFACE (iface),
@@ -721,7 +721,7 @@ goa_account_default_init (GoaAccountIface *iface)
    *
    * If a signal handler returns %TRUE, it means the signal handler will handle the invocation (e.g. take a reference to @invocation and eventually call goa_account_complete_ensure_credentials() or e.g. g_dbus_method_invocation_return_error() on it) and no order signal handlers will run. If no signal handler handles the invocation, the %G_DBUS_ERROR_UNKNOWN_METHOD error is returned.
    *
-   * Returns: %TRUE if the invocation was handled, %FALSE to let other signal handlers run.
+   * Returns: %G_DBUS_METHOD_INVOCATION_HANDLED or %TRUE if the invocation was handled, %G_DBUS_METHOD_INVOCATION_UNHANDLED or %FALSE to let other signal handlers run.
    */
   g_signal_new ("handle-ensure-credentials",
     G_TYPE_FROM_INTERFACE (iface),
@@ -2004,7 +2004,7 @@ _out:
  */
 void
 goa_account_complete_remove (
-    GoaAccount *object,
+    GoaAccount *object G_GNUC_UNUSED,
     GDBusMethodInvocation *invocation)
 {
   g_dbus_method_invocation_return_value (invocation,
@@ -2023,7 +2023,7 @@ goa_account_complete_remove (
  */
 void
 goa_account_complete_ensure_credentials (
-    GoaAccount *object,
+    GoaAccount *object G_GNUC_UNUSED,
     GDBusMethodInvocation *invocation,
     gint expires_in)
 {
@@ -3698,7 +3698,7 @@ goa_oauth2_based_default_init (GoaOAuth2BasedIface *iface)
    *
    * If a signal handler returns %TRUE, it means the signal handler will handle the invocation (e.g. take a reference to @invocation and eventually call goa_oauth2_based_complete_get_access_token() or e.g. g_dbus_method_invocation_return_error() on it) and no order signal handlers will run. If no signal handler handles the invocation, the %G_DBUS_ERROR_UNKNOWN_METHOD error is returned.
    *
-   * Returns: %TRUE if the invocation was handled, %FALSE to let other signal handlers run.
+   * Returns: %G_DBUS_METHOD_INVOCATION_HANDLED or %TRUE if the invocation was handled, %G_DBUS_METHOD_INVOCATION_UNHANDLED or %FALSE to let other signal handlers run.
    */
   g_signal_new ("handle-get-access-token",
     G_TYPE_FROM_INTERFACE (iface),
@@ -3951,7 +3951,7 @@ _out:
  */
 void
 goa_oauth2_based_complete_get_access_token (
-    GoaOAuth2Based *object,
+    GoaOAuth2Based *object G_GNUC_UNUSED,
     GDBusMethodInvocation *invocation,
     const gchar *access_token,
     gint expires_in)
@@ -5060,7 +5060,7 @@ goa_oauth_based_default_init (GoaOAuthBasedIface *iface)
    *
    * If a signal handler returns %TRUE, it means the signal handler will handle the invocation (e.g. take a reference to @invocation and eventually call goa_oauth_based_complete_get_access_token() or e.g. g_dbus_method_invocation_return_error() on it) and no order signal handlers will run. If no signal handler handles the invocation, the %G_DBUS_ERROR_UNKNOWN_METHOD error is returned.
    *
-   * Returns: %TRUE if the invocation was handled, %FALSE to let other signal handlers run.
+   * Returns: %G_DBUS_METHOD_INVOCATION_HANDLED or %TRUE if the invocation was handled, %G_DBUS_METHOD_INVOCATION_UNHANDLED or %FALSE to let other signal handlers run.
    */
   g_signal_new ("handle-get-access-token",
     G_TYPE_FROM_INTERFACE (iface),
@@ -5320,7 +5320,7 @@ _out:
  */
 void
 goa_oauth_based_complete_get_access_token (
-    GoaOAuthBased *object,
+    GoaOAuthBased *object G_GNUC_UNUSED,
     GDBusMethodInvocation *invocation,
     const gchar *access_token,
     const gchar *access_token_secret,
@@ -6352,7 +6352,7 @@ goa_password_based_interface_info (void)
  * Since: 3.6.0
  */
 guint
-goa_password_based_override_properties (GObjectClass *klass, guint property_id_begin)
+goa_password_based_override_properties (GObjectClass *klass G_GNUC_UNUSED, guint property_id_begin)
 {
   return property_id_begin - 1;
 }
@@ -6394,7 +6394,7 @@ goa_password_based_default_init (GoaPasswordBasedIface *iface)
    *
    * If a signal handler returns %TRUE, it means the signal handler will handle the invocation (e.g. take a reference to @invocation and eventually call goa_password_based_complete_get_password() or e.g. g_dbus_method_invocation_return_error() on it) and no order signal handlers will run. If no signal handler handles the invocation, the %G_DBUS_ERROR_UNKNOWN_METHOD error is returned.
    *
-   * Returns: %TRUE if the invocation was handled, %FALSE to let other signal handlers run.
+   * Returns: %G_DBUS_METHOD_INVOCATION_HANDLED or %TRUE if the invocation was handled, %G_DBUS_METHOD_INVOCATION_UNHANDLED or %FALSE to let other signal handlers run.
    *
    * Since: 3.6.0
    */
@@ -6535,7 +6535,7 @@ _out:
  */
 void
 goa_password_based_complete_get_password (
-    GoaPasswordBased *object,
+    GoaPasswordBased *object G_GNUC_UNUSED,
     GDBusMethodInvocation *invocation,
     const gchar *password)
 {
@@ -6589,17 +6589,17 @@ goa_password_based_proxy_finalize (GObject *object)
 }
 
 static void
-goa_password_based_proxy_get_property (GObject      *object,
-  guint         prop_id,
-  GValue       *value,
+goa_password_based_proxy_get_property (GObject      *object G_GNUC_UNUSED,
+  guint         prop_id G_GNUC_UNUSED,
+  GValue       *value G_GNUC_UNUSED,
   GParamSpec   *pspec G_GNUC_UNUSED)
 {
 }
 
 static void
-goa_password_based_proxy_set_property (GObject      *object,
-  guint         prop_id,
-  const GValue *value,
+goa_password_based_proxy_set_property (GObject      *object G_GNUC_UNUSED,
+  guint         prop_id G_GNUC_UNUSED,
+  const GValue *value G_GNUC_UNUSED,
   GParamSpec   *pspec G_GNUC_UNUSED)
 {
 }
@@ -6707,7 +6707,7 @@ goa_password_based_proxy_class_init (GoaPasswordBasedProxyClass *klass)
 }
 
 static void
-goa_password_based_proxy_iface_init (GoaPasswordBasedIface *iface)
+goa_password_based_proxy_iface_init (GoaPasswordBasedIface *iface G_GNUC_UNUSED)
 {
 }
 
@@ -7115,7 +7115,7 @@ out:
 }
 
 static void
-goa_password_based_skeleton_dbus_interface_flush (GDBusInterfaceSkeleton *_skeleton)
+goa_password_based_skeleton_dbus_interface_flush (GDBusInterfaceSkeleton *_skeleton G_GNUC_UNUSED)
 {
 }
 
@@ -7176,7 +7176,7 @@ goa_password_based_skeleton_class_init (GoaPasswordBasedSkeletonClass *klass)
 }
 
 static void
-goa_password_based_skeleton_iface_init (GoaPasswordBasedIface *iface)
+goa_password_based_skeleton_iface_init (GoaPasswordBasedIface *iface G_GNUC_UNUSED)
 {
 }
 
@@ -7397,7 +7397,7 @@ goa_manager_interface_info (void)
  * Returns: The last property id.
  */
 guint
-goa_manager_override_properties (GObjectClass *klass, guint property_id_begin)
+goa_manager_override_properties (GObjectClass *klass G_GNUC_UNUSED, guint property_id_begin)
 {
   return property_id_begin - 1;
 }
@@ -7440,7 +7440,7 @@ goa_manager_default_init (GoaManagerIface *iface)
    *
    * If a signal handler returns %TRUE, it means the signal handler will handle the invocation (e.g. take a reference to @invocation and eventually call goa_manager_complete_add_account() or e.g. g_dbus_method_invocation_return_error() on it) and no order signal handlers will run. If no signal handler handles the invocation, the %G_DBUS_ERROR_UNKNOWN_METHOD error is returned.
    *
-   * Returns: %TRUE if the invocation was handled, %FALSE to let other signal handlers run.
+   * Returns: %G_DBUS_METHOD_INVOCATION_HANDLED or %TRUE if the invocation was handled, %G_DBUS_METHOD_INVOCATION_UNHANDLED or %FALSE to let other signal handlers run.
    */
   g_signal_new ("handle-add-account",
     G_TYPE_FROM_INTERFACE (iface),
@@ -7463,7 +7463,7 @@ goa_manager_default_init (GoaManagerIface *iface)
    *
    * If a signal handler returns %TRUE, it means the signal handler will handle the invocation (e.g. take a reference to @invocation and eventually call goa_manager_complete_is_supported_provider() or e.g. g_dbus_method_invocation_return_error() on it) and no order signal handlers will run. If no signal handler handles the invocation, the %G_DBUS_ERROR_UNKNOWN_METHOD error is returned.
    *
-   * Returns: %TRUE if the invocation was handled, %FALSE to let other signal handlers run.
+   * Returns: %G_DBUS_METHOD_INVOCATION_HANDLED or %TRUE if the invocation was handled, %G_DBUS_METHOD_INVOCATION_UNHANDLED or %FALSE to let other signal handlers run.
    */
   g_signal_new ("handle-is-supported-provider",
     G_TYPE_FROM_INTERFACE (iface),
@@ -7722,7 +7722,7 @@ _out:
  */
 void
 goa_manager_complete_add_account (
-    GoaManager *object,
+    GoaManager *object G_GNUC_UNUSED,
     GDBusMethodInvocation *invocation,
     const gchar *account_object_path)
 {
@@ -7743,7 +7743,7 @@ goa_manager_complete_add_account (
  */
 void
 goa_manager_complete_is_supported_provider (
-    GoaManager *object,
+    GoaManager *object G_GNUC_UNUSED,
     GDBusMethodInvocation *invocation,
     gboolean is_supported)
 {
@@ -7793,17 +7793,17 @@ goa_manager_proxy_finalize (GObject *object)
 }
 
 static void
-goa_manager_proxy_get_property (GObject      *object,
-  guint         prop_id,
-  GValue       *value,
+goa_manager_proxy_get_property (GObject      *object G_GNUC_UNUSED,
+  guint         prop_id G_GNUC_UNUSED,
+  GValue       *value G_GNUC_UNUSED,
   GParamSpec   *pspec G_GNUC_UNUSED)
 {
 }
 
 static void
-goa_manager_proxy_set_property (GObject      *object,
-  guint         prop_id,
-  const GValue *value,
+goa_manager_proxy_set_property (GObject      *object G_GNUC_UNUSED,
+  guint         prop_id G_GNUC_UNUSED,
+  const GValue *value G_GNUC_UNUSED,
   GParamSpec   *pspec G_GNUC_UNUSED)
 {
 }
@@ -7911,7 +7911,7 @@ goa_manager_proxy_class_init (GoaManagerProxyClass *klass)
 }
 
 static void
-goa_manager_proxy_iface_init (GoaManagerIface *iface)
+goa_manager_proxy_iface_init (GoaManagerIface *iface G_GNUC_UNUSED)
 {
 }
 
@@ -8303,7 +8303,7 @@ out:
 }
 
 static void
-goa_manager_skeleton_dbus_interface_flush (GDBusInterfaceSkeleton *_skeleton)
+goa_manager_skeleton_dbus_interface_flush (GDBusInterfaceSkeleton *_skeleton G_GNUC_UNUSED)
 {
 }
 
@@ -8364,7 +8364,7 @@ goa_manager_skeleton_class_init (GoaManagerSkeletonClass *klass)
 }
 
 static void
-goa_manager_skeleton_iface_init (GoaManagerIface *iface)
+goa_manager_skeleton_iface_init (GoaManagerIface *iface G_GNUC_UNUSED)
 {
 }
 
@@ -13384,7 +13384,7 @@ goa_chat_interface_info (void)
  * Returns: The last property id.
  */
 guint
-goa_chat_override_properties (GObjectClass *klass, guint property_id_begin)
+goa_chat_override_properties (GObjectClass *klass G_GNUC_UNUSED, guint property_id_begin)
 {
   return property_id_begin - 1;
 }
@@ -13408,7 +13408,7 @@ typedef GoaChatIface GoaChatInterface;
 G_DEFINE_INTERFACE (GoaChat, goa_chat, G_TYPE_OBJECT)
 
 static void
-goa_chat_default_init (GoaChatIface *iface)
+goa_chat_default_init (GoaChatIface *iface G_GNUC_UNUSED)
 {
 }
 
@@ -13453,17 +13453,17 @@ goa_chat_proxy_finalize (GObject *object)
 }
 
 static void
-goa_chat_proxy_get_property (GObject      *object,
-  guint         prop_id,
-  GValue       *value,
+goa_chat_proxy_get_property (GObject      *object G_GNUC_UNUSED,
+  guint         prop_id G_GNUC_UNUSED,
+  GValue       *value G_GNUC_UNUSED,
   GParamSpec   *pspec G_GNUC_UNUSED)
 {
 }
 
 static void
-goa_chat_proxy_set_property (GObject      *object,
-  guint         prop_id,
-  const GValue *value,
+goa_chat_proxy_set_property (GObject      *object G_GNUC_UNUSED,
+  guint         prop_id G_GNUC_UNUSED,
+  const GValue *value G_GNUC_UNUSED,
   GParamSpec   *pspec G_GNUC_UNUSED)
 {
 }
@@ -13571,7 +13571,7 @@ goa_chat_proxy_class_init (GoaChatProxyClass *klass)
 }
 
 static void
-goa_chat_proxy_iface_init (GoaChatIface *iface)
+goa_chat_proxy_iface_init (GoaChatIface *iface G_GNUC_UNUSED)
 {
 }
 
@@ -13963,7 +13963,7 @@ out:
 }
 
 static void
-goa_chat_skeleton_dbus_interface_flush (GDBusInterfaceSkeleton *_skeleton)
+goa_chat_skeleton_dbus_interface_flush (GDBusInterfaceSkeleton *_skeleton G_GNUC_UNUSED)
 {
 }
 
@@ -14024,7 +14024,7 @@ goa_chat_skeleton_class_init (GoaChatSkeletonClass *klass)
 }
 
 static void
-goa_chat_skeleton_iface_init (GoaChatIface *iface)
+goa_chat_skeleton_iface_init (GoaChatIface *iface G_GNUC_UNUSED)
 {
 }
 
@@ -14112,7 +14112,7 @@ goa_documents_interface_info (void)
  * Deprecated: The D-Bus interface has been deprecated.
  */
 guint
-goa_documents_override_properties (GObjectClass *klass, guint property_id_begin)
+goa_documents_override_properties (GObjectClass *klass G_GNUC_UNUSED, guint property_id_begin)
 {
   return property_id_begin - 1;
 }
@@ -14140,7 +14140,7 @@ typedef GoaDocumentsIface GoaDocumentsInterface;
 G_DEFINE_INTERFACE (GoaDocuments, goa_documents, G_TYPE_OBJECT)
 
 static void
-goa_documents_default_init (GoaDocumentsIface *iface)
+goa_documents_default_init (GoaDocumentsIface *iface G_GNUC_UNUSED)
 {
 }
 
@@ -14189,17 +14189,17 @@ goa_documents_proxy_finalize (GObject *object)
 }
 
 static void
-goa_documents_proxy_get_property (GObject      *object,
-  guint         prop_id,
-  GValue       *value,
+goa_documents_proxy_get_property (GObject      *object G_GNUC_UNUSED,
+  guint         prop_id G_GNUC_UNUSED,
+  GValue       *value G_GNUC_UNUSED,
   GParamSpec   *pspec G_GNUC_UNUSED)
 {
 }
 
 static void
-goa_documents_proxy_set_property (GObject      *object,
-  guint         prop_id,
-  const GValue *value,
+goa_documents_proxy_set_property (GObject      *object G_GNUC_UNUSED,
+  guint         prop_id G_GNUC_UNUSED,
+  const GValue *value G_GNUC_UNUSED,
   GParamSpec   *pspec G_GNUC_UNUSED)
 {
 }
@@ -14307,7 +14307,7 @@ goa_documents_proxy_class_init (GoaDocumentsProxyClass *klass)
 }
 
 static void
-goa_documents_proxy_iface_init (GoaDocumentsIface *iface)
+goa_documents_proxy_iface_init (GoaDocumentsIface *iface G_GNUC_UNUSED)
 {
 }
 
@@ -14715,7 +14715,7 @@ out:
 }
 
 static void
-goa_documents_skeleton_dbus_interface_flush (GDBusInterfaceSkeleton *_skeleton)
+goa_documents_skeleton_dbus_interface_flush (GDBusInterfaceSkeleton *_skeleton G_GNUC_UNUSED)
 {
 }
 
@@ -14776,7 +14776,7 @@ goa_documents_skeleton_class_init (GoaDocumentsSkeletonClass *klass)
 }
 
 static void
-goa_documents_skeleton_iface_init (GoaDocumentsIface *iface)
+goa_documents_skeleton_iface_init (GoaDocumentsIface *iface G_GNUC_UNUSED)
 {
 }
 
@@ -14852,7 +14852,7 @@ goa_maps_interface_info (void)
  * Since: 3.14.0
  */
 guint
-goa_maps_override_properties (GObjectClass *klass, guint property_id_begin)
+goa_maps_override_properties (GObjectClass *klass G_GNUC_UNUSED, guint property_id_begin)
 {
   return property_id_begin - 1;
 }
@@ -14880,7 +14880,7 @@ typedef GoaMapsIface GoaMapsInterface;
 G_DEFINE_INTERFACE (GoaMaps, goa_maps, G_TYPE_OBJECT)
 
 static void
-goa_maps_default_init (GoaMapsIface *iface)
+goa_maps_default_init (GoaMapsIface *iface G_GNUC_UNUSED)
 {
 }
 
@@ -14929,17 +14929,17 @@ goa_maps_proxy_finalize (GObject *object)
 }
 
 static void
-goa_maps_proxy_get_property (GObject      *object,
-  guint         prop_id,
-  GValue       *value,
+goa_maps_proxy_get_property (GObject      *object G_GNUC_UNUSED,
+  guint         prop_id G_GNUC_UNUSED,
+  GValue       *value G_GNUC_UNUSED,
   GParamSpec   *pspec G_GNUC_UNUSED)
 {
 }
 
 static void
-goa_maps_proxy_set_property (GObject      *object,
-  guint         prop_id,
-  const GValue *value,
+goa_maps_proxy_set_property (GObject      *object G_GNUC_UNUSED,
+  guint         prop_id G_GNUC_UNUSED,
+  const GValue *value G_GNUC_UNUSED,
   GParamSpec   *pspec G_GNUC_UNUSED)
 {
 }
@@ -15047,7 +15047,7 @@ goa_maps_proxy_class_init (GoaMapsProxyClass *klass)
 }
 
 static void
-goa_maps_proxy_iface_init (GoaMapsIface *iface)
+goa_maps_proxy_iface_init (GoaMapsIface *iface G_GNUC_UNUSED)
 {
 }
 
@@ -15455,7 +15455,7 @@ out:
 }
 
 static void
-goa_maps_skeleton_dbus_interface_flush (GDBusInterfaceSkeleton *_skeleton)
+goa_maps_skeleton_dbus_interface_flush (GDBusInterfaceSkeleton *_skeleton G_GNUC_UNUSED)
 {
 }
 
@@ -15516,7 +15516,7 @@ goa_maps_skeleton_class_init (GoaMapsSkeletonClass *klass)
 }
 
 static void
-goa_maps_skeleton_iface_init (GoaMapsIface *iface)
+goa_maps_skeleton_iface_init (GoaMapsIface *iface G_GNUC_UNUSED)
 {
 }
 
@@ -15592,7 +15592,7 @@ goa_music_interface_info (void)
  * Since: 3.18.0
  */
 guint
-goa_music_override_properties (GObjectClass *klass, guint property_id_begin)
+goa_music_override_properties (GObjectClass *klass G_GNUC_UNUSED, guint property_id_begin)
 {
   return property_id_begin - 1;
 }
@@ -15620,7 +15620,7 @@ typedef GoaMusicIface GoaMusicInterface;
 G_DEFINE_INTERFACE (GoaMusic, goa_music, G_TYPE_OBJECT)
 
 static void
-goa_music_default_init (GoaMusicIface *iface)
+goa_music_default_init (GoaMusicIface *iface G_GNUC_UNUSED)
 {
 }
 
@@ -15669,17 +15669,17 @@ goa_music_proxy_finalize (GObject *object)
 }
 
 static void
-goa_music_proxy_get_property (GObject      *object,
-  guint         prop_id,
-  GValue       *value,
+goa_music_proxy_get_property (GObject      *object G_GNUC_UNUSED,
+  guint         prop_id G_GNUC_UNUSED,
+  GValue       *value G_GNUC_UNUSED,
   GParamSpec   *pspec G_GNUC_UNUSED)
 {
 }
 
 static void
-goa_music_proxy_set_property (GObject      *object,
-  guint         prop_id,
-  const GValue *value,
+goa_music_proxy_set_property (GObject      *object G_GNUC_UNUSED,
+  guint         prop_id G_GNUC_UNUSED,
+  const GValue *value G_GNUC_UNUSED,
   GParamSpec   *pspec G_GNUC_UNUSED)
 {
 }
@@ -15787,7 +15787,7 @@ goa_music_proxy_class_init (GoaMusicProxyClass *klass)
 }
 
 static void
-goa_music_proxy_iface_init (GoaMusicIface *iface)
+goa_music_proxy_iface_init (GoaMusicIface *iface G_GNUC_UNUSED)
 {
 }
 
@@ -16195,7 +16195,7 @@ out:
 }
 
 static void
-goa_music_skeleton_dbus_interface_flush (GDBusInterfaceSkeleton *_skeleton)
+goa_music_skeleton_dbus_interface_flush (GDBusInterfaceSkeleton *_skeleton G_GNUC_UNUSED)
 {
 }
 
@@ -16256,7 +16256,7 @@ goa_music_skeleton_class_init (GoaMusicSkeletonClass *klass)
 }
 
 static void
-goa_music_skeleton_iface_init (GoaMusicIface *iface)
+goa_music_skeleton_iface_init (GoaMusicIface *iface G_GNUC_UNUSED)
 {
 }
 
@@ -16332,7 +16332,7 @@ goa_photos_interface_info (void)
  * Since: 3.8.0
  */
 guint
-goa_photos_override_properties (GObjectClass *klass, guint property_id_begin)
+goa_photos_override_properties (GObjectClass *klass G_GNUC_UNUSED, guint property_id_begin)
 {
   return property_id_begin - 1;
 }
@@ -16360,7 +16360,7 @@ typedef GoaPhotosIface GoaPhotosInterface;
 G_DEFINE_INTERFACE (GoaPhotos, goa_photos, G_TYPE_OBJECT)
 
 static void
-goa_photos_default_init (GoaPhotosIface *iface)
+goa_photos_default_init (GoaPhotosIface *iface G_GNUC_UNUSED)
 {
 }
 
@@ -16409,17 +16409,17 @@ goa_photos_proxy_finalize (GObject *object)
 }
 
 static void
-goa_photos_proxy_get_property (GObject      *object,
-  guint         prop_id,
-  GValue       *value,
+goa_photos_proxy_get_property (GObject      *object G_GNUC_UNUSED,
+  guint         prop_id G_GNUC_UNUSED,
+  GValue       *value G_GNUC_UNUSED,
   GParamSpec   *pspec G_GNUC_UNUSED)
 {
 }
 
 static void
-goa_photos_proxy_set_property (GObject      *object,
-  guint         prop_id,
-  const GValue *value,
+goa_photos_proxy_set_property (GObject      *object G_GNUC_UNUSED,
+  guint         prop_id G_GNUC_UNUSED,
+  const GValue *value G_GNUC_UNUSED,
   GParamSpec   *pspec G_GNUC_UNUSED)
 {
 }
@@ -16527,7 +16527,7 @@ goa_photos_proxy_class_init (GoaPhotosProxyClass *klass)
 }
 
 static void
-goa_photos_proxy_iface_init (GoaPhotosIface *iface)
+goa_photos_proxy_iface_init (GoaPhotosIface *iface G_GNUC_UNUSED)
 {
 }
 
@@ -16935,7 +16935,7 @@ out:
 }
 
 static void
-goa_photos_skeleton_dbus_interface_flush (GDBusInterfaceSkeleton *_skeleton)
+goa_photos_skeleton_dbus_interface_flush (GDBusInterfaceSkeleton *_skeleton G_GNUC_UNUSED)
 {
 }
 
@@ -16996,7 +16996,7 @@ goa_photos_skeleton_class_init (GoaPhotosSkeletonClass *klass)
 }
 
 static void
-goa_photos_skeleton_iface_init (GoaPhotosIface *iface)
+goa_photos_skeleton_iface_init (GoaPhotosIface *iface G_GNUC_UNUSED)
 {
 }
 
@@ -20676,7 +20676,7 @@ goa_ticketing_default_init (GoaTicketingIface *iface)
    *
    * If a signal handler returns %TRUE, it means the signal handler will handle the invocation (e.g. take a reference to @invocation and eventually call goa_ticketing_complete_get_ticket() or e.g. g_dbus_method_invocation_return_error() on it) and no order signal handlers will run. If no signal handler handles the invocation, the %G_DBUS_ERROR_UNKNOWN_METHOD error is returned.
    *
-   * Returns: %TRUE if the invocation was handled, %FALSE to let other signal handlers run.
+   * Returns: %G_DBUS_METHOD_INVOCATION_HANDLED or %TRUE if the invocation was handled, %G_DBUS_METHOD_INVOCATION_UNHANDLED or %FALSE to let other signal handlers run.
    *
    * Since: 3.6.0
    */
@@ -20873,7 +20873,7 @@ _out:
  */
 void
 goa_ticketing_complete_get_ticket (
-    GoaTicketing *object,
+    GoaTicketing *object G_GNUC_UNUSED,
     GDBusMethodInvocation *invocation)
 {
   g_dbus_method_invocation_return_value (invocation,
@@ -21855,7 +21855,7 @@ goa_todo_interface_info (void)
  * Deprecated: The D-Bus interface has been deprecated.
  */
 guint
-goa_todo_override_properties (GObjectClass *klass, guint property_id_begin)
+goa_todo_override_properties (GObjectClass *klass G_GNUC_UNUSED, guint property_id_begin)
 {
   return property_id_begin - 1;
 }
@@ -21887,7 +21887,7 @@ typedef GoaTodoIface GoaTodoInterface;
 G_DEFINE_INTERFACE (GoaTodo, goa_todo, G_TYPE_OBJECT)
 
 static void
-goa_todo_default_init (GoaTodoIface *iface)
+goa_todo_default_init (GoaTodoIface *iface G_GNUC_UNUSED)
 {
 }
 
@@ -21940,17 +21940,17 @@ goa_todo_proxy_finalize (GObject *object)
 }
 
 static void
-goa_todo_proxy_get_property (GObject      *object,
-  guint         prop_id,
-  GValue       *value,
+goa_todo_proxy_get_property (GObject      *object G_GNUC_UNUSED,
+  guint         prop_id G_GNUC_UNUSED,
+  GValue       *value G_GNUC_UNUSED,
   GParamSpec   *pspec G_GNUC_UNUSED)
 {
 }
 
 static void
-goa_todo_proxy_set_property (GObject      *object,
-  guint         prop_id,
-  const GValue *value,
+goa_todo_proxy_set_property (GObject      *object G_GNUC_UNUSED,
+  guint         prop_id G_GNUC_UNUSED,
+  const GValue *value G_GNUC_UNUSED,
   GParamSpec   *pspec G_GNUC_UNUSED)
 {
 }
@@ -22058,7 +22058,7 @@ goa_todo_proxy_class_init (GoaTodoProxyClass *klass)
 }
 
 static void
-goa_todo_proxy_iface_init (GoaTodoIface *iface)
+goa_todo_proxy_iface_init (GoaTodoIface *iface G_GNUC_UNUSED)
 {
 }
 
@@ -22482,7 +22482,7 @@ out:
 }
 
 static void
-goa_todo_skeleton_dbus_interface_flush (GDBusInterfaceSkeleton *_skeleton)
+goa_todo_skeleton_dbus_interface_flush (GDBusInterfaceSkeleton *_skeleton G_GNUC_UNUSED)
 {
 }
 
@@ -22543,7 +22543,7 @@ goa_todo_skeleton_class_init (GoaTodoSkeletonClass *klass)
 }
 
 static void
-goa_todo_skeleton_iface_init (GoaTodoIface *iface)
+goa_todo_skeleton_iface_init (GoaTodoIface *iface G_GNUC_UNUSED)
 {
 }
 
@@ -22639,7 +22639,7 @@ goa_read_later_interface_info (void)
  * Deprecated: The D-Bus interface has been deprecated.
  */
 guint
-goa_read_later_override_properties (GObjectClass *klass, guint property_id_begin)
+goa_read_later_override_properties (GObjectClass *klass G_GNUC_UNUSED, guint property_id_begin)
 {
   return property_id_begin - 1;
 }
@@ -22671,7 +22671,7 @@ typedef GoaReadLaterIface GoaReadLaterInterface;
 G_DEFINE_INTERFACE (GoaReadLater, goa_read_later, G_TYPE_OBJECT)
 
 static void
-goa_read_later_default_init (GoaReadLaterIface *iface)
+goa_read_later_default_init (GoaReadLaterIface *iface G_GNUC_UNUSED)
 {
 }
 
@@ -22724,17 +22724,17 @@ goa_read_later_proxy_finalize (GObject *object)
 }
 
 static void
-goa_read_later_proxy_get_property (GObject      *object,
-  guint         prop_id,
-  GValue       *value,
+goa_read_later_proxy_get_property (GObject      *object G_GNUC_UNUSED,
+  guint         prop_id G_GNUC_UNUSED,
+  GValue       *value G_GNUC_UNUSED,
   GParamSpec   *pspec G_GNUC_UNUSED)
 {
 }
 
 static void
-goa_read_later_proxy_set_property (GObject      *object,
-  guint         prop_id,
-  const GValue *value,
+goa_read_later_proxy_set_property (GObject      *object G_GNUC_UNUSED,
+  guint         prop_id G_GNUC_UNUSED,
+  const GValue *value G_GNUC_UNUSED,
   GParamSpec   *pspec G_GNUC_UNUSED)
 {
 }
@@ -22842,7 +22842,7 @@ goa_read_later_proxy_class_init (GoaReadLaterProxyClass *klass)
 }
 
 static void
-goa_read_later_proxy_iface_init (GoaReadLaterIface *iface)
+goa_read_later_proxy_iface_init (GoaReadLaterIface *iface G_GNUC_UNUSED)
 {
 }
 
@@ -23266,7 +23266,7 @@ out:
 }
 
 static void
-goa_read_later_skeleton_dbus_interface_flush (GDBusInterfaceSkeleton *_skeleton)
+goa_read_later_skeleton_dbus_interface_flush (GDBusInterfaceSkeleton *_skeleton G_GNUC_UNUSED)
 {
 }
 
@@ -23327,7 +23327,7 @@ goa_read_later_skeleton_class_init (GoaReadLaterSkeletonClass *klass)
 }
 
 static void
-goa_read_later_skeleton_iface_init (GoaReadLaterIface *iface)
+goa_read_later_skeleton_iface_init (GoaReadLaterIface *iface G_GNUC_UNUSED)
 {
 }
 
@@ -23405,7 +23405,7 @@ goa_printers_interface_info (void)
  * Since: 3.12.0
  */
 guint
-goa_printers_override_properties (GObjectClass *klass, guint property_id_begin)
+goa_printers_override_properties (GObjectClass *klass G_GNUC_UNUSED, guint property_id_begin)
 {
   return property_id_begin - 1;
 }
@@ -23433,7 +23433,7 @@ typedef GoaPrintersIface GoaPrintersInterface;
 G_DEFINE_INTERFACE (GoaPrinters, goa_printers, G_TYPE_OBJECT)
 
 static void
-goa_printers_default_init (GoaPrintersIface *iface)
+goa_printers_default_init (GoaPrintersIface *iface G_GNUC_UNUSED)
 {
 }
 
@@ -23482,17 +23482,17 @@ goa_printers_proxy_finalize (GObject *object)
 }
 
 static void
-goa_printers_proxy_get_property (GObject      *object,
-  guint         prop_id,
-  GValue       *value,
+goa_printers_proxy_get_property (GObject      *object G_GNUC_UNUSED,
+  guint         prop_id G_GNUC_UNUSED,
+  GValue       *value G_GNUC_UNUSED,
   GParamSpec   *pspec G_GNUC_UNUSED)
 {
 }
 
 static void
-goa_printers_proxy_set_property (GObject      *object,
-  guint         prop_id,
-  const GValue *value,
+goa_printers_proxy_set_property (GObject      *object G_GNUC_UNUSED,
+  guint         prop_id G_GNUC_UNUSED,
+  const GValue *value G_GNUC_UNUSED,
   GParamSpec   *pspec G_GNUC_UNUSED)
 {
 }
@@ -23600,7 +23600,7 @@ goa_printers_proxy_class_init (GoaPrintersProxyClass *klass)
 }
 
 static void
-goa_printers_proxy_iface_init (GoaPrintersIface *iface)
+goa_printers_proxy_iface_init (GoaPrintersIface *iface G_GNUC_UNUSED)
 {
 }
 
@@ -24008,7 +24008,7 @@ out:
 }
 
 static void
-goa_printers_skeleton_dbus_interface_flush (GDBusInterfaceSkeleton *_skeleton)
+goa_printers_skeleton_dbus_interface_flush (GDBusInterfaceSkeleton *_skeleton G_GNUC_UNUSED)
 {
 }
 
@@ -24069,7 +24069,7 @@ goa_printers_skeleton_class_init (GoaPrintersSkeletonClass *klass)
 }
 
 static void
-goa_printers_skeleton_iface_init (GoaPrintersIface *iface)
+goa_printers_skeleton_iface_init (GoaPrintersIface *iface G_GNUC_UNUSED)
 {
 }
 
